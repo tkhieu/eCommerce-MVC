@@ -9,6 +9,7 @@
     if (Session["order"] != null)
     {
         orders = (List<ORDERDETAIL>) Session["order"];
+        var total = 0;
         <table>
             <tr>
                 <td>Tên sản phẩm</td>
@@ -16,10 +17,20 @@
                 <td>Đơn giá</td>
                 <td>Thành tiền</td>
             </tr>
-           // var sum=0;
             @foreach (var item in orders)
             {
-               // @sum += @item.Price;
+                try
+                {
+                    total = total + (int)item.TotalPayment;
+                }
+                catch (Exception)
+                {                 
+                    throw;
+                }
+                
+            }
+            @foreach (var item in orders)
+            {
                 <tr>
                     <td>@item.FOOD.Name</td>
                     <td>@item.Count</td>
@@ -28,7 +39,7 @@
                 </tr>
             }
         </table>
-        //<p>Sum: @sum</p>
+        <p>Sum: @total</p>
         @Html.ActionLink("Tiếp tục mua hàng", "index", "store")
     }
     else
