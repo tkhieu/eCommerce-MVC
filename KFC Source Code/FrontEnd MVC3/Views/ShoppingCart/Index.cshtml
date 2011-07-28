@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Model;
+<h2>ShowCart</h2>
+@{
+    List<ORDERDETAIL> orders = null;
+    if (Session["order"] != null)
+    {
+        orders = (List<ORDERDETAIL>) Session["order"];
+        <table>
+            <tr>
+                <td>Tên sản phẩm</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Thành tiền</td>
+            </tr>
+           // var sum=0;
+            @foreach (var item in orders)
+            {
+               // @sum += @item.Price;
+                <tr>
+                    <td>@item.FOOD.Name</td>
+                    <td>@item.Count</td>
+                    <td>@item.Price</td>
+                    <td>@item.TotalPayment</td>
+                </tr>
+            }
+        </table>
+        //<p>Sum: @sum</p>
+        @Html.ActionLink("Tiếp tục mua hàng", "index", "store")
+    }
+    else
+    {
+        <p>Chưa có gì trong giỏ hàng</p>
+    }
+}

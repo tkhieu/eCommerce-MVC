@@ -1,0 +1,14 @@
+﻿@model Model.FOOD
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<p>@Model.Name</p>
+<p>@Model.Price</p>
+<p>@Model.FOODTYPE.Name</p>
+
+<a href="/ShoppingCart/AddFoodToCart?foodId=@Model.ID">AddToCart</a>

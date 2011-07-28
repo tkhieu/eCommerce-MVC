@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Model.FOOD>
+
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SearchResult</h2>
+
+<ul>
+    @foreach (var food in @Model)
+    {
+        <li>
+            @Html.ActionLink(food.Name,"Detail",new {id = food.ID})
+        </li>
+    }
+
+</ul>
