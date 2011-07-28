@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWebUI", "OfficeWebUI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{5B450E65-D1BA-439E-8CF8-BD943CAE4178}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd MVC3", "FrontEnd MVC3\FrontEnd MVC3.csproj", "{EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -29,6 +31,10 @@ Global
 		{5B450E65-D1BA-439E-8CF8-BD943CAE4178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B450E65-D1BA-439E-8CF8-BD943CAE4178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B450E65-D1BA-439E-8CF8-BD943CAE4178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
