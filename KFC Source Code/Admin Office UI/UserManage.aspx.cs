@@ -19,14 +19,16 @@ namespace ContosoWebApp
                 if (Request.QueryString["New"] == "1")
                 {
 
+                    //Đổ dữ liệu vào NewUserQuestion
                     var listQuestion = QuestionController.GetList();
-                    foreach (var question in listQuestion)
-                    {
-                        var listItem = new ListItem(question.Question, question.ID.ToString());
-                        NewUserQuestion.Items.Add(listItem);
-                    }
-                    OfficePopupNewUser.RecreateChildControls();
+                    NewUserQuestion.DataTextField = "Question";
+                    NewUserQuestion.DataValueField = "ID";
+                    NewUserQuestion.DataSource = listQuestion;
+                    NewUserQuestion.DataBind();
+                    
 
+                    //Hiển thị OfficePopupNewUser
+                    OfficePopupNewUser.RecreateChildControls();
                     OfficePopupNewUser.Show();
                 }
             }
