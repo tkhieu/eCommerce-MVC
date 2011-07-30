@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    public class CityController
+    public class CITYController
     {
         public static FoodStoreEntities _db;
 
