@@ -4,16 +4,26 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FoodStoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="FoodStoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="FoodStoreModelStoreContainer">
           <EntitySet Name="ACCOUNT" EntityType="FoodStoreModel.Store.ACCOUNT" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="BILL" EntityType="FoodStoreModel.Store.BILL" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="BILLDETAIL" EntityType="FoodStoreModel.Store.BILLDETAIL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CITY" EntityType="FoodStoreModel.Store.CITY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DISTRICT" EntityType="FoodStoreModel.Store.DISTRICT" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FOOD" EntityType="FoodStoreModel.Store.FOOD" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FOODTYPE" EntityType="FoodStoreModel.Store.FOODTYPE" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ORDER" EntityType="FoodStoreModel.Store.ORDER" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ORDERDETAIL" EntityType="FoodStoreModel.Store.ORDERDETAIL" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="QUESTION" EntityType="FoodStoreModel.Store.QUESTION" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ACCOUNT_CITY" Association="FoodStoreModel.Store.FK_ACCOUNT_CITY">
+            <End Role="CITY" EntitySet="CITY" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ACCOUNT_DISTRICT" Association="FoodStoreModel.Store.FK_ACCOUNT_DISTRICT">
+            <End Role="DISTRICT" EntitySet="DISTRICT" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+          </AssociationSet>
           <AssociationSet Name="FK_ACCOUNT_QUESTION" Association="FoodStoreModel.Store.FK_ACCOUNT_QUESTION">
             <End Role="QUESTION" EntitySet="QUESTION" />
             <End Role="ACCOUNT" EntitySet="ACCOUNT" />
@@ -26,6 +36,10 @@
             <End Role="FOOD" EntitySet="FOOD" />
             <End Role="BILLDETAIL" EntitySet="BILLDETAIL" />
           </AssociationSet>
+          <AssociationSet Name="FK_DISTRICT_CITY" Association="FoodStoreModel.Store.FK_DISTRICT_CITY">
+            <End Role="CITY" EntitySet="CITY" />
+            <End Role="DISTRICT" EntitySet="DISTRICT" />
+          </AssociationSet>
           <AssociationSet Name="FK_FOOD_FOODTYPE1" Association="FoodStoreModel.Store.FK_FOOD_FOODTYPE1">
             <End Role="FOODTYPE" EntitySet="FOODTYPE" />
             <End Role="FOOD" EntitySet="FOOD" />
@@ -36,6 +50,14 @@
           </AssociationSet>
           <AssociationSet Name="FK_ORDER_BILL1" Association="FoodStoreModel.Store.FK_ORDER_BILL1">
             <End Role="BILL" EntitySet="BILL" />
+            <End Role="ORDER" EntitySet="ORDER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDER_CITY" Association="FoodStoreModel.Store.FK_ORDER_CITY">
+            <End Role="CITY" EntitySet="CITY" />
+            <End Role="ORDER" EntitySet="ORDER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDER_DISTRICT" Association="FoodStoreModel.Store.FK_ORDER_DISTRICT">
+            <End Role="DISTRICT" EntitySet="DISTRICT" />
             <End Role="ORDER" EntitySet="ORDER" />
           </AssociationSet>
           <AssociationSet Name="FK_ORDERDETAIL_FOOD1" Association="FoodStoreModel.Store.FK_ORDERDETAIL_FOOD1">
@@ -61,6 +83,8 @@
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Question" Type="int" />
           <Property Name="Answer" Type="nvarchar" MaxLength="100" />
+          <Property Name="IDCity" Type="int" />
+          <Property Name="IDDistrict" Type="int" />
         </EntityType>
         <EntityType Name="BILL">
           <Key>
@@ -81,6 +105,23 @@
           <Property Name="Count" Type="int" />
           <Property Name="Price" Type="int" />
           <Property Name="TotalPayment" Type="int" />
+        </EntityType>
+        <EntityType Name="CITY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Code" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="DISTRICT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDCity" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Code" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="FOOD">
           <Key>
@@ -113,6 +154,8 @@
           <Property Name="Note" Type="text" />
           <Property Name="State" Type="int" />
           <Property Name="TotalPayment" Type="int" />
+          <Property Name="IDCity" Type="int" />
+          <Property Name="IDDistrict" Type="int" />
         </EntityType>
         <EntityType Name="ORDERDETAIL">
           <Key>
@@ -132,6 +175,30 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Question" Type="nvarchar(max)" />
         </EntityType>
+        <Association Name="FK_ACCOUNT_CITY">
+          <End Role="CITY" Type="FoodStoreModel.Store.CITY" Multiplicity="0..1" />
+          <End Role="ACCOUNT" Type="FoodStoreModel.Store.ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="IDCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ACCOUNT_DISTRICT">
+          <End Role="DISTRICT" Type="FoodStoreModel.Store.DISTRICT" Multiplicity="0..1" />
+          <End Role="ACCOUNT" Type="FoodStoreModel.Store.ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRICT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="IDDistrict" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ACCOUNT_QUESTION">
           <End Role="QUESTION" Type="FoodStoreModel.Store.QUESTION" Multiplicity="0..1" />
           <End Role="ACCOUNT" Type="FoodStoreModel.Store.ACCOUNT" Multiplicity="*" />
@@ -165,6 +232,18 @@
             </Principal>
             <Dependent Role="BILLDETAIL">
               <PropertyRef Name="Food" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRICT_CITY">
+          <End Role="CITY" Type="FoodStoreModel.Store.CITY" Multiplicity="0..1" />
+          <End Role="DISTRICT" Type="FoodStoreModel.Store.DISTRICT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DISTRICT">
+              <PropertyRef Name="IDCity" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -204,6 +283,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ORDER_CITY">
+          <End Role="CITY" Type="FoodStoreModel.Store.CITY" Multiplicity="0..1" />
+          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDER">
+              <PropertyRef Name="IDCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ORDER_DISTRICT">
+          <End Role="DISTRICT" Type="FoodStoreModel.Store.DISTRICT" Multiplicity="0..1" />
+          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRICT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDER">
+              <PropertyRef Name="IDDistrict" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ORDERDETAIL_FOOD1">
           <End Role="FOOD" Type="FoodStoreModel.Store.FOOD" Multiplicity="1" />
           <End Role="ORDERDETAIL" Type="FoodStoreModel.Store.ORDERDETAIL" Multiplicity="*" />
@@ -228,8 +331,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FoodStoreModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -274,6 +376,28 @@
             <End Role="ORDER" EntitySet="ORDERs" />
             <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
           </AssociationSet>
+          <EntitySet Name="CITies" EntityType="FoodStoreModel.CITY" />
+          <EntitySet Name="DISTRICTs" EntityType="FoodStoreModel.DISTRICT" />
+          <AssociationSet Name="FK_ACCOUNT_CITY" Association="FoodStoreModel.FK_ACCOUNT_CITY">
+            <End Role="CITY" EntitySet="CITies" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ACCOUNT_DISTRICT" Association="FoodStoreModel.FK_ACCOUNT_DISTRICT">
+            <End Role="DISTRICT" EntitySet="DISTRICTs" />
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DISTRICT_CITY" Association="FoodStoreModel.FK_DISTRICT_CITY">
+            <End Role="CITY" EntitySet="CITies" />
+            <End Role="DISTRICT" EntitySet="DISTRICTs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDER_CITY" Association="FoodStoreModel.FK_ORDER_CITY">
+            <End Role="CITY" EntitySet="CITies" />
+            <End Role="ORDER" EntitySet="ORDERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDER_DISTRICT" Association="FoodStoreModel.FK_ORDER_DISTRICT">
+            <End Role="DISTRICT" EntitySet="DISTRICTs" />
+            <End Role="ORDER" EntitySet="ORDERs" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ACCOUNT">
           <Key>
@@ -291,6 +415,10 @@
           <Property Name="Answer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="QUESTION" Relationship="FoodStoreModel.FK_ACCOUNT_QUESTION" FromRole="ACCOUNT" ToRole="QUESTION" />
           <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ACCOUNT" ToRole="ORDER" />
+          <Property Type="Int32" Name="IDCity" />
+          <Property Type="Int32" Name="IDDistrict" />
+          <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_ACCOUNT_CITY" FromRole="ACCOUNT" ToRole="CITY" />
+          <NavigationProperty Name="DISTRICT" Relationship="FoodStoreModel.FK_ACCOUNT_DISTRICT" FromRole="ACCOUNT" ToRole="DISTRICT" />
         </EntityType>
         <EntityType Name="BILL">
           <Key>
@@ -354,6 +482,10 @@
           <NavigationProperty Name="ACCOUNT" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ORDER" ToRole="ACCOUNT" />
           <NavigationProperty Name="BILL" Relationship="FoodStoreModel.FK_ORDER_BILL1" FromRole="ORDER" ToRole="BILL" />
           <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_ORDER1" FromRole="ORDER" ToRole="ORDERDETAIL" />
+          <Property Type="Int32" Name="IDCity" />
+          <Property Type="Int32" Name="IDDistrict" />
+          <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_ORDER_CITY" FromRole="ORDER" ToRole="CITY" />
+          <NavigationProperty Name="DISTRICT" Relationship="FoodStoreModel.FK_ORDER_DISTRICT" FromRole="ORDER" ToRole="DISTRICT" />
         </EntityType>
         <EntityType Name="ORDERDETAIL">
           <Key>
@@ -472,6 +604,89 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="CITY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="ACCOUNTs" Relationship="FoodStoreModel.FK_ACCOUNT_CITY" FromRole="CITY" ToRole="ACCOUNT" />
+          <NavigationProperty Name="DISTRICTs" Relationship="FoodStoreModel.FK_DISTRICT_CITY" FromRole="CITY" ToRole="DISTRICT" />
+          <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_CITY" FromRole="CITY" ToRole="ORDER" />
+        </EntityType>
+        <EntityType Name="DISTRICT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDCity" />
+          <Property Type="String" Name="Name" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Code" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="ACCOUNTs" Relationship="FoodStoreModel.FK_ACCOUNT_DISTRICT" FromRole="DISTRICT" ToRole="ACCOUNT" />
+          <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_DISTRICT_CITY" FromRole="DISTRICT" ToRole="CITY" />
+          <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_DISTRICT" FromRole="DISTRICT" ToRole="ORDER" />
+        </EntityType>
+        <Association Name="FK_ACCOUNT_CITY">
+          <End Type="FoodStoreModel.CITY" Role="CITY" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ACCOUNT" Role="ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="IDCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ACCOUNT_DISTRICT">
+          <End Type="FoodStoreModel.DISTRICT" Role="DISTRICT" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ACCOUNT" Role="ACCOUNT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRICT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ACCOUNT">
+              <PropertyRef Name="IDDistrict" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRICT_CITY">
+          <End Type="FoodStoreModel.CITY" Role="CITY" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.DISTRICT" Role="DISTRICT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DISTRICT">
+              <PropertyRef Name="IDCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ORDER_CITY">
+          <End Type="FoodStoreModel.CITY" Role="CITY" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CITY">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDER">
+              <PropertyRef Name="IDCity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ORDER_DISTRICT">
+          <End Type="FoodStoreModel.DISTRICT" Role="DISTRICT" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRICT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDER">
+              <PropertyRef Name="IDDistrict" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -479,7 +694,9 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="FoodStoreModelStoreContainer" CdmEntityContainer="FoodStoreEntities">
           <EntitySetMapping Name="ACCOUNTs"><EntityTypeMapping TypeName="FoodStoreModel.ACCOUNT"><MappingFragment StoreEntitySet="ACCOUNT">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+                <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Username" ColumnName="Username" />
             <ScalarProperty Name="Password" ColumnName="Password" />
             <ScalarProperty Name="Name" ColumnName="Name" />
@@ -516,7 +733,9 @@
             <ScalarProperty Name="Name" ColumnName="Name" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="ORDERs"><EntityTypeMapping TypeName="FoodStoreModel.ORDER"><MappingFragment StoreEntitySet="ORDER">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+                <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="UserName" ColumnName="UserName" />
             <ScalarProperty Name="Guest" ColumnName="Guest" />
             <ScalarProperty Name="Tel" ColumnName="Tel" />
@@ -537,6 +756,25 @@
             <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Question" ColumnName="Question" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CITies">
+            <EntityTypeMapping TypeName="FoodStoreModel.CITY">
+              <MappingFragment StoreEntitySet="CITY">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DISTRICTs">
+            <EntityTypeMapping TypeName="FoodStoreModel.DISTRICT">
+              <MappingFragment StoreEntitySet="DISTRICT">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -557,7 +795,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="FoodStore">
+      <Diagram Name="FoodStore" ZoomLevel="88">
         <EntityTypeShape EntityType="FoodStoreModel.ACCOUNT" Width="1.5" PointX="3.75" PointY="12.5" Height="3.3263964843749996" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.BILL" Width="1.5" PointX="0.75" PointY="5" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.BILLDETAIL" Width="1.5" PointX="3" PointY="5" Height="2.3648893229166656" IsExpanded="true" />
@@ -572,8 +810,8 @@
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_ACCOUNT" ManuallyRouted="false">
           <ConnectorPoint PointX="4.90625" PointY="12.5" />
-          <ConnectorPoint PointX="4.90625" PointY="4.71875" />
-          <ConnectorPoint PointX="6" PointY="4.71875" />
+          <ConnectorPoint PointX="4.90625" PointY="8.31173459281614" />
+          <ConnectorPoint PointX="6" PointY="8.31173459281614" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_BILLDETAIL_BILL1" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="6.0862939453125" />
@@ -582,13 +820,13 @@
           <ConnectorPoint PointX="3" PointY="6.0862939453125" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_BILL1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="7.172587890625" />
-          <ConnectorPoint PointX="1.5" PointY="7.6268929036458326" />
-          <ConnectorPoint PointX="2.5416691666666664" PointY="7.6268929036458317" />
-          <ConnectorPoint PointX="2.7083358333333334" PointY="7.6268929036458326" />
-          <ConnectorPoint PointX="4.822916666666667" PointY="7.6268929036458317" />
-          <ConnectorPoint PointX="4.989583333333333" PointY="7.6268929036458326" />
-          <ConnectorPoint PointX="6" PointY="7.6268929036458326" />
+          <ConnectorPoint PointX="1.5" PointY="5" />
+          <ConnectorPoint PointX="1.5" PointY="4.7187474999999992" />
+          <ConnectorPoint PointX="2.5416691666666664" PointY="4.7187474999999983" />
+          <ConnectorPoint PointX="2.7083358333333334" PointY="4.7187474999999992" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="4.7187474999999983" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="4.7187474999999992" />
+          <ConnectorPoint PointX="6" PointY="4.7187474999999992" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_BILLDETAIL_FOOD1" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="2.12474609375" />
@@ -608,6 +846,35 @@
         <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_ORDER1" ManuallyRouted="false">
           <ConnectorPoint PointX="7.5" PointY="6.1824446614583337" />
           <ConnectorPoint PointX="8.25" PointY="6.1824446614583337" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FoodStoreModel.CITY" Width="1.5" PointX="8" PointY="10.625" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="FoodStoreModel.DISTRICT" Width="1.5" PointX="9.75" PointY="7.625" Height="2.3648893229166674" />
+        <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_CITY" >
+          <ConnectorPoint PointX="8" PointY="11.5312475" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="11.5312475" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="11.5312475" />
+          <ConnectorPoint PointX="4.1953087500000006" PointY="11.5312475" />
+          <ConnectorPoint PointX="4.1953087500000006" PointY="12.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_DISTRICT" >
+          <ConnectorPoint PointX="10.5" PointY="9.9898893229166674" />
+          <ConnectorPoint PointX="10.5" PointY="14.727845052083334" />
+          <ConnectorPoint PointX="5.25" PointY="14.727845052083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_DISTRICT_CITY" >
+          <ConnectorPoint PointX="9.5" PointY="10.625" />
+          <ConnectorPoint PointX="9.75" PointY="9.9898893229166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_ORDER_CITY" >
+          <ConnectorPoint PointX="8.0624975" PointY="10.625" />
+          <ConnectorPoint PointX="8.0624975" PointY="8.0114957682291674" />
+          <ConnectorPoint PointX="7.5" PointY="8.0114957682291674" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_ORDER_DISTRICT" >
+          <ConnectorPoint PointX="9.75" PointY="8.3660489908854174" />
+          <ConnectorPoint PointX="8.1458308333333331" PointY="8.3660489908854174" />
+          <ConnectorPoint PointX="7.9791641666666662" PointY="8.3660489908854174" />
+          <ConnectorPoint PointX="7.5" PointY="8.3660489908854174" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>
