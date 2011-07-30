@@ -1,36 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="UserManage.aspx.cs" Inherits="ContosoWebApp.UserManage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-<script src="Library/js/jquery-1.6.2.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-
-        $.ajax({
-            url: "AddressForm.aspx",
-            success: function (result) {
-                //                $("#AddressContent").html(result);
-                alert(result);
-            }
-        });
-
-        $(".NewUserCity").change(function () {
-            $.ajax({
-                url: "AddressForm.aspx?City=" + this.val(),
-                success: function (result) {
-                    $("#AddressContent").html(result);
-                }
-            });
-        });
-    })
-</script>
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <%--Begin New User Popup--%>
     <OfficeWebUI:OfficePopup ID="OfficePopupNewUser" runat="server" OnClickOk="NewUserPopupOk" Title="New User Information" Height="500" Width="400px">
         <Content>
-        <div id="RegForm">
             <h1>New Customer</h1>
         
             <table>
@@ -104,12 +78,6 @@
                         <asp:TextBox ID="TextBox1" runat="server"  Width="200" Height="15"></asp:TextBox>
                     </td>
                 </tr>
-                </table>
-
-
-                <%--Đoạn này thay đổi dùng AJAX--%>
-                <div id="AddressContent">
-                <table>
                 <tr>
                     <td width="150px">Quận, huyện</td>
                     <td>
@@ -125,9 +93,6 @@
                     </td>
                 </tr>
             </table>
-
-            </div>
-            </div>   
         </Content>
     </OfficeWebUI:OfficePopup>
     <%--End New User Popup--%>
