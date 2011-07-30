@@ -7,12 +7,13 @@ namespace Model
 {
     public class DistrictController
     {
-        public static FoodStoreEntities _db;
 
-        public static List<DISTRICT> GetListByCityId(int cityId)
+        private static FoodStoreEntities _db;
+
+        public static List<DISTRICT> GetListDistrictByCityId(int cityId)
         {
             _db = new FoodStoreEntities();
-            return _db.DISTRICTs.Where(p => p.IDCity == cityId).ToList();
+            return _db.CITies.Single(p => p.ID == cityId).DISTRICTs.ToList();
         }
     }
 }
