@@ -129,7 +129,7 @@
                         District
                     </td>
                     <td>
-                        <asp:DropDownList ID="NewUserDistrict" runat="server">
+                        <asp:DropDownList ID="NewUserDistrict" runat="server" Width="200">
                         </asp:DropDownList>
                     </td>
                 </tr>
@@ -138,7 +138,7 @@
                         City
                     </td>
                     <td>
-                        <asp:DropDownList ID="NewUserCity" runat="server">
+                        <asp:DropDownList ID="NewUserCity" runat="server" Width="200" AutoPostBack="True">
                         </asp:DropDownList>                        
                     </td>
                 </tr>
