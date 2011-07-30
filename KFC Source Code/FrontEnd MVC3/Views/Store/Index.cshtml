@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Model.FOODTYPE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (var foodtype in @Model)
+    {
+        <li>@Html.ActionLink(foodtype.Name,"Browse",new {id = foodtype.ID})</li>       
+    }
+</ul>
