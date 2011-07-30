@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <OfficeWebUI:OfficePopup ID="OfficePopupNewUser" runat="server" OnClickOk="NewUserPopupOk"
-        Title="New User Information" Height="500" Width="400px">
+        Title="New User Information" Height="600" Width="600px">
         <Content>
             <h1>
                 New Customer</h1>
@@ -20,7 +20,8 @@
                         Username
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserUserName" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserUserName" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelUserName" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -29,7 +30,8 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="NewUserPassword" TextMode="Password" Width="200"
-                            Height="15"></asp:TextBox>
+                            Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelPassword" runat="server" Text="Label" Visible="false" CssClass="validate-error"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -38,7 +40,8 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="NewUserRetypePassword" TextMode="Password" Width="200"
-                            Height="15"></asp:TextBox>
+                            Height="15"></asp:TextBox><br/> 
+                        <asp:Label ID="LabelRetypePassword" runat="server" Text="Label" Visible="false" CssClass="validate-error"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -46,7 +49,8 @@
                         Email
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserEmail" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserEmail" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelEmail" runat="server" Text="Label" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -54,7 +58,8 @@
                         Retype email
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserRetypeEmail" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserRetypeEmail" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelRetypeEmail" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -76,7 +81,8 @@
                         Answer
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserAnswer" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserAnswer" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelAnswer" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -89,7 +95,8 @@
                         Full name
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserFullName" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserFullName" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelFullName" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -97,7 +104,8 @@
                         Social ID
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserSocialId" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserSocialId" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelSocialId" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -105,7 +113,8 @@
                         Phone Number
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserPhone" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserPhone" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelPhone" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -113,7 +122,8 @@
                         Address
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserAddress" Width="200" Height="15"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="NewUserAddress" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:Label ID="LabelAddress" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
