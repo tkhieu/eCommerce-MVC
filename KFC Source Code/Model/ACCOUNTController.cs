@@ -12,6 +12,9 @@ namespace Model{
         public static bool Insert(String username, String password,String fullName, String address, String tel, String socialId, String email, int question, String answer, int idCity, int idDistrict)
         {
             //Khởi tạo một đối tượng ACCOUNT
+
+            _db = new FoodStoreEntities();
+
             var account = new ACCOUNT();
             account.ID = GetMaxId();
             account.Username = username;
@@ -21,17 +24,18 @@ namespace Model{
             account.Tel = tel;
             account.SocialID = socialId;
             account.Email = email;
-            account.Question = question;
+            account.QUESTION = QuestionController.GetById(question,_db);
             account.Answer = answer;
-            account.IDCity = idCity;
-            account.IDDistrict = idDistrict;
+            account.CITY = CityController.GetById(idCity,_db);
+            account.DISTRICT = DistrictController.GetById(idDistrict,_db);
 
             //Chèn đối tượng ACCOUNT vào CSDL
             bool flag = true;
             try
             {
-                _db = new FoodStoreEntities();
+                
                 _db.AddToACCOUNTs(account);
+                _db.SaveChanges();
             }
             catch (Exception)
             {
