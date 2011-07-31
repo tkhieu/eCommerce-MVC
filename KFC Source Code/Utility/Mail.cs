@@ -18,7 +18,7 @@ namespace Utility
             string subject = "[eCommerce System] - Welcome custommer "+name;
             string body = String.Format("Hi {0}<br />" +
                                         "Welcome to eCommerce System. If you have some problem<br />" +
-                                        "Contact Custommer Manage at <kimhieuqtvn@gmail.com>");
+                                        "Contact Custommer Manage at <kimhieuqtvn@gmail.com>",name);
             bool flag = true;
 
             var smtp = new SmtpClient
