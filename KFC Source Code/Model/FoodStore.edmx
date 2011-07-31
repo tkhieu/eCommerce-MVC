@@ -411,7 +411,7 @@
           <Property Name="Tel" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="SocialID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Question" Type="Int32" />
+          <Property Name="IDQuestion" Type="Int32" />
           <Property Name="Answer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="QUESTION" Relationship="FoodStoreModel.FK_ACCOUNT_QUESTION" FromRole="ACCOUNT" ToRole="QUESTION" />
           <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ACCOUNT" ToRole="ORDER" />
@@ -516,7 +516,7 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ACCOUNT">
-              <PropertyRef Name="Question" />
+              <PropertyRef Name="IDQuestion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -704,7 +704,7 @@
             <ScalarProperty Name="Tel" ColumnName="Tel" />
             <ScalarProperty Name="SocialID" ColumnName="SocialID" />
             <ScalarProperty Name="Email" ColumnName="Email" />
-            <ScalarProperty Name="Question" ColumnName="Question" />
+            <ScalarProperty Name="IDQuestion" ColumnName="Question" />
             <ScalarProperty Name="Answer" ColumnName="Answer" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="BILLs"><EntityTypeMapping TypeName="FoodStoreModel.BILL"><MappingFragment StoreEntitySet="BILL">

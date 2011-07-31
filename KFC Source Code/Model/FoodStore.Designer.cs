@@ -557,24 +557,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Question
+        public Nullable<global::System.Int32> IDQuestion
         {
             get
             {
-                return _Question;
+                return _IDQuestion;
             }
             set
             {
-                OnQuestionChanging(value);
-                ReportPropertyChanging("Question");
-                _Question = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Question");
-                OnQuestionChanged();
+                OnIDQuestionChanging(value);
+                ReportPropertyChanging("IDQuestion");
+                _IDQuestion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDQuestion");
+                OnIDQuestionChanged();
             }
         }
-        private Nullable<global::System.Int32> _Question;
-        partial void OnQuestionChanging(Nullable<global::System.Int32> value);
-        partial void OnQuestionChanged();
+        private Nullable<global::System.Int32> _IDQuestion;
+        partial void OnIDQuestionChanging(Nullable<global::System.Int32> value);
+        partial void OnIDQuestionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
