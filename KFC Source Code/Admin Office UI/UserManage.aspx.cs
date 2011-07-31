@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 using Model;
+using Utility;
 
 //Using by Kimhieuqtvn
 
@@ -36,6 +37,14 @@ namespace ContosoWebApp
                         NewUserCity.DataSource = listCity;
                         NewUserCity.DataBind();
 
+                        //Đổ dữ liệu vào NewUserDistrict
+                        int cityId = int.Parse(NewUserCity.SelectedValue);
+                        List<DISTRICT> listDistrict = DistrictController.GetListDistrictByCityId(cityId);
+                        NewUserDistrict.DataTextField = "Name";
+                        NewUserDistrict.DataValueField = "ID";
+                        NewUserDistrict.DataSource = listDistrict;
+                        NewUserDistrict.DataBind();
+
 
                         //Hiển thị OfficePopupNewUser
                         OfficePopupNewUser.RecreateChildControls();
@@ -62,7 +71,7 @@ namespace ContosoWebApp
             if (DataValidating())
             {
                 String username = NewUserUserName.Text;
-                String password = NewUserPassword.Text;
+                String password = SaltEncrypt.HashCodeSHA1(NewUserPassword.Text);
                 String fullName = NewUserFullName.Text;
                 String address = NewUserAddress.Text;
                 String tel = NewUserPhone.Text;
@@ -74,7 +83,11 @@ namespace ContosoWebApp
                 int idDistrict = int.Parse(NewUserDistrict.SelectedValue);
                 if (!AccountController.Insert(username, password, fullName, address, tel, socialId, email, question, answer,
                                          idCity, idDistrict))
-                    Response.Write("<script type='text/javascript'>alert('Không thực hiện chèn Account vào CSDL được.')</script>");
+                    Response.Write(@"<script type='text/javascript'>alert('Không thực hiện chèn Account vào CSDL được.')</script>");
+                else
+                {
+                    OfficePopupNewUser.Hide();
+                }
                     
             }
         }

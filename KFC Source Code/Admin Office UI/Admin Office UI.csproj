@@ -481,6 +481,10 @@
       <Project>{8192EECB-F2F1-4753-A29F-246F7E2973BF}</Project>
       <Name>OfficeWebUI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
