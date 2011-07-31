@@ -86,6 +86,7 @@ namespace ContosoWebApp
                     Response.Write(@"<script type='text/javascript'>alert('Không thực hiện chèn Account vào CSDL được.')</script>");
                 else
                 {
+                    Utility.Mail.SendWelcome(email, fullName);
                     OfficePopupNewUser.Hide();
                 }
                     
