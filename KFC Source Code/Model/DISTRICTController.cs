@@ -15,5 +15,17 @@ namespace Model
             _db = new FoodStoreEntities();
             return _db.CITies.Single(p => p.ID == cityId).DISTRICTs.ToList();
         }
+
+        //Lấy câu hỏi by Id
+        public static DISTRICT GetById(int id)
+        {
+            _db = new FoodStoreEntities();
+            return _db.DISTRICTs.Single(p => p.ID == id);
+
+        }
+        public static DISTRICT GetById(int id,FoodStoreEntities db)
+        {
+            return db.DISTRICTs.Single(p => p.ID == id);
+        }
     }
 }
