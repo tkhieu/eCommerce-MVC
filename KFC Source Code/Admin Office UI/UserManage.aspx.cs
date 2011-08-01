@@ -90,6 +90,9 @@ namespace ContosoWebApp
                     OfficePopupNewUser.Hide();
                 }
                     
+            }else
+            {
+                OfficePopupNewUser.Height = 600;
             }
         }
 

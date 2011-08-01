@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <OfficeWebUI:OfficePopup ID="OfficePopupNewUser" runat="server" OnClickOk="NewUserPopupOk"
-        Title="New User Information" Height="600" Width="600px">
+        Title="New User Information" Height="550px" Width="400px">
         <Content>
             <h1>
                 New Customer</h1>

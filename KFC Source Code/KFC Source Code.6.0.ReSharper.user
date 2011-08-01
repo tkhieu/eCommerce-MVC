@@ -12,26 +12,21 @@
       <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:Combobox/f:Combobox.cs" caret="296" fromTop="0" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="10" fromTop="0" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="508" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="467" fromTop="0" />
       <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:SaltEncrypt.cs" caret="107" fromTop="6" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="27568" fromTop="11" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:DISTRICTController.cs" caret="731" fromTop="24" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:QUESTIONController.cs" caret="595" fromTop="21" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="708" fromTop="25" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx" caret="0" fromTop="0" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Default.aspx" caret="331" fromTop="5" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="801" fromTop="17" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="587" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="4054" fromTop="13" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx.cs" caret="797" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Web.config" caret="2521" fromTop="22" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx" caret="0" fromTop="0" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="521" fromTop="11" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="600" fromTop="9" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="455" fromTop="2" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="468" fromTop="7" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:SaltEncrypt.cs" caret="799" fromTop="25" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:SaltEncrypt.cs" caret="503" fromTop="15" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="138" fromTop="5" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:SaltEncrypt.cs" caret="107" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="3086" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="5282" fromTop="16" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:QUESTIONController.cs" caret="0" fromTop="0" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:QUESTIONController.cs" caret="231" fromTop="11" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="414" fromTop="20" />
@@ -48,14 +43,20 @@
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="1223" fromTop="16" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="530" fromTop="11" />
       <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="133" fromTop="5" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1478" fromTop="26" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="835" fromTop="11" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1586" fromTop="22" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1674" fromTop="26" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1483" fromTop="26" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="840" fromTop="11" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1591" fromTop="22" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="1679" fromTop="26" />
       <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="227" fromTop="9" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="801" fromTop="17" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="4054" fromTop="13" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx.cs" caret="797" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Web.config" caret="2521" fromTop="25" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="808" fromTop="11" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="4227" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="2203" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="717" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="455" fromTop="2" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="468" fromTop="7" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -145,6 +146,7 @@
       <Item value="RecreateChildControls`0" priority="27" />
       <Item value="Dispose`0" priority="26" />
       <Item value="Hide`0" priority="26" />
+      <Item value="Height" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
       <Item value="ctx" priority="0" />
@@ -241,7 +243,7 @@
       <Item value="TextMode" priority="13" />
       <Item value="Password" priority="13" />
       <Item value="Width" priority="69" />
-      <Item value="Height" priority="27" />
+      <Item value="Height" priority="35" />
       <Item value="NewUserPassword" priority="37" />
       <Item value="NewUserEmail" priority="21" />
       <Item value="OfficeCombobox`0" priority="6" />
@@ -273,7 +275,7 @@
       <Item value="void" priority="63" />
       <Item value="if" priority="383" />
       <Item value="Request" priority="58" />
-      <Item value="OfficePopupNewUser" priority="127" />
+      <Item value="OfficePopupNewUser" priority="250" />
       <Item value="public" priority="255" />
       <Item value="static" priority="383" />
       <Item value="List" priority="127" />
@@ -367,7 +369,7 @@
       <Item value="NewUserAddress" priority="26" />
       <Item value="NewUserSocialId" priority="31" />
       <Item value="AccountController`0" priority="31" />
-      <Item value="else" priority="63" />
+      <Item value="else" priority="127" />
       <Item value="class" priority="30" />
       <Item value="input" priority="95" />
       <Item value="string" priority="31" />
