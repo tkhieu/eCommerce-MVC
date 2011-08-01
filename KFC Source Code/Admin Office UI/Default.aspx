@@ -5,9 +5,24 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 
-<h1>Welcome to Contoso Backoffice Web App 2011</h1>
-<p>This demo app will show you what you can do with Office Web.UI; look at the sources to see how you can play with components. Enjoy.</p>
 
-<h3>This is for testing purposes !</h3>
-<p>Please send feedback !</p>
+<h1>Dự án: eCommerce-MVC-Web-Programing</h1>
+<p>
+    Lập trình một hệ thống Website thực hiện các chức năng Ecommerce <br/>
+    <b>Ngôn ngữ sử dụng: ASP.NET MVC3</b>
+    <b>View Syntax Engine: Razor</b>
+    <b>Admin View: OfficeWebUI</b>
+</p>
+<p>
+    <b>Github: <a href="git://github.com/kimhieuqtvn/eCommerce-MVC-Web-Programing-2.git">git://github.com/kimhieuqtvn/eCommerce-MVC-Web-Programing-2.git</a></b>
+
+    <h1>Thành viên</h1>
+    <b>Trần Kim Hiếu</b> - 0864050<br/>
+    <b>Phạm Chánh Tín</b> - 0864154<br/>
+    <b>Trương Ngọc Huyền</b> - 0864061<br/>
+    <b>Đặng Hoàng Vinh</b> - 0864183<br/>
+</p>
+
+<h3>Đang chạy thử nghiệm !</h3>
+<p>Please send feedback &lt;<a href="mailto:kimhieu.khtn@gmail.com">kimhieu.khtn@gmail.com</a>&gt;</p>
 </asp:Content>

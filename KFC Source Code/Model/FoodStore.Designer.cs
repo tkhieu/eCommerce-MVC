@@ -26,6 +26,11 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_FOOD_FOODTYPE1", "FOODTYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.FOODTYPE), "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.FOOD), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD1", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.FOOD), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER1", "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.ORDER), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ACCOUNT), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_DISTRICT", "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DISTRICT), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ACCOUNT), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_DISTRICT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.DISTRICT), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_DISTRICT", "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DISTRICT), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
 
 #endregion
 
@@ -204,6 +209,38 @@ namespace Model
             }
         }
         private ObjectSet<QUESTION> _QUESTIONs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CITY> CITies
+        {
+            get
+            {
+                if ((_CITies == null))
+                {
+                    _CITies = base.CreateObjectSet<CITY>("CITies");
+                }
+                return _CITies;
+            }
+        }
+        private ObjectSet<CITY> _CITies;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<DISTRICT> DISTRICTs
+        {
+            get
+            {
+                if ((_DISTRICTs == null))
+                {
+                    _DISTRICTs = base.CreateObjectSet<DISTRICT>("DISTRICTs");
+                }
+                return _DISTRICTs;
+            }
+        }
+        private ObjectSet<DISTRICT> _DISTRICTs;
 
         #endregion
         #region AddTo Methods
@@ -270,6 +307,22 @@ namespace Model
         public void AddToQUESTIONs(QUESTION qUESTION)
         {
             base.AddObject("QUESTIONs", qUESTION);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CITies EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCITies(CITY cITY)
+        {
+            base.AddObject("CITies", cITY);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the DISTRICTs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToDISTRICTs(DISTRICT dISTRICT)
+        {
+            base.AddObject("DISTRICTs", dISTRICT);
         }
 
         #endregion
@@ -504,24 +557,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Question
+        public Nullable<global::System.Int32> IDQuestion
         {
             get
             {
-                return _Question;
+                return _IDQuestion;
             }
             set
             {
-                OnQuestionChanging(value);
-                ReportPropertyChanging("Question");
-                _Question = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Question");
-                OnQuestionChanged();
+                OnIDQuestionChanging(value);
+                ReportPropertyChanging("IDQuestion");
+                _IDQuestion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDQuestion");
+                OnIDQuestionChanged();
             }
         }
-        private Nullable<global::System.Int32> _Question;
-        partial void OnQuestionChanging(Nullable<global::System.Int32> value);
-        partial void OnQuestionChanged();
+        private Nullable<global::System.Int32> _IDQuestion;
+        partial void OnIDQuestionChanging(Nullable<global::System.Int32> value);
+        partial void OnIDQuestionChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -546,6 +599,54 @@ namespace Model
         private global::System.String _Answer;
         partial void OnAnswerChanging(global::System.String value);
         partial void OnAnswerChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDCity
+        {
+            get
+            {
+                return _IDCity;
+            }
+            set
+            {
+                OnIDCityChanging(value);
+                ReportPropertyChanging("IDCity");
+                _IDCity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDCity");
+                OnIDCityChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDCity;
+        partial void OnIDCityChanging(Nullable<global::System.Int32> value);
+        partial void OnIDCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDDistrict
+        {
+            get
+            {
+                return _IDDistrict;
+            }
+            set
+            {
+                OnIDDistrictChanging(value);
+                ReportPropertyChanging("IDDistrict");
+                _IDDistrict = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDDistrict");
+                OnIDDistrictChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDDistrict;
+        partial void OnIDDistrictChanging(Nullable<global::System.Int32> value);
+        partial void OnIDDistrictChanged();
 
         #endregion
     
@@ -607,6 +708,82 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_ACCOUNT", "ORDER", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "CITY")]
+        public CITY CITY
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ACCOUNT_CITY", "CITY").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ACCOUNT_CITY", "CITY").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CITY> CITYReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ACCOUNT_CITY", "CITY");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CITY>("FoodStoreModel.FK_ACCOUNT_CITY", "CITY", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ACCOUNT_DISTRICT", "DISTRICT")]
+        public DISTRICT DISTRICT
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "DISTRICT").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "DISTRICT").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<DISTRICT> DISTRICTReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "DISTRICT");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DISTRICT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "DISTRICT", value);
                 }
             }
         }
@@ -1032,6 +1209,390 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FoodStoreModel", Name="CITY")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CITY : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CITY object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static CITY CreateCITY(global::System.Int32 id)
+        {
+            CITY cITY = new CITY();
+            cITY.ID = id;
+            return cITY;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Code
+        {
+            get
+            {
+                return _Code;
+            }
+            set
+            {
+                OnCodeChanging(value);
+                ReportPropertyChanging("Code");
+                _Code = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Code");
+                OnCodeChanged();
+            }
+        }
+        private global::System.String _Code;
+        partial void OnCodeChanging(global::System.String value);
+        partial void OnCodeChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "ACCOUNT")]
+        public EntityCollection<ACCOUNT> ACCOUNTs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ACCOUNT>("FoodStoreModel.FK_ACCOUNT_CITY", "ACCOUNT");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ACCOUNT>("FoodStoreModel.FK_ACCOUNT_CITY", "ACCOUNT", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_DISTRICT_CITY", "DISTRICT")]
+        public EntityCollection<DISTRICT> DISTRICTs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DISTRICT>("FoodStoreModel.FK_DISTRICT_CITY", "DISTRICT");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DISTRICT>("FoodStoreModel.FK_DISTRICT_CITY", "DISTRICT", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_CITY", "ORDER")]
+        public EntityCollection<ORDER> ORDERs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_CITY", "ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_CITY", "ORDER", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FoodStoreModel", Name="DISTRICT")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class DISTRICT : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new DISTRICT object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static DISTRICT CreateDISTRICT(global::System.Int32 id)
+        {
+            DISTRICT dISTRICT = new DISTRICT();
+            dISTRICT.ID = id;
+            return dISTRICT;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDCity
+        {
+            get
+            {
+                return _IDCity;
+            }
+            set
+            {
+                OnIDCityChanging(value);
+                ReportPropertyChanging("IDCity");
+                _IDCity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDCity");
+                OnIDCityChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDCity;
+        partial void OnIDCityChanging(Nullable<global::System.Int32> value);
+        partial void OnIDCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Code
+        {
+            get
+            {
+                return _Code;
+            }
+            set
+            {
+                OnCodeChanging(value);
+                ReportPropertyChanging("Code");
+                _Code = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Code");
+                OnCodeChanged();
+            }
+        }
+        private global::System.String _Code;
+        partial void OnCodeChanging(global::System.String value);
+        partial void OnCodeChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ACCOUNT_DISTRICT", "ACCOUNT")]
+        public EntityCollection<ACCOUNT> ACCOUNTs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ACCOUNT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "ACCOUNT");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ACCOUNT>("FoodStoreModel.FK_ACCOUNT_DISTRICT", "ACCOUNT", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_DISTRICT_CITY", "CITY")]
+        public CITY CITY
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_DISTRICT_CITY", "CITY").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_DISTRICT_CITY", "CITY").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CITY> CITYReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_DISTRICT_CITY", "CITY");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CITY>("FoodStoreModel.FK_DISTRICT_CITY", "CITY", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_DISTRICT", "ORDER")]
+        public EntityCollection<ORDER> ORDERs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_DISTRICT", "ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_DISTRICT", "ORDER", value);
                 }
             }
         }
@@ -1645,6 +2206,54 @@ namespace Model
         private Nullable<global::System.Int32> _TotalPayment;
         partial void OnTotalPaymentChanging(Nullable<global::System.Int32> value);
         partial void OnTotalPaymentChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDCity
+        {
+            get
+            {
+                return _IDCity;
+            }
+            set
+            {
+                OnIDCityChanging(value);
+                ReportPropertyChanging("IDCity");
+                _IDCity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDCity");
+                OnIDCityChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDCity;
+        partial void OnIDCityChanging(Nullable<global::System.Int32> value);
+        partial void OnIDCityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDDistrict
+        {
+            get
+            {
+                return _IDDistrict;
+            }
+            set
+            {
+                OnIDDistrictChanging(value);
+                ReportPropertyChanging("IDDistrict");
+                _IDDistrict = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDDistrict");
+                OnIDDistrictChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDDistrict;
+        partial void OnIDDistrictChanging(Nullable<global::System.Int32> value);
+        partial void OnIDDistrictChanged();
 
         #endregion
     
@@ -1744,6 +2353,82 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDERDETAIL", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_CITY", "CITY")]
+        public CITY CITY
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ORDER_CITY", "CITY").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ORDER_CITY", "CITY").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CITY> CITYReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CITY>("FoodStoreModel.FK_ORDER_CITY", "CITY");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CITY>("FoodStoreModel.FK_ORDER_CITY", "CITY", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_DISTRICT", "DISTRICT")]
+        public DISTRICT DISTRICT
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ORDER_DISTRICT", "DISTRICT").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ORDER_DISTRICT", "DISTRICT").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<DISTRICT> DISTRICTReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DISTRICT>("FoodStoreModel.FK_ORDER_DISTRICT", "DISTRICT");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DISTRICT>("FoodStoreModel.FK_ORDER_DISTRICT", "DISTRICT", value);
                 }
             }
         }

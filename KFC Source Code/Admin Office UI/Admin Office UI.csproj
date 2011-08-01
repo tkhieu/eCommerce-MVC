@@ -62,6 +62,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Library\css\StyleSheet.css" />
+    <Content Include="Library\js\jquery-1.6.2.js" />
     <Content Include="UserManage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -469,8 +471,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Library\css\" />
-    <Folder Include="Library\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
@@ -480,6 +480,10 @@
     <ProjectReference Include="..\OfficeWebUI\OfficeWebUI.csproj">
       <Project>{8192EECB-F2F1-4753-A29F-246F7E2973BF}</Project>
       <Name>OfficeWebUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

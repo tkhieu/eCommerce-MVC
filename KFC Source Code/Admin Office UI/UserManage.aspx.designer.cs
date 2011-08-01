@@ -31,6 +31,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewUserUserName;
         
         /// <summary>
+        /// LabelUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelUserName;
+        
+        /// <summary>
         /// NewUserPassword control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewUserPassword;
+        
+        /// <summary>
+        /// LabelPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPassword;
         
         /// <summary>
         /// NewUserRetypePassword control.
@@ -49,6 +67,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewUserRetypePassword;
         
         /// <summary>
+        /// LabelRetypePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRetypePassword;
+        
+        /// <summary>
         /// NewUserEmail control.
         /// </summary>
         /// <remarks>
@@ -56,6 +83,15 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewUserEmail;
+        
+        /// <summary>
+        /// LabelEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelEmail;
         
         /// <summary>
         /// NewUserRetypeEmail control.
@@ -67,13 +103,22 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewUserRetypeEmail;
         
         /// <summary>
+        /// LabelRetypeEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRetypeEmail;
+        
+        /// <summary>
         /// NewUserQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.OfficeCombobox NewUserQuestion;
+        protected global::System.Web.UI.WebControls.DropDownList NewUserQuestion;
         
         /// <summary>
         /// NewUserAnswer control.
@@ -83,5 +128,113 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewUserAnswer;
+        
+        /// <summary>
+        /// LabelAnswer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAnswer;
+        
+        /// <summary>
+        /// NewUserFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewUserFullName;
+        
+        /// <summary>
+        /// LabelFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelFullName;
+        
+        /// <summary>
+        /// NewUserSocialId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewUserSocialId;
+        
+        /// <summary>
+        /// LabelSocialId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSocialId;
+        
+        /// <summary>
+        /// NewUserPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewUserPhone;
+        
+        /// <summary>
+        /// LabelPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPhone;
+        
+        /// <summary>
+        /// NewUserAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewUserAddress;
+        
+        /// <summary>
+        /// LabelAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAddress;
+        
+        /// <summary>
+        /// NewUserWard control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewUserWard;
+        
+        /// <summary>
+        /// NewUserDistrict control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList NewUserDistrict;
+        
+        /// <summary>
+        /// NewUserCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList NewUserCity;
     }
 }
