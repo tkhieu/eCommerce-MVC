@@ -2,3 +2,13 @@
 {
     color: red;
 }
+
+.ContentTableHeader {
+    font-size: 12px;
+    text-align: left;
+    border: black;
+}
+
+.ContentTableBorder {
+    width: 100%;
+}

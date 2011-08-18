@@ -20,8 +20,9 @@
                         Username
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserUserName" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelUserName" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserUserName" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelUserName" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -30,7 +31,7 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="NewUserPassword" TextMode="Password" Width="200"
-                            Height="15"></asp:TextBox><br/>
+                            Height="15"></asp:TextBox><br />
                         <asp:Label ID="LabelPassword" runat="server" Text="Label" Visible="false" CssClass="validate-error"></asp:Label>
                     </td>
                 </tr>
@@ -40,7 +41,7 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="NewUserRetypePassword" TextMode="Password" Width="200"
-                            Height="15"></asp:TextBox><br/> 
+                            Height="15"></asp:TextBox><br />
                         <asp:Label ID="LabelRetypePassword" runat="server" Text="Label" Visible="false" CssClass="validate-error"></asp:Label>
                     </td>
                 </tr>
@@ -49,7 +50,7 @@
                         Email
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserEmail" Width="200" Height="15"></asp:TextBox><br/>
+                        <asp:TextBox runat="server" ID="NewUserEmail" Width="200" Height="15"></asp:TextBox><br />
                         <asp:Label ID="LabelEmail" runat="server" Text="Label" Visible="false"></asp:Label>
                     </td>
                 </tr>
@@ -59,7 +60,8 @@
                     </td>
                     <td>
                         <asp:TextBox runat="server" ID="NewUserRetypeEmail" Width="200" Height="15"></asp:TextBox><br />
-                        <asp:Label ID="LabelRetypeEmail" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:Label ID="LabelRetypeEmail" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -81,8 +83,9 @@
                         Answer
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserAnswer" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelAnswer" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserAnswer" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelAnswer" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -95,8 +98,9 @@
                         Full name
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserFullName" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelFullName" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserFullName" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelFullName" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -104,8 +108,9 @@
                         Social ID
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserSocialId" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelSocialId" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserSocialId" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelSocialId" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -113,8 +118,9 @@
                         Phone Number
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserPhone" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelPhone" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserPhone" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelPhone" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -122,8 +128,9 @@
                         Address
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="NewUserAddress" Width="200" Height="15"></asp:TextBox><br/>
-                        <asp:Label ID="LabelAddress" runat="server" Text="Label" CssClass="validate-error" Visible="false"></asp:Label>
+                        <asp:TextBox runat="server" ID="NewUserAddress" Width="200" Height="15"></asp:TextBox><br />
+                        <asp:Label ID="LabelAddress" runat="server" Text="Label" CssClass="validate-error"
+                            Visible="false"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -149,10 +156,56 @@
                     </td>
                     <td>
                         <asp:DropDownList ID="NewUserCity" runat="server" Width="200" AutoPostBack="True">
-                        </asp:DropDownList>                        
+                        </asp:DropDownList>
                     </td>
                 </tr>
             </table>
         </Content>
     </OfficeWebUI:OfficePopup>
+
+    <%--Hộp thoại cảnh báo khi xóa một Record--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxConfirmDelete" Title="Delete Confirm"
+        Text="Do you want to delete..." ButtonsType="YesNo" MessageBoxType="Warn" OnReturn="DeleteAccountYes">
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại cảnh báo khi sửa một Record--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxConfirmEdit" Title="Edit Confirm"
+        Text="Do you want to edit..." ButtonsType="YesNo" MessageBoxType="Warn" OnReturn="EditAccountYes">
+    </OfficeWebUI:OfficeMessageBox>
+
+    <%--Hiển thị Danh sách User qua GridView--%>
+
+    <asp:GridView ID="GridViewListUser" runat="server"  
+                AutoGenerateColumns="False" CellPadding="4" 
+        ForeColor="#333333" CssClass="ContentTableBorder" 
+        onrowediting="GridViewListUser_RowEditing" 
+        onrowdeleting="GridViewListUser_RowDeleting">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:CommandField ShowSelectButton="False" ShowDeleteButton="True" 
+                        ShowEditButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" ReadOnly="True" SortExpression="Username" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" ReadOnly="True" SortExpression="Address" />
+                    
+                    <asp:BoundField DataField="District" HeaderText="District" ReadOnly="True" SortExpression="District" />
+                    <asp:BoundField DataField="City" HeaderText="City" ReadOnly="True" SortExpression="City" />
+                    
+                    <asp:BoundField DataField="Tel" HeaderText="Tel" ReadOnly="True" SortExpression="Tel" />
+                    <asp:BoundField DataField="SocialID" HeaderText="SocialID" ReadOnly="True" SortExpression="SocialID" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />
+                </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" 
+                    CssClass="ContentTableHeader" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+            </asp:GridView>
+    
 </asp:Content>

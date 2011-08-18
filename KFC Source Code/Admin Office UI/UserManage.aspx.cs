@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using Model;
+using OfficeWebUI;
 using Utility;
 
 //Using by Kimhieuqtvn
@@ -13,8 +16,27 @@ namespace ContosoWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //NewUserCity.ViewStateMode = ViewStateMode.Enabled;
+            
+            //Load
+            List<ACCOUNT> list = AccountController.GetList();
 
+            var listAccount = from account in list
+                              select new
+                              {
+                                  ID = account.ID,
+                                  Username = account.Username,
+                                  Name = account.Name,
+                                  Address = account.Address,
+                                  City = account.CITY.Name,
+                                  District = account.DISTRICT.Name,
+                                  Tel = account.Tel,
+                                  SocialID = account.SocialID,
+                                  Email = account.Email
+                              };
+            GridViewListUser.DataSource = listAccount;
+            GridViewListUser.DataBind();
+
+            //NewUserCity.ViewStateMode = ViewStateMode.Enabled;
             //Kiểm tra xem có đang ở trạng thái PostBack hay không
             if (!IsPostBack)
             {
@@ -179,6 +201,88 @@ namespace ContosoWebApp
             LabelSocialId.Visible = false;
             LabelAnswer.Visible = false;
             LabelAddress.Visible = false;
+        }
+
+        
+
+        protected void GridViewListUser_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
+        {
+            Session["id"] = GridViewListUser.Rows[e.NewEditIndex].Cells[1].Text;
+            Session["edit"] = 1;
+            OfficeMessageBoxConfirmEdit.Show();
+        }
+
+        protected void GridViewListUser_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
+        {
+            Session["id"] = e.Values["ID"].ToString();
+            OfficeMessageBoxConfirmDelete.Show();
+        }
+
+        protected void DeleteAccountYes(object sender, EventArgs e)
+        {
+            if (OfficeMessageBoxConfirmDelete.ReturnValue == MessageBoxReturnType.Yes)
+            {
+                int id = int.Parse(Session["id"].ToString());
+                AccountController.Delete(id);    
+            }
+        }
+
+        protected void EditAccountYes(object sender, EventArgs e)
+        {
+            if (OfficeMessageBoxConfirmEdit.ReturnValue == MessageBoxReturnType.Yes)
+            {
+                int id = int.Parse(Session["id"].ToString());
+                var account = AccountController.Get(id);
+
+                //Cấm Edit thông tin đăng nhập
+                NewUserUserName.Enabled = false;
+                NewUserPassword.Enabled = false;
+                NewUserRetypePassword.Enabled = false;
+                NewUserEmail.Enabled = false;
+                NewUserRetypeEmail.Enabled = false;
+
+                //Cấm Edit thông tin bảo mật
+                NewUserQuestion.Enabled = false;
+                NewUserAnswer.Enabled = false;
+
+                //Load thông tin lên các Control
+                NewUserUserName.Text = account.Username;
+                NewUserPassword.Text = @"-------------------";
+                NewUserRetypePassword.Text = @"-------------------";
+                NewUserEmail.Text = account.Email;
+                NewUserRetypeEmail.Text = account.Email;
+
+
+                var listItem = new ListItem {Text = account.QUESTION.Question, Value = ""};
+                NewUserQuestion.Items.Add(listItem);
+                NewUserQuestion.SelectedIndex = 0;
+                NewUserAnswer.Text = @"-------------------";
+
+                NewUserFullName.Text = account.Name;
+                NewUserSocialId.Text = account.SocialID;
+                NewUserPhone.Text = account.Tel;
+                NewUserAddress.Text = account.Address;
+                NewUserWard.Text = @"Tạm thời không có";
+
+
+                List<CITY> listCity = CityController.GetList();
+                NewUserCity.DataTextField = "Name";
+                NewUserCity.DataValueField = "ID";
+                NewUserCity.DataSource = listCity;
+                NewUserCity.DataBind();
+                //NewUserCity.SelectedValue = account.CITY.Name;
+
+                //Đổ dữ liệu vào NewUserDistrict
+                int cityId = int.Parse(NewUserCity.SelectedValue);
+                List<DISTRICT> listDistrict = DistrictController.GetListDistrictByCityId(cityId);
+                NewUserDistrict.DataTextField = "Name";
+                NewUserDistrict.DataValueField = "ID";
+                NewUserDistrict.DataSource = listDistrict;
+                NewUserDistrict.DataBind();
+                //NewUserDistrict.SelectedValue = account.DISTRICT.Name;
+
+                OfficePopupNewUser.Show();
+            }
         }
     }
 }

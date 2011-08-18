@@ -59,5 +59,36 @@ namespace Model{
             }
             return id;
         }
+
+        public static List<ACCOUNT> GetList()
+        {
+            _db = new FoodStoreEntities();
+
+            return _db.ACCOUNTs.ToList();
+        }
+
+        public static bool Delete(int id)
+        {
+            bool flag = true;
+            try
+            {
+                _db = new FoodStoreEntities();
+                var account = _db.ACCOUNTs.Single(p => p.ID == id);
+                _db.ACCOUNTs.DeleteObject(account);
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
+            return flag;
+        }
+
+        public static ACCOUNT Get(int id)
+        {
+            _db = new FoodStoreEntities();
+            return _db.ACCOUNTs.Single(p => p.ID == id);
+        }
     }
 }

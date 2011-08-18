@@ -44,7 +44,7 @@
                                     <OfficeWebUI:GroupZone ID="GroupZone12" runat="server" Text="Zone 1">
                                         <Content>
                                             <OfficeWebUI:LargeItem ID="LargeItem1" runat="server" ImageUrl="~/library/img/32/icon52_32.png" Text="New User" ToolTip="<b>Create a new user</b><br/>Use this option to create a new user in the system" NavigateUrl="~/UserManage.aspx?New=1" />
-                                            <OfficeWebUI:LargeItem ID="LargeItem2" runat="server" ImageUrl="~/library/img/32/icon117_32.png" Text="Users" ToolTip="<b>Manage the users</b><br/>Use this option to display user in grid view" />
+                                            <OfficeWebUI:LargeItem ID="LargeItem2" runat="server" ImageUrl="~/library/img/32/icon117_32.png" Text="Users" ToolTip="<b>Manage the users</b><br/>Use this option to display user in grid view" NavigateUrl="~/UserManage.aspx"/>
                                         </Content>
                                     </OfficeWebUI:GroupZone>
                                 </Zones>
