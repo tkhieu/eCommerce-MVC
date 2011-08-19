@@ -453,7 +453,7 @@
           <Property Name="Price" Type="Int32" />
           <Property Name="Detail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Image" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
-          <Property Name="FoodType" Type="Int32" />
+          <Property Name="FoodTypeId" Type="Int32" />
           <NavigationProperty Name="BILLDETAILs" Relationship="FoodStoreModel.FK_BILLDETAIL_FOOD1" FromRole="FOOD" ToRole="BILLDETAIL" />
           <NavigationProperty Name="FOODTYPE" Relationship="FoodStoreModel.FK_FOOD_FOODTYPE1" FromRole="FOOD" ToRole="FOODTYPE" />
           <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD1" FromRole="FOOD" ToRole="ORDERDETAIL" />
@@ -576,7 +576,7 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="FOOD">
-              <PropertyRef Name="FoodType" />
+              <PropertyRef Name="FoodTypeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -726,7 +726,7 @@
             <ScalarProperty Name="Price" ColumnName="Price" />
             <ScalarProperty Name="Detail" ColumnName="Detail" />
             <ScalarProperty Name="Image" ColumnName="Image" />
-            <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+            <ScalarProperty Name="FoodTypeId" ColumnName="FoodType" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="FOODTYPEs"><EntityTypeMapping TypeName="FoodStoreModel.FOODTYPE"><MappingFragment StoreEntitySet="FOODTYPE">
             <ScalarProperty Name="ID" ColumnName="ID" />

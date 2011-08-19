@@ -21,7 +21,7 @@ namespace FrontEnd_MVC3.Controllers
         //Xem các món ăn thuộc về một loại món ăn(foodtype)
         public ActionResult Browse(int id)
         {
-            var listFood = StoreDB.FOODs.Where(p => p.FoodType == id).ToList();
+            var listFood = StoreDB.FOODs.Where(p => p.FoodTypeId == id).ToList();
             return View(listFood);
         }
         //Xem thông tin chi tiết về một món ăn

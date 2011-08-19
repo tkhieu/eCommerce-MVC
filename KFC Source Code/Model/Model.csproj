@@ -50,11 +50,13 @@
     <Compile Include="ACCOUNTController.cs" />
     <Compile Include="CITYController.cs" />
     <Compile Include="DISTRICTController.cs" />
+    <Compile Include="FOODController.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodStore.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FOODTYPEController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUESTIONController.cs" />
   </ItemGroup>

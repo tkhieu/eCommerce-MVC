@@ -1752,24 +1752,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FoodType
+        public Nullable<global::System.Int32> FoodTypeId
         {
             get
             {
-                return _FoodType;
+                return _FoodTypeId;
             }
             set
             {
-                OnFoodTypeChanging(value);
-                ReportPropertyChanging("FoodType");
-                _FoodType = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FoodType");
-                OnFoodTypeChanged();
+                OnFoodTypeIdChanging(value);
+                ReportPropertyChanging("FoodTypeId");
+                _FoodTypeId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FoodTypeId");
+                OnFoodTypeIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _FoodType;
-        partial void OnFoodTypeChanging(Nullable<global::System.Int32> value);
-        partial void OnFoodTypeChanged();
+        private Nullable<global::System.Int32> _FoodTypeId;
+        partial void OnFoodTypeIdChanging(Nullable<global::System.Int32> value);
+        partial void OnFoodTypeIdChanged();
 
         #endregion
     

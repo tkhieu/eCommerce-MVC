@@ -40,6 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="FtpOperation\Extensions.cs" />
+    <Compile Include="FtpOperation\FtpConnection.cs" />
+    <Compile Include="FtpOperation\FtpDirectoryInfo.cs" />
+    <Compile Include="FtpOperation\FtpException.cs" />
+    <Compile Include="FtpOperation\FtpFileInfo.cs" />
+    <Compile Include="FtpOperation\WinApi.cs" />
     <Compile Include="SaltEncrypt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mail.cs" />
