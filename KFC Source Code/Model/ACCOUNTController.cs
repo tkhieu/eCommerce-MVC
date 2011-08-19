@@ -45,6 +45,35 @@ namespace Model{
             return flag;
         }
 
+        public static bool Update(int id, String fullName, String address, String tel, String socialId, int idCity, int idDistrict)
+        {
+            //Khởi tạo một đối tượng ACCOUNT
+
+            _db = new FoodStoreEntities();
+
+            var account = Get(id);
+            
+            account.Name = fullName;
+            account.Address = address;
+            account.Tel = tel;
+            account.SocialID = socialId;
+            account.CITY = CityController.GetById(idCity, _db);
+            account.DISTRICT = DistrictController.GetById(idDistrict, _db);
+
+            //Chèn đối tượng ACCOUNT vào CSDL
+            bool flag = true;
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
+            return flag;
+        }
+
         public static int GetMaxId()
         {
             int id;

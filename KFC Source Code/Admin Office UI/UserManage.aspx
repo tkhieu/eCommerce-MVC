@@ -171,6 +171,22 @@
     <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxConfirmEdit" Title="Edit Confirm"
         Text="Do you want to edit..." ButtonsType="YesNo" MessageBoxType="Warn" OnReturn="EditAccountYes">
     </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại báo cập nhật user thành công--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxUpdateAccountSuccess" Title="Success"
+        Text="Update user infomation success..." ButtonsType="Ok" MessageBoxType="Info" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi cập nhật user thất bại--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxUpdateAccountFail" Title="Fail"
+        Text="Update user infomation fail..." ButtonsType="Ok" MessageBoxType="Error" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi thêm user thành công--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddAccountSuccess" Title="Success"
+        Text="Insert user infomation success..." ButtonsType="Ok" MessageBoxType="Info" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi thêm user thất bại--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddAccountFail" Title="Fail"
+        Text="Insert user infomation fail..." ButtonsType="Ok" MessageBoxType="Error" >
+    </OfficeWebUI:OfficeMessageBox>
 
     <%--Hiển thị Danh sách User qua GridView--%>
 

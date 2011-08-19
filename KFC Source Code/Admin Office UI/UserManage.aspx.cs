@@ -14,6 +14,11 @@ namespace ContosoWebApp
 {
     public partial class UserManage : Page
     {
+
+        //
+        private OfficeMessageBox _officeMessageBoxAddUserSuccess;
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -103,13 +108,38 @@ namespace ContosoWebApp
                 String answer = NewUserAnswer.Text;
                 int idCity = int.Parse(NewUserCity.SelectedValue);
                 int idDistrict = int.Parse(NewUserDistrict.SelectedValue);
-                if (!AccountController.Insert(username, password, fullName, address, tel, socialId, email, question, answer,
-                                         idCity, idDistrict))
-                    Response.Write(@"<script type='text/javascript'>alert('Không thực hiện chèn Account vào CSDL được.')</script>");
+
+                if (Session["edit"] != null)
+                {
+                    int idAccount = int.Parse(Session["id"].ToString());
+                    if (!AccountController.Update(idAccount, fullName, address, tel, socialId, idCity, idDistrict))
+                    {
+                        OfficeMessageBoxUpdateAccountFail.Show();
+                        OfficePopupNewUser.Hide();
+                        Session["edit"] = null;
+                    }
+                    else
+                    {
+                        
+                        OfficeMessageBoxUpdateAccountSuccess.Show();
+                        OfficePopupNewUser.Hide();
+                        Session["edit"] = null;
+                    }
+                }
                 else
                 {
-                    Utility.Mail.SendWelcome(email, fullName);
-                    OfficePopupNewUser.Hide();
+                    if (!AccountController.Insert(username, password, fullName, address, tel, socialId, email, question, answer,
+                                         idCity, idDistrict))
+                    {
+                        OfficeMessageBoxAddAccountFail.Show();
+                        OfficePopupNewUser.Hide();
+                    }
+                    else
+                    {
+                        OfficeMessageBoxAddAccountSuccess.Show();
+                        Utility.Mail.SendWelcome(email, fullName);
+                        OfficePopupNewUser.Hide();
+                    }                    
                 }
                     
             }else
@@ -117,6 +147,7 @@ namespace ContosoWebApp
                 OfficePopupNewUser.Height = 600;
             }
         }
+
 
         private bool DataValidating()
         {
@@ -210,6 +241,7 @@ namespace ContosoWebApp
             Session["id"] = GridViewListUser.Rows[e.NewEditIndex].Cells[1].Text;
             Session["edit"] = 1;
             OfficeMessageBoxConfirmEdit.Show();
+            e.Cancel = true;
         }
 
         protected void GridViewListUser_RowDeleting(object sender, System.Web.UI.WebControls.GridViewDeleteEventArgs e)
@@ -247,13 +279,15 @@ namespace ContosoWebApp
 
                 //Load thông tin lên các Control
                 NewUserUserName.Text = account.Username;
+                NewUserPassword.TextMode = TextBoxMode.SingleLine;
+                NewUserRetypePassword.TextMode = TextBoxMode.SingleLine;
                 NewUserPassword.Text = @"-------------------";
                 NewUserRetypePassword.Text = @"-------------------";
                 NewUserEmail.Text = account.Email;
                 NewUserRetypeEmail.Text = account.Email;
 
 
-                var listItem = new ListItem {Text = account.QUESTION.Question, Value = ""};
+                var listItem = new ListItem {Text = account.QUESTION.Question, Value = account.QUESTION.ID.ToString()};
                 NewUserQuestion.Items.Add(listItem);
                 NewUserQuestion.SelectedIndex = 0;
                 NewUserAnswer.Text = @"-------------------";
@@ -270,7 +304,7 @@ namespace ContosoWebApp
                 NewUserCity.DataValueField = "ID";
                 NewUserCity.DataSource = listCity;
                 NewUserCity.DataBind();
-                //NewUserCity.SelectedValue = account.CITY.Name;
+                NewUserCity.SelectedValue = account.IDCity.ToString();
 
                 //Đổ dữ liệu vào NewUserDistrict
                 int cityId = int.Parse(NewUserCity.SelectedValue);
@@ -279,8 +313,7 @@ namespace ContosoWebApp
                 NewUserDistrict.DataValueField = "ID";
                 NewUserDistrict.DataSource = listDistrict;
                 NewUserDistrict.DataBind();
-                //NewUserDistrict.SelectedValue = account.DISTRICT.Name;
-
+                NewUserDistrict.SelectedValue = account.IDDistrict.ToString();
                 OfficePopupNewUser.Show();
             }
         }

@@ -256,6 +256,42 @@ namespace ContosoWebApp {
         protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxConfirmEdit;
         
         /// <summary>
+        /// OfficeMessageBoxUpdateAccountSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateAccountSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxUpdateAccountFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateAccountFail;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddAccountSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddAccountSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddAccountFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddAccountFail;
+        
+        /// <summary>
         /// GridViewListUser control.
         /// </summary>
         /// <remarks>
