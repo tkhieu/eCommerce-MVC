@@ -8,6 +8,7 @@ using System.IO;
 using FtpLib;
 using Model;
 using Utility;
+using OfficeWebUI;
 
 namespace ContosoWebApp
 {
@@ -17,6 +18,20 @@ namespace ContosoWebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            var list = FoodController.GetList();
+            var listFood = from food in list
+                           select new
+                                      {
+                                          ID = food.ID,
+                                          Name = food.Name,
+                                          FoodType = food.FOODTYPE.Name,
+                                          Price = food.Price,
+                                          Image = food.Image
+                                      };
+
+            GridViewListFood.DataSource = listFood;
+            GridViewListFood.DataBind();
+
             if (!IsPostBack)
             {
                 if (Request.QueryString.Count == 1)
@@ -40,11 +55,13 @@ namespace ContosoWebApp
         {
             if (DataValidate())
             {
+                
+
                 bool checkFtpNotError = true;
 
                 int foodId = FoodController.GetMaxId();
                 String imageFileName = "";
-
+                
                 if (NewFoodImage.PostedFile != null)
                 {
                     var postImage = NewFoodImage.PostedFile;
@@ -93,27 +110,54 @@ namespace ContosoWebApp
                     }
                 }
 
-                if (checkFtpNotError)
-                {
-                    String foodName = NewFoodName.Text;
-                    int foodPrice = int.Parse(NewFoodPrice.Text);
-                    int foodType = int.Parse(NewFoodType.SelectedValue);
-                    String imageOnCdn = imageFileName;
-                    String foodDetail = CKEditorNewFood.Text;
+                String foodName = NewFoodName.Text;
+                int foodPrice = int.Parse(NewFoodPrice.Text);
+                int foodType = int.Parse(NewFoodType.SelectedValue);
+                String imageOnCdn = imageFileName;
+                String foodDetail = CKEditorNewFood.Text;
 
-                    if (!FoodController.Insert(foodId, foodName, foodPrice, foodType, imageOnCdn, foodDetail))
+                if (Session["edit"] != null)
+                {
+
+                    foodId = int.Parse(Session["id"].ToString());
+                    
+                    if (NewFoodImage.PostedFile == null)
                     {
-                        OfficeMessageBoxAddFoodFail.Show();
+                        imageOnCdn = null;
+                    }
+
+                    if (!FoodController.Update(foodId, foodName, foodPrice, foodType, imageOnCdn, foodDetail))
+                    {
+                        OfficeMessageBoxUpdateFoodFail.Show();
                         OfficePopupNewFood.Hide();
                     }
                     else
                     {
-                        OfficeMessageBoxAddFoodSuccess.Show();
+                        OfficeMessageBoxUpdateFoodSuccess.Show();
                         OfficePopupNewFood.Hide();
                     }
-                }
 
-                
+
+                    Session["edit"] = null;
+                }
+                else
+                {
+                    if (checkFtpNotError)
+                    {
+                        
+
+                        if (!FoodController.Insert(foodId, foodName, foodPrice, foodType, imageOnCdn, foodDetail))
+                        {
+                            OfficeMessageBoxAddFoodFail.Show();
+                            OfficePopupNewFood.Hide();
+                        }
+                        else
+                        {
+                            OfficeMessageBoxAddFoodSuccess.Show();
+                            OfficePopupNewFood.Hide();
+                        }
+                    }
+                }
             }
         }
 
@@ -139,6 +183,54 @@ namespace ContosoWebApp
 
         protected void OnOfficeMessageBoxFoodFailYes(object sender, EventArgs e)
         {
+            OfficePopupNewFood.Show();
+        }
+
+        protected void GridViewListFood_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Session["id"] = GridViewListFood.Rows[e.NewEditIndex].Cells[1].Text;
+            OfficeMessageBoxConfirmEdit.Show();
+            e.Cancel = true;
+        }
+
+        protected void GridViewListFood_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            Session["id"] = e.Values["ID"];
+            OfficeMessageBoxConfirmDelete.Show();
+
+        }
+
+        protected void DeleteFoodYes(object sender, EventArgs e)
+        {
+            if (OfficeMessageBoxConfirmDelete.ReturnValue == MessageBoxReturnType.Yes)
+            {
+                int id = int.Parse(Session["id"].ToString());
+                if (FoodController.Delete(id))
+                {
+                    Response.Redirect("~/FoodManage.aspx");
+                }
+                
+            }
+        }
+
+        protected void EditFoodYes(object sender, EventArgs e)
+        {
+            int id = int.Parse(Session["id"].ToString());
+            Session["edit"] = 1;
+            var food = FoodController.Get(id);
+
+            var listFoodType = FoodTypeController.GetList();
+
+            NewFoodType.DataSource = listFoodType;
+            NewFoodType.DataValueField = "ID";
+            NewFoodType.DataTextField = "Name";
+            NewFoodType.DataBind();
+
+            NewFoodName.Text = food.Name;
+            NewFoodPrice.Text = food.Price.ToString();
+            NewFoodType.SelectedValue = food.FOODTYPE.ID.ToString();
+            CKEditorNewFood.Text = food.Detail;
+
             OfficePopupNewFood.Show();
         }
     }

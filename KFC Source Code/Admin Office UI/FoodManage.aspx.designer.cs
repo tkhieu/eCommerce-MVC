@@ -83,5 +83,50 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddFoodFail;
+        
+        /// <summary>
+        /// OfficeMessageBoxUpdateFoodSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateFoodSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxUpdateFoodFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateFoodFail;
+        
+        /// <summary>
+        /// OfficeMessageBoxConfirmDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxConfirmDelete;
+        
+        /// <summary>
+        /// OfficeMessageBoxConfirmEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxConfirmEdit;
+        
+        /// <summary>
+        /// GridViewListFood control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewListFood;
     }
 }

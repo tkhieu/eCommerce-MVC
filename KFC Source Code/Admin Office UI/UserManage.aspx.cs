@@ -237,7 +237,6 @@ namespace ContosoWebApp
         protected void GridViewListUser_RowEditing(object sender, System.Web.UI.WebControls.GridViewEditEventArgs e)
         {
             Session["id"] = GridViewListUser.Rows[e.NewEditIndex].Cells[1].Text;
-            Session["edit"] = 1;
             OfficeMessageBoxConfirmEdit.Show();
             e.Cancel = true;
         }
@@ -253,7 +252,10 @@ namespace ContosoWebApp
             if (OfficeMessageBoxConfirmDelete.ReturnValue == MessageBoxReturnType.Yes)
             {
                 int id = int.Parse(Session["id"].ToString());
-                AccountController.Delete(id);    
+                if (AccountController.Delete(id))
+                {
+                    Response.Redirect("~/UserManage.aspx");
+                }
             }
         }
 
@@ -263,6 +265,7 @@ namespace ContosoWebApp
             {
                 int id = int.Parse(Session["id"].ToString());
                 var account = AccountController.Get(id);
+                Session["edit"] = 1;
 
                 //Cấm Edit thông tin đăng nhập
                 NewUserUserName.Enabled = false;
