@@ -4,7 +4,7 @@
 <script type="text/javascript" src="Scripts/JScriptFileUpload.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFood" Title="New Food" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="90%" OnClickOk="NewFoodPopupOk">
+<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFood" Title="New Food" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="900px" OnClickOk="NewFoodPopupOk">
 	<Content>
 		<table style="width: 100%">
 	<tr>
@@ -37,4 +37,13 @@
 
 	</Content>
 </OfficeWebUI:OfficePopup>
+
+    <%--Hộp thoại khi thêm food thành công--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddFoodSuccess" Title="Success"
+        Text="Insert food infomation success..." ButtonsType="Ok" MessageBoxType="Info" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi thêm food thất bại--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddFoodFail" Title="Fail"
+        Text="Insert food infomation fail..." ButtonsType="Ok" MessageBoxType="Error" OnReturn="OnOfficeMessageBoxFoodFailYes">
+    </OfficeWebUI:OfficeMessageBox>
 </asp:Content>

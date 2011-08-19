@@ -65,5 +65,23 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CKEditor.NET.CKEditorControl CKEditorNewFood;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddFoodSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddFoodSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddFoodFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddFoodFail;
     }
 }
