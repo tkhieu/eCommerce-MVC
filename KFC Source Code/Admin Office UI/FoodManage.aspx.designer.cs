@@ -49,6 +49,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.FileUpload NewFoodImage;
         
         /// <summary>
+        /// NewFoodType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList NewFoodType;
+        
+        /// <summary>
         /// CKEditorNewFood control.
         /// </summary>
         /// <remarks>
