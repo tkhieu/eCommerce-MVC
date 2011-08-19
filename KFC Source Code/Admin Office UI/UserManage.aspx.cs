@@ -16,9 +16,7 @@ namespace ContosoWebApp
     {
 
         //
-        private OfficeMessageBox _officeMessageBoxAddUserSuccess;
         
-
         protected void Page_Load(object sender, EventArgs e)
         {
             
