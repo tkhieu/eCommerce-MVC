@@ -3,67 +3,74 @@
     <string />
     <integer />
     <boolean>
-      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="livetemplates.csharp.usevar">False</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="27568" fromTop="11" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:DISTRICTController.cs" caret="731" fromTop="24" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:QUESTIONController.cs" caret="595" fromTop="21" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="708" fromTop="25" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Default.aspx" caret="331" fromTop="5" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx.cs" caret="797" fromTop="10" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Web.config" caret="2521" fromTop="22" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Inbox.aspx" caret="0" fromTop="0" />
       <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Mail.cs" caret="600" fromTop="9" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Site.Master" caret="373" fromTop="8" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.designer.cs" caret="11472" fromTop="258" />
       <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:Button/f:Button.cs" caret="5934" fromTop="0" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="128" fromTop="5" />
-      <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:MessageBox/f:MessageBox.cs" caret="12773" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="8689" fromTop="12" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="1521" fromTop="0" />
-      <File id="FD3FD959-42D5-4D4D-B852-A7F2304F7A31/f:^TransientScriptDocument902.txt" caret="0" fromTop="0" />
-      <File id="FD3FD959-42D5-4D4D-B852-A7F2304F7A31/f:^TransientScriptDocument911.txt" caret="0" fromTop="0" />
-      <File id="FD3FD959-42D5-4D4D-B852-A7F2304F7A31/f:^TransientScriptDocument904.axd" caret="0" fromTop="0" />
       <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:Popup/f:Popup.cs" caret="5662" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="344" fromTop="0" />
-      <File id="FD3FD959-42D5-4D4D-B852-A7F2304F7A31/f:^TransientScriptDocument1550.aspx" caret="90133" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="0" fromTop="0" />
-      <File id="FD3FD959-42D5-4D4D-B852-A7F2304F7A31/f:^TransientScriptDocument2120.aspx" caret="91530" fromTop="12" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="0" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="585" fromTop="6" />
       <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="16" />
       <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorConfig.cs" caret="81002" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1275" fromTop="12" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="160" fromTop="9" />
+      <File id="EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE/d:Controllers/f:StoreController.cs" caret="662" fromTop="12" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:FileOperation.cs" caret="303" fromTop="13" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="211" fromTop="11" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODTYPEController.cs" caret="686" fromTop="24" />
+      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Configuration.cs" caret="168" fromTop="9" />
+      <File id="4F4F4B6F-A0F1-4802-A590-D6AF6AD63269/f:^TransientScriptDocument4558.aspx" caret="22392" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:MessageBox/f:MessageBox.cs" caret="12773" fromTop="16" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="4764" fromTop="13" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="5005" fromTop="114" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="400" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="2502" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="8288" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="5127" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="10332" fromTop="22" />
     </RecentFiles>
     <RecentEdits>
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="4592" fromTop="21" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="547" fromTop="19" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="344" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1346" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="8" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="1" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="639" fromTop="5" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="266" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="381" fromTop="3" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="7" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1346" fromTop="7" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="585" fromTop="14" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="585" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="585" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1346" fromTop="5" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="5" />
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1383" fromTop="10" />
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1290" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="1234" fromTop="11" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="1883" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="3206" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="8435" fromTop="24" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="7951" fromTop="21" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="8461" fromTop="27" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="6986" fromTop="7" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="9614" fromTop="6" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="10720" fromTop="24" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="1992" fromTop="11" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="1822" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="1822" fromTop="7" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="6085" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="5452" fromTop="13" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="6085" fromTop="25" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="5542" fromTop="20" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="4273" fromTop="13" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="4833" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="6192" fromTop="18" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2633" fromTop="20" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2924" fromTop="29" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="5059" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="2219" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="5005" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="2502" fromTop="16" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2421" fromTop="9" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="3084" fromTop="21" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="5258" fromTop="8" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="400" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="7627" fromTop="22" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="10332" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -149,15 +156,15 @@
       <Item value="RenderMethod" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OfficeWebUI.OfficePopup">
-      <Item value="Show`0" priority="82" />
+      <Item value="Show`0" priority="136" />
       <Item value="RecreateChildControls`0" priority="27" />
       <Item value="Dispose`0" priority="26" />
-      <Item value="Hide`0" priority="53" />
+      <Item value="Hide`0" priority="107" />
       <Item value="Height" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
       <Item value="ctx" priority="0" />
-      <Item value="Text" priority="790" />
+      <Item value="Text" priority="979" />
       <Item value="Enabled" priority="162" />
       <Item value="RenderEndTag`0" priority="26" />
       <Item value="TextMode" priority="53" />
@@ -177,11 +184,14 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.FoodStoreEntities">
       <Item value="ACCOUNTs" priority="190" />
-      <Item value="SaveChanges`0" priority="81" />
+      <Item value="SaveChanges`0" priority="162" />
       <Item value="QUESTIONs" priority="54" />
       <Item value="CITies" priority="81" />
       <Item value="AddToACCOUNTs`0" priority="26" />
       <Item value="DISTRICTs" priority="27" />
+      <Item value="FOODTYPEs" priority="53" />
+      <Item value="FOODs" priority="189" />
+      <Item value="AddToFOODs`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.ACCOUNT">
       <Item value="Username" priority="81" />
@@ -202,11 +212,11 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
       <Item value="AddObject`0" priority="0" />
-      <Item value="ToList`1" priority="77" />
+      <Item value="ToList`1" priority="131" />
       <Item value="Where`0" priority="26" />
-      <Item value="Single`1" priority="108" />
-      <Item value="Max`1" priority="26" />
-      <Item value="DeleteObject`0" priority="26" />
+      <Item value="Single`1" priority="204" />
+      <Item value="Max`1" priority="76" />
+      <Item value="DeleteObject`0" priority="49" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Model.DataValidate">
       <Item value="Account`0" priority="0" />
@@ -231,10 +241,10 @@
       <Item value="ID" priority="83" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int32">
-      <Item value="ToString`0" priority="136" />
+      <Item value="ToString`0" priority="159" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
-      <Item value="Parse`0" priority="216" />
+      <Item value="Parse`0" priority="351" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Model.AccountController">
       <Item value="Insert`0" priority="27" />
@@ -257,7 +267,7 @@
       <Item value="ID" priority="98" />
       <Item value="TextMode" priority="13" />
       <Item value="Password" priority="13" />
-      <Item value="Width" priority="98" />
+      <Item value="Width" priority="105" />
       <Item value="Height" priority="49" />
       <Item value="NewUserPassword" priority="37" />
       <Item value="NewUserEmail" priority="21" />
@@ -293,7 +303,7 @@
       <Item value="Warn" priority="13" />
       <Item value="Text" priority="13" />
       <Item value="Title" priority="20" />
-      <Item value="Return" priority="13" />
+      <Item value="Return" priority="21" />
       <Item value="ReturnValue" priority="6" />
       <Item value="ctx" priority="6" />
       <Item value="ButtonsType" priority="6" />
@@ -328,33 +338,35 @@
       <Item value="img" priority="6" />
       <Item value="ajax-loader.gif" priority="6" />
       <Item value="absmiddle" priority="6" />
+      <Item value="tr" priority="7" />
+      <Item value="ClickOk" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="void" priority="127" />
-      <Item value="if" priority="671" />
+      <Item value="if" priority="1087" />
       <Item value="Request" priority="122" />
       <Item value="OfficePopupNewUser" priority="314" />
-      <Item value="public" priority="351" />
-      <Item value="static" priority="479" />
-      <Item value="List" priority="191" />
+      <Item value="public" priority="670" />
+      <Item value="static" priority="766" />
+      <Item value="List" priority="254" />
       <Item value="QUESTION`0" priority="63" />
       <Item value="EnvironmentVariableTarget`0" priority="95" />
-      <Item value="FoodStoreEntities`0" priority="191" />
+      <Item value="FoodStoreEntities`0" priority="255" />
       <Item value="dbStoreEntities" priority="27" />
-      <Item value="private" priority="287" />
+      <Item value="private" priority="319" />
       <Item value="NetPipeStyleUriParser`0" priority="26" />
-      <Item value="new" priority="735" />
-      <Item value="FoodStoreEntities" priority="289" />
-      <Item value="return" priority="319" />
-      <Item value="DBNull`0" priority="95" />
-      <Item value="_db" priority="767" />
+      <Item value="new" priority="1212" />
+      <Item value="FoodStoreEntities" priority="517" />
+      <Item value="return" priority="574" />
+      <Item value="DBNull`0" priority="127" />
+      <Item value="_db" priority="1502" />
       <Item value="NewUserAnswer" priority="154" />
       <Item value="NewUserQuestion" priority="474" />
-      <Item value="var" priority="351" />
-      <Item value="using" priority="61" />
+      <Item value="var" priority="639" />
+      <Item value="using" priority="124" />
       <Item value="QuestionController`0" priority="63" />
-      <Item value="from" priority="191" />
-      <Item value="foreach" priority="58" />
+      <Item value="from" priority="223" />
+      <Item value="foreach" priority="90" />
       <Item value="ListItem" priority="26" />
       <Item value="question" priority="159" />
       <Item value="listItem" priority="127" />
@@ -363,9 +375,9 @@
       <Item value="CityController`0" priority="63" />
       <Item value="NewUserCity" priority="282" />
       <Item value="listCity" priority="31" />
-      <Item value="int" priority="982" />
+      <Item value="int" priority="1555" />
       <Item value="DISTRICT`0" priority="63" />
-      <Item value="p" priority="159" />
+      <Item value="p" priority="255" />
       <Item value="cityId" priority="58" />
       <Item value="NewUserDistrict" priority="186" />
       <Item value="DistrictController`0" priority="63" />
@@ -373,20 +385,20 @@
       <Item value="ViewState" priority="31" />
       <Item value="Enabled" priority="16" />
       <Item value="IsPostBack" priority="63" />
-      <Item value="Response" priority="90" />
+      <Item value="Response" priority="149" />
       <Item value="eventArgs" priority="63" />
       <Item value="sender" priority="31" />
-      <Item value="bool" priority="218" />
-      <Item value="true" priority="319" />
-      <Item value="flag" priority="287" />
+      <Item value="bool" priority="602" />
+      <Item value="true" priority="543" />
+      <Item value="flag" priority="666" />
       <Item value="NewUserPassword" priority="250" />
       <Item value="NewUserRetypePassword" priority="127" />
       <Item value="LabelRetypePassword" priority="90" />
-      <Item value="false" priority="703" />
+      <Item value="false" priority="959" />
       <Item value="DataValidating`0" priority="63" />
       <Item value="LabelPassword" priority="127" />
       <Item value="ResetValidate`0" priority="31" />
-      <Item value="String`0" priority="607" />
+      <Item value="String`0" priority="895" />
       <Item value="RegisteredExpandoAttribute`0" priority="63" />
       <Item value="regex" priority="96" />
       <Item value="Regex" priority="28" />
@@ -403,14 +415,14 @@
       <Item value="LabelFullName" priority="31" />
       <Item value="LabelSocialId" priority="31" />
       <Item value="LabelAddress" priority="31" />
-      <Item value="FlagsAttribute`0" priority="31" />
+      <Item value="FlagsAttribute`0" priority="63" />
       <Item value="AccountController" priority="26" />
-      <Item value="Model" priority="31" />
+      <Item value="Model" priority="62" />
       <Item value="ActivationContext`0" priority="29" />
       <Item value="ACCOUNT" priority="29" />
       <Item value="account" priority="1179" />
-      <Item value="try" priority="127" />
-      <Item value="id" priority="127" />
+      <Item value="try" priority="319" />
+      <Item value="id" priority="255" />
       <Item value="GetMaxId`0" priority="31" />
       <Item value="fullName" priority="127" />
       <Item value="username" priority="58" />
@@ -427,13 +439,13 @@
       <Item value="NewUserAddress" priority="85" />
       <Item value="NewUserSocialId" priority="63" />
       <Item value="AccountController`0" priority="255" />
-      <Item value="else" priority="191" />
+      <Item value="else" priority="255" />
       <Item value="class" priority="30" />
       <Item value="input" priority="95" />
-      <Item value="string" priority="31" />
+      <Item value="string" priority="95" />
       <Item value="salt" priority="31" />
       <Item value="SaltEncrypt`0" priority="58" />
-      <Item value="db" priority="31" />
+      <Item value="db" priority="63" />
       <Item value="SendCompletedEventHandler`0" priority="31" />
       <Item value="body" priority="31" />
       <Item value="Utility" priority="63" />
@@ -441,7 +453,7 @@
       <Item value="name" priority="63" />
       <Item value="ACCOUNT`0" priority="95" />
       <Item value="list" priority="118" />
-      <Item value="select" priority="94" />
+      <Item value="select" priority="121" />
       <Item value="postEventArgumentID" priority="32" />
       <Item value="GridViewListUser" priority="250" />
       <Item value="listAccount" priority="31" />
@@ -452,13 +464,13 @@
       <Item value="WebControls" priority="26" />
       <Item value="GridView`0" priority="26" />
       <Item value="GridView" priority="32" />
-      <Item value="e" priority="255" />
+      <Item value="e" priority="319" />
       <Item value="NewsStyleUriParser`0" priority="26" />
       <Item value="Test" priority="31" />
-      <Item value="OfficeMessageBoxConfirmDelete" priority="95" />
+      <Item value="OfficeMessageBoxConfirmDelete" priority="122" />
       <Item value="this" priority="95" />
-      <Item value="Session" priority="223" />
-      <Item value="null" priority="95" />
+      <Item value="Session" priority="346" />
+      <Item value="null" priority="286" />
       <Item value="Yes" priority="33" />
       <Item value="OfficeMessageBoxConfirmEdit" priority="63" />
       <Item value="NewUserWard" priority="31" />
@@ -478,11 +490,59 @@
       <Item value="OfficeMessageBoxUpdateAccountFail" priority="31" />
       <Item value="OfficeMessageBoxAddAccountFail" priority="26" />
       <Item value="OfficeMessageBoxAddAccountSuccess" priority="31" />
-      <Item value="OfficePopupNewFood" priority="31" />
-      <Item value="CKEditorNewFood" priority="31" />
+      <Item value="OfficePopupNewFood" priority="154" />
+      <Item value="CKEditorNewFood" priority="95" />
       <Item value="object" priority="31" />
       <Item value="EventArgs`0" priority="31" />
       <Item value="ASyncFileUploadFoodImage" priority="26" />
+      <Item value="FOODTYPE`0" priority="63" />
+      <Item value="NewFoodType" priority="218" />
+      <Item value="listFoodType" priority="31" />
+      <Item value="NewFoodName" priority="95" />
+      <Item value="NewFoodPrice" priority="122" />
+      <Item value="NewFoodImage" priority="126" />
+      <Item value="postImage" priority="159" />
+      <Item value="Path`0" priority="31" />
+      <Item value="imageFileLenght" priority="95" />
+      <Item value="imageExtension" priority="187" />
+      <Item value="BuildProfileTree`0" priority="31" />
+      <Item value="Char`0" priority="31" />
+      <Item value="DataValidate`0" priority="31" />
+      <Item value="FtpLib" priority="26" />
+      <Item value="FtpConnection`0" priority="26" />
+      <Item value="ftpConnection" priority="223" />
+      <Item value="FtpConnection" priority="28" />
+      <Item value="strFilename" priority="31" />
+      <Item value="absServerFileName" priority="63" />
+      <Item value="FoodController`0" priority="159" />
+      <Item value="foodId" priority="95" />
+      <Item value="tryf" priority="31" />
+      <Item value="finally" priority="31" />
+      <Item value="const" priority="31" />
+      <Item value="checkFtpError" priority="63" />
+      <Item value="Configuration`0" priority="31" />
+      <Item value="imageFileName" priority="127" />
+      <Item value="FOOD" priority="28" />
+      <Item value="Stack" priority="31" />
+      <Item value="FoodTypeController`0" priority="58" />
+      <Item value="foodType" priority="154" />
+      <Item value="foodDetail" priority="192" />
+      <Item value="food" priority="447" />
+      <Item value="foodName" priority="154" />
+      <Item value="foodPrice" priority="154" />
+      <Item value="Decimal`0" priority="31" />
+      <Item value="foodImage" priority="95" />
+      <Item value="imageOnCdnPath" priority="31" />
+      <Item value="OfficeMessageBoxAddFoodFail" priority="63" />
+      <Item value="OfficeMessageBoxAddFoodSuccess" priority="31" />
+      <Item value="FOOD`0" priority="62" />
+      <Item value="GridViewListFood" priority="63" />
+      <Item value="listFood" priority="31" />
+      <Item value="checkFtpNotError" priority="26" />
+      <Item value="foodTypeId" priority="31" />
+      <Item value="imageOnCdn" priority="53" />
+      <Item value="Page" priority="31" />
+      <Item value="Header" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpRequest">
       <Item value="QueryString" priority="107" />
@@ -492,14 +552,14 @@
       <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.DropDownList">
-      <Item value="DataTextField" priority="107" />
-      <Item value="DataValueField" priority="76" />
-      <Item value="DataSource" priority="81" />
-      <Item value="DataBind`0" priority="80" />
+      <Item value="DataTextField" priority="134" />
+      <Item value="DataValueField" priority="104" />
+      <Item value="DataSource" priority="108" />
+      <Item value="DataBind`0" priority="107" />
       <Item value="SelectedIndex" priority="107" />
       <Item value="SelectedIndexChanged" priority="26" />
       <Item value="SelectedItem" priority="26" />
-      <Item value="SelectedValue" priority="244" />
+      <Item value="SelectedValue" priority="298" />
       <Item value="ViewStateMode" priority="26" />
       <Item value="Enabled" priority="27" />
       <Item value="Text" priority="82" />
@@ -523,6 +583,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpResponse">
       <Item value="Write`0" priority="80" />
+      <Item value="Redirect`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.EventArgs">
       <Item value="Equals`0" priority="26" />
@@ -532,7 +593,8 @@
       <Item value="Visible" priority="296" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
-      <Item value="Length" priority="134" />
+      <Item value="Length" priority="188" />
+      <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="CssCodeCompletionContext">
       <Item value="color" priority="5" />
@@ -566,8 +628,8 @@
       <Item value="Name" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.GridView">
-      <Item value="DataBind`0" priority="26" />
-      <Item value="DataSource" priority="26" />
+      <Item value="DataBind`0" priority="53" />
+      <Item value="DataSource" priority="53" />
       <Item value="SelectedIndex" priority="81" />
       <Item value="SelectedRow" priority="26" />
       <Item value="DataKeys" priority="26" />
@@ -580,16 +642,16 @@
       <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.GridViewDeleteEventArgs">
-      <Item value="Values" priority="26" />
+      <Item value="Values" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Specialized.IOrderedDictionary">
       <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Object">
-      <Item value="ToString`0" priority="107" />
+      <Item value="ToString`0" priority="134" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OfficeWebUI.OfficeMessageBox">
-      <Item value="Show`0" priority="215" />
+      <Item value="Show`0" priority="269" />
       <Item value="ReturnValue" priority="80" />
       <Item value="Text" priority="53" />
       <Item value="Title" priority="53" />
@@ -618,7 +680,7 @@
       <Item value="Add`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Nullable`1">
-      <Item value="ToString`0" priority="53" />
+      <Item value="ToString`0" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ContosoWebApp.UserManage">
       <Item value="AutoPostBackControl" priority="26" />
@@ -628,6 +690,59 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:AjaxControlToolkit.AsyncFileUploadEventArgs">
       <Item value="FileName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Model.FoodTypeController">
+      <Item value="GetList`0" priority="26" />
+      <Item value="Get`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.FileUpload">
+      <Item value="PostedFile" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpPostedFile">
+      <Item value="ContentLength" priority="26" />
+      <Item value="FileName" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetExtension`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Char">
+      <Item value="IsDigit`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FtpLib.FtpConnection">
+      <Item value="Open`0" priority="53" />
+      <Item value="Login`0" priority="27" />
+      <Item value="SetCurrentDirectory`0" priority="26" />
+      <Item value="PutFile`0" priority="26" />
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.FOOD">
+      <Item value="ID" priority="162" />
+      <Item value="Name" priority="130" />
+      <Item value="Price" priority="134" />
+      <Item value="Detail" priority="81" />
+      <Item value="Image" priority="81" />
+      <Item value="FOODTYPE" priority="135" />
+      <Item value="FoodTypeId" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Model.FoodController">
+      <Item value="GetMaxId`0" priority="26" />
+      <Item value="Insert`0" priority="26" />
+      <Item value="GetList`0" priority="26" />
+      <Item value="Get`0" priority="53" />
+      <Item value="Update`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Utility.Configuration">
+      <Item value="IMAGE_CDN_HOST" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.FOODTYPE">
+      <Item value="ID" priority="81" />
+      <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CKEditor.NET.CKEditorControl">
+      <Item value="Text" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="ID" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
