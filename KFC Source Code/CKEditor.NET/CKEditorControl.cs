@@ -59,7 +59,7 @@ namespace CKEditor.NET
 		#region CKEditor Other Settings Property
 
 		[Category("CKEditor Basic Settings")]
-		[DefaultValue("~/Scripts/ckeditor")]
+		[DefaultValue("~/Library/ckeditor")]
 		public string BasePath
 		{
 			get
@@ -68,7 +68,7 @@ namespace CKEditor.NET
 				if (obj == null)
 				{
 					obj = System.Configuration.ConfigurationManager.AppSettings["CKeditor:BasePath"];
-                    ViewState["BasePath"] = (obj == null ? "~/Scripts/ckeditor" : (string)obj);
+                    ViewState["BasePath"] = (obj == null ? "~/Library/ckeditor" : (string)obj);
 				}
 				return (string)ViewState["BasePath"];
 			}

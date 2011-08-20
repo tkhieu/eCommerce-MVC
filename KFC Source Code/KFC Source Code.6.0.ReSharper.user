@@ -11,67 +11,18 @@
     <RecentFiles>
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="160" fromTop="9" />
       <File id="EA1B3FCF-3CE2-4BFA-8500-CFFA848D64AE/d:Controllers/f:StoreController.cs" caret="662" fromTop="12" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:FileOperation.cs" caret="303" fromTop="13" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODTYPEController.cs" caret="686" fromTop="24" />
-      <File id="8E76C2B5-95D1-4490-9FC1-571C90FB58D8/f:Configuration.cs" caret="168" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.designer.cs" caret="0" fromTop="0" />
       <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:MessageBox/f:MessageBox.cs" caret="12773" fromTop="16" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="4764" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="5005" fromTop="114" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="400" fromTop="18" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="2502" fromTop="14" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx" caret="8288" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="10332" fromTop="22" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument207.aspx" caret="505" fromTop="11" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument236.aspx" caret="514" fromTop="13" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument265.aspx" caret="514" fromTop="13" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument294.aspx" caret="637" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="557" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="1776" fromTop="49" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:AutoComplete/f:AccountUserName.ashx.cs" caret="518" fromTop="19" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument323.aspx" caret="602" fromTop="12" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="0" fromTop="0" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument352.aspx" caret="358" fromTop="8" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument367.aspx" caret="281" fromTop="8" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument396.aspx" caret="886" fromTop="38" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument429.axd" caret="35" fromTop="0" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument430.axd" caret="4" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="19781" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="369" fromTop="5" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="492" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="0" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="0" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="0" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="FF086D36-8B4C-4F17-8BF3-BA100BBD5E7D/f:ckeditorcontrol.cs" caret="0" fromTop="0" />
     </RecentFiles>
-    <RecentEdits>
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:UserManage.aspx.cs" caret="10332" fromTop="22" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="7055" fromTop="25" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="4310" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="557" fromTop="19" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="4250" fromTop="32" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2429" fromTop="7" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="895" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1188" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1489" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1798" fromTop="8" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2116" fromTop="14" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="3037" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="3263" fromTop="15" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2560" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2779" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2859" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:AutoComplete/f:AccountUserName.ashx.cs" caret="121" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:AutoComplete/f:AccountUserName.ashx.cs" caret="778" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:AutoComplete/f:AccountUserName.ashx.cs" caret="518" fromTop="12" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument207.aspx" caret="87992" fromTop="12" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument207.aspx" caret="505" fromTop="11" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument294.aspx" caret="637" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="234" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="397" fromTop="32" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="386" fromTop="16" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument352.aspx" caret="358" fromTop="8" />
-      <File id="D59649F0-6A34-4E51-B330-E20C4E9F10AF/f:^TransientScriptDocument367.aspx" caret="281" fromTop="8" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="991" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="369" fromTop="5" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="492" fromTop="8" />
-    </RecentEdits>
+    <RecentEdits />
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
