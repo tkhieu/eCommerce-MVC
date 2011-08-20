@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUESTIONController.cs" />
     <Compile Include="SimpleJSON\AccountJSON.cs" />
+    <Compile Include="SimpleJSON\FoodJSON.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="FoodStore.edmx">

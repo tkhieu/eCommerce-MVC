@@ -59,6 +59,12 @@ namespace Model
             return _db.FOODs.ToList();
         }
 
+        public static List<FOOD> GetList(string searchText)
+        {
+            _db = new FoodStoreEntities();
+            return _db.FOODs.ToList().Where(p => p.Name.ToLower().StartsWith(searchText.ToLower())).ToList();
+        }
+
         public static bool Delete(int id)
         {
             _db = new FoodStoreEntities();
