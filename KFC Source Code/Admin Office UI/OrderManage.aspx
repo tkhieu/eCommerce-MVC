@@ -1,36 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="OrderManage.aspx.cs" Inherits="ContosoWebApp.OrderManage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
+
 <script>
-	$(function() {
-		var availableTags = [
-			"ActionScript",
-			"AppleScript",
-			"Asp",
-			"BASIC",
-			"C",
-			"C++",
-			"Clojure",
-			"COBOL",
-			"ColdFusion",
-			"Erlang",
-			"Fortran",
-			"Groovy",
-			"Haskell",
-			"Java",
-			"JavaScript",
-			"Lisp",
-			"Perl",
-			"PHP",
-			"Python",
-			"Ruby",
-			"Scala",
-			"Scheme"
-		];
-		$( "#<%=NewOrderUser.ClientID %>" ).autocomplete({
-			source: 'Service/Account.ashx'
-		});
-	});
+    $(function () {
+        $("#<%=NewOrderUser.ClientID %>").autocomplete({
+            source: 'Service/Account.ashx',
+            minLenght: 0,
+            select: function (event, ui) {
+                $("#<%=NewOrderName.ClientID %>").val(ui.item.Name);
+                $("#<%=NewOrderTel.ClientID %>").val(ui.item.Tel);
+                $("#<%=NewOrderAddress.ClientID %>").val(ui.item.Address);
+                $("#<%=NewOrderDistrict.ClientID %>").val(ui.item.District);
+                $("#<%=NewOrderCity.ClientID %>").val(ui.item.City);
+            }
+
+        });
+
+        $("#<%=NewOrderFood.ClientID %>").autocomplete({
+            source: 'Service/Food2Order.ashx',
+            select: function (event, ui) {
+                var foodPrice = ui.item.Price * $("#<%=NewOrderCount.ClientID %>").val();
+                Price = ui.item.Price;
+                $("#<%=NewOrderPrice.ClientID %>").val(foodPrice);
+            }
+
+        });
+
+        $("#<%=NewOrderCount.ClientID %>").autocomplete({
+            source: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+            minLenght: 0,
+            select: function (event, ui) {
+                var foodPrice = ui.item.value * Price;
+                $("#<%=NewOrderPrice.ClientID %>").val(foodPrice);
+            }
+
+        });
+
+        $('#<%=NewOrderTime.ClientID %>').datetimepicker();
+    });
 </script>
 
 
@@ -45,6 +53,14 @@
 					</td>
 					<td>
 						<asp:TextBox ID="NewOrderUser" runat="server" Width="300px" Height="15px"></asp:TextBox>
+					</td>
+				</tr>
+                <tr>
+					<td>
+						Name
+					</td>
+					<td>
+						<asp:TextBox ID="NewOrderName" runat="server" Width="300px" Height="15px"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>
@@ -68,8 +84,7 @@
 						District
 					</td>
 					<td>
-						<asp:DropDownList ID="NewOrderDistrict" runat="server" Width="300px">
-						</asp:DropDownList>
+						<asp:TextBox ID="NewOrderDistrict" runat="server" Width="300px" Height="15px"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>
@@ -77,8 +92,7 @@
 						City
 					</td>
 					<td>
-						<asp:DropDownList ID="NewOrderCity" runat="server" Width="300px" >
-						</asp:DropDownList>
+						<asp:TextBox ID="NewOrderCity" runat="server" Width="300px" Height="15px"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>
@@ -128,13 +142,13 @@
 				</tr>
 				<tr>
 					<td>
-						Gà Rán
+                        <asp:TextBox ID="NewOrderFood" runat="server"></asp:TextBox>
 					</td>
 					<td>
-						2
+						<asp:TextBox ID="NewOrderCount" runat="server" TextMode="SingleLine" >1</asp:TextBox>
 					</td>
 					<td>
-						85000
+						<asp:TextBox ID="NewOrderPrice" runat="server"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>
@@ -145,7 +159,7 @@
 						Tổng
 					</td>
 					<td>
-						Tổng cộng
+						<asp:TextBox ID="NewOrderTotal" runat="server"></asp:TextBox>
 					</td>
 				</tr>
 			</table>

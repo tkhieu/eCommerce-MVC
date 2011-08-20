@@ -14,49 +14,52 @@
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODTYPEController.cs" caret="686" fromTop="24" />
       <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:MessageBox/f:MessageBox.cs" caret="12773" fromTop="16" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="4764" fromTop="13" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="400" fromTop="18" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="0" fromTop="0" />
       <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorConfig.cs" caret="0" fromTop="0" />
       <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="28" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="666" fromTop="10" />
-      <File id="97DA3EBE-5909-43B0-B016-DCC8CDB09375/f:^TransientScriptDocument403.aspx" caret="1294" fromTop="12" />
-      <File id="97DA3EBE-5909-43B0-B016-DCC8CDB09375/f:^TransientScriptDocument453.aspx" caret="915" fromTop="4" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="163787" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="661" fromTop="21" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="455" fromTop="17" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3730" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="806" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.designer.cs" caret="0" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="454" fromTop="21" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:FoodJSON.cs" caret="134" fromTop="7" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="149" fromTop="7" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="1749" fromTop="14" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3567" fromTop="22" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="726" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="732" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="771" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1455" fromTop="9" />
     </RecentFiles>
     <RecentEdits>
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1383" fromTop="19" />
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="28" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="666" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="3" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3811" fromTop="19" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3811" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="24" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="5" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2922" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="10" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="28" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="4" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="711" fromTop="23" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="387" fromTop="13" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3793" fromTop="25" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="1080" fromTop="28" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="455" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="661" fromTop="21" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="806" fromTop="10" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="545" fromTop="17" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="1387" fromTop="28" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="799" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2700" fromTop="11" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2908" fromTop="19" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="183" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="454" fromTop="21" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="234" fromTop="3" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="771" fromTop="11" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:FoodJSON.cs" caret="378" fromTop="16" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:FoodJSON.cs" caret="134" fromTop="7" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="4252" fromTop="69" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="1814" fromTop="15" />
+      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="1749" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="664" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="1148" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="1226" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="1466" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="732" fromTop="17" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="726" fromTop="17" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="4350" fromTop="18" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="4054" fromTop="9" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1568" fromTop="19" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1568" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1568" fromTop="12" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="395" fromTop="8" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1568" fromTop="14" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1568" fromTop="5" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1114" fromTop="5" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="1455" fromTop="9" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -154,7 +157,7 @@
       <Item value="Enabled" priority="162" />
       <Item value="RenderEndTag`0" priority="26" />
       <Item value="TextMode" priority="53" />
-      <Item value="ClientID" priority="174" />
+      <Item value="ClientID" priority="264" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OfficeWebUI.OfficeCombobox">
       <Item value="Items" priority="88" />
@@ -178,25 +181,25 @@
       <Item value="AddToACCOUNTs`0" priority="26" />
       <Item value="DISTRICTs" priority="27" />
       <Item value="FOODTYPEs" priority="53" />
-      <Item value="FOODs" priority="189" />
+      <Item value="FOODs" priority="217" />
       <Item value="AddToFOODs`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.ACCOUNT">
-      <Item value="Username" priority="267" />
+      <Item value="Username" priority="321" />
       <Item value="Password" priority="81" />
-      <Item value="Name" priority="81" />
-      <Item value="Address" priority="108" />
-      <Item value="Tel" priority="77" />
+      <Item value="Name" priority="108" />
+      <Item value="Address" priority="135" />
+      <Item value="Tel" priority="104" />
       <Item value="SocialID" priority="81" />
       <Item value="Email" priority="135" />
       <Item value="Question" priority="27" />
       <Item value="Answer" priority="28" />
-      <Item value="ID" priority="162" />
-      <Item value="DISTRICT" priority="107" />
+      <Item value="ID" priority="189" />
+      <Item value="DISTRICT" priority="134" />
       <Item value="IDCity" priority="54" />
       <Item value="IDDistrict" priority="53" />
       <Item value="QUESTION" priority="81" />
-      <Item value="CITY" priority="80" />
+      <Item value="CITY" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
       <Item value="AddObject`0" priority="0" />
@@ -229,7 +232,7 @@
       <Item value="ID" priority="83" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int32">
-      <Item value="ToString`0" priority="213" />
+      <Item value="ToString`0" priority="240" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="351" />
@@ -245,7 +248,7 @@
       <Item value="ctx" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="AspCodeCompletionContext">
-      <Item value="script" priority="43" />
+      <Item value="script" priority="50" />
       <Item value="OfficeWebUI" priority="42" />
       <Item value="OfficePopup`0" priority="20" />
       <Item value="NewUserPopupOk`0" priority="14" />
@@ -253,7 +256,7 @@
       <Item value="asp" priority="70" />
       <Item value="TextBox`0" priority="41" />
       <Item value="ID" priority="112" />
-      <Item value="TextMode" priority="20" />
+      <Item value="TextMode" priority="27" />
       <Item value="Password" priority="13" />
       <Item value="Width" priority="119" />
       <Item value="Height" priority="63" />
@@ -272,10 +275,10 @@
       <Item value="ValidationExpression" priority="6" />
       <Item value="br" priority="71" />
       <Item value="Visible" priority="56" />
-      <Item value="type" priority="48" />
+      <Item value="type" priority="55" />
       <Item value="text/C#" priority="7" />
-      <Item value="src" priority="34" />
-      <Item value="Library" priority="56" />
+      <Item value="src" priority="41" />
+      <Item value="Library" priority="63" />
       <Item value="css" priority="41" />
       <Item value="StyleSheet.css" priority="13" />
       <Item value="link" priority="14" />
@@ -315,8 +318,8 @@
       <Item value="OnClientUploadError" priority="6" />
       <Item value="UploaderStyle" priority="6" />
       <Item value="Modern" priority="6" />
-      <Item value="text/javascript" priority="27" />
-      <Item value="async" priority="6" />
+      <Item value="text/javascript" priority="34" />
+      <Item value="async" priority="13" />
       <Item value="Scripts" priority="6" />
       <Item value="JScriptFileUpload.js" priority="6" />
       <Item value="OnClientUploadStarted" priority="7" />
@@ -331,7 +334,7 @@
       <Item value="OfficePopupNewOrder" priority="7" />
       <Item value="MultiLine" priority="6" />
       <Item value="colspan" priority="6" />
-      <Item value="js" priority="20" />
+      <Item value="js" priority="27" />
       <Item value="jquery-1.6.2.js" priority="6" />
       <Item value="jquery.autocomplete.js" priority="13" />
       <Item value="jquery.autocomplete.css" priority="13" />
@@ -341,13 +344,17 @@
       <Item value="IncludeJQuery" priority="7" />
       <Item value=".." priority="6" />
       <Item value="." priority="6" />
+      <Item value="NewOrderAddress" priority="23" />
+      <Item value="NewOrderDistrict" priority="7" />
+      <Item value="jquery-ui-timepicker-addon.js" priority="6" />
+      <Item value="SingleLine" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="void" priority="127" />
       <Item value="if" priority="1183" />
       <Item value="Request" priority="186" />
       <Item value="OfficePopupNewUser" priority="314" />
-      <Item value="public" priority="798" />
+      <Item value="public" priority="830" />
       <Item value="static" priority="798" />
       <Item value="List" priority="350" />
       <Item value="QUESTION`0" priority="63" />
@@ -399,7 +406,7 @@
       <Item value="DataValidating`0" priority="63" />
       <Item value="LabelPassword" priority="127" />
       <Item value="ResetValidate`0" priority="31" />
-      <Item value="String`0" priority="1023" />
+      <Item value="String`0" priority="1055" />
       <Item value="RegisteredExpandoAttribute`0" priority="63" />
       <Item value="regex" priority="96" />
       <Item value="Regex" priority="28" />
@@ -421,7 +428,7 @@
       <Item value="Model" priority="93" />
       <Item value="ActivationContext`0" priority="29" />
       <Item value="ACCOUNT" priority="59" />
-      <Item value="account" priority="1361" />
+      <Item value="account" priority="1649" />
       <Item value="try" priority="319" />
       <Item value="id" priority="255" />
       <Item value="GetMaxId`0" priority="31" />
@@ -536,7 +543,7 @@
       <Item value="imageOnCdnPath" priority="31" />
       <Item value="OfficeMessageBoxAddFoodFail" priority="63" />
       <Item value="OfficeMessageBoxAddFoodSuccess" priority="31" />
-      <Item value="FOOD`0" priority="62" />
+      <Item value="FOOD`0" priority="126" />
       <Item value="GridViewListFood" priority="63" />
       <Item value="listFood" priority="31" />
       <Item value="checkFtpNotError" priority="26" />
@@ -563,13 +570,21 @@
       <Item value="Collection" priority="26" />
       <Item value="searchText" priority="53" />
       <Item value="AccountJSON" priority="29" />
-      <Item value="accountJson" priority="31" />
+      <Item value="accountJson" priority="319" />
       <Item value="javaScriptSerializer" priority="96" />
       <Item value="JavaScriptConverter`0" priority="26" />
       <Item value="JavaScriptSerializer" priority="29" />
       <Item value="jsonString" priority="31" />
       <Item value="label" priority="31" />
       <Item value="value" priority="31" />
+      <Item value="NewOrderName" priority="30" />
+      <Item value="NewOrderTel" priority="37" />
+      <Item value="NewOrderAddress" priority="30" />
+      <Item value="NewOrderDistrict" priority="37" />
+      <Item value="NewOrderTime" priority="30" />
+      <Item value="FoodJSON`0" priority="26" />
+      <Item value="NewOrderFood" priority="30" />
+      <Item value="NewOrderCount" priority="68" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpRequest">
       <Item value="QueryString" priority="161" />
@@ -599,7 +614,7 @@
     <ItemStatistics item="Qualified:Model.CITY">
       <Item value="ID" priority="26" />
       <Item value="DISTRICTs" priority="26" />
-      <Item value="Name" priority="53" />
+      <Item value="Name" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Objects.DataClasses.EntityCollection`1">
       <Item value="ToList`1" priority="26" />
@@ -654,7 +669,7 @@
       <Item value="Format`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.DISTRICT">
-      <Item value="Name" priority="53" />
+      <Item value="Name" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.GridView">
       <Item value="DataBind`0" priority="53" />
@@ -709,7 +724,7 @@
       <Item value="Add`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Nullable`1">
-      <Item value="ToString`0" priority="107" />
+      <Item value="ToString`0" priority="134" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:ContosoWebApp.UserManage">
       <Item value="AutoPostBackControl" priority="26" />
@@ -746,8 +761,8 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.FOOD">
       <Item value="ID" priority="162" />
-      <Item value="Name" priority="130" />
-      <Item value="Price" priority="134" />
+      <Item value="Name" priority="214" />
+      <Item value="Price" priority="161" />
       <Item value="Detail" priority="81" />
       <Item value="Image" priority="81" />
       <Item value="FOODTYPE" priority="135" />
@@ -786,17 +801,31 @@
     <ItemStatistics item="JavaScriptSpecificContext">
       <Item value="false" priority="7" />
       <Item value="reset" priority="7" />
+      <Item value="function" priority="20" />
+      <Item value="fun" priority="10" />
+      <Item value="$" priority="29" />
+      <Item value="ui" priority="10" />
+      <Item value="foodPrice" priority="18" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="ToList`1" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Model.SimpleJSON.AccountJSON">
       <Item value="Username" priority="26" />
-      <Item value="label" priority="26" />
-      <Item value="value" priority="26" />
+      <Item value="label" priority="80" />
+      <Item value="value" priority="54" />
+      <Item value="id" priority="26" />
+      <Item value="Name" priority="26" />
+      <Item value="Tel" priority="26" />
+      <Item value="Address" priority="27" />
+      <Item value="District" priority="26" />
+      <Item value="City" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Script.Serialization.JavaScriptSerializer">
       <Item value="Serialize`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.SimpleJSON.FoodJSON">
+      <Item value="Price" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

@@ -23,11 +23,23 @@ namespace ContosoWebApp.Service
             var list = AccountController.GetList(searchText);
             foreach (ACCOUNT account in list)
             {
-                var accountJson = new AccountJSON(account.ID.ToString(),account.Username,account.Username);
+                var accountJson = new AccountJSON
+                                      {
+                                          id = account.ID.ToString(),
+                                          label = account.Username,
+                                          value = account.Username,
+                                          Name = account.Name,
+                                          Tel = account.Tel,
+                                          Address = account.Address,
+                                          District = account.DISTRICT.Name,
+                                          City = account.CITY.Name
+                                      };
+
+
                 collection.Add(accountJson);
             }
 
-            JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+            var javaScriptSerializer = new JavaScriptSerializer();
             string jsonString = javaScriptSerializer.Serialize(collection);
             context.Response.Write(jsonString);
         }

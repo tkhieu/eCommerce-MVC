@@ -31,6 +31,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewOrderUser;
         
         /// <summary>
+        /// NewOrderName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderName;
+        
+        /// <summary>
         /// NewOrderTel control.
         /// </summary>
         /// <remarks>
@@ -55,7 +64,7 @@ namespace ContosoWebApp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList NewOrderDistrict;
+        protected global::System.Web.UI.WebControls.TextBox NewOrderDistrict;
         
         /// <summary>
         /// NewOrderCity control.
@@ -64,7 +73,7 @@ namespace ContosoWebApp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList NewOrderCity;
+        protected global::System.Web.UI.WebControls.TextBox NewOrderCity;
         
         /// <summary>
         /// NewOrderTime control.
@@ -83,5 +92,41 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewOrderNote;
+        
+        /// <summary>
+        /// NewOrderFood control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderFood;
+        
+        /// <summary>
+        /// NewOrderCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderCount;
+        
+        /// <summary>
+        /// NewOrderPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderPrice;
+        
+        /// <summary>
+        /// NewOrderTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderTotal;
     }
 }
