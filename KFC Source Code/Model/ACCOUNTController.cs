@@ -119,5 +119,11 @@ namespace Model{
             _db = new FoodStoreEntities();
             return _db.ACCOUNTs.Single(p => p.ID == id);
         }
+
+        public static List<ACCOUNT> GetList(string searchText)
+        {
+            _db = new FoodStoreEntities();
+            return _db.ACCOUNTs.ToList().Where(p => p.Username.ToLower().StartsWith(searchText.ToLower())).ToList();
+        }
     }
 }

@@ -28,7 +28,7 @@
 			"Scheme"
 		];
 		$( "#<%=NewOrderUser.ClientID %>" ).autocomplete({
-			source: availableTags
+			source: 'Service/Account.ashx'
 		});
 	});
 </script>
