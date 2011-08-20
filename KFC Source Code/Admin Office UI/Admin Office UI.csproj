@@ -72,6 +72,7 @@
     <Content Include="Library\css\StyleSheet.css" />
     <Content Include="Library\img\ajax-loader.gif" />
     <Content Include="Library\js\jquery-1.6.2.js" />
+    <Content Include="OrderManage.aspx" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
@@ -354,6 +355,13 @@
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManage.aspx.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderManage.aspx.designer.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
