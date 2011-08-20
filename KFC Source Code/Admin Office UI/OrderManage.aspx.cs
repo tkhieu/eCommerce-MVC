@@ -11,7 +11,16 @@ namespace ContosoWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.QueryString.Count == 1)
+                {
+                    if (Request.QueryString["New"] == "1")
+                    {
+                        OfficePopupNewOrder.Show();
+                    }
+                }
+            }
         }
     }
 }
