@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="OrderManage.aspx.cs" Inherits="ContosoWebApp.OrderManage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script type="text/javascript" src="Library/js/jquery-1.6.2.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewOrder" Title="Order Add" ShowOkButton="true" ShowCancelButton="true">
@@ -10,7 +12,7 @@
                         User
                     </td>
                     <td>
-                        Trần Kim Hiếu
+                        <asp:TextBox ID="NewOrderUser" runat="server" Width="300px" Height="15px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -18,7 +20,7 @@
                         Tel
                     </td>
                     <td>
-                        01224569125
+                        <asp:TextBox ID="NewOrderTel" runat="server" Width="300px" Height="15px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -26,7 +28,7 @@
                         Address
                     </td>
                     <td>
-                        155 Bùi Viện
+                        <asp:TextBox ID="NewOrderAddress" runat="server" Width="300px" Height="15px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -34,7 +36,8 @@
                         District
                     </td>
                     <td>
-                        Quận 1
+                        <asp:DropDownList ID="NewOrderDistrict" runat="server" Width="300px">
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +45,8 @@
                         City
                     </td>
                     <td>
-                        TP.Hồ Chí Minh
+                        <asp:DropDownList ID="NewOrderCity" runat="server" Width="300px" >
+                        </asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -50,7 +54,7 @@
                         Order Time
                     </td>
                     <td>
-                        Ngày giờ.
+                        <asp:TextBox ID="NewOrderTime" runat="server" Width="300px" Height="15px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -58,12 +62,7 @@
                         Note
                     </td>
                     <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        Thông tin
+                        <asp:TextBox ID="NewOrderNote" runat="server" TextMode="MultiLine" Width="300px" Height="50px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

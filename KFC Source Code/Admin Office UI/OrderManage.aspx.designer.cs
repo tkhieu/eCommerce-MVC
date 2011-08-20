@@ -20,5 +20,68 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OfficeWebUI.OfficePopup OfficePopupNewOrder;
+        
+        /// <summary>
+        /// NewOrderUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderUser;
+        
+        /// <summary>
+        /// NewOrderTel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderTel;
+        
+        /// <summary>
+        /// NewOrderAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderAddress;
+        
+        /// <summary>
+        /// NewOrderDistrict control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList NewOrderDistrict;
+        
+        /// <summary>
+        /// NewOrderCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList NewOrderCity;
+        
+        /// <summary>
+        /// NewOrderTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderTime;
+        
+        /// <summary>
+        /// NewOrderNote control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NewOrderNote;
     }
 }
