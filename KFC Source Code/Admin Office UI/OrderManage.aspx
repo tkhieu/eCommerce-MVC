@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="OrderManage.aspx.cs" Inherits="ContosoWebApp.OrderManage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script type="text/javascript" src="Library/js/jquery-1.6.2.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#<%=NewOrderUser.ClientID%>").autocomplete('AutoComplete/AccountUserName.ashx');
+    });     
+</script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">

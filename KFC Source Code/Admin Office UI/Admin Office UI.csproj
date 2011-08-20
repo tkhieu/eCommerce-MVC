@@ -68,12 +68,29 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Library\css\jquery.autocomplete.css" />
-    <Content Include="Library\js\jquery.autocomplete.js" />
     <Content Include="FoodManage.aspx" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_666666_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Library\css\jquery-ui\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Library\css\jquery.autocomplete.css" />
     <Content Include="Library\css\StyleSheet.css" />
     <Content Include="Library\img\ajax-loader.gif" />
     <Content Include="Library\js\jquery-1.6.2.js" />
+    <Content Include="Library\js\jquery-1.6.2.min.js" />
+    <Content Include="Library\js\jquery-ui-1.8.16.custom.js" />
+    <Content Include="Library\js\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Library\js\jquery.autocomplete.js" />
     <Content Include="OrderManage.aspx" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />

@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title></title>
-    <link href="Library/css/StyleSheet.css" rel="stylesheet" type="text/css"/>
+    <link href="Library/css/stylesheet.css" rel="stylesheet" type="text/css"/>
+    
+    <script type="text/javascript" src="Library/js/jquery-1.6.2.js"></script>
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,7 +17,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 
-    <OfficeWebUI:Manager ID="Manager1" runat="server" UITheme="Office2010Silver" IncludeJQuery="true" ChromeUI="true" />
+    <OfficeWebUI:Manager ID="Manager1" runat="server" UITheme="Office2010Silver" IncludeJQuery="false" ChromeUI="true" />
     
     <div style="background:#fff url(/library/img/apptitle.png) top center no-repeat;">
     <OfficeWebUI:OfficeRibbon ID="OfficeRibbon1" runat="server" ApplicationMenuColor="green" ApplicationMenuText="File" ApplicationMenuType="Backstage" ShowToggleButton="true">
