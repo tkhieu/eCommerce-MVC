@@ -16,13 +16,23 @@
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="4764" fromTop="13" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="400" fromTop="18" />
       <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="0" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="0" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="0" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="0" fromTop="0" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="0" fromTop="0" />
-      <File id="FF086D36-8B4C-4F17-8BF3-BA100BBD5E7D/f:ckeditorcontrol.cs" caret="0" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="0" fromTop="0" />
+      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorConfig.cs" caret="0" fromTop="0" />
+      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="28" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="666" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="700" fromTop="25" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1383" fromTop="19" />
+      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="28" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="666" fromTop="10" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2913" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="2913" fromTop="13" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="627" fromTop="16" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="242" fromTop="3" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="700" fromTop="25" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -119,7 +129,7 @@
       <Item value="Enabled" priority="162" />
       <Item value="RenderEndTag`0" priority="26" />
       <Item value="TextMode" priority="53" />
-      <Item value="ClientID" priority="54" />
+      <Item value="ClientID" priority="84" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OfficeWebUI.OfficeCombobox">
       <Item value="Items" priority="88" />
@@ -240,7 +250,7 @@
       <Item value="text/C#" priority="7" />
       <Item value="src" priority="34" />
       <Item value="Library" priority="56" />
-      <Item value="css" priority="34" />
+      <Item value="css" priority="41" />
       <Item value="StyleSheet.css" priority="13" />
       <Item value="link" priority="14" />
       <Item value="href" priority="13" />
@@ -299,9 +309,9 @@
       <Item value="jquery-1.6.2.js" priority="6" />
       <Item value="jquery.autocomplete.js" priority="13" />
       <Item value="jquery.autocomplete.css" priority="13" />
-      <Item value="jquery-ui-1.8.16.custom.js" priority="6" />
-      <Item value="jquery-ui" priority="6" />
-      <Item value="jquery-ui-1.8.16.custom.css" priority="6" />
+      <Item value="jquery-ui-1.8.16.custom.js" priority="13" />
+      <Item value="jquery-ui" priority="13" />
+      <Item value="jquery-ui-1.8.16.custom.css" priority="13" />
       <Item value="IncludeJQuery" priority="7" />
       <Item value=".." priority="6" />
       <Item value="." priority="6" />
@@ -514,7 +524,7 @@
       <Item value="StringBuilder" priority="26" />
       <Item value="Environment`0" priority="31" />
       <Item value="context" priority="31" />
-      <Item value="NewOrderUser" priority="61" />
+      <Item value="NewOrderUser" priority="92" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.HttpRequest">
       <Item value="QueryString" priority="161" />
