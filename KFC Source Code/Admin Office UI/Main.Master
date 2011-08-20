@@ -73,8 +73,8 @@
                                 <Zones>
                                     <OfficeWebUI:GroupZone ID="GroupZone5" runat="server" Text="Zone 1">
                                         <Content>
-                                            <OfficeWebUI:LargeItem ID="LargeItem11" runat="server" ImageUrl="~/library/img/32/icon89_32.png" Text="New " ToolTip="<b>Create a new food type</b><br/>Use this option to create a new food type in the system" />
-                                            <OfficeWebUI:LargeItem ID="LargeItem12" runat="server" ImageUrl="~/library/img/32/icon90_32.png" Text="Orders" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" />
+                                            <OfficeWebUI:LargeItem ID="LargeItem11" runat="server" ImageUrl="~/library/img/32/icon89_32.png" Text="New " ToolTip="<b>Create a new food type</b><br/>Use this option to create a new food type in the system" NavigateUrl="~/OrderManage.aspx?New=1"/>
+                                            <OfficeWebUI:LargeItem ID="LargeItem12" runat="server" ImageUrl="~/library/img/32/icon90_32.png" Text="Orders" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" NavigateUrl="~/OrderManage.aspx"/>
                                         </Content>                                        
                                     </OfficeWebUI:GroupZone>
                                 </Zones>
