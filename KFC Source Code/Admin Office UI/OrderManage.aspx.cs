@@ -22,5 +22,11 @@ namespace ContosoWebApp
                 }
             }
         }
+
+
+        protected void NewOrderPopupOk()
+        {
+            
+        }
     }
 }

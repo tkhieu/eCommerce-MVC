@@ -4,6 +4,53 @@
 
 <script>
     $(function () {
+
+        var foodId;
+        var foodCount = $("#<%=NewOrderCount.ClientID %>").val();
+
+
+        $("#buttonDelete").click(function () {
+            var i = $("#buttonDelete").button("option", "count");
+            alert(i);
+        });
+
+        var count = 0;
+        var totalPrice = 0;
+        $("#buttonAdd").button().click(function () {
+            count++;
+
+            var newfname = "<tr><td id=\"food" + count.toString() + "\">" + $("#<%=NewOrderFood.ClientID %>").val() + "</td>";
+            var newfcount = "<td id=\"fcount" + count.toString() + "\">" + $("#<%=NewOrderCount.ClientID %>").val() + "</td>";
+            var newfprice = "<td id=\"fprice" + count.toString() + "\">" + $("#<%=NewOrderPrice.ClientID %>").val();
+            var newdelbutton = "<div id=\"buttonDelete" + count + "\" >Delete</div></td></tr>";
+
+            var newElement = newfname + newfcount + newfprice + newdelbutton;
+
+            $("#<%=NewFoodArray.ClientID %>").val($("#<%=NewFoodArray.ClientID %>").val() + "," + foodId);
+            $("#<%=NewCountArray.ClientID %>").val($("#<%=NewCountArray.ClientID %>").val() + "," + foodCount);
+
+            totalPrice = totalPrice + parseInt($("#<%=NewOrderPrice.ClientID %>").val());
+
+            $("#<%=NewOrderTotal.ClientID %>").val(totalPrice);
+
+            $('#foodTable > tbody:last').append(newElement);
+
+            $("#buttonDelete" + count).button();
+            //alert("Running the last action");
+
+            if (count == 5) {
+                $("#buttonAdd").button("disable");
+            }
+
+            return false;
+        });
+
+        $("#buttonClear").button().click(function () {
+            $("#<%=NewOrderFood.ClientID %>").val("");
+            $("#<%=NewOrderCount.ClientID %>").val("");
+            $("#<%=NewOrderPrice.ClientID %>").val("");
+        });
+
         $("#<%=NewOrderUser.ClientID %>").autocomplete({
             source: 'Service/Account.ashx',
             minLenght: 0,
@@ -22,21 +69,21 @@
             select: function (event, ui) {
                 var foodPrice = ui.item.Price * $("#<%=NewOrderCount.ClientID %>").val();
                 Price = ui.item.Price;
+                foodId = ui.item.id;
                 $("#<%=NewOrderPrice.ClientID %>").val(foodPrice);
             }
 
         });
 
-        $("#<%=NewOrderCount.ClientID %>").autocomplete({
-            source: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-            minLenght: 0,
-            select: function (event, ui) {
-                var foodPrice = ui.item.value * Price;
+
+        $("#<%=NewOrderCount.ClientID %>").change(
+            function () {
+                foodCount = $("#<%=NewOrderCount.ClientID %>").val();
+                var foodPrice = Price * foodCount;
                 $("#<%=NewOrderPrice.ClientID %>").val(foodPrice);
+
             }
-
-        });
-
+        );
         $('#<%=NewOrderTime.ClientID %>').datetimepicker();
     });
 </script>
@@ -44,7 +91,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-	<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewOrder" Title="Order Add" ShowOkButton="true" ShowCancelButton="true">
+	<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewOrder" Title="Order Add" ShowOkButton="true" ShowCancelButton="true" Width="415px" OnClickOk="NewOrderPopupOk">
 		<Content>
 			<table style="width: 100%">
 				<tr>
@@ -120,35 +167,39 @@
 					</td>
 				</tr>
 			</table>
-			<p>
-				<br />
-			</p>
-			<table style="width: 100%">
+			
+			<table style="width: 100%" id="foodTable">
 				<tr>
 					<td colspan="3">
 						<strong>Food</strong>
 					</td>
 				</tr>
-				<tr>
-					<td>
+				<tr id="element">
+					<td id="fName">
 						Gà Chiên
 					</td>
-					<td>
+					<td id="fCount">
 						1
 					</td>
-					<td>
+					<td id="fPrice">
 						45.000
 					</td>
 				</tr>
 				<tr>
-					<td>
-                        <asp:TextBox ID="NewOrderFood" runat="server"></asp:TextBox>
+					<td style="width: 180px">
+                        <asp:HiddenField runat="server" ID="NewFoodId"/>
+                        <asp:TextBox ID="NewOrderFood" runat="server" Width="90%"></asp:TextBox>
 					</td>
 					<td>
-						<asp:TextBox ID="NewOrderCount" runat="server" TextMode="SingleLine" >1</asp:TextBox>
+						<asp:TextBox ID="NewOrderCount" runat="server" Width="20px" >1</asp:TextBox>
 					</td>
 					<td>
-						<asp:TextBox ID="NewOrderPrice" runat="server"></asp:TextBox>
+						<asp:TextBox ID="NewOrderPrice" runat="server" Width="50px"></asp:TextBox>
+                        
+                            <div id="buttonAdd">Add</div>
+                            <div Id="buttonClear">Clear</div>
+                        
+                        
 					</td>
 				</tr>
 				<tr>
@@ -159,10 +210,12 @@
 						Tổng
 					</td>
 					<td>
-						<asp:TextBox ID="NewOrderTotal" runat="server"></asp:TextBox>
+						<asp:TextBox ID="NewOrderTotal" runat="server" Width="155px" CssClass="float-right"></asp:TextBox>
 					</td>
 				</tr>
 			</table>
+            <asp:HiddenField runat="server" ID="NewFoodArray"/>
+            <asp:HiddenField runat="server" ID="NewCountArray"/>
 		</Content>
 	</OfficeWebUI:OfficePopup>
 </asp:Content>
