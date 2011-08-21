@@ -19,18 +19,18 @@ using System.Runtime.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_QUESTION", "QUESTION", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.QUESTION), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ACCOUNT), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_ACCOUNT", "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.ACCOUNT), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.BILL), "BILLDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.BILLDETAIL), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_BILL1", "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.BILL), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.ORDER), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILLDETAIL_FOOD1", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.FOOD), "BILLDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.BILLDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_FOOD_FOODTYPE1", "FOODTYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.FOODTYPE), "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.FOOD), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD1", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.FOOD), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER1", "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.ORDER), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ACCOUNT), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_DISTRICT", "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DISTRICT), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ACCOUNT), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_DISTRICT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.DISTRICT), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.BILL), "BILLDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.BILLDETAIL), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Model.FOOD), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_ACCOUNT", "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.ACCOUNT), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILL_ORDER", "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.ORDER), "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.BILL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.CITY), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_DISTRICT", "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.DISTRICT), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDER), true)]
+[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER", "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Model.ORDER), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Model.ORDERDETAIL), true)]
 
 #endregion
 
@@ -101,22 +101,6 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<BILL> BILLs
-        {
-            get
-            {
-                if ((_BILLs == null))
-                {
-                    _BILLs = base.CreateObjectSet<BILL>("BILLs");
-                }
-                return _BILLs;
-            }
-        }
-        private ObjectSet<BILL> _BILLs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<BILLDETAIL> BILLDETAILs
         {
             get
@@ -165,38 +149,6 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<ORDER> ORDERs
-        {
-            get
-            {
-                if ((_ORDERs == null))
-                {
-                    _ORDERs = base.CreateObjectSet<ORDER>("ORDERs");
-                }
-                return _ORDERs;
-            }
-        }
-        private ObjectSet<ORDER> _ORDERs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ORDERDETAIL> ORDERDETAILs
-        {
-            get
-            {
-                if ((_ORDERDETAILs == null))
-                {
-                    _ORDERDETAILs = base.CreateObjectSet<ORDERDETAIL>("ORDERDETAILs");
-                }
-                return _ORDERDETAILs;
-            }
-        }
-        private ObjectSet<ORDERDETAIL> _ORDERDETAILs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<QUESTION> QUESTIONs
         {
             get
@@ -241,6 +193,54 @@ namespace Model
             }
         }
         private ObjectSet<DISTRICT> _DISTRICTs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<BILL> BILLs
+        {
+            get
+            {
+                if ((_BILLs == null))
+                {
+                    _BILLs = base.CreateObjectSet<BILL>("BILLs");
+                }
+                return _BILLs;
+            }
+        }
+        private ObjectSet<BILL> _BILLs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ORDERDETAIL> ORDERDETAILs
+        {
+            get
+            {
+                if ((_ORDERDETAILs == null))
+                {
+                    _ORDERDETAILs = base.CreateObjectSet<ORDERDETAIL>("ORDERDETAILs");
+                }
+                return _ORDERDETAILs;
+            }
+        }
+        private ObjectSet<ORDERDETAIL> _ORDERDETAILs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ORDER> ORDERs
+        {
+            get
+            {
+                if ((_ORDERs == null))
+                {
+                    _ORDERs = base.CreateObjectSet<ORDER>("ORDERs");
+                }
+                return _ORDERs;
+            }
+        }
+        private ObjectSet<ORDER> _ORDERs;
 
         #endregion
         #region AddTo Methods
@@ -251,14 +251,6 @@ namespace Model
         public void AddToACCOUNTs(ACCOUNT aCCOUNT)
         {
             base.AddObject("ACCOUNTs", aCCOUNT);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BILLs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBILLs(BILL bILL)
-        {
-            base.AddObject("BILLs", bILL);
         }
     
         /// <summary>
@@ -286,22 +278,6 @@ namespace Model
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the ORDERs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToORDERs(ORDER oRDER)
-        {
-            base.AddObject("ORDERs", oRDER);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the ORDERDETAILs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToORDERDETAILs(ORDERDETAIL oRDERDETAIL)
-        {
-            base.AddObject("ORDERDETAILs", oRDERDETAIL);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the QUESTIONs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToQUESTIONs(QUESTION qUESTION)
@@ -323,6 +299,30 @@ namespace Model
         public void AddToDISTRICTs(DISTRICT dISTRICT)
         {
             base.AddObject("DISTRICTs", dISTRICT);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the BILLs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToBILLs(BILL bILL)
+        {
+            base.AddObject("BILLs", bILL);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ORDERDETAILs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToORDERDETAILs(ORDERDETAIL oRDERDETAIL)
+        {
+            base.AddObject("ORDERDETAILs", oRDERDETAIL);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ORDERs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToORDERs(ORDER oRDER)
+        {
+            base.AddObject("ORDERs", oRDER);
         }
 
         #endregion
@@ -696,28 +696,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_ACCOUNT", "ORDER")]
-        public EntityCollection<ORDER> ORDERs
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_ACCOUNT", "ORDER");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_ACCOUNT", "ORDER", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "CITY")]
         public CITY CITY
         {
@@ -787,6 +765,28 @@ namespace Model
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_ACCOUNT", "ORDER")]
+        public EntityCollection<ORDER> ORDERs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_ACCOUNT", "ORDER");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDER>("FoodStoreModel.FK_ORDER_ACCOUNT", "ORDER", value);
+                }
+            }
+        }
 
         #endregion
     }
@@ -814,6 +814,30 @@ namespace Model
 
         #endregion
         #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDOrder
+        {
+            get
+            {
+                return _IDOrder;
+            }
+            set
+            {
+                OnIDOrderChanging(value);
+                ReportPropertyChanging("IDOrder");
+                _IDOrder = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDOrder");
+                OnIDOrderChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDOrder;
+        partial void OnIDOrderChanging(Nullable<global::System.Int32> value);
+        partial void OnIDOrderChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -946,16 +970,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_BILL1", "ORDER")]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILL_ORDER", "ORDER")]
         public ORDER ORDER
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDER_BILL1", "ORDER").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_BILL_ORDER", "ORDER").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDER_BILL1", "ORDER").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_BILL_ORDER", "ORDER").Value = value;
             }
         }
         /// <summary>
@@ -967,13 +991,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDER_BILL1", "ORDER");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_BILL_ORDER", "ORDER");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORDER>("FoodStoreModel.FK_ORDER_BILL1", "ORDER", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORDER>("FoodStoreModel.FK_BILL_ORDER", "ORDER", value);
                 }
             }
         }
@@ -995,12 +1019,12 @@ namespace Model
         /// Create a new BILLDETAIL object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        /// <param name="food">Initial value of the Food property.</param>
-        public static BILLDETAIL CreateBILLDETAIL(global::System.Int32 id, global::System.Int32 food)
+        /// <param name="idFood">Initial value of the IdFood property.</param>
+        public static BILLDETAIL CreateBILLDETAIL(global::System.Int32 id, global::System.Int32 idFood)
         {
             BILLDETAIL bILLDETAIL = new BILLDETAIL();
             bILLDETAIL.ID = id;
-            bILLDETAIL.Food = food;
+            bILLDETAIL.IdFood = idFood;
             return bILLDETAIL;
         }
 
@@ -1039,27 +1063,27 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Food
+        public global::System.Int32 IdFood
         {
             get
             {
-                return _Food;
+                return _IdFood;
             }
             set
             {
-                if (_Food != value)
+                if (_IdFood != value)
                 {
-                    OnFoodChanging(value);
-                    ReportPropertyChanging("Food");
-                    _Food = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Food");
-                    OnFoodChanged();
+                    OnIdFoodChanging(value);
+                    ReportPropertyChanging("IdFood");
+                    _IdFood = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdFood");
+                    OnIdFoodChanged();
                 }
             }
         }
-        private global::System.Int32 _Food;
-        partial void OnFoodChanging(global::System.Int32 value);
-        partial void OnFoodChanged();
+        private global::System.Int32 _IdFood;
+        partial void OnIdFoodChanging(global::System.Int32 value);
+        partial void OnIdFoodChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1143,44 +1167,6 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL")]
-        public BILL BILL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BILL> BILLReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_FOOD1", "FOOD")]
         public FOOD FOOD
         {
@@ -1209,6 +1195,44 @@ namespace Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL")]
+        public BILL BILL
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<BILL> BILLReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL", value);
                 }
             }
         }
@@ -1841,18 +1865,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD1", "ORDERDETAIL")]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD", "ORDERDETAIL")]
         public EntityCollection<ORDERDETAIL> ORDERDETAILs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "ORDERDETAIL");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "ORDERDETAIL");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "ORDERDETAIL", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "ORDERDETAIL", value);
                 }
             }
         }
@@ -2044,24 +2068,24 @@ namespace Model
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Guest
+        public global::System.String Name
         {
             get
             {
-                return _Guest;
+                return _Name;
             }
             set
             {
-                OnGuestChanging(value);
-                ReportPropertyChanging("Guest");
-                _Guest = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Guest");
-                OnGuestChanged();
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
             }
         }
-        private global::System.String _Guest;
-        partial void OnGuestChanging(global::System.String value);
-        partial void OnGuestChanged();
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2303,56 +2327,18 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDER_BILL1", "BILL")]
-        public BILL BILL
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILL_ORDER", "BILL")]
+        public EntityCollection<BILL> BILLs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_ORDER_BILL1", "BILL").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_ORDER_BILL1", "BILL").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BILL> BILLReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_ORDER_BILL1", "BILL");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BILL>("FoodStoreModel.FK_BILL_ORDER", "BILL");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BILL>("FoodStoreModel.FK_ORDER_BILL1", "BILL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER1", "ORDERDETAIL")]
-        public EntityCollection<ORDERDETAIL> ORDERDETAILs
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDERDETAIL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDERDETAIL", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BILL>("FoodStoreModel.FK_BILL_ORDER", "BILL", value);
                 }
             }
         }
@@ -2432,6 +2418,28 @@ namespace Model
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER", "ORDERDETAIL")]
+        public EntityCollection<ORDERDETAIL> ORDERDETAILs
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDERDETAIL");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ORDERDETAIL>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDERDETAIL", value);
+                }
+            }
+        }
 
         #endregion
     }
@@ -2450,17 +2458,41 @@ namespace Model
         /// Create a new ORDERDETAIL object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        /// <param name="food">Initial value of the Food property.</param>
-        public static ORDERDETAIL CreateORDERDETAIL(global::System.Int32 id, global::System.Int32 food)
+        /// <param name="iDFood">Initial value of the IDFood property.</param>
+        public static ORDERDETAIL CreateORDERDETAIL(global::System.Int32 id, global::System.Int32 iDFood)
         {
             ORDERDETAIL oRDERDETAIL = new ORDERDETAIL();
             oRDERDETAIL.ID = id;
-            oRDERDETAIL.Food = food;
+            oRDERDETAIL.IDFood = iDFood;
             return oRDERDETAIL;
         }
 
         #endregion
         #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDOrder
+        {
+            get
+            {
+                return _IDOrder;
+            }
+            set
+            {
+                OnIDOrderChanging(value);
+                ReportPropertyChanging("IDOrder");
+                _IDOrder = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDOrder");
+                OnIDOrderChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDOrder;
+        partial void OnIDOrderChanging(Nullable<global::System.Int32> value);
+        partial void OnIDOrderChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2492,29 +2524,26 @@ namespace Model
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Food
+        public global::System.Int32 IDFood
         {
             get
             {
-                return _Food;
+                return _IDFood;
             }
             set
             {
-                if (_Food != value)
-                {
-                    OnFoodChanging(value);
-                    ReportPropertyChanging("Food");
-                    _Food = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Food");
-                    OnFoodChanged();
-                }
+                OnIDFoodChanging(value);
+                ReportPropertyChanging("IDFood");
+                _IDFood = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IDFood");
+                OnIDFoodChanged();
             }
         }
-        private global::System.Int32 _Food;
-        partial void OnFoodChanging(global::System.Int32 value);
-        partial void OnFoodChanged();
+        private global::System.Int32 _IDFood;
+        partial void OnIDFoodChanging(global::System.Int32 value);
+        partial void OnIDFoodChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2598,16 +2627,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD1", "FOOD")]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD", "FOOD")]
         public FOOD FOOD
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "FOOD").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "FOOD").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "FOOD").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "FOOD").Value = value;
             }
         }
         /// <summary>
@@ -2619,13 +2648,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "FOOD");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "FOOD");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD1", "FOOD", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FOOD>("FoodStoreModel.FK_ORDERDETAIL_FOOD", "FOOD", value);
                 }
             }
         }
@@ -2636,16 +2665,16 @@ namespace Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER1", "ORDER")]
+        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_ORDERDETAIL_ORDER", "ORDER")]
         public ORDER ORDER
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDER").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDER").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDER").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDER").Value = value;
             }
         }
         /// <summary>
@@ -2657,13 +2686,13 @@ namespace Model
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDER");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDER");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER1", "ORDER", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORDER>("FoodStoreModel.FK_ORDERDETAIL_ORDER", "ORDER", value);
                 }
             }
         }

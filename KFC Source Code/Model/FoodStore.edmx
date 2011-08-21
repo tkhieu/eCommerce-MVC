@@ -28,6 +28,10 @@
             <End Role="QUESTION" EntitySet="QUESTION" />
             <End Role="ACCOUNT" EntitySet="ACCOUNT" />
           </AssociationSet>
+          <AssociationSet Name="FK_BILL_ORDER" Association="FoodStoreModel.Store.FK_BILL_ORDER">
+            <End Role="ORDER" EntitySet="ORDER" />
+            <End Role="BILL" EntitySet="BILL" />
+          </AssociationSet>
           <AssociationSet Name="FK_BILLDETAIL_BILL1" Association="FoodStoreModel.Store.FK_BILLDETAIL_BILL1">
             <End Role="BILL" EntitySet="BILL" />
             <End Role="BILLDETAIL" EntitySet="BILLDETAIL" />
@@ -48,10 +52,6 @@
             <End Role="ACCOUNT" EntitySet="ACCOUNT" />
             <End Role="ORDER" EntitySet="ORDER" />
           </AssociationSet>
-          <AssociationSet Name="FK_ORDER_BILL1" Association="FoodStoreModel.Store.FK_ORDER_BILL1">
-            <End Role="BILL" EntitySet="BILL" />
-            <End Role="ORDER" EntitySet="ORDER" />
-          </AssociationSet>
           <AssociationSet Name="FK_ORDER_CITY" Association="FoodStoreModel.Store.FK_ORDER_CITY">
             <End Role="CITY" EntitySet="CITY" />
             <End Role="ORDER" EntitySet="ORDER" />
@@ -60,11 +60,11 @@
             <End Role="DISTRICT" EntitySet="DISTRICT" />
             <End Role="ORDER" EntitySet="ORDER" />
           </AssociationSet>
-          <AssociationSet Name="FK_ORDERDETAIL_FOOD1" Association="FoodStoreModel.Store.FK_ORDERDETAIL_FOOD1">
+          <AssociationSet Name="FK_ORDERDETAIL_FOOD" Association="FoodStoreModel.Store.FK_ORDERDETAIL_FOOD">
             <End Role="FOOD" EntitySet="FOOD" />
             <End Role="ORDERDETAIL" EntitySet="ORDERDETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK_ORDERDETAIL_ORDER1" Association="FoodStoreModel.Store.FK_ORDERDETAIL_ORDER1">
+          <AssociationSet Name="FK_ORDERDETAIL_ORDER" Association="FoodStoreModel.Store.FK_ORDERDETAIL_ORDER">
             <End Role="ORDER" EntitySet="ORDER" />
             <End Role="ORDERDETAIL" EntitySet="ORDERDETAIL" />
           </AssociationSet>
@@ -90,6 +90,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
+          <Property Name="IDOrder" Type="int" />
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="datetime" />
           <Property Name="TotalPayment" Type="int" />
@@ -147,11 +148,11 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="int" />
-          <Property Name="Guest" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Tel" Type="varchar" MaxLength="11" />
           <Property Name="Address" Type="nvarchar(max)" />
           <Property Name="Date" Type="datetime" />
-          <Property Name="Note" Type="text" />
+          <Property Name="Note" Type="nvarchar" MaxLength="1024" />
           <Property Name="State" Type="int" />
           <Property Name="TotalPayment" Type="int" />
           <Property Name="IDCity" Type="int" />
@@ -160,10 +161,10 @@
         <EntityType Name="ORDERDETAIL">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Food" />
           </Key>
+          <Property Name="IDOrder" Type="int" />
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Food" Type="int" Nullable="false" />
+          <Property Name="IDFood" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" />
           <Property Name="Price" Type="int" />
           <Property Name="TotalPayment" Type="int" />
@@ -208,6 +209,18 @@
             </Principal>
             <Dependent Role="ACCOUNT">
               <PropertyRef Name="Question" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BILL_ORDER">
+          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="0..1" />
+          <End Role="BILL" Type="FoodStoreModel.Store.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="IDOrder" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -271,18 +284,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ORDER_BILL1">
-          <End Role="BILL" Type="FoodStoreModel.Store.BILL" Multiplicity="1" />
-          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="BILL">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ORDER">
-              <PropertyRef Name="ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ORDER_CITY">
           <End Role="CITY" Type="FoodStoreModel.Store.CITY" Multiplicity="0..1" />
           <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="*" />
@@ -307,7 +308,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ORDERDETAIL_FOOD1">
+        <Association Name="FK_ORDERDETAIL_FOOD">
           <End Role="FOOD" Type="FoodStoreModel.Store.FOOD" Multiplicity="1" />
           <End Role="ORDERDETAIL" Type="FoodStoreModel.Store.ORDERDETAIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -315,19 +316,19 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ORDERDETAIL">
-              <PropertyRef Name="Food" />
+              <PropertyRef Name="IDFood" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ORDERDETAIL_ORDER1">
-          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="1" />
+        <Association Name="FK_ORDERDETAIL_ORDER">
+          <End Role="ORDER" Type="FoodStoreModel.Store.ORDER" Multiplicity="0..1" />
           <End Role="ORDERDETAIL" Type="FoodStoreModel.Store.ORDERDETAIL" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ORDER">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ORDERDETAIL">
-              <PropertyRef Name="ID" />
+              <PropertyRef Name="IDOrder" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -337,28 +338,13 @@
       <Schema Namespace="FoodStoreModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="FoodStoreEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ACCOUNTs" EntityType="FoodStoreModel.ACCOUNT" />
-          <EntitySet Name="BILLs" EntityType="FoodStoreModel.BILL" />
           <EntitySet Name="BILLDETAILs" EntityType="FoodStoreModel.BILLDETAIL" />
           <EntitySet Name="FOODs" EntityType="FoodStoreModel.FOOD" />
           <EntitySet Name="FOODTYPEs" EntityType="FoodStoreModel.FOODTYPE" />
-          <EntitySet Name="ORDERs" EntityType="FoodStoreModel.ORDER" />
-          <EntitySet Name="ORDERDETAILs" EntityType="FoodStoreModel.ORDERDETAIL" />
           <EntitySet Name="QUESTIONs" EntityType="FoodStoreModel.QUESTION" />
           <AssociationSet Name="FK_ACCOUNT_QUESTION" Association="FoodStoreModel.FK_ACCOUNT_QUESTION">
             <End Role="QUESTION" EntitySet="QUESTIONs" />
             <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ORDER_ACCOUNT" Association="FoodStoreModel.FK_ORDER_ACCOUNT">
-            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
-            <End Role="ORDER" EntitySet="ORDERs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_BILLDETAIL_BILL1" Association="FoodStoreModel.FK_BILLDETAIL_BILL1">
-            <End Role="BILL" EntitySet="BILLs" />
-            <End Role="BILLDETAIL" EntitySet="BILLDETAILs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ORDER_BILL1" Association="FoodStoreModel.FK_ORDER_BILL1">
-            <End Role="BILL" EntitySet="BILLs" />
-            <End Role="ORDER" EntitySet="ORDERs" />
           </AssociationSet>
           <AssociationSet Name="FK_BILLDETAIL_FOOD1" Association="FoodStoreModel.FK_BILLDETAIL_FOOD1">
             <End Role="FOOD" EntitySet="FOODs" />
@@ -367,14 +353,6 @@
           <AssociationSet Name="FK_FOOD_FOODTYPE1" Association="FoodStoreModel.FK_FOOD_FOODTYPE1">
             <End Role="FOODTYPE" EntitySet="FOODTYPEs" />
             <End Role="FOOD" EntitySet="FOODs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ORDERDETAIL_FOOD1" Association="FoodStoreModel.FK_ORDERDETAIL_FOOD1">
-            <End Role="FOOD" EntitySet="FOODs" />
-            <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ORDERDETAIL_ORDER1" Association="FoodStoreModel.FK_ORDERDETAIL_ORDER1">
-            <End Role="ORDER" EntitySet="ORDERs" />
-            <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
           </AssociationSet>
           <EntitySet Name="CITies" EntityType="FoodStoreModel.CITY" />
           <EntitySet Name="DISTRICTs" EntityType="FoodStoreModel.DISTRICT" />
@@ -390,6 +368,25 @@
             <End Role="CITY" EntitySet="CITies" />
             <End Role="DISTRICT" EntitySet="DISTRICTs" />
           </AssociationSet>
+          <EntitySet Name="BILLs" EntityType="FoodStoreModel.BILL" />
+          <AssociationSet Name="FK_BILLDETAIL_BILL1" Association="FoodStoreModel.FK_BILLDETAIL_BILL1">
+            <End Role="BILL" EntitySet="BILLs" />
+            <End Role="BILLDETAIL" EntitySet="BILLDETAILs" />
+          </AssociationSet>
+          <EntitySet Name="ORDERDETAILs" EntityType="FoodStoreModel.ORDERDETAIL" />
+          <AssociationSet Name="FK_ORDERDETAIL_FOOD" Association="FoodStoreModel.FK_ORDERDETAIL_FOOD">
+            <End Role="FOOD" EntitySet="FOODs" />
+            <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
+          </AssociationSet>
+          <EntitySet Name="ORDERs" EntityType="FoodStoreModel.ORDER" />
+          <AssociationSet Name="FK_ORDER_ACCOUNT" Association="FoodStoreModel.FK_ORDER_ACCOUNT">
+            <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+            <End Role="ORDER" EntitySet="ORDERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BILL_ORDER" Association="FoodStoreModel.FK_BILL_ORDER">
+            <End Role="ORDER" EntitySet="ORDERs" />
+            <End Role="BILL" EntitySet="BILLs" />
+          </AssociationSet>
           <AssociationSet Name="FK_ORDER_CITY" Association="FoodStoreModel.FK_ORDER_CITY">
             <End Role="CITY" EntitySet="CITies" />
             <End Role="ORDER" EntitySet="ORDERs" />
@@ -397,6 +394,10 @@
           <AssociationSet Name="FK_ORDER_DISTRICT" Association="FoodStoreModel.FK_ORDER_DISTRICT">
             <End Role="DISTRICT" EntitySet="DISTRICTs" />
             <End Role="ORDER" EntitySet="ORDERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ORDERDETAIL_ORDER" Association="FoodStoreModel.FK_ORDERDETAIL_ORDER">
+            <End Role="ORDER" EntitySet="ORDERs" />
+            <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="ACCOUNT">
@@ -414,35 +415,24 @@
           <Property Name="IDQuestion" Type="Int32" />
           <Property Name="Answer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="QUESTION" Relationship="FoodStoreModel.FK_ACCOUNT_QUESTION" FromRole="ACCOUNT" ToRole="QUESTION" />
-          <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ACCOUNT" ToRole="ORDER" />
           <Property Type="Int32" Name="IDCity" />
           <Property Type="Int32" Name="IDDistrict" />
           <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_ACCOUNT_CITY" FromRole="ACCOUNT" ToRole="CITY" />
           <NavigationProperty Name="DISTRICT" Relationship="FoodStoreModel.FK_ACCOUNT_DISTRICT" FromRole="ACCOUNT" ToRole="DISTRICT" />
-        </EntityType>
-        <EntityType Name="BILL">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="DateTime" />
-          <Property Name="TotalPayment" Type="Int32" />
-          <Property Name="Note" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="BILLDETAILs" Relationship="FoodStoreModel.FK_BILLDETAIL_BILL1" FromRole="BILL" ToRole="BILLDETAIL" />
-          <NavigationProperty Name="ORDER" Relationship="FoodStoreModel.FK_ORDER_BILL1" FromRole="BILL" ToRole="ORDER" />
+          <NavigationProperty Name="ORDERs" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ACCOUNT" ToRole="ORDER" />
         </EntityType>
         <EntityType Name="BILLDETAIL">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Food" />
+            <PropertyRef Name="IdFood" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Food" Type="Int32" Nullable="false" />
+          <Property Name="IdFood" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" />
           <Property Name="Price" Type="Int32" />
           <Property Name="TotalPayment" Type="Int32" />
-          <NavigationProperty Name="BILL" Relationship="FoodStoreModel.FK_BILLDETAIL_BILL1" FromRole="BILLDETAIL" ToRole="BILL" />
           <NavigationProperty Name="FOOD" Relationship="FoodStoreModel.FK_BILLDETAIL_FOOD1" FromRole="BILLDETAIL" ToRole="FOOD" />
+          <NavigationProperty Name="BILL" Relationship="FoodStoreModel.FK_BILLDETAIL_BILL1" FromRole="BILLDETAIL" ToRole="BILL" />
         </EntityType>
         <EntityType Name="FOOD">
           <Key>
@@ -456,7 +446,7 @@
           <Property Name="FoodTypeId" Type="Int32" />
           <NavigationProperty Name="BILLDETAILs" Relationship="FoodStoreModel.FK_BILLDETAIL_FOOD1" FromRole="FOOD" ToRole="BILLDETAIL" />
           <NavigationProperty Name="FOODTYPE" Relationship="FoodStoreModel.FK_FOOD_FOODTYPE1" FromRole="FOOD" ToRole="FOODTYPE" />
-          <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD1" FromRole="FOOD" ToRole="ORDERDETAIL" />
+          <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD" FromRole="FOOD" ToRole="ORDERDETAIL" />
         </EntityType>
         <EntityType Name="FOODTYPE">
           <Key>
@@ -465,40 +455,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="FOODs" Relationship="FoodStoreModel.FK_FOOD_FOODTYPE1" FromRole="FOODTYPE" ToRole="FOOD" />
-        </EntityType>
-        <EntityType Name="ORDER">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserName" Type="Int32" />
-          <Property Name="Guest" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Tel" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
-          <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Date" Type="DateTime" />
-          <Property Name="Note" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="State" Type="Int32" />
-          <Property Name="TotalPayment" Type="Int32" />
-          <NavigationProperty Name="ACCOUNT" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ORDER" ToRole="ACCOUNT" />
-          <NavigationProperty Name="BILL" Relationship="FoodStoreModel.FK_ORDER_BILL1" FromRole="ORDER" ToRole="BILL" />
-          <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_ORDER1" FromRole="ORDER" ToRole="ORDERDETAIL" />
-          <Property Type="Int32" Name="IDCity" />
-          <Property Type="Int32" Name="IDDistrict" />
-          <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_ORDER_CITY" FromRole="ORDER" ToRole="CITY" />
-          <NavigationProperty Name="DISTRICT" Relationship="FoodStoreModel.FK_ORDER_DISTRICT" FromRole="ORDER" ToRole="DISTRICT" />
-        </EntityType>
-        <EntityType Name="ORDERDETAIL">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="Food" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Food" Type="Int32" Nullable="false" />
-          <Property Name="Count" Type="Int32" />
-          <Property Name="Price" Type="Int32" />
-          <Property Name="TotalPayment" Type="Int32" />
-          <NavigationProperty Name="FOOD" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD1" FromRole="ORDERDETAIL" ToRole="FOOD" />
-          <NavigationProperty Name="ORDER" Relationship="FoodStoreModel.FK_ORDERDETAIL_ORDER1" FromRole="ORDERDETAIL" ToRole="ORDER" />
         </EntityType>
         <EntityType Name="QUESTION">
           <Key>
@@ -520,42 +476,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ORDER_ACCOUNT">
-          <End Role="ACCOUNT" Type="FoodStoreModel.ACCOUNT" Multiplicity="0..1" />
-          <End Role="ORDER" Type="FoodStoreModel.ORDER" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ACCOUNT">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ORDER">
-              <PropertyRef Name="UserName" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_BILLDETAIL_BILL1">
-          <End Role="BILL" Type="FoodStoreModel.BILL" Multiplicity="1" />
-          <End Role="BILLDETAIL" Type="FoodStoreModel.BILLDETAIL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="BILL">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="BILLDETAIL">
-              <PropertyRef Name="ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ORDER_BILL1">
-          <End Role="BILL" Type="FoodStoreModel.BILL" Multiplicity="1" />
-          <End Role="ORDER" Type="FoodStoreModel.ORDER" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="BILL">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ORDER">
-              <PropertyRef Name="ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_BILLDETAIL_FOOD1">
           <End Role="FOOD" Type="FoodStoreModel.FOOD" Multiplicity="1" />
           <End Role="BILLDETAIL" Type="FoodStoreModel.BILLDETAIL" Multiplicity="*" />
@@ -564,7 +484,7 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="BILLDETAIL">
-              <PropertyRef Name="Food" />
+              <PropertyRef Name="IdFood" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -577,30 +497,6 @@
             </Principal>
             <Dependent Role="FOOD">
               <PropertyRef Name="FoodTypeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ORDERDETAIL_FOOD1">
-          <End Role="FOOD" Type="FoodStoreModel.FOOD" Multiplicity="1" />
-          <End Role="ORDERDETAIL" Type="FoodStoreModel.ORDERDETAIL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FOOD">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ORDERDETAIL">
-              <PropertyRef Name="Food" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ORDERDETAIL_ORDER1">
-          <End Role="ORDER" Type="FoodStoreModel.ORDER" Multiplicity="1" />
-          <End Role="ORDERDETAIL" Type="FoodStoreModel.ORDERDETAIL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ORDER">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ORDERDETAIL">
-              <PropertyRef Name="ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -663,6 +559,100 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="BILL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="IDOrder" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="TotalPayment" />
+          <Property Type="String" Name="Note" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BILLDETAILs" Relationship="FoodStoreModel.FK_BILLDETAIL_BILL1" FromRole="BILL" ToRole="BILLDETAIL" />
+          <NavigationProperty Name="ORDER" Relationship="FoodStoreModel.FK_BILL_ORDER" FromRole="BILL" ToRole="ORDER" />
+        </EntityType>
+        <Association Name="FK_BILLDETAIL_BILL1">
+          <End Type="FoodStoreModel.BILL" Role="BILL" Multiplicity="1" />
+          <End Type="FoodStoreModel.BILLDETAIL" Role="BILLDETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILL">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BILLDETAIL">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ORDERDETAIL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="IDOrder" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IDFood" Nullable="false" />
+          <Property Type="Int32" Name="Count" />
+          <Property Type="Int32" Name="Price" />
+          <Property Type="Int32" Name="TotalPayment" />
+          <NavigationProperty Name="FOOD" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD" FromRole="ORDERDETAIL" ToRole="FOOD" />
+          <NavigationProperty Name="ORDER" Relationship="FoodStoreModel.FK_ORDERDETAIL_ORDER" FromRole="ORDERDETAIL" ToRole="ORDER" />
+        </EntityType>
+        <Association Name="FK_ORDERDETAIL_FOOD">
+          <End Type="FoodStoreModel.FOOD" Role="FOOD" Multiplicity="1" />
+          <End Type="FoodStoreModel.ORDERDETAIL" Role="ORDERDETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FOOD">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDERDETAIL">
+              <PropertyRef Name="IDFood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ORDER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserName" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tel" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="String" Name="Note" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="State" />
+          <Property Type="Int32" Name="TotalPayment" />
+          <Property Type="Int32" Name="IDCity" />
+          <Property Type="Int32" Name="IDDistrict" />
+          <NavigationProperty Name="ACCOUNT" Relationship="FoodStoreModel.FK_ORDER_ACCOUNT" FromRole="ORDER" ToRole="ACCOUNT" />
+          <NavigationProperty Name="BILLs" Relationship="FoodStoreModel.FK_BILL_ORDER" FromRole="ORDER" ToRole="BILL" />
+          <NavigationProperty Name="CITY" Relationship="FoodStoreModel.FK_ORDER_CITY" FromRole="ORDER" ToRole="CITY" />
+          <NavigationProperty Name="DISTRICT" Relationship="FoodStoreModel.FK_ORDER_DISTRICT" FromRole="ORDER" ToRole="DISTRICT" />
+          <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_ORDER" FromRole="ORDER" ToRole="ORDERDETAIL" />
+        </EntityType>
+        <Association Name="FK_ORDER_ACCOUNT">
+          <End Type="FoodStoreModel.ACCOUNT" Role="ACCOUNT" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDER">
+              <PropertyRef Name="UserName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BILL_ORDER">
+          <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.BILL" Role="BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="IDOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ORDER_CITY">
           <End Type="FoodStoreModel.CITY" Role="CITY" Multiplicity="0..1" />
           <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="*" />
@@ -687,6 +677,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ORDERDETAIL_ORDER">
+          <End Type="FoodStoreModel.ORDER" Role="ORDER" Multiplicity="0..1" />
+          <End Type="FoodStoreModel.ORDERDETAIL" Role="ORDERDETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDER">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ORDERDETAIL">
+              <PropertyRef Name="IDOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -707,15 +709,9 @@
             <ScalarProperty Name="IDQuestion" ColumnName="Question" />
             <ScalarProperty Name="Answer" ColumnName="Answer" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="BILLs"><EntityTypeMapping TypeName="FoodStoreModel.BILL"><MappingFragment StoreEntitySet="BILL">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Date" ColumnName="Date" />
-            <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
-            <ScalarProperty Name="Note" ColumnName="Note" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="BILLDETAILs"><EntityTypeMapping TypeName="FoodStoreModel.BILLDETAIL"><MappingFragment StoreEntitySet="BILLDETAIL">
             <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Food" ColumnName="Food" />
+            <ScalarProperty Name="IdFood" ColumnName="Food" />
             <ScalarProperty Name="Count" ColumnName="Count" />
             <ScalarProperty Name="Price" ColumnName="Price" />
             <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
@@ -731,26 +727,6 @@
           <EntitySetMapping Name="FOODTYPEs"><EntityTypeMapping TypeName="FoodStoreModel.FOODTYPE"><MappingFragment StoreEntitySet="FOODTYPE">
             <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="ORDERs"><EntityTypeMapping TypeName="FoodStoreModel.ORDER"><MappingFragment StoreEntitySet="ORDER">
-            <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
-                <ScalarProperty Name="IDCity" ColumnName="IDCity" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="UserName" ColumnName="UserName" />
-            <ScalarProperty Name="Guest" ColumnName="Guest" />
-            <ScalarProperty Name="Tel" ColumnName="Tel" />
-            <ScalarProperty Name="Address" ColumnName="Address" />
-            <ScalarProperty Name="Date" ColumnName="Date" />
-            <ScalarProperty Name="Note" ColumnName="Note" />
-            <ScalarProperty Name="State" ColumnName="State" />
-            <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="ORDERDETAILs"><EntityTypeMapping TypeName="FoodStoreModel.ORDERDETAIL"><MappingFragment StoreEntitySet="ORDERDETAIL">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Food" ColumnName="Food" />
-            <ScalarProperty Name="Count" ColumnName="Count" />
-            <ScalarProperty Name="Price" ColumnName="Price" />
-            <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="QUESTIONs"><EntityTypeMapping TypeName="FoodStoreModel.QUESTION"><MappingFragment StoreEntitySet="QUESTION">
             <ScalarProperty Name="ID" ColumnName="ID" />
@@ -771,6 +747,46 @@
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLs">
+            <EntityTypeMapping TypeName="FoodStoreModel.BILL">
+              <MappingFragment StoreEntitySet="BILL">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDERDETAILs">
+            <EntityTypeMapping TypeName="FoodStoreModel.ORDERDETAIL">
+              <MappingFragment StoreEntitySet="ORDERDETAIL">
+                <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="IDFood" ColumnName="IDFood" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDOrder" ColumnName="IDOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDERs">
+            <EntityTypeMapping TypeName="FoodStoreModel.ORDER">
+              <MappingFragment StoreEntitySet="ORDER">
+                <ScalarProperty Name="IDDistrict" ColumnName="IDDistrict" />
+                <ScalarProperty Name="IDCity" ColumnName="IDCity" />
+                <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -797,84 +813,84 @@
     <Diagrams>
       <Diagram Name="FoodStore" ZoomLevel="88">
         <EntityTypeShape EntityType="FoodStoreModel.ACCOUNT" Width="1.5" PointX="3.75" PointY="12.5" Height="3.3263964843749996" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodStoreModel.BILL" Width="1.5" PointX="0.75" PointY="5" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.BILLDETAIL" Width="1.5" PointX="3" PointY="5" Height="2.3648893229166656" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.FOOD" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.FOODTYPE" Width="1.5" PointX="1.5" PointY="9.5" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodStoreModel.ORDER" Width="1.5" PointX="6" PointY="4.5" Height="3.3263964843749996" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodStoreModel.ORDERDETAIL" Width="1.5" PointX="8.25" PointY="5" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.QUESTION" Width="1.5" PointX="1.5" PointY="13.375" Height="1.5956835937499996" IsExpanded="true" />
         <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_QUESTION" ManuallyRouted="false">
           <ConnectorPoint PointX="3" PointY="14.172841796875" />
           <ConnectorPoint PointX="3.75" PointY="14.172841796875" />
         </AssociationConnector>
-        <AssociationConnector Association="FoodStoreModel.FK_ORDER_ACCOUNT" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.90625" PointY="12.5" />
-          <ConnectorPoint PointX="4.90625" PointY="8.31173459281614" />
-          <ConnectorPoint PointX="6" PointY="8.31173459281614" />
-        </AssociationConnector>
-        <AssociationConnector Association="FoodStoreModel.FK_BILLDETAIL_BILL1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="6.0862939453125" />
-          <ConnectorPoint PointX="2.5416691666666664" PointY="6.0862939453124989" />
-          <ConnectorPoint PointX="2.7083358333333334" PointY="6.0862939453125" />
-          <ConnectorPoint PointX="3" PointY="6.0862939453125" />
-        </AssociationConnector>
-        <AssociationConnector Association="FoodStoreModel.FK_ORDER_BILL1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="5" />
-          <ConnectorPoint PointX="1.5" PointY="4.7187474999999992" />
-          <ConnectorPoint PointX="2.5416691666666664" PointY="4.7187474999999983" />
-          <ConnectorPoint PointX="2.7083358333333334" PointY="4.7187474999999992" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="4.7187474999999983" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="4.7187474999999992" />
-          <ConnectorPoint PointX="6" PointY="4.7187474999999992" />
-        </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_BILLDETAIL_FOOD1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="2.12474609375" />
-          <ConnectorPoint PointX="3.75" PointY="2.12474609375" />
-          <ConnectorPoint PointX="3.75" PointY="5" />
+          <ConnectorPoint PointX="1.3125" PointY="3.4994921875" />
+          <ConnectorPoint PointX="1.3125" PointY="6.1824446614583328" />
+          <ConnectorPoint PointX="1.7916666666666667" PointY="6.1824446614583319" />
+          <ConnectorPoint PointX="1.9583333333333333" PointY="6.1824446614583328" />
+          <ConnectorPoint PointX="3" PointY="6.1824446614583328" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_FOOD_FOODTYPE1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.6250025" PointY="9.5" />
-          <ConnectorPoint PointX="2.6250025" PointY="2.8433716406250005" />
-          <ConnectorPoint PointX="2.25" PointY="2.8433716406250005" />
-        </AssociationConnector>
-        <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_FOOD1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="1.4061205468749991" />
-          <ConnectorPoint PointX="9" PointY="1.4061205468749991" />
-          <ConnectorPoint PointX="9" PointY="5" />
-        </AssociationConnector>
-        <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_ORDER1" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.5" PointY="6.1824446614583337" />
-          <ConnectorPoint PointX="8.25" PointY="6.1824446614583337" />
+          <ConnectorPoint PointX="1.875" PointY="9.5" />
+          <ConnectorPoint PointX="1.875" PointY="3.4994921875" />
         </AssociationConnector>
         <EntityTypeShape EntityType="FoodStoreModel.CITY" Width="1.5" PointX="8" PointY="10.625" Height="2.1725878906249996" />
         <EntityTypeShape EntityType="FoodStoreModel.DISTRICT" Width="1.5" PointX="9.75" PointY="7.625" Height="2.3648893229166674" />
         <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_CITY" >
-          <ConnectorPoint PointX="8" PointY="11.5312475" />
-          <ConnectorPoint PointX="4.989583333333333" PointY="11.5312475" />
-          <ConnectorPoint PointX="4.822916666666667" PointY="11.5312475" />
-          <ConnectorPoint PointX="4.1953087500000006" PointY="11.5312475" />
-          <ConnectorPoint PointX="4.1953087500000006" PointY="12.5" />
+          <ConnectorPoint PointX="8" PointY="11.562499500000001" />
+          <ConnectorPoint PointX="4.5" PointY="11.562499500000001" />
+          <ConnectorPoint PointX="4.5" PointY="12.5" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_DISTRICT" >
-          <ConnectorPoint PointX="10.5" PointY="9.9898893229166674" />
+          <ConnectorPoint PointX="10.5" PointY="9.9898893229166656" />
           <ConnectorPoint PointX="10.5" PointY="14.727845052083334" />
           <ConnectorPoint PointX="5.25" PointY="14.727845052083334" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_DISTRICT_CITY" >
           <ConnectorPoint PointX="9.5" PointY="10.625" />
-          <ConnectorPoint PointX="9.75" PointY="9.9898893229166674" />
+          <ConnectorPoint PointX="9.75" PointY="9.9898893229166656" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FoodStoreModel.BILL" Width="1.5" PointX="9.5" PointY="0.5" Height="2.3648893229166674" />
+        <AssociationConnector Association="FoodStoreModel.FK_BILLDETAIL_BILL1" >
+          <ConnectorPoint PointX="10.25" PointY="2.8648893229166661" />
+          <ConnectorPoint PointX="10.25" PointY="6.1824446614583328" />
+          <ConnectorPoint PointX="4.5" PointY="6.1824446614583328" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FoodStoreModel.ORDERDETAIL" Width="1.5" PointX="17.625" PointY="6.25" Height="2.5571907552083388" />
+        <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_FOOD" >
+          <ConnectorPoint PointX="0.99999750000000009" PointY="3.4994921875" />
+          <ConnectorPoint PointX="0.99999750000000009" PointY="7.4949446614583337" />
+          <ConnectorPoint PointX="1.7916666666666667" PointY="7.4949446614583328" />
+          <ConnectorPoint PointX="1.9583333333333333" PointY="7.4949446614583337" />
+          <ConnectorPoint PointX="12.666666666666666" PointY="7.4949446614583328" />
+          <ConnectorPoint PointX="12.833333333333334" PointY="7.4949446614583337" />
+          <ConnectorPoint PointX="17.625" PointY="7.4949446614583337" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="FoodStoreModel.ORDER" Width="1.5" PointX="12" PointY="10.125" Height="4.0956022135416674" />
+        <AssociationConnector Association="FoodStoreModel.FK_ORDER_ACCOUNT" >
+          <ConnectorPoint PointX="5.25" PointY="13.540345052083334" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="13.540345052083334" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="13.540345052083334" />
+          <ConnectorPoint PointX="12" PointY="13.540345052083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_BILL_ORDER" >
+          <ConnectorPoint PointX="12.75" PointY="10.125" />
+          <ConnectorPoint PointX="12.75" PointY="1.6824446614583331" />
+          <ConnectorPoint PointX="11" PointY="1.6824446614583331" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_CITY" >
-          <ConnectorPoint PointX="8.0624975" PointY="10.625" />
-          <ConnectorPoint PointX="8.0624975" PointY="8.0114957682291674" />
-          <ConnectorPoint PointX="7.5" PointY="8.0114957682291674" />
+          <ConnectorPoint PointX="9.5" PointY="11.7425464453125" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="11.7425464453125" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="11.7425464453125" />
+          <ConnectorPoint PointX="12" PointY="11.7425464453125" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_DISTRICT" >
-          <ConnectorPoint PointX="9.75" PointY="8.3660489908854174" />
-          <ConnectorPoint PointX="8.1458308333333331" PointY="8.3660489908854174" />
-          <ConnectorPoint PointX="7.9791641666666662" PointY="8.3660489908854174" />
-          <ConnectorPoint PointX="7.5" PointY="8.3660489908854174" />
+          <ConnectorPoint PointX="11.25" PointY="8.8074446614583337" />
+          <ConnectorPoint PointX="12.3437475" PointY="8.8074446614583337" />
+          <ConnectorPoint PointX="12.3437475" PointY="10.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_ORDER" >
+          <ConnectorPoint PointX="13.1562525" PointY="10.125" />
+          <ConnectorPoint PointX="13.1562525" PointY="8.1823202083333335" />
+          <ConnectorPoint PointX="17.625" PointY="8.1823202083333335" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

@@ -51,7 +51,7 @@ namespace Model{
 
             _db = new FoodStoreEntities();
 
-            var account = Get(id);
+            var account = GetById(id);
             
             account.Name = fullName;
             account.Address = address;
@@ -114,10 +114,15 @@ namespace Model{
             return flag;
         }
 
-        public static ACCOUNT Get(int id)
+        public static ACCOUNT GetById(int id)
         {
             _db = new FoodStoreEntities();
             return _db.ACCOUNTs.Single(p => p.ID == id);
+        }
+
+        public static ACCOUNT GetById(int id,FoodStoreEntities db)
+        {
+            return db.ACCOUNTs.Single(p => p.ID == id);
         }
 
         public static List<ACCOUNT> GetList(string searchText)

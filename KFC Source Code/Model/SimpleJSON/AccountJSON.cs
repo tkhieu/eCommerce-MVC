@@ -15,7 +15,9 @@ namespace Model.SimpleJSON
         public String Tel { get; set; }
         public String Address { get; set; }
         public String District { get; set; }
+        public int DistrictId { get; set; }
         public String City { get; set; }
+        public int CityId { get; set; }
 
         public AccountJSON()
         {

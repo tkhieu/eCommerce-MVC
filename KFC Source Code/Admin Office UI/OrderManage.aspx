@@ -9,6 +9,8 @@
         var foodCount = $("#<%=NewOrderCount.ClientID %>").val();
 
 
+        $("#radio").buttonset();
+
         $("#buttonDelete").click(function () {
             var i = $("#buttonDelete").button("option", "count");
             alert(i);
@@ -60,6 +62,9 @@
                 $("#<%=NewOrderAddress.ClientID %>").val(ui.item.Address);
                 $("#<%=NewOrderDistrict.ClientID %>").val(ui.item.District);
                 $("#<%=NewOrderCity.ClientID %>").val(ui.item.City);
+                $("#<%=NewOrderDistrictId.ClientID %>").val(ui.item.DistrictId);
+                $("#<%=NewOrderCityId.ClientID %>").val(ui.item.CityId);
+                $("#<%=NewOrderUserId.ClientID %>").val(ui.item.id);
             }
 
         });
@@ -94,12 +99,21 @@
 	<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewOrder" Title="Order Add" ShowOkButton="true" ShowCancelButton="true" Width="415px" OnClickOk="NewOrderPopupOk">
 		<Content>
 			<table style="width: 100%">
+                <tr><td>User Type</td>
+                    <td>
+                        <div id="radio">
+                            <asp:RadioButton ID="NewUserIsGuest" runat="server" Text="Guest" GroupName="OrderType"/> 
+                            <asp:RadioButton ID="NewUserIsMember" runat="server" Text="Registed" GroupName="OrderType" Checked="true"/>
+                        </div>
+                    </td>
+                </tr>
 				<tr>
 					<td>
 						User
 					</td>
 					<td>
 						<asp:TextBox ID="NewOrderUser" runat="server" Width="300px" Height="15px"></asp:TextBox>
+                        <asp:HiddenField runat="server" ID="NewOrderUserId"/>
 					</td>
 				</tr>
                 <tr>
@@ -132,6 +146,7 @@
 					</td>
 					<td>
 						<asp:TextBox ID="NewOrderDistrict" runat="server" Width="300px" Height="15px"></asp:TextBox>
+                        <asp:HiddenField runat="server" ID="NewOrderDistrictId"/>
 					</td>
 				</tr>
 				<tr>
@@ -140,6 +155,7 @@
 					</td>
 					<td>
 						<asp:TextBox ID="NewOrderCity" runat="server" Width="300px" Height="15px"></asp:TextBox>
+                        <asp:HiddenField runat="server" ID="NewOrderCityId"/>
 					</td>
 				</tr>
 				<tr>
@@ -218,4 +234,13 @@
             <asp:HiddenField runat="server" ID="NewCountArray"/>
 		</Content>
 	</OfficeWebUI:OfficePopup>
+
+    <%--Hộp thoại khi thêm food thành công--%>
+<OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddOrderSuccess" Title="Success"
+    Text="Insert order infomation success..." ButtonsType="Ok" MessageBoxType="Info" >
+</OfficeWebUI:OfficeMessageBox>
+<%--Hộp thoại khi thêm food thất bại--%>
+<OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxAddOrderFail" Title="Fail"
+    Text="Insert order infomation fail..." ButtonsType="Ok" MessageBoxType="Error" OnReturn="OnOfficeMessageBoxOrderFailYes">
+</OfficeWebUI:OfficeMessageBox>
 </asp:Content>

@@ -22,6 +22,24 @@ namespace ContosoWebApp {
         protected global::OfficeWebUI.OfficePopup OfficePopupNewOrder;
         
         /// <summary>
+        /// NewUserIsGuest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton NewUserIsGuest;
+        
+        /// <summary>
+        /// NewUserIsMember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton NewUserIsMember;
+        
+        /// <summary>
         /// NewOrderUser control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,15 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewOrderUser;
+        
+        /// <summary>
+        /// NewOrderUserId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewOrderUserId;
         
         /// <summary>
         /// NewOrderName control.
@@ -67,6 +94,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewOrderDistrict;
         
         /// <summary>
+        /// NewOrderDistrictId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewOrderDistrictId;
+        
+        /// <summary>
         /// NewOrderCity control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,15 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewOrderCity;
+        
+        /// <summary>
+        /// NewOrderCityId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewOrderCityId;
         
         /// <summary>
         /// NewOrderTime control.
@@ -155,5 +200,23 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField NewCountArray;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddOrderSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddOrderSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxAddOrderFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxAddOrderFail;
     }
 }

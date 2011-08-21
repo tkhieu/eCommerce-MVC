@@ -83,10 +83,15 @@ namespace Model
             return flag;
         }
 
-        public static FOOD Get(int id)
+        public static FOOD GetById(int id)
         {
             _db = new FoodStoreEntities();
             return _db.FOODs.Single(p => p.ID == id);
+        }
+
+        public static FOOD GetById(int id,FoodStoreEntities db)
+        {
+            return db.FOODs.Single(p => p.ID == id);
         }
 
         public static bool Update(int id, String foodName, int foodPrice, int foodTypeId, String foodImage,

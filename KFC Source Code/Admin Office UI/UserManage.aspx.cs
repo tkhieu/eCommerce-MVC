@@ -264,7 +264,7 @@ namespace ContosoWebApp
             if (OfficeMessageBoxConfirmEdit.ReturnValue == MessageBoxReturnType.Yes)
             {
                 int id = int.Parse(Session["id"].ToString());
-                var account = AccountController.Get(id);
+                var account = AccountController.GetById(id);
                 Session["edit"] = 1;
 
                 //Cấm Edit thông tin đăng nhập
