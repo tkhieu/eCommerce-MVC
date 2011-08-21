@@ -3,6 +3,10 @@
     color: red;
 }
 
+.float-right {
+    float: right;
+}
+
 .ContentTableHeader {
     font-size: 12px;
     text-align: left;

@@ -94,6 +94,15 @@ namespace ContosoWebApp {
         protected global::System.Web.UI.WebControls.TextBox NewOrderNote;
         
         /// <summary>
+        /// NewFoodId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewFoodId;
+        
+        /// <summary>
         /// NewOrderFood control.
         /// </summary>
         /// <remarks>
@@ -128,5 +137,23 @@ namespace ContosoWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox NewOrderTotal;
+        
+        /// <summary>
+        /// NewFoodArray control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewFoodArray;
+        
+        /// <summary>
+        /// NewCountArray control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField NewCountArray;
     }
 }
