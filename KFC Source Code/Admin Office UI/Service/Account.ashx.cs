@@ -32,7 +32,9 @@ namespace ContosoWebApp.Service
                                           Tel = account.Tel,
                                           Address = account.Address,
                                           District = account.DISTRICT.Name,
-                                          City = account.CITY.Name
+                                          DistrictId = account.DISTRICT.ID,
+                                          City = account.CITY.Name,
+                                          CityId = account.CITY.ID
                                       };
 
 

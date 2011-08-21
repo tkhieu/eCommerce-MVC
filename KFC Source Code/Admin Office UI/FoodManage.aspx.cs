@@ -217,7 +217,7 @@ namespace ContosoWebApp
         {
             int id = int.Parse(Session["id"].ToString());
             Session["edit"] = 1;
-            var food = FoodController.Get(id);
+            var food = FoodController.GetById(id);
 
             var listFoodType = FoodTypeController.GetList();
 
