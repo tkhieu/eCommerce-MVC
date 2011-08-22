@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -43,20 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACCOUNTController.cs" />
-    <Compile Include="CITYController.cs" />
-    <Compile Include="DISTRICTController.cs" />
-    <Compile Include="FOODController.cs" />
+    <Compile Include="Controller\ACCOUNTController.cs" />
+    <Compile Include="Controller\CITYController.cs" />
+    <Compile Include="Controller\DISTRICTController.cs" />
+    <Compile Include="Controller\FOODController.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <DependentUpon>FoodStore.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="FOODTYPEController.cs" />
-    <Compile Include="ORDERController.cs" />
-    <Compile Include="ORDERDETAILController.cs" />
+    <Compile Include="Controller\FOODTYPEController.cs" />
+    <Compile Include="Controller\ORDERController.cs" />
+    <Compile Include="Controller\ORDERDETAILController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUESTIONController.cs" />
+    <Compile Include="Controller\QUESTIONController.cs" />
     <Compile Include="SimpleJSON\AccountJSON.cs" />
     <Compile Include="SimpleJSON\FoodJSON.cs" />
   </ItemGroup>
@@ -66,6 +72,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FoodStore.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
