@@ -6,7 +6,9 @@ using System.Web.Mvc;
 using Moq;
 using Ninject;
 using eCommerce.Model.Abstract;
-using eCommerce.Model.Entities;
+using eCommerce.Model;
+using eCommerce.Model.Concrete;
+
 
 namespace eCommerce.WebUI.Infrastructure
 {
@@ -26,13 +28,7 @@ namespace eCommerce.WebUI.Infrastructure
 
         private void AddBinding()
         {
-            Mock<IFoodRepository> mock = new Mock<IFoodRepository>();
-            mock.Setup(m => m.Foods).Returns(new List<Food>
-                                                 {
-                                                     new Food() {Name = "Kem Ly", Category = "Vị Cay"},
-                                                     new Food(){Name = "Kem Cốc",Category = "Vị Ngọt"}
-                                                 }.AsQueryable);
-            _ninjectKernel.Bind<IFoodRepository>().ToConstant(mock.Object);
+           _ninjectKernel.Bind<IFoodRepository>().To<EFFoodRepository>();
         }
 
 

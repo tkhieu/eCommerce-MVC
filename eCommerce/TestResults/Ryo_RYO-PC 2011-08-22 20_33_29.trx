@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d5fb83bd-357d-4032-97b8-8fb9da9f3cc6" name="Ryo@RYO-PC 2011-08-22 20:33:29" runUser="Ryo-PC\Ryo" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="a2db67e9-9c82-413a-a805-f6c4d1a90c92">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ryo_RYO-PC 2011-08-22 20_33_29" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-08-22T20:33:29.8951969+07:00" queuing="2011-08-22T20:33:36.6985860+07:00" start="2011-08-22T20:33:37.0116039+07:00" finish="2011-08-22T20:33:38.2766763+07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="d:\git repository\ecommerce-mvc-web-programing\ecommerce\ecommerce.unittests\bin\debug\ecommerce.unittests.dll" id="ed80c8d0-d020-1fe9-0375-19c14194d4c3">
+      <Execution id="00adc8b2-133b-4e0e-af18-36dbbecac607" />
+      <TestMethod codeBase="D:/Git Repository/eCommerce-MVC-Web-Programing/eCommerce/eCommerce.UnitTests/bin/Debug/eCommerce.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="eCommerce.UnitTests.UnitTest1, eCommerce.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ed80c8d0-d020-1fe9-0375-19c14194d4c3" executionId="00adc8b2-133b-4e0e-af18-36dbbecac607" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="00adc8b2-133b-4e0e-af18-36dbbecac607" testId="ed80c8d0-d020-1fe9-0375-19c14194d4c3" testName="TestMethod1" computerName="RYO-PC" duration="00:00:00.0173883" startTime="2011-08-22T20:33:37.1406113+07:00" endTime="2011-08-22T20:33:38.0886655+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00adc8b2-133b-4e0e-af18-36dbbecac607">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using eCommerce.Model.Entities;
+using eCommerce.Model;
 
 namespace eCommerce.Model.Abstract
 {
     public interface IFoodRepository
     {
-        IQueryable<Food> Foods { get; }
+        IQueryable<FOOD> Foods { get; }
     }
 }

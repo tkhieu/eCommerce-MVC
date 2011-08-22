@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using eCommerce.Model.Abstract;
+using eCommerce.Model.Concrete;
 
 namespace eCommerce.WebUI.Controllers
 {
     public class FoodController : Controller
     {
-        private IFoodRepository _repository;
-        public FoodController(IFoodRepository foodRepository)
+        private EFFoodRepository _repository;
+        public FoodController(EFFoodRepository repository)
         {
-            _repository = foodRepository;
+            this._repository = repository;
         }
         //
         // GET: /Food/
 
         public ActionResult Index()
         {
-            
-
             return View();
         }
 
@@ -28,5 +26,6 @@ namespace eCommerce.WebUI.Controllers
         {
             return View(_repository.Foods);
         }
+
     }
 }

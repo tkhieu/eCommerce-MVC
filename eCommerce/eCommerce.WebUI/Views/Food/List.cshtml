@@ -1,4 +1,4 @@
-﻿@model IEnumerable<eCommerce.Model.Entities.Food>
+﻿@model IEnumerable<eCommerce.Model.FOOD>
 
 @{
     ViewBag.Title = "List";
@@ -6,10 +6,7 @@
 
 @foreach (var p in Model)
 {
-    <div class="item">
-    <h3>@p.Name</h3>
-    <h4>@p.Price.ToString("c")</h4>
-    </div>
+    <div>@p.Name</div>
 }
 
 <h2>List</h2>
