@@ -10,45 +10,56 @@
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ORDERController.cs" caret="3580" fromTop="92" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ORDERDETAILController.cs" caret="57" fromTop="0" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:QUESTIONController.cs" caret="74" fromTop="3" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Global.asax.cs" caret="1073" fromTop="13" />
       <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Web.config" caret="631" fromTop="10" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Concrete/f:EFFoodRepository.cs" caret="334" fromTop="11" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:FoodStore.Designer.cs" caret="4442" fromTop="14" />
       <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Controllers/f:FoodController.cs" caret="570" fromTop="12" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Food/f:List.cshtml" caret="128" fromTop="8" />
       <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Web.config" caret="3384" fromTop="6" />
       <File id="299D1983-B31C-4407-8C92-F9AD692DB2F7/f:UnitTest1.cs" caret="0" fromTop="0" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ACCOUNTController.cs" caret="82" fromTop="0" />
       <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Abstract/f:IFoodRepository.cs" caret="111" fromTop="4" />
       <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Infrastructure/f:NinjectControllerFactory.cs" caret="388" fromTop="16" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
       <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Global.asax.cs" caret="980" fromTop="13" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Home/f:Index.cshtml" caret="104" fromTop="5" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Food/f:List.cshtml" caret="83" fromTop="6" />
+      <File id="B56AD808-015B-4C91-B7E9-49D20BC2D128/f:^TransientScriptDocument4.htm" caret="23147" fromTop="18" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_Layout.cshtml" caret="143" fromTop="5" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Controllers/f:HomeController.cs" caret="278" fromTop="10" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Content/d:javascript/f:DD_belatedPNG_0.0.8a-min.js" caret="14869" fromTop="328" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="22" fromTop="1" />
     </RecentFiles>
     <RecentEdits>
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ACCOUNTController.cs" caret="3976" fromTop="133" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:CITYController.cs" caret="73" fromTop="3" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:DISTRICTController.cs" caret="75" fromTop="3" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:FOODController.cs" caret="3493" fromTop="122" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:FOODTYPEController.cs" caret="73" fromTop="3" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ORDERController.cs" caret="3580" fromTop="101" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:ORDERDETAILController.cs" caret="57" fromTop="3" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Controller/f:QUESTIONController.cs" caret="74" fromTop="3" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Infrastructure/f:NinjectControllerFactory.cs" caret="394" fromTop="5" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Infrastructure/f:NinjectControllerFactory.cs" caret="787" fromTop="17" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Global.asax.cs" caret="1349" fromTop="17" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Abstract/f:IFoodRepository.cs" caret="166" fromTop="8" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Global.asax.cs" caret="869" fromTop="10" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Concrete/f:EFFoodRepository.cs" caret="121" fromTop="4" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Concrete/f:EFFoodRepository.cs" caret="387" fromTop="14" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Infrastructure/f:NinjectControllerFactory.cs" caret="917" fromTop="15" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Web.config" caret="345" fromTop="6" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Web.config" caret="3384" fromTop="12" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Concrete/f:EFFoodRepository.cs" caret="268" fromTop="7" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Controllers/f:FoodController.cs" caret="402" fromTop="5" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Controllers/f:FoodController.cs" caret="630" fromTop="14" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Food/f:List.cshtml" caret="128" fromTop="8" />
-      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:Abstract/f:IFoodRepository.cs" caret="111" fromTop="4" />
-      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Infrastructure/f:NinjectControllerFactory.cs" caret="194" fromTop="8" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="17" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="12" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/f:Global.asax.cs" caret="940" fromTop="12" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="0" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="6" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="7" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="10" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="10" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="14" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="17" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="6" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="11" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="1" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="15" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="26707" fromTop="13" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="1102" fromTop="10" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Content/d:javascript/f:DD_belatedPNG_0.0.8a-min.js" caret="14869" fromTop="12" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="961" fromTop="12" />
+      <File id="824EA0BD-A4F0-4659-AD48-64288447F5F3/d:Views/d:Shared/f:_MainLayout.cshtml" caret="22" fromTop="1" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -105,6 +116,8 @@
       <Item value="EFFoodRepository`0" priority="63" />
       <Item value="this" priority="31" />
       <Item value="p" priority="61" />
+      <Item value="RenderBody`0" priority="26" />
+      <Item value="DD_belatedPNG_0.0.8a-min.js" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Ninject.IKernel">
       <Item value="Get`0" priority="53" />
@@ -137,6 +150,7 @@
     <ItemStatistics item="RazorTransitionCompletionContext">
       <Item value="foreach" priority="17" />
       <Item value="p" priority="7" />
+      <Item value="RenderBody`0" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:eCommerce.Model.FoodStoreEntities">
       <Item value="FOODs" priority="26" />
@@ -152,6 +166,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:eCommerce.Model.FOOD">
       <Item value="Name" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="Content`0" priority="45" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
