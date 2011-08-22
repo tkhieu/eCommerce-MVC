@@ -49,10 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IFoodRepository.cs" />
     <Compile Include="Controller\ACCOUNTController.cs" />
     <Compile Include="Controller\CITYController.cs" />
     <Compile Include="Controller\DISTRICTController.cs" />
     <Compile Include="Controller\FOODController.cs" />
+    <Compile Include="Entities\Food.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <DependentUpon>FoodStore.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
