@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87AA55AE-4125-4D8C-9C9E-AC3F214B5D01}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eCommerce.Admin</RootNamespace>
+    <AssemblyName>eCommerce.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FoodManage.aspx" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_666666_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Library\css\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Library\css\jquery-ui\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Library\css\StyleSheet.css" />
+    <Content Include="Library\img\ajax-loader.gif" />
+    <Content Include="Library\js\jquery-1.6.2.js" />
+    <Content Include="Library\js\jquery-1.6.2.min.js" />
+    <Content Include="Library\js\jquery-ui-1.8.16.custom.js" />
+    <Content Include="Library\js\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Library\js\jquery-ui-timepicker-addon.js" />
+    <Content Include="OrderManage.aspx" />
+    <Content Include="UserManage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Docs.aspx.cs">
+      <DependentUpon>Docs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Docs.aspx.designer.cs">
+      <DependentUpon>Docs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodManage.aspx.cs">
+      <DependentUpon>FoodManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodManage.aspx.designer.cs">
+      <DependentUpon>FoodManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_General.ascx.cs">
+      <DependentUpon>BackstagePage_General.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_General.ascx.designer.cs">
+      <DependentUpon>BackstagePage_General.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_Resources.ascx.cs">
+      <DependentUpon>BackstagePage_Resources.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_Resources.ascx.designer.cs">
+      <DependentUpon>BackstagePage_Resources.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_Settings.ascx.cs">
+      <DependentUpon>BackstagePage_Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\ascx\BackstagePage_Settings.ascx.designer.cs">
+      <DependentUpon>BackstagePage_Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrderManage.aspx.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderManage.aspx.designer.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Account.ashx.cs">
+      <DependentUpon>Account.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Food2Order.ashx.cs">
+      <DependentUpon>Food2Order.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\ascx\BackstagePage_General.ascx" />
+    <Content Include="Library\ascx\BackstagePage_Resources.ascx" />
+    <Content Include="Library\ascx\BackstagePage_Settings.ascx" />
+    <Content Include="Library\img\16\icon1.png" />
+    <Content Include="Library\img\16\icon10.png" />
+    <Content Include="Library\img\16\icon100.png" />
+    <Content Include="Library\img\16\icon101.png" />
+    <Content Include="Library\img\16\icon102.png" />
+    <Content Include="Library\img\16\icon103.png" />
+    <Content Include="Library\img\16\icon104.png" />
+    <Content Include="Library\img\16\icon105.png" />
+    <Content Include="Library\img\16\icon106.png" />
+    <Content Include="Library\img\16\icon107.png" />
+    <Content Include="Library\img\16\icon108.png" />
+    <Content Include="Library\img\16\icon109.png" />
+    <Content Include="Library\img\16\icon11.png" />
+    <Content Include="Library\img\16\icon110.png" />
+    <Content Include="Library\img\16\icon111.png" />
+    <Content Include="Library\img\16\icon112.png" />
+    <Content Include="Library\img\16\icon113.png" />
+    <Content Include="Library\img\16\icon114.png" />
+    <Content Include="Library\img\16\icon115.png" />
+    <Content Include="Library\img\16\icon116.png" />
+    <Content Include="Library\img\16\icon117.png" />
+    <Content Include="Library\img\16\icon118.png" />
+    <Content Include="Library\img\16\icon119.png" />
+    <Content Include="Library\img\16\icon12.png" />
+    <Content Include="Library\img\16\icon120.png" />
+    <Content Include="Library\img\16\icon121.png" />
+    <Content Include="Library\img\16\icon122.png" />
+    <Content Include="Library\img\16\icon123.png" />
+    <Content Include="Library\img\16\icon124.png" />
+    <Content Include="Library\img\16\icon125.png" />
+    <Content Include="Library\img\16\icon126.png" />
+    <Content Include="Library\img\16\icon127.png" />
+    <Content Include="Library\img\16\icon128.png" />
+    <Content Include="Library\img\16\icon129.png" />
+    <Content Include="Library\img\16\icon13.png" />
+    <Content Include="Library\img\16\icon130.png" />
+    <Content Include="Library\img\16\icon131.png" />
+    <Content Include="Library\img\16\icon132.png" />
+    <Content Include="Library\img\16\icon133.png" />
+    <Content Include="Library\img\16\icon134.png" />
+    <Content Include="Library\img\16\icon135.png" />
+    <Content Include="Library\img\16\icon136.png" />
+    <Content Include="Library\img\16\icon137.png" />
+    <Content Include="Library\img\16\icon138.png" />
+    <Content Include="Library\img\16\icon139.png" />
+    <Content Include="Library\img\16\icon14.png" />
+    <Content Include="Library\img\16\icon140.png" />
+    <Content Include="Library\img\16\icon141.png" />
+    <Content Include="Library\img\16\icon142.png" />
+    <Content Include="Library\img\16\icon143.png" />
+    <Content Include="Library\img\16\icon15.png" />
+    <Content Include="Library\img\16\icon16.png" />
+    <Content Include="Library\img\16\icon17.png" />
+    <Content Include="Library\img\16\icon18.png" />
+    <Content Include="Library\img\16\icon19.png" />
+    <Content Include="Library\img\16\icon2.png" />
+    <Content Include="Library\img\16\icon20.png" />
+    <Content Include="Library\img\16\icon21.png" />
+    <Content Include="Library\img\16\icon22.png" />
+    <Content Include="Library\img\16\icon23.png" />
+    <Content Include="Library\img\16\icon24.png" />
+    <Content Include="Library\img\16\icon25.png" />
+    <Content Include="Library\img\16\icon26.png" />
+    <Content Include="Library\img\16\icon27.png" />
+    <Content Include="Library\img\16\icon28.png" />
+    <Content Include="Library\img\16\icon29.png" />
+    <Content Include="Library\img\16\icon3.png" />
+    <Content Include="Library\img\16\icon30.png" />
+    <Content Include="Library\img\16\icon31.png" />
+    <Content Include="Library\img\16\icon32.png" />
+    <Content Include="Library\img\16\icon33.png" />
+    <Content Include="Library\img\16\icon34.png" />
+    <Content Include="Library\img\16\icon35.png" />
+    <Content Include="Library\img\16\icon36.png" />
+    <Content Include="Library\img\16\icon37.png" />
+    <Content Include="Library\img\16\icon38.png" />
+    <Content Include="Library\img\16\icon39.png" />
+    <Content Include="Library\img\16\icon4.png" />
+    <Content Include="Library\img\16\icon40.png" />
+    <Content Include="Library\img\16\icon41.png" />
+    <Content Include="Library\img\16\icon42.png" />
+    <Content Include="Library\img\16\icon43.png" />
+    <Content Include="Library\img\16\icon44.png" />
+    <Content Include="Library\img\16\icon45.png" />
+    <Content Include="Library\img\16\icon46.png" />
+    <Content Include="Library\img\16\icon47.png" />
+    <Content Include="Library\img\16\icon48.png" />
+    <Content Include="Library\img\16\icon49.png" />
+    <Content Include="Library\img\16\icon5.png" />
+    <Content Include="Library\img\16\icon50.png" />
+    <Content Include="Library\img\16\icon51.png" />
+    <Content Include="Library\img\16\icon52.png" />
+    <Content Include="Library\img\16\icon53.png" />
+    <Content Include="Library\img\16\icon54.png" />
+    <Content Include="Library\img\16\icon55.png" />
+    <Content Include="Library\img\16\icon56.png" />
+    <Content Include="Library\img\16\icon57.png" />
+    <Content Include="Library\img\16\icon58.png" />
+    <Content Include="Library\img\16\icon59.png" />
+    <Content Include="Library\img\16\icon6.png" />
+    <Content Include="Library\img\16\icon60.png" />
+    <Content Include="Library\img\16\icon61.png" />
+    <Content Include="Library\img\16\icon62.png" />
+    <Content Include="Library\img\16\icon63.png" />
+    <Content Include="Library\img\16\icon64.png" />
+    <Content Include="Library\img\16\icon65.png" />
+    <Content Include="Library\img\16\icon66.png" />
+    <Content Include="Library\img\16\icon67.png" />
+    <Content Include="Library\img\16\icon68.png" />
+    <Content Include="Library\img\16\icon69.png" />
+    <Content Include="Library\img\16\icon7.png" />
+    <Content Include="Library\img\16\icon70.png" />
+    <Content Include="Library\img\16\icon71.png" />
+    <Content Include="Library\img\16\icon72.png" />
+    <Content Include="Library\img\16\icon73.png" />
+    <Content Include="Library\img\16\icon74.png" />
+    <Content Include="Library\img\16\icon75.png" />
+    <Content Include="Library\img\16\icon76.png" />
+    <Content Include="Library\img\16\icon77.png" />
+    <Content Include="Library\img\16\icon78.png" />
+    <Content Include="Library\img\16\icon79.png" />
+    <Content Include="Library\img\16\icon8.png" />
+    <Content Include="Library\img\16\icon80.png" />
+    <Content Include="Library\img\16\icon81.png" />
+    <Content Include="Library\img\16\icon82.png" />
+    <Content Include="Library\img\16\icon83.png" />
+    <Content Include="Library\img\16\icon84.png" />
+    <Content Include="Library\img\16\icon85.png" />
+    <Content Include="Library\img\16\icon86.png" />
+    <Content Include="Library\img\16\icon87.png" />
+    <Content Include="Library\img\16\icon88.png" />
+    <Content Include="Library\img\16\icon89.png" />
+    <Content Include="Library\img\16\icon9.png" />
+    <Content Include="Library\img\16\icon90.png" />
+    <Content Include="Library\img\16\icon91.png" />
+    <Content Include="Library\img\16\icon92.png" />
+    <Content Include="Library\img\16\icon93.png" />
+    <Content Include="Library\img\16\icon94.png" />
+    <Content Include="Library\img\16\icon95.png" />
+    <Content Include="Library\img\16\icon96.png" />
+    <Content Include="Library\img\16\icon97.png" />
+    <Content Include="Library\img\16\icon98.png" />
+    <Content Include="Library\img\16\icon99.png" />
+    <Content Include="Library\img\32\icon100_32.png" />
+    <Content Include="Library\img\32\icon101_32.png" />
+    <Content Include="Library\img\32\icon102_32.png" />
+    <Content Include="Library\img\32\icon103_32.png" />
+    <Content Include="Library\img\32\icon104_32.png" />
+    <Content Include="Library\img\32\icon105_32.png" />
+    <Content Include="Library\img\32\icon106_32.png" />
+    <Content Include="Library\img\32\icon107_32.png" />
+    <Content Include="Library\img\32\icon108_32.png" />
+    <Content Include="Library\img\32\icon109_32.png" />
+    <Content Include="Library\img\32\icon10_32.png" />
+    <Content Include="Library\img\32\icon110_32.png" />
+    <Content Include="Library\img\32\icon111_32.png" />
+    <Content Include="Library\img\32\icon112_32.png" />
+    <Content Include="Library\img\32\icon113_32.png" />
+    <Content Include="Library\img\32\icon114_32.png" />
+    <Content Include="Library\img\32\icon115_32.png" />
+    <Content Include="Library\img\32\icon116_32.png" />
+    <Content Include="Library\img\32\icon117_32.png" />
+    <Content Include="Library\img\32\icon118_32.png" />
+    <Content Include="Library\img\32\icon119_32.png" />
+    <Content Include="Library\img\32\icon11_32.png" />
+    <Content Include="Library\img\32\icon120_32.png" />
+    <Content Include="Library\img\32\icon121_32.png" />
+    <Content Include="Library\img\32\icon122_32.png" />
+    <Content Include="Library\img\32\icon123_32.png" />
+    <Content Include="Library\img\32\icon124_32.png" />
+    <Content Include="Library\img\32\icon125_32.png" />
+    <Content Include="Library\img\32\icon126_32.png" />
+    <Content Include="Library\img\32\icon127_32.png" />
+    <Content Include="Library\img\32\icon128_32.png" />
+    <Content Include="Library\img\32\icon129_32.png" />
+    <Content Include="Library\img\32\icon12_32.png" />
+    <Content Include="Library\img\32\icon130_32.png" />
+    <Content Include="Library\img\32\icon131_32.png" />
+    <Content Include="Library\img\32\icon132_32.png" />
+    <Content Include="Library\img\32\icon13_32.png" />
+    <Content Include="Library\img\32\icon14_32.png" />
+    <Content Include="Library\img\32\icon15_32.png" />
+    <Content Include="Library\img\32\icon16_32.png" />
+    <Content Include="Library\img\32\icon17_32.png" />
+    <Content Include="Library\img\32\icon18_32.png" />
+    <Content Include="Library\img\32\icon19_32.png" />
+    <Content Include="Library\img\32\icon1_32.png" />
+    <Content Include="Library\img\32\icon20_32.png" />
+    <Content Include="Library\img\32\icon21_32.png" />
+    <Content Include="Library\img\32\icon22_32.png" />
+    <Content Include="Library\img\32\icon23_32.png" />
+    <Content Include="Library\img\32\icon24_32.png" />
+    <Content Include="Library\img\32\icon25_32.png" />
+    <Content Include="Library\img\32\icon26_32.png" />
+    <Content Include="Library\img\32\icon27_32.png" />
+    <Content Include="Library\img\32\icon28_32.png" />
+    <Content Include="Library\img\32\icon29_32.png" />
+    <Content Include="Library\img\32\icon2_32.png" />
+    <Content Include="Library\img\32\icon30_32.png" />
+    <Content Include="Library\img\32\icon31_32.png" />
+    <Content Include="Library\img\32\icon32_32.png" />
+    <Content Include="Library\img\32\icon33_32.png" />
+    <Content Include="Library\img\32\icon34_32.png" />
+    <Content Include="Library\img\32\icon35_32.png" />
+    <Content Include="Library\img\32\icon36_32.png" />
+    <Content Include="Library\img\32\icon37_32.png" />
+    <Content Include="Library\img\32\icon38_32.png" />
+    <Content Include="Library\img\32\icon39_32.png" />
+    <Content Include="Library\img\32\icon3_32.png" />
+    <Content Include="Library\img\32\icon40_32.png" />
+    <Content Include="Library\img\32\icon41_32.png" />
+    <Content Include="Library\img\32\icon42_32.png" />
+    <Content Include="Library\img\32\icon43_32.png" />
+    <Content Include="Library\img\32\icon44_32.png" />
+    <Content Include="Library\img\32\icon45_32.png" />
+    <Content Include="Library\img\32\icon46_32.png" />
+    <Content Include="Library\img\32\icon47_32.png" />
+    <Content Include="Library\img\32\icon48_32.png" />
+    <Content Include="Library\img\32\icon49_32.png" />
+    <Content Include="Library\img\32\icon4_32.png" />
+    <Content Include="Library\img\32\icon50_32.png" />
+    <Content Include="Library\img\32\icon51_32.png" />
+    <Content Include="Library\img\32\icon52_32.png" />
+    <Content Include="Library\img\32\icon53_32.png" />
+    <Content Include="Library\img\32\icon54_32.png" />
+    <Content Include="Library\img\32\icon55_32.png" />
+    <Content Include="Library\img\32\icon56_32.png" />
+    <Content Include="Library\img\32\icon57_32.png" />
+    <Content Include="Library\img\32\icon58_32.png" />
+    <Content Include="Library\img\32\icon59_32.png" />
+    <Content Include="Library\img\32\icon5_32.png" />
+    <Content Include="Library\img\32\icon60_32.png" />
+    <Content Include="Library\img\32\icon61_32.png" />
+    <Content Include="Library\img\32\icon62_32.png" />
+    <Content Include="Library\img\32\icon63_32.png" />
+    <Content Include="Library\img\32\icon64_32.png" />
+    <Content Include="Library\img\32\icon65_32.png" />
+    <Content Include="Library\img\32\icon66_32.png" />
+    <Content Include="Library\img\32\icon67_32.png" />
+    <Content Include="Library\img\32\icon68_32.png" />
+    <Content Include="Library\img\32\icon69_32.png" />
+    <Content Include="Library\img\32\icon6_32.png" />
+    <Content Include="Library\img\32\icon70_32.png" />
+    <Content Include="Library\img\32\icon71_32.png" />
+    <Content Include="Library\img\32\icon72_32.png" />
+    <Content Include="Library\img\32\icon73_32.png" />
+    <Content Include="Library\img\32\icon74_32.png" />
+    <Content Include="Library\img\32\icon75_32.png" />
+    <Content Include="Library\img\32\icon76_32.png" />
+    <Content Include="Library\img\32\icon77_32.png" />
+    <Content Include="Library\img\32\icon78_32.png" />
+    <Content Include="Library\img\32\icon79_32.png" />
+    <Content Include="Library\img\32\icon7_32.png" />
+    <Content Include="Library\img\32\icon80_32.png" />
+    <Content Include="Library\img\32\icon81_32.png" />
+    <Content Include="Library\img\32\icon82_32.png" />
+    <Content Include="Library\img\32\icon83_32.png" />
+    <Content Include="Library\img\32\icon84_32.png" />
+    <Content Include="Library\img\32\icon85_32.png" />
+    <Content Include="Library\img\32\icon86_32.png" />
+    <Content Include="Library\img\32\icon87_32.png" />
+    <Content Include="Library\img\32\icon88_32.png" />
+    <Content Include="Library\img\32\icon89_32.png" />
+    <Content Include="Library\img\32\icon8_32.png" />
+    <Content Include="Library\img\32\icon90_32.png" />
+    <Content Include="Library\img\32\icon91_32.png" />
+    <Content Include="Library\img\32\icon92_32.png" />
+    <Content Include="Library\img\32\icon93_32.png" />
+    <Content Include="Library\img\32\icon94_32.png" />
+    <Content Include="Library\img\32\icon95_32.png" />
+    <Content Include="Library\img\32\icon96_32.png" />
+    <Content Include="Library\img\32\icon97_32.png" />
+    <Content Include="Library\img\32\icon98_32.png" />
+    <Content Include="Library\img\32\icon99_32.png" />
+    <Content Include="Library\img\32\icon9_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calendar.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Docs.aspx" />
+    <Content Include="Inbox.aspx" />
+    <Content Include="Library\img\64\icon1.png" />
+    <Content Include="Library\img\64\icon10.png" />
+    <Content Include="Library\img\64\icon11.png" />
+    <Content Include="Library\img\64\icon12.png" />
+    <Content Include="Library\img\64\icon13.png" />
+    <Content Include="Library\img\64\icon14.png" />
+    <Content Include="Library\img\64\icon15.png" />
+    <Content Include="Library\img\64\icon16.png" />
+    <Content Include="Library\img\64\icon17.png" />
+    <Content Include="Library\img\64\icon18.png" />
+    <Content Include="Library\img\64\icon19.png" />
+    <Content Include="Library\img\64\icon2.png" />
+    <Content Include="Library\img\64\icon20.png" />
+    <Content Include="Library\img\64\icon21.png" />
+    <Content Include="Library\img\64\icon22.png" />
+    <Content Include="Library\img\64\icon23.png" />
+    <Content Include="Library\img\64\icon24.png" />
+    <Content Include="Library\img\64\icon25.png" />
+    <Content Include="Library\img\64\icon26.png" />
+    <Content Include="Library\img\64\icon27.png" />
+    <Content Include="Library\img\64\icon28.png" />
+    <Content Include="Library\img\64\icon29.png" />
+    <Content Include="Library\img\64\icon3.png" />
+    <Content Include="Library\img\64\icon30.png" />
+    <Content Include="Library\img\64\icon31.png" />
+    <Content Include="Library\img\64\icon32.png" />
+    <Content Include="Library\img\64\icon33.png" />
+    <Content Include="Library\img\64\icon34.png" />
+    <Content Include="Library\img\64\icon35.png" />
+    <Content Include="Library\img\64\icon36.png" />
+    <Content Include="Library\img\64\icon37.png" />
+    <Content Include="Library\img\64\icon38.png" />
+    <Content Include="Library\img\64\icon39.png" />
+    <Content Include="Library\img\64\icon4.png" />
+    <Content Include="Library\img\64\icon40.png" />
+    <Content Include="Library\img\64\icon41.png" />
+    <Content Include="Library\img\64\icon42.png" />
+    <Content Include="Library\img\64\icon43.png" />
+    <Content Include="Library\img\64\icon44.png" />
+    <Content Include="Library\img\64\icon45.png" />
+    <Content Include="Library\img\64\icon46.png" />
+    <Content Include="Library\img\64\icon47.png" />
+    <Content Include="Library\img\64\icon5.png" />
+    <Content Include="Library\img\64\icon6.png" />
+    <Content Include="Library\img\64\icon7.png" />
+    <Content Include="Library\img\64\icon8.png" />
+    <Content Include="Library\img\64\icon9.png" />
+    <Content Include="Library\img\apptitle.png" />
+    <Content Include="Library\img\contoso.png" />
+    <Content Include="Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">
+      <Project>{082C99E9-FA31-41FE-A1D2-D5C4D0F557C6}</Project>
+      <Name>eCommerce.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Utility\eCommerce.Utility.csproj">
+      <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>
+      <Name>eCommerce.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library Project\CKEditor.NET\CKEditor.NET.csproj">
+      <Project>{FC4500A9-8E83-46B0-87FA-86D44AB79AA7}</Project>
+      <Name>CKEditor.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library Project\OfficeWebUI\OfficeWebUI.csproj">
+      <Project>{8192EECB-F2F1-4753-A29F-246F7E2973BF}</Project>
+      <Name>OfficeWebUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Account.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Food2Order.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54224</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

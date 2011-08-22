@@ -9,64 +9,19 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODTYPEController.cs" caret="686" fromTop="24" />
-      <File id="8192EECB-F2F1-4753-A29F-246F7E2973BF/d:MessageBox/f:MessageBox.cs" caret="12773" fromTop="16" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FoodStore.Designer.cs" caret="4764" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.designer.cs" caret="0" fromTop="0" />
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorConfig.cs" caret="0" fromTop="0" />
-      <File id="FC4500A9-8E83-46B0-87FA-86D44AB79AA7/f:CKEditorControl.cs" caret="1669" fromTop="28" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:js/f:jquery-ui-1.8.16.custom.js" caret="163787" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Food2Order.ashx.cs" caret="726" fromTop="14" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.designer.cs" caret="8302" fromTop="7" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:FoodJSON.cs" caret="0" fromTop="0" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:css/f:StyleSheet.css" caret="75" fromTop="6" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:Main.Master" caret="771" fromTop="8" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx.cs" caret="1718" fromTop="18" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Service/f:Account.ashx.cs" caret="1467" fromTop="18" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3643" fromTop="12" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/d:SimpleJSON/f:AccountJSON.cs" caret="631" fromTop="22" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="698" fromTop="11" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:CITYController.cs" caret="451" fromTop="14" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="160" fromTop="6" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERDETAILController.cs" caret="397" fromTop="18" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="1493" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="8118" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:FoodManage.aspx" caret="2090" fromTop="14" />
-      <File id="0E53113E-1469-4947-AC07-FD1233D7D0F9/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
-      <File id="0E53113E-1469-4947-AC07-FD1233D7D0F9/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
-      <File id="0E53113E-1469-4947-AC07-FD1233D7D0F9/d:Controllers/f:AccountController.cs" caret="2656" fromTop="0" />
+      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/d:Library/d:ascx/f:BackstagePage_General.ascx.designer.cs" caret="868" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="740" fromTop="9" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="856" fromTop="13" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="2687" fromTop="14" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="1550" fromTop="22" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="1053" fromTop="10" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3426" fromTop="12" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3712" fromTop="20" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ACCOUNTController.cs" caret="3665" fromTop="15" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="3550" fromTop="24" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="3560" fromTop="24" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="1482" fromTop="23" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="564" fromTop="8" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="2687" fromTop="21" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="952" fromTop="20" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="2862" fromTop="20" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="2532" fromTop="8" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2329" fromTop="22" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2601" fromTop="28" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:FOODController.cs" caret="2557" fromTop="26" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="3607" fromTop="9" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERDETAILController.cs" caret="159" fromTop="9" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERDETAILController.cs" caret="553" fromTop="25" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERDETAILController.cs" caret="397" fromTop="18" />
-      <File id="5B450E65-D1BA-439E-8CF8-BD943CAE4178/f:ORDERController.cs" caret="2069" fromTop="13" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="7814" fromTop="12" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="8272" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx" caret="8118" fromTop="17" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="2713" fromTop="16" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="1493" fromTop="11" />
-      <File id="87AA55AE-4125-4D8C-9C9E-AC3F214B5D01/f:OrderManage.aspx.cs" caret="2897" fromTop="11" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:QUESTIONController.cs" caret="0" fromTop="0" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:ACCOUNTController.cs" caret="116" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:CITYController.cs" caret="117" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:DISTRICTController.cs" caret="92" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:FOODController.cs" caret="117" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:FOODTYPEController.cs" caret="117" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:ORDERDETAILController.cs" caret="117" fromTop="5" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:QUESTIONController.cs" caret="119" fromTop="6" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/d:SimpleJSON/f:AccountJSON.cs" caret="39" fromTop="2" />
+      <File id="082C99E9-FA31-41FE-A1D2-D5C4D0F557C6/f:ORDERController.cs" caret="88" fromTop="3" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -372,6 +327,7 @@
       <Item value="div" priority="6" />
       <Item value="GroupName" priority="6" />
       <Item value="Checked" priority="6" />
+      <Item value="eCommerce" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="void" priority="159" />
@@ -395,7 +351,7 @@
       <Item value="NewUserAnswer" priority="154" />
       <Item value="NewUserQuestion" priority="474" />
       <Item value="var" priority="1054" />
-      <Item value="using" priority="251" />
+      <Item value="using" priority="282" />
       <Item value="QuestionController`0" priority="63" />
       <Item value="from" priority="223" />
       <Item value="foreach" priority="250" />
@@ -449,7 +405,7 @@
       <Item value="LabelAddress" priority="31" />
       <Item value="FlagsAttribute`0" priority="63" />
       <Item value="AccountController" priority="26" />
-      <Item value="Model" priority="93" />
+      <Item value="Model" priority="155" />
       <Item value="ActivationContext`0" priority="29" />
       <Item value="ACCOUNT" priority="92" />
       <Item value="account" priority="1748" />
