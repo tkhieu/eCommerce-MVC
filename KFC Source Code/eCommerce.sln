@@ -13,10 +13,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKEditor.NET", "Library Pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeWebUI", "Library Project\OfficeWebUI\OfficeWebUI.csproj", "{8192EECB-F2F1-4753-A29F-246F7E2973BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.WebUI", "eCommerce.WebUI\eCommerce.WebUI.csproj", "{824EA0BD-A4F0-4659-AD48-64288447F5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.UnitTests", "eCommerce.UnitTests\eCommerce.UnitTests.csproj", "{299D1983-B31C-4407-8C92-F9AD692DB2F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D1BC8A1-7233-4AB6-B524-E2801A660967}"
+	ProjectSection(SolutionItems) = preProject
+		eCommerce.vsmdi = eCommerce.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
 		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = eCommerce.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +57,14 @@ Global
 		{8192EECB-F2F1-4753-A29F-246F7E2973BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8192EECB-F2F1-4753-A29F-246F7E2973BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8192EECB-F2F1-4753-A29F-246F7E2973BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824EA0BD-A4F0-4659-AD48-64288447F5F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824EA0BD-A4F0-4659-AD48-64288447F5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824EA0BD-A4F0-4659-AD48-64288447F5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824EA0BD-A4F0-4659-AD48-64288447F5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299D1983-B31C-4407-8C92-F9AD692DB2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299D1983-B31C-4407-8C92-F9AD692DB2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299D1983-B31C-4407-8C92-F9AD692DB2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299D1983-B31C-4407-8C92-F9AD692DB2F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
