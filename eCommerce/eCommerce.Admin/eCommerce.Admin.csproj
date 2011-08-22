@@ -45,6 +45,9 @@
     <Reference Include="AjaxControlToolkit">
       <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.0.85\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
     <Reference Include="SanitizerProviders">
       <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
     </Reference>
@@ -68,6 +71,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="FoodManage.aspx" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_eeeeee_40x100.png" />
