@@ -1,0 +1,303 @@
+BODY {
+	MIN-WIDTH: 972px
+}
+.container_12 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; WIDTH: 972px; PADDING-RIGHT: 10px; MARGIN-LEFT: auto; MARGIN-RIGHT: auto; PADDING-TOP: 0px
+}
+.grid_1 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_2 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_3 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_4 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_5 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_6 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_7 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_8 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_9 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_10 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_11 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.grid_12 {
+	POSITION: relative; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; MARGIN-RIGHT: 10px
+}
+.push_1 {
+	POSITION: relative
+}
+.pull_1 {
+	POSITION: relative
+}
+.push_2 {
+	POSITION: relative
+}
+.pull_2 {
+	POSITION: relative
+}
+.push_3 {
+	POSITION: relative
+}
+.pull_3 {
+	POSITION: relative
+}
+.push_4 {
+	POSITION: relative
+}
+.pull_4 {
+	POSITION: relative
+}
+.push_5 {
+	POSITION: relative
+}
+.pull_5 {
+	POSITION: relative
+}
+.push_6 {
+	POSITION: relative
+}
+.pull_6 {
+	POSITION: relative
+}
+.push_7 {
+	POSITION: relative
+}
+.pull_7 {
+	POSITION: relative
+}
+.push_8 {
+	POSITION: relative
+}
+.pull_8 {
+	POSITION: relative
+}
+.push_9 {
+	POSITION: relative
+}
+.pull_9 {
+	POSITION: relative
+}
+.push_10 {
+	POSITION: relative
+}
+.pull_10 {
+	POSITION: relative
+}
+.push_11 {
+	POSITION: relative
+}
+.pull_11 {
+	POSITION: relative
+}
+.push_12 {
+	POSITION: relative
+}
+.pull_12 {
+	POSITION: relative
+}
+.alpha {
+	MARGIN-LEFT: 0px
+}
+.omega {
+	MARGIN-RIGHT: 0px
+}
+.container_12 .grid_1 {
+	WIDTH: 61px
+}
+.container_12 .grid_2 {
+	WIDTH: 142px
+}
+.container_12 .grid_3 {
+	WIDTH: 223px
+}
+.container_12 .grid_4 {
+	WIDTH: 304px
+}
+.container_12 .grid_5 {
+	WIDTH: 385px
+}
+.container_12 .grid_6 {
+	WIDTH: 466px
+}
+.container_12 .grid_7 {
+	WIDTH: 547px
+}
+.container_12 .grid_8 {
+	WIDTH: 628px
+}
+.container_12 .grid_9 {
+	WIDTH: 709px
+}
+.container_12 .grid_10 {
+	WIDTH: 790px
+}
+.container_12 .grid_11 {
+	WIDTH: 871px
+}
+.container_12 .grid_12 {
+	WIDTH: 952px
+}
+.container_12 .prefix_1 {
+	PADDING-LEFT: 81px
+}
+.container_12 .prefix_2 {
+	PADDING-LEFT: 162px
+}
+.container_12 .prefix_3 {
+	PADDING-LEFT: 243px
+}
+.container_12 .prefix_4 {
+	PADDING-LEFT: 324px
+}
+.container_12 .prefix_5 {
+	PADDING-LEFT: 405px
+}
+.container_12 .prefix_6 {
+	PADDING-LEFT: 486px
+}
+.container_12 .prefix_7 {
+	PADDING-LEFT: 567px
+}
+.container_12 .prefix_8 {
+	PADDING-LEFT: 648px
+}
+.container_12 .prefix_9 {
+	PADDING-LEFT: 729px
+}
+.container_12 .prefix_10 {
+	PADDING-LEFT: 810px
+}
+.container_12 .prefix_11 {
+	PADDING-LEFT: 891px
+}
+.container_12 .suffix_1 {
+	PADDING-RIGHT: 81px
+}
+.container_12 .suffix_2 {
+	PADDING-RIGHT: 162px
+}
+.container_12 .suffix_3 {
+	PADDING-RIGHT: 243px
+}
+.container_12 .suffix_4 {
+	PADDING-RIGHT: 324px
+}
+.container_12 .suffix_5 {
+	PADDING-RIGHT: 405px
+}
+.container_12 .suffix_6 {
+	PADDING-RIGHT: 486px
+}
+.container_12 .suffix_7 {
+	PADDING-RIGHT: 567px
+}
+.container_12 .suffix_8 {
+	PADDING-RIGHT: 648px
+}
+.container_12 .suffix_9 {
+	PADDING-RIGHT: 729px
+}
+.container_12 .suffix_10 {
+	PADDING-RIGHT: 810px
+}
+.container_12 .suffix_11 {
+	PADDING-RIGHT: 891px
+}
+.container_12 .push_1 {
+	LEFT: 81px
+}
+.container_12 .push_2 {
+	LEFT: 162px
+}
+.container_12 .push_3 {
+	LEFT: 243px
+}
+.container_12 .push_4 {
+	LEFT: 324px
+}
+.container_12 .push_5 {
+	LEFT: 405px
+}
+.container_12 .push_6 {
+	LEFT: 486px
+}
+.container_12 .push_7 {
+	LEFT: 567px
+}
+.container_12 .push_8 {
+	LEFT: 648px
+}
+.container_12 .push_9 {
+	LEFT: 729px
+}
+.container_12 .push_10 {
+	LEFT: 810px
+}
+.container_12 .push_11 {
+	LEFT: 891px
+}
+.container_12 .pull_1 {
+	LEFT: -81px
+}
+.container_12 .pull_2 {
+	LEFT: -162px
+}
+.container_12 .pull_3 {
+	LEFT: -243px
+}
+.container_12 .pull_4 {
+	LEFT: -324px
+}
+.container_12 .pull_5 {
+	LEFT: -405px
+}
+.container_12 .pull_6 {
+	LEFT: -486px
+}
+.container_12 .pull_7 {
+	LEFT: -567px
+}
+.container_12 .pull_8 {
+	LEFT: -648px
+}
+.container_12 .pull_9 {
+	LEFT: -729px
+}
+.container_12 .pull_10 {
+	LEFT: -810px
+}
+.container_12 .pull_11 {
+	LEFT: -891px
+}
+.clear {
+	WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; OVERFLOW: hidden
+}
+.clearfix:before {
+	WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; OVERFLOW: hidden; CONTENT: ' '
+}
+.clearfix:after {
+	WIDTH: 0px; DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; OVERFLOW: hidden; CONTENT: ' '
+}
+.clearfix:after {
+	CLEAR: both
+}
+.clearfix {
+	ZOOM: 1
+}
