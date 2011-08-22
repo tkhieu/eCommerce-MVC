@@ -1,0 +1,840 @@
+html {
+	margin: 0px; padding: 0px;
+}
+* {
+	color: rgb(0, 114, 188); line-height: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 12px;
+}
+#home {
+	background: url("../image/bg.jpg") repeat-x white;
+}
+body {
+	background: url("../image/bg2.jpg") repeat-x white; margin: 0px; padding: 0px;
+}
+body {
+	font-size: 12px;
+}
+td {
+	font-size: 12px;
+}
+th {
+	font-size: 12px;
+}
+input {
+	font-size: 12px;
+}
+textarea {
+	font-size: 12px;
+}
+select {
+	font-size: 12px;
+}
+a {
+	font-size: 12px;
+}
+form {
+	margin: 0px; padding: 0px; display: inline;
+}
+input {
+	background: rgb(240, 246, 255); margin: 3px 5px 3px 0px; padding: 5px; border-radius: 2px; border: currentColor; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+}
+textarea {
+	background: rgb(240, 246, 255); margin: 3px 5px 3px 0px; padding: 5px; border-radius: 2px; border: currentColor; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+}
+select {
+	background: rgb(240, 246, 255); margin: 3px 5px 3px 0px; padding: 5px; border-radius: 2px; border: currentColor; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+}
+#prod_price input {
+	background: white;
+}
+a {
+	color: rgb(56, 80, 116); text-decoration: none; cursor: pointer;
+}
+a:visited {
+	color: rgb(56, 80, 116); text-decoration: none; cursor: pointer;
+}
+a:hover {
+	color: rgb(160, 65, 13);
+}
+a:hover:visited {
+	color: rgb(160, 65, 13);
+}
+a img {
+	border: currentColor;
+}
+p {
+	margin-top: 0px;
+}
+h1 {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 18pt; text-shadow: 1px 1px 1px #FEFEFF;
+}
+h2 {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 16pt; font-weight: 500; text-shadow: 1px 1px 1px #FEFEFF;
+}
+h3 {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 14pt; text-shadow: 1px 1px 1px #FEFEFF;
+}
+.category_name {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 14pt; text-shadow: 1px 1px 1px #FEFEFF;
+}
+.category_name {
+	padding-left: 10px;
+}
+h4 {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 12pt; text-shadow: 1px 1px 1px #FEFEFF;
+}
+h5 {
+	color: rgb(160, 65, 13); font-family: "Museo"; font-size: 10pt; text-shadow: 1px 1px 1px #FEFEFF;
+}
+ul {
+	list-style: url("../image/box_arrow_dark.png");
+}
+tr.even {
+	background: rgb(249, 240, 209);
+}
+tr.odd {
+	background: rgb(197, 232, 250);
+}
+.product_list td {
+	padding: 5px 10px;
+}
+.summary {
+	background: 0px 0px rgb(249, 240, 209); width: 100%; display: inline-block;
+}
+#container {
+	text-align: left;
+}
+#header .div2 {
+	padding-top: 15px; padding-left: 15px; float: left;
+}
+#header .div3 {
+	height: 38px; padding-top: 7px; float: right;
+}
+#header .div3 a {
+	background-position: left; padding: 1px 0px 2px 20px; margin-left: 15px; background-repeat: no-repeat;
+}
+#header .div4 {
+	width: 510px; height: 32px; padding-right: 14px; clear: right; float: right;
+}
+#header .div4 a {
+	background: url("../image/tab_1.png") no-repeat; width: 100px; height: 18px; text-align: center; color: rgb(51, 51, 51); padding-top: 9px; padding-bottom: 9px; font-size: 14px; font-weight: bold; text-decoration: none; margin-right: 2px; float: left; position: relative; z-index: 1;
+}
+#header .div4 a.selected {
+	background: url("../image/tab_2.png") no-repeat; color: rgb(255, 255, 255); padding-bottom: 10px; z-index: 3;
+}
+#header .div5 {
+	clear: both;
+}
+#header .div5 .left {
+	background: url("../image/header_1_left.png") no-repeat; width: 5px; height: 40px; float: left;
+}
+#header .div5 .right {
+	background: url("../image/header_1_right.png") no-repeat; width: 5px; height: 40px; float: right;
+}
+#header .div5 .center {
+	height: 40px; margin-right: 5px; margin-left: 5px;
+}
+#header .div6 {
+	clear: both;
+}
+#header .div6 .left {
+	display: none;
+}
+#header .div6 .right {
+	display: none;
+}
+#header .div6 .center {
+	background: url("../image/header_2_center.png") repeat-x; padding-right: 5px; padding-left: 5px; margin-right: 5px; margin-left: 5px;
+}
+#header .div7 {
+	padding-top: 2px; float: right;
+}
+#header .div8 {
+	margin-top: 6px; float: left;
+}
+#header .div9 {
+	margin-right: -6px; float: left;
+}
+#header .div10 {
+	margin-top: 2px; float: left;
+}
+#search {
+	width: 221px; height: 27px; color: rgb(255, 255, 255); padding-top: 16px; padding-left: 5px; font-weight: bold; float: right;
+}
+#search select {
+	padding: 1px; border: 1px solid rgb(10, 83, 145);
+}
+#search a {
+	background: url("../image/search.png") no-repeat 0px 0px; width: 36px; height: 28px; color: rgb(255, 255, 255); text-indent: -9999px; display: inline-block;
+}
+#search input {
+	background: 0px 0px white; margin: 0px; padding: 5px; border-radius: 3px; border: 1px solid rgb(227, 237, 252); width: 172px; height: 16px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+#breadcrumb {
+	height: 80px; color: rgb(0, 0, 0); padding-top: 7px; padding-bottom: 11px; margin-bottom: 10px; float: left;
+}
+#breadcrumb h2 {
+	font-weight: bold; margin-top: 10px;
+}
+#breadcrumb a {
+	color: rgb(0, 114, 188);
+}
+#breadcrumb a:hover {
+	text-decoration: underline;
+}
+.switcher {
+	margin-top: 3px; margin-left: 10px; float: right;
+}
+.switcher a {
+	text-decoration: none; display: block;
+}
+.switcher .selected {
+	background: url("../image/switcher.png") repeat-x rgb(255, 255, 255);
+}
+.switcher .selected a {
+	background: url("../image/arrow_down2.png") no-repeat center; padding: 2px 5px; border-radius: 3px; width: 145px; font-size: 11px; margin-top: 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.switcher .selected a:hover {
+	
+}
+.switcher .option {
+	width: 128px; color: rgb(0, 114, 188); display: none; position: absolute; z-index: 3; background-color: rgb(183, 225, 248);
+}
+.switcher .option a {
+	padding: 3px 5px; color: rgb(0, 114, 188); font-size: 11px;
+}
+.switcher .option a:hover {
+	background: rgb(8, 146, 209); color: rgb(197, 232, 250);
+}
+.switcher img {
+	top: 1px; position: relative;
+}
+#column_left {
+	clear: left; float: left;
+}
+#column_left ul li ul li a {
+	color: rgb(254, 249, 194);
+}
+#column_left ul li ul li a {
+	background: url("../image/column_li_ul_bg.png") 0px 0px; list-style: url("../image/inner_disc.png"); text-indent: 10px;
+}
+#column_left ul li ul li a b {
+	color: rgb(254, 249, 194);
+}
+#column_left ul li a b {
+	color: rgb(254, 249, 194);
+}
+#column_left a {
+	color: rgb(197, 232, 250); font-weight: bold;
+}
+#column_left a:visited {
+	color: rgb(197, 232, 250); font-weight: bold;
+}
+#column_right {
+	display: none;
+}
+#content {
+	margin-bottom: 10px; margin-left: 240px;
+}
+#content .top .left {
+	background: url("../image/content_top_left.png") no-repeat; width: 5px; height: 32px; float: left;
+}
+#content .top .right {
+	background: url("../image/content_top_right.png") no-repeat; width: 5px; height: 32px; float: right;
+}
+#content .top h1 {
+	padding: 8px 0px 8px 7px;
+}
+.heading {
+	padding: 8px 0px 8px 7px;
+}
+#content h1 {
+	margin: 0px; color: rgb(160, 65, 13); text-transform: capitalize; font-family: "Museo"; font-size: 14pt; font-weight: 500;
+}
+.heading {
+	margin: 0px; color: rgb(160, 65, 13); text-transform: capitalize; font-family: "Museo"; font-size: 14pt; font-weight: 500;
+}
+#content .middle {
+	margin: 0px 10px; min-height: 30px;
+}
+#content .bottom .left {
+	background: url("../image/content_bottom_left.png") no-repeat; width: 5px; height: 5px; float: left;
+}
+#content .bottom .right {
+	background: url("../image/content_bottom_right.png") no-repeat; width: 5px; height: 5px; float: right;
+}
+#content .bottom .center {
+	background: url("../image/content_bottom_center.png") repeat-x; margin: 0px 5px 10px; height: 5px;
+}
+.box {
+	background: url("../image/box_top.png") no-repeat; margin-bottom: 20px;
+}
+.box .top {
+	padding: 12px 0px 8px 15px; height: 24px; color: rgb(254, 249, 194); text-transform: capitalize; font-size: 14px; font-weight: 700;
+}
+.box .top img {
+	display: none;
+}
+.box .middle {
+	background: url("../image/box_bg.png") 0px 0px; padding: 10px; overflow: auto;
+}
+.box .middle_no_margin {
+	background: url("../image/box_bg.png") 0px 0px; padding: 10px; overflow: auto;
+}
+.box .bottom {
+	background: url("../image/box_bg.png") repeat-x 0px 0px; border-radius: 0px 0px 3px 3px; height: 5px; -moz-border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px;
+}
+.success {
+	background: rgb(228, 241, 201); padding: 5px 0px; border: 1px solid rgb(165, 189, 113); text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 11px; margin-bottom: 10px;
+}
+.warning {
+	background: rgb(255, 223, 224); padding: 5px 0px; border-radius: 3px; text-align: center; font-size: 12px; margin-bottom: 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.wait {
+	background: rgb(251, 250, 234); padding: 5px 0px; border: 1px solid rgb(239, 235, 170); text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 11px; margin-bottom: 10px;
+}
+.required {
+	color: rgb(255, 0, 0); font-weight: bold;
+}
+.error {
+	color: rgb(160, 65, 13); display: block;
+}
+.help {
+	cursor: pointer;
+}
+.tooltip {
+	background: rgb(251, 255, 149); padding: 5px; border: 1px solid rgb(253, 218, 92); width: 250px; font-size: 11px;
+}
+.clear {
+	width: 100%; overflow: hidden;
+}
+.button {
+	background: url("../image/button_left.png") no-repeat left top; color: rgb(255, 255, 255); padding-left: 8px; text-decoration: none; margin-right: 5px; display: inline-block;
+}
+.button span {
+	background: url("../image/button_right.png") no-repeat right top; padding: 4px 12px 5px 5px; color: rgb(255, 255, 255); display: block;
+}
+.buttons {
+	padding: 5px 0px; margin-bottom: 10px;
+}
+.buttons input {
+	margin: 0px; padding: 0px;
+}
+.buttons table {
+	width: 100%; border-collapse: collapse;
+}
+.buttons table td {
+	vertical-align: middle;
+}
+.content {
+	background: white; padding: 10px 0px; margin-top: 3px; margin-bottom: 10px;
+}
+.list {
+	width: 100%; margin-bottom: 10px;
+}
+.list td {
+	text-align: center; padding-right: 10px; padding-bottom: 10px; vertical-align: top;
+}
+.sort {
+	width: 100%; height: 30px; margin-bottom: 25px;
+}
+.sort .div1 {
+	padding-top: 6px; margin-left: 5px; float: right;
+}
+.sort .div2 {
+	text-align: right; color: rgb(160, 65, 13); line-height: 38px; font-size: 12px; font-weight: 500;
+}
+.sort select {
+	margin: 0px; padding: 0px; font-size: 11px;
+}
+.pagination {
+	width: 100%; margin-bottom: 10px; display: inline-block;
+}
+.pagination .links {
+	padding: 7px;
+}
+.pagination .results {
+	padding: 7px;
+}
+.pagination .links {
+	float: left;
+}
+.pagination .links a {
+	padding: 4px 7px; border: 1px solid rgb(204, 204, 204); color: rgb(0, 0, 0); text-decoration: none;
+}
+.pagination .links b {
+	background: rgb(255, 255, 255); padding: 4px 7px; border: 1px solid rgb(204, 204, 204); color: rgb(0, 0, 0); text-decoration: none;
+}
+.pagination .results {
+	float: right;
+}
+.tabs {
+	width: 100%; height: 31px; margin-bottom: 0px;
+}
+.tabs a {
+	background: rgb(241, 247, 255); padding: 6px 15px 3px; border-radius: 3px 3px 0px 0px; border: 1px solid rgb(240, 246, 255); top: 1px; color: rgb(0, 114, 188); font-size: 13px; font-weight: bold; text-decoration: none; margin-right: 2px; float: left; display: block; position: relative; z-index: 1; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0;
+}
+.tabs a.selected {
+	background: rgb(255, 255, 255); border-radius: 3px 3px 0px 0px; color: rgb(160, 65, 13); padding-bottom: 8px; border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none; z-index: 3; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0;
+}
+.tab_page {
+	background: rgb(255, 255, 255); padding: 10px; border: 1px solid rgb(240, 246, 255); margin-bottom: 10px; display: block; z-index: 2;
+}
+#footer {
+	width: 100%; padding-top: 5px; clear: both; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+#footer .div1 {
+	text-align: left; float: left;
+}
+#footer .div2 {
+	text-align: right; float: right;
+}
+#category ul {
+	padding-left: 12px; margin-top: 0px; margin-bottom: 0px; margin-left: 8px;
+}
+#information ul {
+	padding-left: 12px; margin-top: 0px; margin-bottom: 0px; margin-left: 8px;
+}
+#column_left ul {
+	list-style: url("../image/box_arrow.png");
+}
+#column_left ul li a {
+	color: rgb(197, 232, 250); line-height: 25px; font-weight: bold; text-decoration: none; display: block; position: relative;
+}
+#column_left ul li {
+	border-bottom-color: rgb(164, 71, 16); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#column_left ul li:last-child {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.cart {
+	width: 100%; margin-bottom: 10px; border-collapse: collapse;
+}
+.cart th {
+	background: rgb(197, 232, 250); padding: 5px; font-weight: normal;
+}
+.cart td {
+	padding: 5px;
+}
+.tags {
+	font-size: x-small; font-style: italic;
+}
+.tags a {
+	font-size: x-small; font-style: italic;
+}
+#module_cart .middle {
+	padding: 5px;
+}
+.cart_module_total {
+	padding: 0px 3px; color: rgb(34, 34, 34); font-size: 0.9em;
+}
+.cart_remove {
+	background: url("../image/list_remove_btn.gif") no-repeat left; padding-right: 10px; margin-top: 3px; cursor: pointer;
+}
+.cart_remove_loading {
+	background: url("../image/ajax_load.gif") no-repeat; padding-right: 10px; margin-top: 3px;
+}
+.button_add_small {
+	background: url("../image/button_add_small.png") no-repeat left; padding: 5px; text-decoration: none; margin-top: 3px; cursor: pointer;
+}
+a.button_add_small:visited {
+	background: url("../image/button_add_small.png") no-repeat left; padding: 5px; text-decoration: none; margin-top: 3px; cursor: pointer;
+}
+#content .middle .box {
+	margin: 0px 6px 10px; float: left; min-height: 0px;
+}
+#content .middle .box .middle {
+	width: 158px; min-height: 0px;
+}
+#logo {
+	margin-top: 25px; float: left;
+}
+#header-top {
+	height: 100px;
+}
+#cart_in_header {
+	padding-bottom: 5px; clear: right; margin-top: 20px; border-bottom-color: rgb(245, 249, 254); border-bottom-width: 1px; border-bottom-style: solid; float: right;
+}
+#cart_in_header p {
+	vertical-align: super; display: inline;
+}
+.header_numbers {
+	color: rgb(160, 65, 13); font-weight: bold;
+}
+.header_info {
+	margin-left: 15px;
+}
+.header_info {
+	color: black; margin-right: 3px;
+}
+#tab_home {
+	background: url("../image/home.png") no-repeat; top: -20px; width: 22px; height: 47px; text-indent: -9999px; float: left; display: block; position: relative;
+}
+#top-menu a {
+	padding: 5px 14px; color: rgb(0, 114, 188); font-family: "Museo"; font-size: 14pt; text-decoration: none; margin-right: 3px; text-shadow: 1px 1px 1px #FEFEFF;
+}
+#top-menu a:hover {
+	background: url("../image/top_menu_hover.png") repeat-x rgb(233, 241, 255); padding: 4px 13px; border-radius: 3px; border: 1px solid rgb(224, 236, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+#tab_home:hover {
+	background: url("../image/home.png") no-repeat !important; border: 1px solid transparent !important;
+}
+#top-menu {
+	height: 45px; padding-top: 20px; float: left;
+}
+#slideshow {
+	margin-right: 20px; margin-bottom: 20px; float: left;
+}
+#homeBanners {
+	margin-bottom: 10px;
+}
+#homeBanners img {
+	margin-bottom: 15px;
+}
+#customHome {
+	overflow: hidden; padding-bottom: 25px; clear: both;
+}
+#customHome h2 {
+	font-weight: normal; margin-top: 0px;
+}
+#learn_more {
+	background: url("../image/learn_more_bg.png") repeat-x 0px 0px rgb(139, 182, 252); padding: 5px 10px; border-radius: 3px; color: white; font-family: "Museo"; font-size: 13px; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; text-shadow: 1px 1px 1px #B8D5FD;
+}
+#learn_more:hover {
+	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px;
+}
+.wide_spacer {
+	background: url("../image/spacer_bg.png") repeat-x 0px 0px; height: 5px; margin-bottom: 20px;
+}
+#brands_selector {
+	padding: 3px; border-radius: 3px; border: currentColor; width: 151px; color: rgb(0, 114, 188); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.product_container {
+	border-radius: 2px; border: 1px solid rgb(240, 246, 255); width: 218px; height: 220px; overflow: hidden; margin-bottom: 20px; position: relative; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+}
+#product_content {
+	overflow: hidden; float: left; display: block;
+}
+.product_visible {
+	text-align: center;
+}
+.product_hidden {
+	background: url("../image/prod_transparent.png"); padding: 20px; top: 260px; width: 180px; height: 100%; display: block; position: absolute;
+}
+.n_price {
+	background: url("../image/n_price_bg.png") no-repeat 0px 0px; left: 10px; top: -72px; width: 63px; height: 40px; text-align: center; padding-top: 23px; font-weight: bold; position: relative;
+}
+.n_price span {
+	font-family: "Museo";
+}
+.s_price {
+	background: url("../image/s_price_bg.png") no-repeat 0px 0px; left: 10px; top: -72px; width: 63px; height: 54px; text-align: center; padding-top: 10px; font-weight: bold; position: relative;
+}
+.old_price {
+	color: rgb(160, 65, 13); font-size: 11px; text-decoration: line-through;
+}
+.new_price {
+	top: -3px; color: rgb(160, 65, 13); font-size: 16px; position: relative;
+}
+.s_price span {
+	font-family: "Museo";
+}
+.product_hidden .product_name {
+	color: rgb(160, 65, 13); line-height: 25px; font-family: "Museo"; font-size: 16px; font-weight: bold; text-decoration: none;
+}
+.product_hidden .product_name:hover {
+	color: rgb(160, 65, 13);
+}
+.product_hidden .product_model {
+	color: rgb(160, 65, 13); line-height: 20px; font-family: "Museo"; font-size: 14px;
+}
+.product_hidden .n_price_h {
+	color: rgb(0, 114, 188); line-height: 24px; font-family: "Museo"; font-size: 16px; font-weight: 700;
+}
+.s_price_h_before {
+	color: rgb(160, 65, 13); font-size: 12px; text-decoration: line-through;
+}
+.button_add {
+	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.button_add:visited {
+	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.button_add:hover {
+	background: url("../image/learn_more_bg.png") repeat-x 0px 0px rgb(139, 182, 252); color: rgb(160, 65, 13);
+}
+.button_add:hover:visited {
+	background: url("../image/learn_more_bg.png") repeat-x 0px 0px rgb(139, 182, 252); color: rgb(160, 65, 13);
+}
+.product_spacer {
+	background: url("../image/prod_spacer.png") repeat-x; margin: 8px 0px; height: 2px;
+}
+#content_home {
+	margin-left: 240px;
+}
+#no_right_margin {
+	padding-right: 0px !important; margin-right: 0px !important;
+}
+.no_right_margin {
+	padding-right: 0px !important; margin-right: 0px !important;
+}
+#category_listing {
+	margin-bottom: 20px;
+}
+#footer-middle-inside {
+	padding-top: 20px;
+}
+#footer-top-outside {
+	background: url("../image/upper_footer_bg.jpg") repeat-x rgb(233, 241, 255); padding-top: 20px; margin-top: 20px;
+}
+#footer-top-outside h2 {
+	padding-bottom: 5px; border-bottom-color: white; border-bottom-width: 1px; border-bottom-style: solid;
+}
+#footer-middle-outside h2 {
+	padding-bottom: 5px; margin-top: 0px; border-bottom-color: rgb(209, 225, 250); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#contact_footer ul {
+	list-style: none; padding-left: 0px;
+}
+#custom_column_footer ul {
+	padding-left: 15px;
+}
+#footer_telephone {
+	text-indent: 25px;
+}
+#footer_telephone2 {
+	text-indent: 25px;
+}
+#footer_email {
+	text-indent: 25px;
+}
+#footer_email2 {
+	text-indent: 25px;
+}
+#footer_skype {
+	text-indent: 25px;
+}
+#footer_fax {
+	text-indent: 25px;
+}
+#footer_telephone {
+	background: url("../image/tel_small.png") no-repeat left;
+}
+#footer_email {
+	background: url("../image/email_small.png") no-repeat left; margin-top: 15px;
+}
+#footer_skype {
+	background: url("../image/skype_small.png") no-repeat left; margin-top: 15px;
+}
+#footer_fax {
+	background: url("../image/fax_small.png") no-repeat left; margin-top: 15px;
+}
+#footer-middle-outside {
+	background: url("../image/bg_pattern.png"); overflow: hidden; padding-bottom: 20px; border-top-color: rgb(207, 223, 250); border-top-width: 2px; border-top-style: solid;
+}
+#footer-bottom-outside {
+	background: url("../image/bg_pattern.png"); overflow: hidden; padding-bottom: 20px; border-top-color: rgb(207, 223, 250); border-top-width: 2px; border-top-style: solid;
+}
+#footer-middle-outside table {
+	width: 100%;
+}
+#footer-middle-outside table {
+	width: 100%;
+}
+#footer-middle-outside td {
+	background: url("../image/box_arrow_dark.png") no-repeat left; text-indent: 20px;
+}
+#footer-bottom-outside {
+	padding-top: 20px;
+}
+#product_top {
+	margin-left: 240px;
+}
+.align_top {
+	vertical-align: top;
+}
+.align_top .tab_page {
+	border: currentColor;
+}
+#big_photo {
+	text-align: center;
+}
+#prod_price {
+	background: url("../image/price_bg.png") 0px 0px; padding: 10px 15px; border-radius: 3px; width: 270px; margin-top: 25px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.n_price_prod {
+	color: rgb(160, 65, 13); font-size: 18px;
+}
+.s_price_before_prod {
+	color: rgb(0, 114, 188); font-size: 12px; text-decoration: line-through;
+}
+.avail_options {
+	background: rgb(238, 162, 51); padding: 10px; border-radius: 3px; border: 1px solid rgb(240, 246, 255); margin-top: 2px; margin-bottom: 15px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.avail_options select {
+	background: white;
+}
+#thumbnails img {
+	margin-left: 15px;
+}
+.info {
+	background: rgb(249, 240, 209); padding: 10px; border-radius: 3px; border: 1px solid rgb(240, 246, 255); margin-bottom: 10px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.cart tr {
+	border-bottom-color: rgb(254, 249, 194); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.dd {
+	border-radius: 3px; width: 185px !important; text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 5px; float: left; background-color: rgb(255, 255, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.dd .ddTitle {
+	height: 25px; text-indent: 10px; overflow: hidden; cursor: default;
+}
+.dd .ddTitle span.arrow {
+	background: url("../image/dd_arrow.png") no-repeat 0px 0px; width: 27px; height: 26px; float: right; display: inline-block; cursor: pointer;
+}
+.dd .ddTitle span.ddTitleText {
+	line-height: 26px; text-indent: 1px; overflow: hidden;
+}
+.dd .ddTitle span.ddTitleText img {
+	padding: 0px 2px 0px 0px; text-align: left;
+}
+.dd .ddTitle img.selected {
+	padding: 0px 3px 0px 0px; vertical-align: top;
+}
+.dd .ddChild {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(195, 195, 195) rgb(195, 195, 195); margin: 0px; width: 156px !important; overflow: auto; display: none; position: absolute; overflow-x: hidden !important; background-color: rgb(255, 255, 255);
+}
+.dd .ddChild .opta a {
+	padding-left: 10px;
+}
+.dd .ddChild .opta a:visited {
+	padding-left: 10px;
+}
+.dd .ddChild a {
+	padding: 2px 0px 2px 3px; color: rgb(0, 0, 0); overflow: hidden; text-decoration: none; display: block; white-space: nowrap; cursor: pointer;
+}
+.dd .ddChild a:hover {
+	background-color: rgb(197, 232, 250);
+}
+.dd .ddChild a img {
+	padding: 0px 2px 0px 0px; border: 0px currentColor; vertical-align: middle;
+}
+.dd .ddChild a.selected {
+	background-color: rgb(197, 232, 250);
+}
+.hidden {
+	display: none;
+}
+.dd .borderTop {
+	border-top-color: rgb(195, 195, 195) !important; border-top-width: 1px !important; border-top-style: solid !important;
+}
+.dd .noBorderTop {
+	border-top-color: currentColor !important; border-top-width: 0px !important; border-top-style: none !important;
+}
+.dd2 {
+	width: 170px !important; text-align: left; overflow: hidden; font-family: Arial,Helvetica,sans-serif; font-size: 12px; float: left; background-color: rgb(255, 255, 255);
+}
+.dd2 .ddTitle {
+	background: url("../image/sort_bg.png") repeat-x 0px 0px; padding: 0px 10px; border-radius: 3px 0px 0px 3px; width: 150px !important; text-indent: 0px; overflow: hidden; cursor: default;
+}
+.dd2 .ddTitle span.arrow {
+	background: url("../image/dd_arrow2.png") no-repeat 0px 0px; width: 27px; height: 26px; right: -9px; float: right; display: inline-block; position: relative; cursor: pointer;
+}
+.dd2 .ddTitle span.ddTitleText {
+	color: rgb(0, 114, 188); line-height: 26px; text-indent: 1px; overflow: hidden; font-family: Georgia,"Times New Roman",Times,serif; font-size: 14px;
+}
+.dd2 .ddTitle span.ddTitleText img {
+	padding: 0px 2px 0px 0px; text-align: left;
+}
+.dd2 .ddTitle img.selected {
+	padding: 0px 2px 0px 0px; vertical-align: top;
+}
+.dd2 .ddChild {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(195, 195, 195) rgb(195, 195, 195); margin: 0px; width: auto; overflow: auto; font-size: 14px; display: none; position: absolute; overflow-x: hidden !important; background-color: rgb(255, 255, 255);
+}
+.dd2 .ddChild .opta a {
+	padding-left: 10px;
+}
+.dd2 .ddChild .opta a:visited {
+	padding-left: 10px;
+}
+.dd2 .ddChild a {
+	padding: 3px 0px 3px 3px; color: rgb(0, 0, 0); overflow: hidden; text-decoration: none; display: block; white-space: nowrap; cursor: pointer;
+}
+.dd2 .ddChild a:hover {
+	background-color: rgb(197, 232, 250);
+}
+.dd2 .ddChild a img {
+	padding: 0px 2px 0px 0px; border: 0px currentColor; vertical-align: middle;
+}
+.dd2 .ddChild a.selected {
+	background-color: rgb(197, 232, 250);
+}
+.dd2 .borderTop {
+	border-top-color: rgb(195, 195, 195) !important; border-top-width: 1px !important; border-top-style: solid !important;
+}
+.dd2 .noBorderTop {
+	border-top-color: currentColor !important; border-top-width: 0px !important; border-top-style: none !important;
+}
+.dd2 #sort_child {
+	border: 1px solid rgb(197, 232, 250); width: 142px !important; height: 235px !important;
+}
+.dd3 {
+	border-radius: 3px; text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 5px; float: left; background-color: rgb(255, 255, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.dd3 .ddTitle {
+	height: 25px; text-indent: 10px; overflow: hidden; cursor: default;
+}
+.dd3 .ddTitle span.arrow {
+	background: url("../image/dd_arrow.png") no-repeat 0px 0px; width: 27px; height: 26px; float: right; display: inline-block; cursor: pointer;
+}
+.dd3 .ddTitle span.ddTitleText {
+	line-height: 26px; text-indent: 1px; overflow: hidden;
+}
+.dd3 .ddTitle span.ddTitleText img {
+	padding: 0px 2px 0px 0px; text-align: left;
+}
+.dd3 .ddTitle img.selected {
+	padding: 0px 3px 0px 0px; vertical-align: top;
+}
+.dd3 .ddChild {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(195, 195, 195) rgb(195, 195, 195); margin: 0px; width: auto; overflow: auto; display: none; position: absolute; overflow-x: hidden !important; background-color: rgb(255, 255, 255);
+}
+.dd3 .ddChild .opta a {
+	padding-left: 10px;
+}
+.dd .ddChild .opta a:visited {
+	padding-left: 10px;
+}
+.dd3 .ddChild a {
+	padding: 2px 0px 2px 3px; color: rgb(0, 0, 0); overflow: hidden; text-decoration: none; display: block; white-space: nowrap; cursor: pointer;
+}
+.dd3 .ddChild a:hover {
+	background-color: rgb(218, 231, 251);
+}
+.dd3 .ddChild a img {
+	padding: 0px 2px 0px 0px; border: 0px currentColor; vertical-align: middle;
+}
+.dd3 .ddChild a.selected {
+	background-color: rgb(218, 231, 251);
+}
+.hidden {
+	display: none;
+}
+.dd3 .borderTop {
+	border-top-color: rgb(195, 195, 195) !important; border-top-width: 1px !important; border-top-style: solid !important;
+}
+.dd3 .noBorderTop {
+	border-top-color: currentColor !important; border-top-width: 0px !important; border-top-style: none !important;
+}
+#theme_switcher {
+	background: url("../image/ts.jpg") no-repeat 0px 0px; border-radius: 0px 5px 5px 0px; left: -15px; top: 10px; width: 155px; height: 123px; padding-left: 21px; position: fixed;
+}
+#theme_switcher_header {
+	height: 48px;
+}
+#theme_switcher p {
+	color: white; font-family: "Museo"; font-size: 12px;
+}
+#ts-arrows {
+	background: url("../image/ts_arrows.png") no-repeat right top; left: -5px; top: 15px; width: 30px; height: 45px; text-indent: -9999px; float: right; position: relative;
+}
