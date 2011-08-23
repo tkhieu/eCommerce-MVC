@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\glimpse.readme.txt" />
+    <Content Include="BillManage.aspx" />
     <Content Include="FoodManage.aspx" />
     <Content Include="FoodTypeManager.aspx" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -102,6 +103,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillManage.aspx.cs">
+      <DependentUpon>BillManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillManage.aspx.designer.cs">
+      <DependentUpon>BillManage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
