@@ -202,6 +202,24 @@ namespace eCommerce.Admin {
         protected global::System.Web.UI.WebControls.HiddenField NewCountArray;
         
         /// <summary>
+        /// OfficeMessageBoxUpdateStateSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateStateSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxUpdateStateFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxUpdateStateFail;
+        
+        /// <summary>
         /// OfficePopupViewOrder control.
         /// </summary>
         /// <remarks>
@@ -344,6 +362,15 @@ namespace eCommerce.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewOrderDetail;
+        
+        /// <summary>
+        /// OrderStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList OrderStatus;
         
         /// <summary>
         /// OfficeMessageBoxAddOrderSuccess control.

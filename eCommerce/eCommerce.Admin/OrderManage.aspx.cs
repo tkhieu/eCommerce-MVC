@@ -27,7 +27,7 @@ namespace eCommerce.Admin
                                 City = order.CITY.Name,
 
                                 Time = order.Date,
-                                State = order.State,
+                                State = (order.State == 1) ? "New" : (order.State == 2) ? "Processing" : (order.State == 3)?"Finish":"Error",
                                 TotalPayment = order.TotalPayment
                             };
 
@@ -139,7 +139,14 @@ namespace eCommerce.Admin
             OrderAddressDistrict.Text = order.DISTRICT.Name;
             OrderAddressFullName.Text = order.Name;
             OrderAddressTel.Text = order.Tel;
-
+            if (order.State == 1)
+            {
+                OrderStatus.SelectedValue = "1";
+            } else if (order.State == 2)
+            {
+                OrderStatus.SelectedValue = "2";
+            } else if (order.State == 3)
+                OrderStatus.SelectedValue = "3";
             var listOrderDetail = from orderdetail in order.ORDERDETAILs
                                   select new
                                              {
@@ -161,8 +168,28 @@ namespace eCommerce.Admin
             }
 
             OrderDetailTotal.Value = totalPayment.ToString();
-
+            Session["orderid"] = order.ID;
             OfficePopupViewOrder.Show();
+        }
+
+        protected void OfficePopupOrderOk(object sender, EventArgs e)
+        {
+            int id = int.Parse(Session["orderid"].ToString());
+            ORDER order = OrderController.GetById(id);
+            if (order.State != null)
+            {
+                int state = (int) order.State;
+                if (state != int.Parse(OrderStatus.SelectedValue))
+                {
+                    state = int.Parse(OrderStatus.SelectedValue);
+                    if (OrderController.UpdateState(id, state))
+                    {
+                        OfficeMessageBoxUpdateStateSuccess.Show();
+                    } else OfficeMessageBoxUpdateStateFail.Show();
+                }
+            }
+            Session["orderid"] = null;
+            OfficePopupViewOrder.Hide();
         }
     }
 }

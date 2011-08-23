@@ -103,5 +103,23 @@ namespace eCommerce.Model.Controller
         {
             return db.ORDERs.Single(p => p.ID == id);
         }
+
+        public static bool UpdateState(int id,int state)
+        {
+            bool flag = true;
+            _db = new FoodStoreEntities();
+            try
+            {
+                ORDER order = GetById(id, _db);
+                order.State = state;
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
+            return flag;
+        }
     }
 }

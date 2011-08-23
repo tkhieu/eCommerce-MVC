@@ -8,9 +8,11 @@
             var foodId;
             var foodCount = $("#<%=NewOrderCount.ClientID %>").val();
 
-            var totalPaymentRow = "<tr><td colspan=\"4\">Tổng</td><td>"+$("#<%=OrderDetailTotal.ClientID %>").val()+"</td></tr>";
+            var totalPaymentRow = "<tr><td colspan=\"4\">Tổng</td><td>" + $("#<%=OrderDetailTotal.ClientID %>").val() + "</td></tr>";
 
             $("#<%=GridViewOrderDetail.ClientID %> tr:last").after(totalPaymentRow);
+
+            $("#<%=OrderStatus.ClientID %>").buttonset();
 
             $(".ItemButton").button().next().button().parent().buttonset();
 
@@ -247,8 +249,18 @@
         </Content>
     </OfficeWebUI:OfficePopup>
 
+
+    <%--Hộp thoại khi thêm food thành công--%>
+<OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxUpdateStateSuccess" Title="Success"
+    Text="Update order status success..." ButtonsType="Ok" MessageBoxType="Info" >
+</OfficeWebUI:OfficeMessageBox>
+<%--Hộp thoại khi thêm food thất bại--%>
+<OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxUpdateStateFail" Title="Fail"
+    Text="Update order status fail..." ButtonsType="Ok" MessageBoxType="Error">
+</OfficeWebUI:OfficeMessageBox>
+
 <%--Office Popup for View--%>
-    <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupViewOrder" Title="Order Detail Infomation" Height="200px">
+    <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupViewOrder" Title="Order Detail Infomation" Height="250px" OnClickOk="OfficePopupOrderOk">
         <Content>
             <div id="OrderContentTab" class="OfficeTextStyle">
                 <ul>
@@ -396,6 +408,13 @@
                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
+                        <br/> Order State:
+                        <asp:RadioButtonList ID="OrderStatus" runat="server" 
+                            RepeatDirection="Horizontal" RepeatLayout="Flow">
+                            <asp:ListItem Value="1">New</asp:ListItem>
+                            <asp:ListItem Value="2">Processing</asp:ListItem>
+                            <asp:ListItem Value="3">Finish</asp:ListItem>
+                        </asp:RadioButtonList>
                     </p>
                 </div>
             </div>
