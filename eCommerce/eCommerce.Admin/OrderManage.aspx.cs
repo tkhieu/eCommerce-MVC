@@ -27,7 +27,7 @@ namespace eCommerce.Admin
                                 City = order.CITY.Name,
 
                                 Time = order.Date,
-                                State = (order.State == 1) ? "New" : (order.State == 2) ? "Processing" : (order.State == 3)?"Finish":"Error",
+                                State = (order.State == (int)ProjectEnum.OrderState.Finish) ? "New" : (order.State == (int)ProjectEnum.OrderState.Processing) ? "Processing" : (order.State == (int)ProjectEnum.OrderState.Finish) ? "Finish" : "Error",
                                 TotalPayment = order.TotalPayment
                             };
 
@@ -139,14 +139,15 @@ namespace eCommerce.Admin
             OrderAddressDistrict.Text = order.DISTRICT.Name;
             OrderAddressFullName.Text = order.Name;
             OrderAddressTel.Text = order.Tel;
-            if (order.State == 1)
+            if (order.State == (int)ProjectEnum.OrderState.New)
             {
-                OrderStatus.SelectedValue = "1";
-            } else if (order.State == 2)
+                OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.New).ToString();
+            }
+            else if (order.State == (int)ProjectEnum.OrderState.Processing)
             {
-                OrderStatus.SelectedValue = "2";
-            } else if (order.State == 3)
-                OrderStatus.SelectedValue = "3";
+                OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.Processing).ToString();
+            } else if (order.State == (int)ProjectEnum.OrderState.Finish)
+                OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.Finish).ToString();
             var listOrderDetail = from orderdetail in order.ORDERDETAILs
                                   select new
                                              {
