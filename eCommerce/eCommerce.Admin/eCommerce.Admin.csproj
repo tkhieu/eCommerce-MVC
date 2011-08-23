@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="FoodManage.aspx" />
+    <Content Include="FoodTypeManager.aspx" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_0_eeeeee_40x100.png" />
     <Content Include="Library\css\jquery-ui\images\ui-bg_flat_55_ffffff_40x100.png" />
@@ -126,6 +127,13 @@
     </Compile>
     <Compile Include="FoodManage.aspx.designer.cs">
       <DependentUpon>FoodManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodTypeManager.aspx.cs">
+      <DependentUpon>FoodTypeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodTypeManager.aspx.designer.cs">
+      <DependentUpon>FoodTypeManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inbox.aspx.cs">
       <DependentUpon>Inbox.aspx</DependentUpon>
