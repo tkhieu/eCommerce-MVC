@@ -19,12 +19,10 @@ using System.Runtime.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_QUESTION", "QUESTION", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.QUESTION), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.ACCOUNT), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILLDETAIL_FOOD1", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(eCommerce.Model.FOOD), "BILLDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.BILLDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_FOOD_FOODTYPE1", "FOODTYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.FOODTYPE), "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.FOOD), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.CITY), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.ACCOUNT), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ACCOUNT_DISTRICT", "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.DISTRICT), "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.ACCOUNT), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_DISTRICT_CITY", "CITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.CITY), "DISTRICT", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.DISTRICT), true)]
-[assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(eCommerce.Model.BILL), "BILLDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.BILLDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDERDETAIL_FOOD", "FOOD", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(eCommerce.Model.FOOD), "ORDERDETAIL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.ORDERDETAIL), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_ORDER_ACCOUNT", "ACCOUNT", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.ACCOUNT), "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.ORDER), true)]
 [assembly: EdmRelationshipAttribute("FoodStoreModel", "FK_BILL_ORDER", "ORDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(eCommerce.Model.ORDER), "BILL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(eCommerce.Model.BILL), true)]
@@ -97,22 +95,6 @@ namespace eCommerce.Model
             }
         }
         private ObjectSet<ACCOUNT> _ACCOUNTs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<BILLDETAIL> BILLDETAILs
-        {
-            get
-            {
-                if ((_BILLDETAILs == null))
-                {
-                    _BILLDETAILs = base.CreateObjectSet<BILLDETAIL>("BILLDETAILs");
-                }
-                return _BILLDETAILs;
-            }
-        }
-        private ObjectSet<BILLDETAIL> _BILLDETAILs;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -251,14 +233,6 @@ namespace eCommerce.Model
         public void AddToACCOUNTs(ACCOUNT aCCOUNT)
         {
             base.AddObject("ACCOUNTs", aCCOUNT);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the BILLDETAILs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToBILLDETAILs(BILLDETAIL bILLDETAIL)
-        {
-            base.AddObject("BILLDETAILs", bILLDETAIL);
         }
     
         /// <summary>
@@ -948,28 +922,6 @@ namespace eCommerce.Model
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILLDETAIL")]
-        public EntityCollection<BILLDETAIL> BILLDETAILs
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BILLDETAIL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILLDETAIL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BILLDETAIL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILLDETAIL", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILL_ORDER", "ORDER")]
         public ORDER ORDER
         {
@@ -998,241 +950,6 @@ namespace eCommerce.Model
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ORDER>("FoodStoreModel.FK_BILL_ORDER", "ORDER", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="FoodStoreModel", Name="BILLDETAIL")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class BILLDETAIL : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new BILLDETAIL object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        /// <param name="idFood">Initial value of the IdFood property.</param>
-        public static BILLDETAIL CreateBILLDETAIL(global::System.Int32 id, global::System.Int32 idFood)
-        {
-            BILLDETAIL bILLDETAIL = new BILLDETAIL();
-            bILLDETAIL.ID = id;
-            bILLDETAIL.IdFood = idFood;
-            return bILLDETAIL;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdFood
-        {
-            get
-            {
-                return _IdFood;
-            }
-            set
-            {
-                if (_IdFood != value)
-                {
-                    OnIdFoodChanging(value);
-                    ReportPropertyChanging("IdFood");
-                    _IdFood = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdFood");
-                    OnIdFoodChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdFood;
-        partial void OnIdFoodChanging(global::System.Int32 value);
-        partial void OnIdFoodChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Count
-        {
-            get
-            {
-                return _Count;
-            }
-            set
-            {
-                OnCountChanging(value);
-                ReportPropertyChanging("Count");
-                _Count = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Count");
-                OnCountChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _Count;
-        partial void OnCountChanging(Nullable<global::System.Int32> value);
-        partial void OnCountChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Price
-        {
-            get
-            {
-                return _Price;
-            }
-            set
-            {
-                OnPriceChanging(value);
-                ReportPropertyChanging("Price");
-                _Price = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Price");
-                OnPriceChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _Price;
-        partial void OnPriceChanging(Nullable<global::System.Int32> value);
-        partial void OnPriceChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> TotalPayment
-        {
-            get
-            {
-                return _TotalPayment;
-            }
-            set
-            {
-                OnTotalPaymentChanging(value);
-                ReportPropertyChanging("TotalPayment");
-                _TotalPayment = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TotalPayment");
-                OnTotalPaymentChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _TotalPayment;
-        partial void OnTotalPaymentChanging(Nullable<global::System.Int32> value);
-        partial void OnTotalPaymentChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_FOOD1", "FOOD")]
-        public FOOD FOOD
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<FOOD> FOODReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FOOD>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "FOOD", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_BILL1", "BILL")]
-        public BILL BILL
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<BILL> BILLReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<BILL>("FoodStoreModel.FK_BILLDETAIL_BILL1", "BILL", value);
                 }
             }
         }
@@ -1798,28 +1515,6 @@ namespace eCommerce.Model
         #endregion
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FoodStoreModel", "FK_BILLDETAIL_FOOD1", "BILLDETAIL")]
-        public EntityCollection<BILLDETAIL> BILLDETAILs
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BILLDETAIL>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "BILLDETAIL");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BILLDETAIL>("FoodStoreModel.FK_BILLDETAIL_FOOD1", "BILLDETAIL", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
