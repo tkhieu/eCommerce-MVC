@@ -55,6 +55,7 @@
     <Compile Include="Controller\CITYController.cs" />
     <Compile Include="Controller\DISTRICTController.cs" />
     <Compile Include="Controller\FOODController.cs" />
+    <Compile Include="Controller\IController.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <DependentUpon>FoodStore.edmx</DependentUpon>
       <AutoGen>True</AutoGen>

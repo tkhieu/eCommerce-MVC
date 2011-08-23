@@ -71,7 +71,13 @@ namespace eCommerce.Model.Controller
             return flag;
         }
 
-        private static int GetMaxId()
+        public static List<ORDER> GetList()
+        {
+            _db = new FoodStoreEntities();
+            return _db.ORDERs.ToList();
+        }
+
+        public static int GetMaxId()
         {
             int id;
             try

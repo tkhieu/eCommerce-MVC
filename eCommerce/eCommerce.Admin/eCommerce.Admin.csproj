@@ -87,13 +87,15 @@
     <Content Include="Library\css\jquery-ui\images\ui-icons_ff0084_256x240.png" />
     <Content Include="Library\css\jquery-ui\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Library\css\jquery-ui\jquery-ui-1.8.16.custom.css" />
-    <Content Include="Library\css\StyleSheet.css" />
+    <Content Include="Library\css\jquery-ui\superTabs.css" />
+    <Content Include="Library\css\stylesheet.css" />
     <Content Include="Library\img\ajax-loader.gif" />
     <Content Include="Library\js\jquery-1.6.2.js" />
     <Content Include="Library\js\jquery-1.6.2.min.js" />
     <Content Include="Library\js\jquery-ui-1.8.16.custom.js" />
     <Content Include="Library\js\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="Library\js\jquery-ui-timepicker-addon.js" />
+    <Content Include="Library\js\superTabs.js" />
     <Content Include="OrderManage.aspx" />
     <Content Include="UserManage.aspx" />
     <Content Include="Web.config" />

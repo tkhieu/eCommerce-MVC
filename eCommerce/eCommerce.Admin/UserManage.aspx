@@ -7,6 +7,7 @@
     <OfficeWebUI:OfficePopup ID="OfficePopupNewUser" runat="server" OnClickOk="NewUserPopupOk"
         Title="New User Information" Height="550px" Width="400px">
         <Content>
+        <div class="OfficeTextStyle">
             <h1>
                 New Customer</h1>
             <table>
@@ -160,6 +161,7 @@
                     </td>
                 </tr>
             </table>
+            </div>
         </Content>
     </OfficeWebUI:OfficePopup>
 
