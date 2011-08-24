@@ -19,6 +19,8 @@ namespace eCommerce.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.Title = String.Format("{0} | {1}", Configuration.SYSTEM_NAME, "Food Manage");
+
             var list = FoodController.GetList();
             var listFood = from food in list
                            select new

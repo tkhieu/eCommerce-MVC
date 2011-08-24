@@ -14,6 +14,8 @@ namespace eCommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.Title = String.Format("{0} | {1}", Configuration.SYSTEM_NAME, "Manage");
+
             if (!IsPostBack)
             {
                 if (Request.QueryString.Count == 1 && Request.QueryString["New"] == "1")

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using eCommerce.Model.Controller;
+using eCommerce.Utility;
 
 namespace eCommerce.Admin
 {
@@ -12,6 +13,7 @@ namespace eCommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.Title = String.Format("{0} | {1}", Configuration.SYSTEM_NAME,"Login");
 
             if (Session["login"] != null)
             {

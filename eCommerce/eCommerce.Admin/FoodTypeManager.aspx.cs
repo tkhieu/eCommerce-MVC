@@ -9,6 +9,7 @@ using FtpLib;
 using eCommerce.Model;
 using OfficeWebUI;
 using eCommerce.Model.Controller;
+using eCommerce.Utility;
 
 namespace eCommerce.Admin
 {
@@ -17,6 +18,8 @@ namespace eCommerce.Admin
         FoodStoreEntities db = new FoodStoreEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.Title = String.Format("{0} | {1}", Configuration.SYSTEM_NAME, "Food Type Manage");
+
             var list = FoodTypeController.GetList();
             var listFoodType = from foodType in list
                            select new

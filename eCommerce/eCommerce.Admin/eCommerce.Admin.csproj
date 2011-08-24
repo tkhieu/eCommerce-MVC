@@ -22,7 +22,7 @@
     <SccLocalPath>Svn</SccLocalPath>
     <SccAuxPath>Svn</SccAuxPath>
     <SccProvider>SubversionScc</SccProvider>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,7 +91,6 @@
     <Content Include="Library\css\jquery-ui\jquery-ui-1.8.16.custom.css" />
     <Content Include="Library\css\jquery-ui\superTabs.css" />
     <Content Include="Library\css\stylesheet.css" />
-    <Content Include="Library\img\ajax-loader.gif" />
     <Content Include="Library\js\jquery-1.6.2.js" />
     <Content Include="Library\js\jquery-1.6.2.min.js" />
     <Content Include="Library\js\jquery-ui-1.8.16.custom.js" />
@@ -619,12 +618,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54224</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:54224/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
