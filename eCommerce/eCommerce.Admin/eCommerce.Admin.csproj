@@ -98,6 +98,7 @@
     <Content Include="Library\js\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="Library\js\jquery-ui-timepicker-addon.js" />
     <Content Include="Library\js\superTabs.js" />
+    <Content Include="Manager.aspx" />
     <Content Include="OrderManage.aspx" />
     <Content Include="UserManage.aspx" />
     <Content Include="Web.config" />
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.aspx.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager.aspx.designer.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderManage.aspx.cs">
       <DependentUpon>OrderManage.aspx</DependentUpon>

@@ -12,6 +12,7 @@
           <EntitySet Name="DISTRICT" EntityType="FoodStoreModel.Store.DISTRICT" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FOOD" EntityType="FoodStoreModel.Store.FOOD" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FOODTYPE" EntityType="FoodStoreModel.Store.FOODTYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MANAGER" EntityType="FoodStoreModel.Store.MANAGER" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ORDER" EntityType="FoodStoreModel.Store.ORDER" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ORDERDETAIL" EntityType="FoodStoreModel.Store.ORDERDETAIL" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="QUESTION" EntityType="FoodStoreModel.Store.QUESTION" store:Type="Tables" Schema="dbo" />
@@ -122,6 +123,14 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MANAGER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Encrypted" Type="nvarchar" Nullable="false" MaxLength="1024" />
         </EntityType>
         <EntityType Name="ORDER">
           <Key>
@@ -347,6 +356,7 @@
             <End Role="ORDER" EntitySet="ORDERs" />
             <End Role="ORDERDETAIL" EntitySet="ORDERDETAILs" />
           </AssociationSet>
+          <EntitySet Name="MANAGERs" EntityType="FoodStoreModel.MANAGER" />
         </EntityContainer>
         <EntityType Name="ACCOUNT">
           <Key>
@@ -599,6 +609,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="MANAGER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Encrypted" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -695,6 +713,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MANAGERs">
+            <EntityTypeMapping TypeName="FoodStoreModel.MANAGER">
+              <MappingFragment StoreEntitySet="MANAGER">
+                <ScalarProperty Name="Encrypted" ColumnName="Encrypted" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -736,8 +763,8 @@
           <ConnectorPoint PointX="4.5" PointY="12.5" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_DISTRICT" >
-          <ConnectorPoint PointX="10.5" PointY="9.9898893229166656" />
-          <ConnectorPoint PointX="10.5" PointY="14.727845052083334" />
+          <ConnectorPoint PointX="10.5312525" PointY="9.9898893229166674" />
+          <ConnectorPoint PointX="10.5312525" PointY="14.727845052083334" />
           <ConnectorPoint PointX="5.25" PointY="14.727845052083334" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_DISTRICT_CITY" >
@@ -758,8 +785,8 @@
         <EntityTypeShape EntityType="FoodStoreModel.ORDER" Width="1.5" PointX="12" PointY="10.125" Height="4.0956022135416674" />
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_ACCOUNT" >
           <ConnectorPoint PointX="5.25" PointY="13.540345052083334" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="13.540345052083334" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="13.540345052083334" />
+          <ConnectorPoint PointX="10.447919166666667" PointY="13.540345052083334" />
+          <ConnectorPoint PointX="10.614585833333335" PointY="13.540345052083334" />
           <ConnectorPoint PointX="12" PointY="13.540345052083334" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_BILL_ORDER" >
@@ -769,8 +796,8 @@
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_CITY" >
           <ConnectorPoint PointX="9.5" PointY="11.7425464453125" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="11.7425464453125" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="11.7425464453125" />
+          <ConnectorPoint PointX="10.447919166666667" PointY="11.7425464453125" />
+          <ConnectorPoint PointX="10.614585833333335" PointY="11.7425464453125" />
           <ConnectorPoint PointX="12" PointY="11.7425464453125" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_ORDER_DISTRICT" >
@@ -783,6 +810,7 @@
           <ConnectorPoint PointX="13.1562525" PointY="8.1823202083333335" />
           <ConnectorPoint PointX="17.625" PointY="8.1823202083333335" />
         </AssociationConnector>
+        <EntityTypeShape EntityType="FoodStoreModel.MANAGER" Width="1.5" PointX="3.375" PointY="0.75" Height="1.5956835937499996" />
       </Diagram>
     </Diagrams>
   </Designer>

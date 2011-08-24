@@ -223,6 +223,22 @@ namespace eCommerce.Model
             }
         }
         private ObjectSet<ORDER> _ORDERs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MANAGER> MANAGERs
+        {
+            get
+            {
+                if ((_MANAGERs == null))
+                {
+                    _MANAGERs = base.CreateObjectSet<MANAGER>("MANAGERs");
+                }
+                return _MANAGERs;
+            }
+        }
+        private ObjectSet<MANAGER> _MANAGERs;
 
         #endregion
         #region AddTo Methods
@@ -297,6 +313,14 @@ namespace eCommerce.Model
         public void AddToORDERs(ORDER oRDER)
         {
             base.AddObject("ORDERs", oRDER);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the MANAGERs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMANAGERs(MANAGER mANAGER)
+        {
+            base.AddObject("MANAGERs", mANAGER);
         }
 
         #endregion
@@ -1705,6 +1729,113 @@ namespace eCommerce.Model
         }
 
         #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FoodStoreModel", Name="MANAGER")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MANAGER : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MANAGER object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="encrypted">Initial value of the Encrypted property.</param>
+        public static MANAGER CreateMANAGER(global::System.Int32 id, global::System.String name, global::System.String encrypted)
+        {
+            MANAGER mANAGER = new MANAGER();
+            mANAGER.ID = id;
+            mANAGER.Name = name;
+            mANAGER.Encrypted = encrypted;
+            return mANAGER;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Encrypted
+        {
+            get
+            {
+                return _Encrypted;
+            }
+            set
+            {
+                OnEncryptedChanging(value);
+                ReportPropertyChanging("Encrypted");
+                _Encrypted = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Encrypted");
+                OnEncryptedChanged();
+            }
+        }
+        private global::System.String _Encrypted;
+        partial void OnEncryptedChanging(global::System.String value);
+        partial void OnEncryptedChanged();
+
+        #endregion
+    
     }
     
     /// <summary>

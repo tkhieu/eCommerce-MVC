@@ -310,6 +310,42 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.LargeItem LargeItem13;
         
         /// <summary>
+        /// RibbonGroup8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.Ribbon.RibbonGroup RibbonGroup8;
+        
+        /// <summary>
+        /// GroupZone7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.Ribbon.GroupZone GroupZone7;
+        
+        /// <summary>
+        /// LargeItem15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem15;
+        
+        /// <summary>
+        /// LargeItem16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem16;
+        
+        /// <summary>
         /// RibbonContext_Calendar control.
         /// </summary>
         /// <remarks>

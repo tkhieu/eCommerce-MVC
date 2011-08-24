@@ -57,6 +57,7 @@
     <Compile Include="Controller\DISTRICTController.cs" />
     <Compile Include="Controller\FOODController.cs" />
     <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\MANAGERController.cs" />
     <Compile Include="ProjectEnum.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <DependentUpon>FoodStore.edmx</DependentUpon>
@@ -81,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eCommerce.Utility\eCommerce.Utility.csproj">
+      <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>
+      <Name>eCommerce.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

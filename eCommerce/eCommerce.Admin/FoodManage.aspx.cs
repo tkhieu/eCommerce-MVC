@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using System.IO;
 using FtpLib;
 using eCommerce.Model;
-using Utility;
 using OfficeWebUI;
 using eCommerce.Model.Controller;
+using eCommerce.Utility;
 
 namespace eCommerce.Admin
 {

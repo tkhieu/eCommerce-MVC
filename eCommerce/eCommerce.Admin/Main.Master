@@ -95,6 +95,16 @@
                                     </OfficeWebUI:GroupZone>
                                 </Zones>
                             </OfficeWebUI:RibbonGroup>                                                 
+                            <OfficeWebUI:RibbonGroup ID="RibbonGroup8" runat="server" Text="Manager">
+                                <Zones>
+                                    <OfficeWebUI:GroupZone ID="GroupZone7" runat="server" Text="Zone 1">
+                                        <Content>
+                                            <OfficeWebUI:LargeItem ID="LargeItem15" runat="server" ImageUrl="~/library/img/32/icon110_32.png" Text="New" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" NavigateUrl="~/Manager.aspx?New=1"/>
+                                            <OfficeWebUI:LargeItem ID="LargeItem16" runat="server" ImageUrl="~/library/img/32/icon120_32.png" Text="List" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" NavigateUrl="~/Manager.aspx"/>
+                                        </Content>                                        
+                                    </OfficeWebUI:GroupZone>
+                                </Zones>
+                            </OfficeWebUI:RibbonGroup>                                                 
                         </Groups>
                     </OfficeWebUI:RibbonTab>
                 </Tabs>

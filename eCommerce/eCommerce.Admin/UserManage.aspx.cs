@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using eCommerce.Model;
 using OfficeWebUI;
-using Utility;
+using eCommerce.Utility;
 using eCommerce.Model.Controller;
 
 //Using by Kimhieuqtvn

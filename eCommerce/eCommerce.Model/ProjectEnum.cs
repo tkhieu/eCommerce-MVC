@@ -15,5 +15,12 @@
             Processing = 2,
             Finish = 3
         }
+
+        public enum Role
+        {
+            SuperAdmin = 1,
+            SaleManage = 2,
+            FoodManage = 3
+        }
     }
 }
