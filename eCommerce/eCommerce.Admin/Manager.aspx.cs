@@ -21,6 +21,10 @@ namespace eCommerce.Admin
                     OfficePopupManage.Show();
                 }
             }
+
+            List<FManager> list = ManagerController.GetListFManage();
+            GridViewListManager.DataSource = list;
+            GridViewListManager.DataBind();
         }
 
         protected void OfficePopupNewManageOk(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace eCommerce.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["login"] != null)
             {
                 if ((bool)Session["login"] == false)

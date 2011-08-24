@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using eCommerce.Utility.Encryption;
 using eCommerce.Utility;
+using eCommerce.Utility.Encryption;
 
 namespace eCommerce.Model.Controller
 {
@@ -18,7 +17,7 @@ namespace eCommerce.Model.Controller
             _db = new FoodStoreEntities();
             try
             {
-                MANAGER manager = new MANAGER();
+                var manager = new MANAGER();
                 manager.ID = GetMaxId();
                 manager.Name = name;
                 manager.Encrypted = encrypted;
@@ -40,7 +39,6 @@ namespace eCommerce.Model.Controller
             int id;
             try
             {
-
                 _db = new FoodStoreEntities();
                 id = _db.MANAGERs.Max(p => p.ID) + 1;
             }
@@ -81,7 +79,6 @@ namespace eCommerce.Model.Controller
                 string[] arr = decrypted.Split('*');
                 if (email == arr[0])
                 {
-                    
                     return manager.Name;
                 }
             }
@@ -106,7 +103,7 @@ namespace eCommerce.Model.Controller
             return role;
         }
 
-        public static bool IsLoginOk(String email,String password)
+        public static bool IsLoginOk(String email, String password)
         {
             bool flag = false;
             _db = new FoodStoreEntities();
@@ -116,7 +113,7 @@ namespace eCommerce.Model.Controller
                 String encrypted = manager.Encrypted;
                 String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
                 string[] arr = decrypted.Split('*');
-                if (email == arr[0]&&password == arr[1])
+                if (email == arr[0] && password == arr[1])
                 {
                     flag = true;
                     return flag;
@@ -125,6 +122,39 @@ namespace eCommerce.Model.Controller
             return flag;
         }
 
-       
+        public static List<FManager> GetListFManage()
+        {
+            _db = new FoodStoreEntities();
+            List<MANAGER> list = _db.MANAGERs.ToList();
+            List<FManager> listFManage = new List<FManager>();
+            foreach (MANAGER manager in list)
+            {
+                String encrypted = manager.Encrypted;
+                String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
+                string[] arr = decrypted.Split('*');
+                FManager fManager = new FManager();
+                fManager.ID = manager.ID;
+                fManager.Name = manager.Name;
+                fManager.Email = arr[0];
+                fManager.Enumrole = int.Parse(arr[2]);
+                fManager.Role = ProjectEnum.PrintRole(fManager.Enumrole);
+                listFManage.Add(fManager);
+            }
+            return listFManage;
+        }
+    }
+
+    public class FManager
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public String Role { get; set; }
+        public int Enumrole { get; set; }
+
+        public FManager()
+        {
+            
+        }
     }
 }

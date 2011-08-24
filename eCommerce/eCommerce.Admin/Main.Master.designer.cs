@@ -49,13 +49,13 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Manager Manager1;
         
         /// <summary>
-        /// OfficeRibbon1 control.
+        /// OfficeRibbon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.OfficeRibbon OfficeRibbon1;
+        protected global::OfficeWebUI.OfficeRibbon OfficeRibbon;
         
         /// <summary>
         /// BackstagePage1 control.
@@ -148,22 +148,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone12;
         
         /// <summary>
-        /// LargeItem1 control.
+        /// LargeItemUser1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem1;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemUser1;
         
         /// <summary>
-        /// LargeItem2 control.
+        /// LargeItemUser2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem2;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemUser2;
         
         /// <summary>
         /// RibbonGroup2 control.
@@ -184,22 +184,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone3;
         
         /// <summary>
-        /// LargeItem7 control.
+        /// LargeItemFood1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem7;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemFood1;
         
         /// <summary>
-        /// LargeItem8 control.
+        /// LargeItemFood2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem8;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemFood2;
         
         /// <summary>
         /// RibbonGroup5 control.
@@ -220,22 +220,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone4;
         
         /// <summary>
-        /// LargeItem9 control.
+        /// LargeItemFoodType1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem9;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemFoodType1;
         
         /// <summary>
-        /// LargeItem10 control.
+        /// LargeItemFoodType2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem10;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemFoodType2;
         
         /// <summary>
         /// RibbonGroup6 control.
@@ -256,22 +256,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone5;
         
         /// <summary>
-        /// LargeItem11 control.
+        /// LargeItemOrder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem11;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemOrder1;
         
         /// <summary>
-        /// LargeItem12 control.
+        /// LargeItemOrder2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem12;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemOrder2;
         
         /// <summary>
         /// RibbonGroup7 control.
@@ -292,22 +292,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone6;
         
         /// <summary>
-        /// LargeItem14 control.
+        /// LargeItemSale1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem14;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemSale1;
         
         /// <summary>
-        /// LargeItem13 control.
+        /// LargeItemSale2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem13;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemSale2;
         
         /// <summary>
         /// RibbonGroup8 control.
@@ -328,22 +328,22 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.Ribbon.GroupZone GroupZone7;
         
         /// <summary>
-        /// LargeItem15 control.
+        /// LargeItemManage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem15;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemManage1;
         
         /// <summary>
-        /// LargeItem16 control.
+        /// LargeItemManage2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OfficeWebUI.Ribbon.LargeItem LargeItem16;
+        protected global::OfficeWebUI.Ribbon.LargeItem LargeItemManage2;
         
         /// <summary>
         /// RibbonContext_Calendar control.
@@ -659,24 +659,6 @@ namespace eCommerce.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OfficeWebUI.Workspace.Area Area2;
-        
-        /// <summary>
-        /// Item13 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::OfficeWebUI.Workspace.Item Item13;
-        
-        /// <summary>
-        /// Item14 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::OfficeWebUI.Workspace.Item Item14;
         
         /// <summary>
         /// Item15 control.

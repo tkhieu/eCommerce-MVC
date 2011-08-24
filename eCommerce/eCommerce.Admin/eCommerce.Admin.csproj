@@ -99,6 +99,7 @@
     <Content Include="Library\js\jquery-ui-timepicker-addon.js" />
     <Content Include="Library\js\superTabs.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Manager.aspx" />
     <Content Include="OrderManage.aspx" />
     <Content Include="UserManage.aspx" />
@@ -181,6 +182,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
