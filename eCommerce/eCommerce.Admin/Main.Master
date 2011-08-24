@@ -89,8 +89,8 @@
                                 <Zones>
                                     <OfficeWebUI:GroupZone ID="GroupZone6" runat="server" Text="Zone 1">
                                         <Content>
-                                            <OfficeWebUI:LargeItem ID="LargeItem14" runat="server" ImageUrl="~/library/img/32/icon32_32.png" Text="Bills" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" />
-                                            <OfficeWebUI:LargeItem ID="LargeItem13" runat="server" ImageUrl="~/library/img/32/icon31_32.png" Text="Detail" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" />
+                                            <OfficeWebUI:LargeItem ID="LargeItem14" runat="server" ImageUrl="~/library/img/32/icon32_32.png" Text="Bills" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" NavigateUrl="~/BillManage.aspx"/>
+                                            <OfficeWebUI:LargeItem ID="LargeItem13" runat="server" ImageUrl="~/library/img/32/icon31_32.png" Text="Sales" ToolTip="<b>Manage the food types</b><br/>Use this option to display food types in grid view" NavigateUrl="~/Sales.aspx"/>
                                         </Content>                                        
                                     </OfficeWebUI:GroupZone>
                                 </Zones>

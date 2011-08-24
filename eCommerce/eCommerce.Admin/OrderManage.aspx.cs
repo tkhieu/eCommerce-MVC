@@ -34,11 +34,17 @@ namespace eCommerce.Admin
             GridViewListOrder.DataSource = listOrder;
             GridViewListOrder.DataBind();
 
+
+
             if (IsPostBack) return;
             if (Request.QueryString.Count != 1) return;
             if (Request.QueryString["New"] == "1")
             {
                 OfficePopupNewOrder.Show();
+            } else if (Request.QueryString["ID"] != null)
+            {
+                int id = int.Parse(Request.QueryString["ID"]);
+                ShowOrderInfo(id);
             }
             
         }
@@ -122,6 +128,12 @@ namespace eCommerce.Admin
             int a  = e.NewEditIndex;
             string idS = GridViewListOrder.Rows[e.NewEditIndex].Cells[1].Text;
             int id = int.Parse(idS);
+            ShowOrderInfo(id);
+            
+        }
+
+        protected void ShowOrderInfo(int id)
+        {
             ORDER order = OrderController.GetById(id);
             ACCOUNT account = order.ACCOUNT;
 
@@ -147,7 +159,7 @@ namespace eCommerce.Admin
 
                 if (bill.PaymentMethor == (int)ProjectEnum.Payment.NganLuong)
                 {
-                    OrderPaymentMethor.SelectedValue = ((int) ProjectEnum.Payment.NganLuong).ToString();
+                    OrderPaymentMethor.SelectedValue = ((int)ProjectEnum.Payment.NganLuong).ToString();
                 }
                 else if (bill.PaymentMethor == (int)ProjectEnum.Payment.Paypay)
                 {
@@ -167,17 +179,18 @@ namespace eCommerce.Admin
             else if (order.State == (int)ProjectEnum.OrderState.Processing)
             {
                 OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.Processing).ToString();
-            } else if (order.State == (int)ProjectEnum.OrderState.Finish)
+            }
+            else if (order.State == (int)ProjectEnum.OrderState.Finish)
                 OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.Finish).ToString();
             var listOrderDetail = from orderdetail in order.ORDERDETAILs
                                   select new
-                                             {
-                                                 Name = orderdetail.FOOD.Name,
-                                                 Type = orderdetail.FOOD.FOODTYPE.Name,
-                                                 Count = orderdetail.Count,
-                                                 Price = orderdetail.Price,
-                                                 Total = orderdetail.Count * orderdetail.Price
-                                             };
+                                  {
+                                      Name = orderdetail.FOOD.Name,
+                                      Type = orderdetail.FOOD.FOODTYPE.Name,
+                                      Count = orderdetail.Count,
+                                      Price = orderdetail.Price,
+                                      Total = orderdetail.Count * orderdetail.Price
+                                  };
             GridViewOrderDetail.DataSource = listOrderDetail;
             GridViewOrderDetail.DataBind();
 
@@ -186,7 +199,7 @@ namespace eCommerce.Admin
             {
                 var i = orderdetail.Count * orderdetail.Price;
                 if (i != null)
-                    totalPayment += (int) i;
+                    totalPayment += (int)i;
             }
 
             OrderDetailTotal.Value = totalPayment.ToString();
@@ -204,7 +217,12 @@ namespace eCommerce.Admin
                 if (state != int.Parse(OrderStatus.SelectedValue))
                 {
                     state = int.Parse(OrderStatus.SelectedValue);
-                    int paymethod = int.Parse(OrderPaymentMethor.SelectedValue);
+                    int paymethod = 3;
+                    try
+                    {
+                        paymethod = int.Parse(OrderPaymentMethor.SelectedValue);
+                    }
+                    catch (Exception){}
                     if (OrderController.UpdateState(id, state) && BillController.UpdateBill(id,state,paymethod))
                     {
                         OfficeMessageBoxUpdateStateSuccess.Show();

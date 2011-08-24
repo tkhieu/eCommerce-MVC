@@ -82,5 +82,17 @@ namespace eCommerce.Model.Controller
             }
             return id;
         }
+
+        public static List<BILL> GetList()
+        {
+            _db = new FoodStoreEntities();
+            return _db.BILLs.ToList();
+        }
+
+        public static BILL GetById(int id)
+        {
+            _db = new FoodStoreEntities();
+            return _db.BILLs.Single(p => p.ID == id);
+        }
     }
 }

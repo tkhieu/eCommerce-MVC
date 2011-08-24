@@ -17,7 +17,7 @@
             <asp:BoundField DataField="District" HeaderText="District" ReadOnly="True" SortExpression="District" />
             <asp:BoundField DataField="City" HeaderText="City" ReadOnly="True" SortExpression="City" />
             <asp:BoundField DataField="Time" HeaderText="Time" ReadOnly="True" SortExpression="Time" />
-            <asp:BoundField DataField="Time" HeaderText="Time" ReadOnly="True" SortExpression="Time" />
+            <asp:BoundField DataField="PaymentMethod" HeaderText="Payment Method" ReadOnly="True" SortExpression="PaymentMethod" />
             <asp:BoundField DataField="TotalPayment" HeaderText="Total Payment" ReadOnly="True"
                 SortExpression="TotalPayment" />
         </Columns>
