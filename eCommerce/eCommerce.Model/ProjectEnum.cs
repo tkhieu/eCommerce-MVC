@@ -5,7 +5,8 @@
         public enum Payment
         {
             Paypay = 1,
-            NganLuong = 2
+            NganLuong = 2,
+            Tradition = 3
         }
 
         public enum OrderState

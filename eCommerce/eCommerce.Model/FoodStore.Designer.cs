@@ -911,6 +911,30 @@ namespace eCommerce.Model
         private global::System.String _Note;
         partial void OnNoteChanging(global::System.String value);
         partial void OnNoteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> PaymentMethor
+        {
+            get
+            {
+                return _PaymentMethor;
+            }
+            set
+            {
+                OnPaymentMethorChanging(value);
+                ReportPropertyChanging("PaymentMethor");
+                _PaymentMethor = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PaymentMethor");
+                OnPaymentMethorChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _PaymentMethor;
+        partial void OnPaymentMethorChanging(Nullable<global::System.Int32> value);
+        partial void OnPaymentMethorChanged();
 
         #endregion
     

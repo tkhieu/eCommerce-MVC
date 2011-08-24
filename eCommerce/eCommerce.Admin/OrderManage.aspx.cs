@@ -27,7 +27,7 @@ namespace eCommerce.Admin
                                 City = order.CITY.Name,
 
                                 Time = order.Date,
-                                State = (order.State == (int)ProjectEnum.OrderState.Finish) ? "New" : (order.State == (int)ProjectEnum.OrderState.Processing) ? "Processing" : (order.State == (int)ProjectEnum.OrderState.Finish) ? "Finish" : "Error",
+                                State = (order.State == (int)ProjectEnum.OrderState.New) ? "New" : (order.State == (int)ProjectEnum.OrderState.Processing) ? "Processing" : (order.State == (int)ProjectEnum.OrderState.Finish) ? "Finish" : "Error",
                                 TotalPayment = order.TotalPayment
                             };
 
@@ -139,6 +139,27 @@ namespace eCommerce.Admin
             OrderAddressDistrict.Text = order.DISTRICT.Name;
             OrderAddressFullName.Text = order.Name;
             OrderAddressTel.Text = order.Tel;
+
+            if (order.BILLs.Count != 0)
+            {
+
+                BILL bill = BillController.GetByOrderId(id);
+
+                if (bill.PaymentMethor == (int)ProjectEnum.Payment.NganLuong)
+                {
+                    OrderPaymentMethor.SelectedValue = ((int) ProjectEnum.Payment.NganLuong).ToString();
+                }
+                else if (bill.PaymentMethor == (int)ProjectEnum.Payment.Paypay)
+                {
+                    OrderPaymentMethor.SelectedValue = ((int)ProjectEnum.Payment.Paypay).ToString();
+                }
+                else if (bill.PaymentMethor == (int)ProjectEnum.Payment.Tradition)
+                {
+                    OrderPaymentMethor.SelectedValue = ((int)ProjectEnum.Payment.Tradition).ToString();
+                }
+            }
+
+
             if (order.State == (int)ProjectEnum.OrderState.New)
             {
                 OrderStatus.SelectedValue = ((int)ProjectEnum.OrderState.New).ToString();
@@ -183,13 +204,15 @@ namespace eCommerce.Admin
                 if (state != int.Parse(OrderStatus.SelectedValue))
                 {
                     state = int.Parse(OrderStatus.SelectedValue);
-                    if (OrderController.UpdateState(id, state))
+                    int paymethod = int.Parse(OrderPaymentMethor.SelectedValue);
+                    if (OrderController.UpdateState(id, state) && BillController.UpdateBill(id,state,paymethod))
                     {
                         OfficeMessageBoxUpdateStateSuccess.Show();
                     } else OfficeMessageBoxUpdateStateFail.Show();
                 }
             }
             Session["orderid"] = null;
+            
             OfficePopupViewOrder.Hide();
         }
     }

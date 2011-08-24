@@ -14,6 +14,8 @@
 
             $("#<%=OrderStatus.ClientID %>").buttonset();
 
+            $("#<%=OrderPaymentMethor.ClientID %>").buttonset();
+
             $(".ItemButton").button().next().button().parent().buttonset();
 
             $("#OrderContentTab").verticalTabs().removeAttr("style");
@@ -260,7 +262,7 @@
 </OfficeWebUI:OfficeMessageBox>
 
 <%--Office Popup for View--%>
-    <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupViewOrder" Title="Order Detail Infomation" Height="250px" OnClickOk="OfficePopupOrderOk">
+    <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupViewOrder" Title="Order Detail Infomation" Height="265px" OnClickOk="OfficePopupOrderOk">
         <Content>
             <div id="OrderContentTab" class="OfficeTextStyle">
                 <ul>
@@ -408,13 +410,28 @@
                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
-                        <br/> Order State:
-                        <asp:RadioButtonList ID="OrderStatus" runat="server" 
-                            RepeatDirection="Horizontal" RepeatLayout="Flow">
+
+                        <table width="100%">
+                        <tr><td>Order State:</td>
+                        <td><asp:RadioButtonList ID="OrderStatus" runat="server" 
+                            RepeatDirection="Horizontal" RepeatLayout="Flow" ViewStateMode="Disabled">
                             <asp:ListItem Value="1">New</asp:ListItem>
                             <asp:ListItem Value="2">Processing</asp:ListItem>
                             <asp:ListItem Value="3">Finish</asp:ListItem>
+                        </asp:RadioButtonList></td>
+                        </tr>
+                        <tr>
+                        <td>Payment Method:</td>
+                        <td>
+                        <asp:RadioButtonList ID="OrderPaymentMethor" runat="server" 
+                            RepeatDirection="Horizontal" RepeatLayout="Flow" ViewStateMode="Disabled">
+                            <asp:ListItem Value="1">Paypal</asp:ListItem>
+                            <asp:ListItem Value="2">Ngân Lượng</asp:ListItem>
+                            <asp:ListItem Value="3">Tradition</asp:ListItem>
                         </asp:RadioButtonList>
+                        </td>
+                        </tr>
+                        </table>
                     </p>
                 </div>
             </div>

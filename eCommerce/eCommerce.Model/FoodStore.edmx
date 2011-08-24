@@ -86,6 +86,7 @@
           <Property Name="Date" Type="datetime" />
           <Property Name="TotalPayment" Type="int" />
           <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="PaymentMethor" Type="int" />
         </EntityType>
         <EntityType Name="CITY">
           <Key>
@@ -490,6 +491,7 @@
           <Property Type="Int32" Name="TotalPayment" />
           <Property Type="String" Name="Note" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ORDER" Relationship="FoodStoreModel.FK_BILL_ORDER" FromRole="BILL" ToRole="ORDER" />
+          <Property Type="Int32" Name="PaymentMethor" />
         </EntityType>
         <EntityType Name="ORDERDETAIL">
           <Key>
@@ -655,6 +657,7 @@
           <EntitySetMapping Name="BILLs">
             <EntityTypeMapping TypeName="FoodStoreModel.BILL">
               <MappingFragment StoreEntitySet="BILL">
+                <ScalarProperty Name="PaymentMethor" ColumnName="PaymentMethor" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
                 <ScalarProperty Name="Date" ColumnName="Date" />

@@ -13,5 +13,10 @@ namespace eCommerce.Admin
         {
 
         }
+
+        protected void GridViewListOrder_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            
+        }
     }
 }

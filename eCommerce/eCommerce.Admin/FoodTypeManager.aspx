@@ -3,12 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFoodType" Title="New Food Type" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="900px" OnClickOk="NewFoodTypePopupOk">
+<OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFoodType" Title="New Food Type" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="330px" Height="30px" OnClickOk="NewFoodTypePopupOk">
 	<Content>
 		<table style="width: 100%">
 	<tr>
-		<td>FoodType Name</td>
-		<td><asp:TextBox runat="server" ID="NewFoodTypeName" Width="400px" Height="15px"></asp:TextBox></td>
+		<td>Food Type Name</td>
+		<td><asp:TextBox runat="server" ID="NewFoodTypeName" Width="200px" Height="15px"></asp:TextBox></td>
 	</tr>
 </table>
 
