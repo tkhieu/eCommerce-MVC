@@ -69,5 +69,62 @@ namespace eCommerce.Model.Controller
             }
             return flag;
         }
+
+        public static String GetNameByEmail(String email)
+        {
+            _db = new FoodStoreEntities();
+            List<MANAGER> list = _db.MANAGERs.ToList();
+            foreach (MANAGER manager in list)
+            {
+                String encrypted = manager.Encrypted;
+                String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
+                string[] arr = decrypted.Split('*');
+                if (email == arr[0])
+                {
+                    
+                    return manager.Name;
+                }
+            }
+            return null;
+        }
+
+        public static int GetRoleByEmail(String email)
+        {
+            int role = 0;
+            _db = new FoodStoreEntities();
+            List<MANAGER> list = _db.MANAGERs.ToList();
+            foreach (MANAGER manager in list)
+            {
+                String encrypted = manager.Encrypted;
+                String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
+                string[] arr = decrypted.Split('*');
+                if (email == arr[0])
+                {
+                    return int.Parse(arr[2]);
+                }
+            }
+            return role;
+        }
+
+        public static bool IsLoginOk(String email,String password)
+        {
+            bool flag = false;
+            _db = new FoodStoreEntities();
+            List<MANAGER> list = _db.MANAGERs.ToList();
+            foreach (MANAGER manager in list)
+            {
+                String encrypted = manager.Encrypted;
+                String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
+                string[] arr = decrypted.Split('*');
+                if (email == arr[0]&&password == arr[1])
+                {
+                    flag = true;
+                    return flag;
+                }
+            }
+            return flag;
+        }
+
+       
     }
 }

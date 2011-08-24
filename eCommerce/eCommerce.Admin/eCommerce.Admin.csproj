@@ -98,6 +98,7 @@
     <Content Include="Library\js\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="Library\js\jquery-ui-timepicker-addon.js" />
     <Content Include="Library\js\superTabs.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Manager.aspx" />
     <Content Include="OrderManage.aspx" />
     <Content Include="UserManage.aspx" />
@@ -173,6 +174,13 @@
     </Compile>
     <Compile Include="Library\ascx\BackstagePage_Settings.ascx.designer.cs">
       <DependentUpon>BackstagePage_Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
