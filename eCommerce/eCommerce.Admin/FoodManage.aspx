@@ -2,6 +2,13 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <script type="text/javascript" src="Scripts/JScriptFileUpload.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+        $(".ItemButton").button();
+    });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFood" Title="New Food" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="900px" OnClickOk="NewFoodPopupOk">
@@ -91,7 +98,9 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="False" ShowDeleteButton="True" 
-                        ShowEditButton="True" />
+                        ShowEditButton="True">
+                        <ControlStyle CssClass="ItemButton"/>
+            </asp:CommandField>
                     <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
                     <asp:BoundField DataField="FoodType" HeaderText="Type" ReadOnly="True" SortExpression="Type" />

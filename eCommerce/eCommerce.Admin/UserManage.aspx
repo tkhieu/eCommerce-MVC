@@ -2,6 +2,12 @@
     CodeBehind="UserManage.aspx.cs" Inherits="eCommerce.Admin.UserManage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<script type="text/javascript">
+    $(function() {
+        $(".ItemButton").button();
+    });
+</script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <OfficeWebUI:OfficePopup ID="OfficePopupNewUser" runat="server" OnClickOk="NewUserPopupOk"
@@ -200,7 +206,9 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="False" ShowDeleteButton="True" 
-                        ShowEditButton="True" />
+                        ShowEditButton="True">
+                        <ControlStyle CssClass="ItemButton"/>
+            </asp:CommandField>
                     <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="Username" HeaderText="Username" ReadOnly="True" SortExpression="Username" />
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />

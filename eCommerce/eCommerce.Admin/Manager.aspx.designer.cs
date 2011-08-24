@@ -85,6 +85,60 @@ namespace eCommerce.Admin {
         protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxManagerExist;
         
         /// <summary>
+        /// OfficeMessageBoxConfirmDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxConfirmDelete;
+        
+        /// <summary>
+        /// OfficeMessageBoxConfirmEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxConfirmEdit;
+        
+        /// <summary>
+        /// OfficeMessageBoxDeleteManagerSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxDeleteManagerSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxDeleteManagerFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxDeleteManagerFail;
+        
+        /// <summary>
+        /// OfficeMessageBoxResendPassSuccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxResendPassSuccess;
+        
+        /// <summary>
+        /// OfficeMessageBoxResendPasswordFail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OfficeWebUI.OfficeMessageBox OfficeMessageBoxResendPasswordFail;
+        
+        /// <summary>
         /// GridViewListManager control.
         /// </summary>
         /// <remarks>

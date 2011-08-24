@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using OfficeWebUI;
 using eCommerce.Model.Controller;
 using eCommerce.Utility.Encryption;
 using eCommerce.Utility;
@@ -64,6 +65,55 @@ namespace eCommerce.Admin
         protected void OnOfficeMessageBoxFailYes(object sender, EventArgs e)
         {
             OfficePopupManage.Show();
+        }
+
+        protected void ManageResendPassword(object sender, GridViewEditEventArgs e)
+        {
+            e.Cancel = true;
+            int id = int.Parse(GridViewListManager.Rows[e.NewEditIndex].Cells[1].Text);
+            Session["mdelid"] = id;
+            OfficeMessageBoxConfirmEdit.Show();
+        }
+
+        protected void ManagerDelete(object sender, GridViewDeleteEventArgs e)
+        {
+            int id = int.Parse(GridViewListManager.Rows[e.RowIndex].Cells[1].Text);
+            Session["mdelid"] = id;
+            OfficeMessageBoxConfirmDelete.Show();
+        }
+
+        protected void DeleteManagerYes(object sender, EventArgs e)
+        {
+            if (OfficeMessageBoxConfirmDelete.ReturnValue == MessageBoxReturnType.Yes)
+            {
+                int id = (int)Session["mdelid"];
+                if (ManagerController.DeleteById(id))
+                {
+                    OfficeMessageBoxDeleteManagerSuccess.Show();
+                }
+                else
+                {
+                    OfficeMessageBoxDeleteManagerFail.Show();
+                }
+            }
+            Session["mdelid"] = null;
+        }
+
+        protected void ResendManagerInfoYes(object sender, EventArgs e)
+        {
+            if (OfficeMessageBoxConfirmEdit.ReturnValue == MessageBoxReturnType.Yes)
+            {
+                int id = (int)Session["mdelid"];
+                if (ManagerController.ResendPassword(id))
+                {
+                    OfficeMessageBoxResendPassSuccess.Show();
+                }
+                else
+                {
+                    OfficeMessageBoxResendPasswordFail.Show();
+                }
+                Session["mdelid"] = null;
+            }
         }
     }
 }

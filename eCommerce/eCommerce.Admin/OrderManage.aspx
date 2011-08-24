@@ -16,7 +16,7 @@
 
             $("#<%=OrderPaymentMethor.ClientID %>").buttonset();
 
-            $(".ItemButton").button().next().button().parent().buttonset();
+            $(".ItemButton").button();
 
             $("#OrderContentTab").verticalTabs().removeAttr("style");
 

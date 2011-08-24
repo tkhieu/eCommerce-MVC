@@ -5,6 +5,8 @@
     <script>
         $(function () {
             $("#<%=NewManageRole.ClientID %>").buttonset();
+
+            $(".ItemButton").button();
         });
     </script>
 </asp:Content>
@@ -65,12 +67,40 @@
     Text="This manager with email had exits..." ButtonsType="Ok" MessageBoxType="Error" OnReturn="OnOfficeMessageBoxFailYes">
 </OfficeWebUI:OfficeMessageBox>
 
+<%--Hộp thoại cảnh báo khi xóa một Record--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxConfirmDelete" Title="Delete Confirm"
+        Text="Do you want to delete..." ButtonsType="YesNo" MessageBoxType="Warn" OnReturn="DeleteManagerYes">
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại cảnh báo khi sửa một Record--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxConfirmEdit" Title="Edit Confirm"
+        Text="Do you want to resend password..." ButtonsType="YesNo" MessageBoxType="Warn" OnReturn="ResendManagerInfoYes">
+    </OfficeWebUI:OfficeMessageBox>
+
+        <%--Hộp thoại khi thêm user thành công--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxDeleteManagerSuccess" Title="Success"
+        Text="Delete manager success..." ButtonsType="Ok" MessageBoxType="Info" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi thêm user thất bại--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxDeleteManagerFail" Title="Fail"
+        Text="Delete manager fail..." ButtonsType="Ok" MessageBoxType="Error" >
+    </OfficeWebUI:OfficeMessageBox>
+
+
+    <%--Hộp thoại khi thêm user thành công--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxResendPassSuccess" Title="Success"
+        Text="Resend manager info success..." ButtonsType="Ok" MessageBoxType="Info" >
+    </OfficeWebUI:OfficeMessageBox>
+    <%--Hộp thoại khi thêm user thất bại--%>
+    <OfficeWebUI:OfficeMessageBox runat="server" ID="OfficeMessageBoxResendPasswordFail" Title="Fail"
+        Text="Resend manager info fail..." ButtonsType="Ok" MessageBoxType="Error" >
+    </OfficeWebUI:OfficeMessageBox>
 
     <asp:GridView ID="GridViewListManager" runat="server" AutoGenerateColumns="False"
-        CellPadding="4" ForeColor="#333333" CssClass="ContentTableBorder">
+        CellPadding="4" ForeColor="#333333" CssClass="ContentTableBorder" OnRowDeleting="ManagerDelete" OnRowEditing="ManageResendPassword">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:CommandField ShowSelectButton="False" ShowEditButton="True" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" EditText="Resend Password" ><ControlStyle CssClass="ItemButton"/>
+            </asp:CommandField>
             <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
             <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
             <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />

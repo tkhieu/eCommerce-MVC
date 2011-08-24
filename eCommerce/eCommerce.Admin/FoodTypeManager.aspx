@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="FoodTypeManager.aspx.cs" Inherits="eCommerce.Admin.FoodTypeManager" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+<script type="text/javascript">
+
+     $(function () {
+         $(".ItemButton").button();
+     });
+</script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 <OfficeWebUI:OfficePopup runat="server" ID="OfficePopupNewFoodType" Title="New Food Type" ShowOkButton="true" ShowCancelButton="true" ViewStateMode="Enabled" Width="330px" Height="30px" OnClickOk="NewFoodTypePopupOk">
@@ -50,7 +58,8 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="False" ShowDeleteButton="True" 
-                        ShowEditButton="True" />
+                        ShowEditButton="True" ><ControlStyle CssClass="ItemButton"/>
+            </asp:CommandField>
                     <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="Name" HeaderText="Name" ReadOnly="True" SortExpression="Name" />
                     <asp:BoundField DataField="Count" HeaderText="Count" ReadOnly="True" SortExpression="Count" />

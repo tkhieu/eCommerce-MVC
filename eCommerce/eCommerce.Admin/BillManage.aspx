@@ -1,12 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="BillManage.aspx.cs" Inherits="eCommerce.Admin.BillManage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+<script type="text/javascript">
+
+    $(function () {
+        $(".ItemButton").button();
+    });
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 <asp:GridView ID="GridViewListBill" runat="server" AutoGenerateColumns="False" CellPadding="4"
         ForeColor="#333333" CssClass="ContentTableBorder" OnRowEditing="GridViewListOrder_RowEditing">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:CommandField ShowEditButton="True">
+            <asp:CommandField ShowEditButton="True" EditText="View">
                 <ControlStyle CssClass="ItemButton"/>
             </asp:CommandField>
             <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />

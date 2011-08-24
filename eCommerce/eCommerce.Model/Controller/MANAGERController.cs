@@ -142,6 +142,42 @@ namespace eCommerce.Model.Controller
             }
             return listFManage;
         }
+
+        public static bool DeleteById(int id)
+        {
+            bool flag = true;
+            _db = new FoodStoreEntities();
+            try
+            {
+                MANAGER manager = _db.MANAGERs.Single(p => p.ID == id);
+                _db.MANAGERs.DeleteObject(manager);
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
+            return flag;
+        }
+
+        public static bool ResendPassword(int id)
+        {
+            
+            _db = new FoodStoreEntities();
+            MANAGER manager = _db.MANAGERs.Single(p => p.ID == id);
+
+            String encrypted = manager.Encrypted;
+            String decrypted = StringEncrypt.DecryptString(encrypted, Configuration.ENCRYPT_PASSWORD);
+            string[] arr = decrypted.Split('*');
+
+            string email = arr[0];
+            string password = arr[1];
+
+
+
+            return Mail.SendPassword(email, manager.Name, password);
+        }
     }
 
     public class FManager
