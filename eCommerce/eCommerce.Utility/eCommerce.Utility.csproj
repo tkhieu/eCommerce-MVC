@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration.cs" />
+    <Compile Include="Encryption\StringEncrypt.cs" />
     <Compile Include="FileOperation.cs" />
     <Compile Include="FtpOperation\Extensions.cs" />
     <Compile Include="FtpOperation\FtpConnection.cs" />

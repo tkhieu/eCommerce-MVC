@@ -71,7 +71,13 @@ namespace eCommerce.Model.Controller
             return flag;
         }
 
-        private static int GetMaxId()
+        public static List<ORDER> GetList()
+        {
+            _db = new FoodStoreEntities();
+            return _db.ORDERs.ToList();
+        }
+
+        public static int GetMaxId()
         {
             int id;
             try
@@ -96,6 +102,24 @@ namespace eCommerce.Model.Controller
         public static ORDER GetById(int id,FoodStoreEntities db)
         {
             return db.ORDERs.Single(p => p.ID == id);
+        }
+
+        public static bool UpdateState(int id,int state)
+        {
+            bool flag = true;
+            _db = new FoodStoreEntities();
+            try
+            {
+                ORDER order = GetById(id, _db);
+                order.State = state;
+                _db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
+            return flag;
         }
     }
 }

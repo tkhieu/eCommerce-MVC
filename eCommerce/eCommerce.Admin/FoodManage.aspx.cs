@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using System.IO;
 using FtpLib;
 using eCommerce.Model;
-using Utility;
 using OfficeWebUI;
 using eCommerce.Model.Controller;
+using eCommerce.Utility;
 
 namespace eCommerce.Admin
 {
@@ -19,6 +19,8 @@ namespace eCommerce.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Header.Title = String.Format("{0} | {1}", Configuration.SYSTEM_NAME, "Food Manage");
+
             var list = FoodController.GetList();
             var listFood = from food in list
                            select new

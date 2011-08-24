@@ -15,7 +15,9 @@
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
     <OfficeWebUI:OfficePopup ID="OfficePopup1" runat="server" OnClickOk="OkPop" Title="Popup title" Height="300">
+    
     <Content>
+    <div class="OfficeTextStyle">
         <h1>Hello from popup</h1>
         
         <p>Type text :
@@ -33,7 +35,7 @@
         </Items>
         </OfficeWebUI:OfficeCombobox>
         </p>
-        
+        </div>
     </Content>
     </OfficeWebUI:OfficePopup>
 
