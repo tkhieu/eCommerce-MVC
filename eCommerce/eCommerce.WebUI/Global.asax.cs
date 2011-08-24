@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using eCommerce.WebUI.Infrastructure;
 
 namespace eCommerce.WebUI
 {
@@ -25,6 +26,8 @@ namespace eCommerce.WebUI
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                //new { controller = "Food", action = "List", id = UrlParameter.Optional }
+
             );
 
         }
@@ -35,6 +38,9 @@ namespace eCommerce.WebUI
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            //!Add NinjectControllerFactory
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }
     }
 }

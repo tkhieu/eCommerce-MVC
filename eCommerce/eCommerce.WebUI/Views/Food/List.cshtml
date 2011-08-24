@@ -1,0 +1,12 @@
+﻿@model IEnumerable<eCommerce.Model.FOOD>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@foreach (var p in Model)
+{
+    <div>@p.Name</div>
+}
+
+<h2>List</h2>

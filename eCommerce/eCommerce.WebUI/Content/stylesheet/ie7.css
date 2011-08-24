@@ -1,0 +1,126 @@
+#menu {
+	Z-INDEX: 3000
+}
+#header #cart {
+	WIDTH: 400px
+}
+#header #cart .heading {
+	POSITION: relative; RIGHT: 172px; MARGIN-RIGHT: 0px
+}
+#cart .content {
+	COLOR: black; widht: 300px
+}
+#header #search {
+	FLOAT: right
+}
+#header .button-search {
+	
+}
+#header #search INPUT {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 33px; PADDING-RIGHT: 1px; HEIGHT: 19px; PADDING-TOP: 3px
+}
+#menu UL LI {
+	POSITION: relative
+}
+#menu UL LI DIV {
+	BACKGROUND: #f6f6f6
+}
+.categories_spacer {
+	DISPLAY: none
+}
+#menu UL LI.active DIV {
+	PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px
+}
+#menu > UL > LI UL > LI {
+	
+}
+.success {
+	POSITION: relative
+}
+.warning {
+	POSITION: relative
+}
+.attention {
+	POSITION: relative
+}
+.information {
+	POSITION: relative
+}
+.success .close {
+	POSITION: absolute; RIGHT: 10px
+}
+.warning .close {
+	POSITION: absolute; RIGHT: 10px
+}
+.attention .close {
+	POSITION: absolute; RIGHT: 10px
+}
+.information .close {
+	POSITION: absolute; RIGHT: 10px
+}
+.box-product > DIV {
+	DISPLAY: inline
+}
+.product-grid > DIV {
+	DISPLAY: inline
+}
+.prduct-info A.button SPAN {
+	LINE-HEIGHT: 12px; DISPLAY: block
+}
+#header #welcome {
+	FLOAT: none
+}
+.slideshow {
+	Z-INDEX: 10
+}
+UL {
+	MARGIN-LEFT: 0px
+}
+#footer UL {
+	MARGIN-LEFT: 0px
+}
+#header #search INPUT {
+	PADDING-LEFT: 10px
+}
+.product-filter .display B {
+	FLOAT: left
+}
+#list_b {
+	FLOAT: left
+}
+#list_a {
+	FLOAT: left
+}
+#grid_b {
+	FLOAT: left
+}
+#grid_a {
+	FLOAT: left
+}
+.box-category UL {
+	LIST-STYLE-TYPE: none !important; LIST-STYLE-IMAGE: none !important
+}
+.banner {
+	FLOAT: left
+}
+#cart .heading H4 {
+	FLOAT: left
+}
+#cart {
+	DISPLAY: none
+}
+#cart .content {
+	
+}
+#menu {
+	Z-INDEX: 100
+}
+#header-bottom {
+	Z-INDEX: 200
+}
+.product-info .cart .minimum {
+	WIDTH: 100%
+}
+#footer-top-outside {
+	PADDING-TOP: 15px
+}

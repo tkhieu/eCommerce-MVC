@@ -1,10 +1,4 @@
-﻿.validate-error
-{
-    color: red;
-}
-
-.float-right {
-    float: right;
+﻿.ItemButton {
 }
 
 .ContentTableHeader {
@@ -14,7 +8,13 @@
 }
 
 .ContentTableBorder {
-    width: 100%;
+    width: 99%;
+}
+
+.OfficeTextStyle {
+     font-size:11px;
+    font-family:"Segoe UI", Tahoma;
+    color:#3B3B3B;
 }
 
 
