@@ -624,9 +624,9 @@
     <None Include="Content\image\flags\.DS_Store" />
     <None Include="PayPalHelper\Docs\startHere.docx" />
     <None Include="PayPalHelper\Docs\startHere.pdf" />
-    <Content Include="Views\Food\List.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Food\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

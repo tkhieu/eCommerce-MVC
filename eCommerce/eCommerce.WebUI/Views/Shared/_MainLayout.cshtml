@@ -1,655 +1,501 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Kinder - Premium Opencart template</title>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta name="Description" content="Kinder is a premium Opencart template. It comes with 4 custom modules, 4 beautiful colour schemes and many options and improvements. Check it out yourself! " />
-	<link rel="icon" href="@Url.Content("~/Content/image/cart.png")" />
-	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/960grid.css")" />
-	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/stylesheet.css")" />
-	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/nivo-slider.css")" media="screen" />
-	<!--[if lt IE 7]>
+    <title>Kinder - Premium Opencart template</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="Description" content="Kinder is a premium Opencart template. It comes with 4 custom modules, 4 beautiful colour schemes and many options and improvements. Check it out yourself! " />
+    <link rel="icon" href="@Url.Content("~/Content/image/cart.png")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/960grid.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/stylesheet.css")" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/nivo-slider.css")" media="screen" />
+    <!--[if lt IE 7]>
 	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/ie6.css")" />
 	<script type="text/javascript" src="@Url.Content("~/Content/javascript/DD_belatedPNG_0.0.8a-min.js")"></script>
 	<script>
 		DD_belatedPNG.fix('img, #header .div3 a, #content .left, #content .right, .box .top');
 	</script>
 	<![endif]-->
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery-1.3.2.min.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.prettyPhoto.js")"></script>
-	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/prettyPhoto.css")" />
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/tab.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/cufon-yui.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/Museo.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/ajax_add.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.dd.js")"></script>
-	<script type="text/javascript" src="@Url.Content("~/Content/javascript/custom.js")"></script>
-	
-	<script type="text/javascript"><!--
-		function bookmark(url, title) {
-			if (window.sidebar) { // firefox
-				window.sidebar.addPanel(title, url, "");
-			} else if (window.opera && window.print) { // opera
-				var elem = document.createElement('a');
-				elem.setAttribute('href', url);
-				elem.setAttribute('title', title);
-				elem.setAttribute('rel', 'sidebar');
-				elem.click();
-			} else if (document.all) {// ie
-				window.external.AddFavorite(url, title);
-			}
-		}
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery-1.3.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.prettyPhoto.js")"></script>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/prettyPhoto.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/tab.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/cufon-yui.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/Museo.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/ajax_add.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.dd.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/javascript/custom.js")"></script>
+    <script type="text/javascript"><!--
+        function bookmark(url, title) {
+            if (window.sidebar) { // firefox
+                window.sidebar.addPanel(title, url, "");
+            } else if (window.opera && window.print) { // opera
+                var elem = document.createElement('a');
+                elem.setAttribute('href', url);
+                elem.setAttribute('title', title);
+                elem.setAttribute('rel', 'sidebar');
+                elem.click();
+            } else if (document.all) {// ie
+                window.external.AddFavorite(url, title);
+            }
+        }
 //--></script>
-
-	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function () {
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
-	</script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+        });
+    </script>
 </head>
 <body id="home">
-	<div id="container" class="container_12">
-		<div id="header" class="grid_12">
-			<div id="header-top">
-				<div id="logo">
-					<a href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-						<img title="Kinder - Premium Opencart template" alt="Kinder - Premium Opencart template"
+    <div id="container" class="container_12">
+        <div id="header" class="grid_12">
+            <div id="header-top">
+                <div id="logo">
+                    <a href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        <img title="Kinder - Premium Opencart template" alt="Kinder - Premium Opencart template"
 							src="@Url.Content("~/Content/image/kinder-logo.png")" /></a></div>
-				<!--  end logo -->
-				<div id="header-top-right">
-					<div id="selectors">
-						<form id="currency_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-						<div class="switcher">
-							<div class="selected">
-								<a>Pound Sterling</a></div>
-							<div class="option">
-								<a onclick="$('input[name=\'currency_code\']').attr('value', 'EUR'); $('#currency_form').submit();">
-									Euro</a><a onclick="$('input[name=\'currency_code\']').attr('value', 'GBP'); $('#currency_form').submit();">Pound
-										Sterling</a><a onclick="$('input[name=\'currency_code\']').attr('value', 'USD'); $('#currency_form').submit();">US
-											Dollar</a></div>
-						</div>
-						<div style="display: inline;">
-							<input name="currency_code" type="hidden" />
-							<input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
-								type="hidden" />
-						</div>
-						</form>
-						<form id="language_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-						<div class="switcher">
-							<div class="selected">
-								<a>
-									<img alt="English" src="@Url.Content("~/Content/image/gb.png")" />&nbsp;&nbsp;English</a></div>
-							<div class="option">
-								<a onclick="$('input[name=\'language_code\']').attr('value', 'en'); $('#language_form').submit();">
-									<img alt="English" src="@Url.Content("~/Content/image/gb.png")" />&nbsp;&nbsp;English</a></div>
-						</div>
-						<div>
-							<input name="language_code" type="hidden" />
-							<input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
-								type="hidden" />
-						</div>
-						</form>
-					</div>
-					<div id="cart_in_header">
-						<a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">
-							<img alt="Go to your shopping cart" src="@Url.Content("~/Content/image/cart.png")" /></a>
-						<p class="header_info">
-							Items:
-						</p>
-						<p class="header_numbers">
-							0</p>
-						<p class="header_info">
-							Total:
-						</p>
-						<p class="header_numbers">
-							£0.00</p>
-					</div>
-				</div>
-			</div>
-			<!--  end header top -->
-			<div id="header-bottom">
-				<div id="top-menu">
-					<a id="tab_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-						Home</a><a id="tab_login" href="login.htm">Log In</a><a id="tab_account" href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a><a
-							id="tab_cart" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a><a
-								id="tab_checkout" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a></div>
-				<div id="search">
-					<div class="div9">
-						<input id="filter_keyword" onclick="this.value = '';" value="Keywords" type="text" />
-					</div>
-					<a class="search_button" onclick="moduleSearch();"><span>Go</span></a></div>
-			</div>
-		</div>
-		<script type="text/javascript"><!--
-			function getURLVar(urlVarName) {
-				var urlHalves = String(document.location).toLowerCase().split('?');
-				var urlVarValue = '';
+                <!--  end logo -->
+                <div id="header-top-right">
+                    <div id="selectors">
+                        <form id="currency_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        <div class="switcher">
+                            <div class="selected">
+                                <a>Pound Sterling</a></div>
+                            <div class="option">
+                                <a onclick="$('input[name=\'currency_code\']').attr('value', 'EUR'); $('#currency_form').submit();">
+                                    Euro</a><a onclick="$('input[name=\'currency_code\']').attr('value', 'GBP'); $('#currency_form').submit();">Pound
+                                        Sterling</a><a onclick="$('input[name=\'currency_code\']').attr('value', 'USD'); $('#currency_form').submit();">US
+                                            Dollar</a></div>
+                        </div>
+                        <div style="display: inline;">
+                            <input name="currency_code" type="hidden" />
+                            <input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
+                                type="hidden" />
+                        </div>
+                        </form>
+                        <form id="language_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        <div class="switcher">
+                            <div class="selected">
+                                <a>
+                                    <img alt="English" src="@Url.Content("~/Content/image/gb.png")" />&nbsp;&nbsp;English</a></div>
+                            <div class="option">
+                                <a onclick="$('input[name=\'language_code\']').attr('value', 'en'); $('#language_form').submit();">
+                                    <img alt="English" src="@Url.Content("~/Content/image/gb.png")" />&nbsp;&nbsp;English</a></div>
+                        </div>
+                        <div>
+                            <input name="language_code" type="hidden" />
+                            <input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
+                                type="hidden" />
+                        </div>
+                        </form>
+                    </div>
+                    <div id="cart_in_header">
+                        <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">
+                            <img alt="Go to your shopping cart" src="@Url.Content("~/Content/image/cart.png")" /></a>
+                        <p class="header_info">
+                            Items:
+                        </p>
+                        <p class="header_numbers">
+                            0</p>
+                        <p class="header_info">
+                            Total:
+                        </p>
+                        <p class="header_numbers">
+                            £0.00</p>
+                    </div>
+                </div>
+            </div>
+            <!--  end header top -->
+            <div id="header-bottom">
+                <div id="top-menu">
+                    <a id="tab_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        Home</a><a id="tab_login" href="login.htm">Log In</a><a id="tab_account" href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a><a
+                            id="tab_cart" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a><a
+                                id="tab_checkout" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a></div>
+                <div id="search">
+                    <div class="div9">
+                        <input id="filter_keyword" onclick="this.value = '';" value="Keywords" type="text" />
+                    </div>
+                    <a class="search_button" onclick="moduleSearch();"><span>Go</span></a></div>
+            </div>
+        </div>
+        <script type="text/javascript"><!--
+            function getURLVar(urlVarName) {
+                var urlHalves = String(document.location).toLowerCase().split('?');
+                var urlVarValue = '';
 
-				if (urlHalves[1]) {
-					var urlVars = urlHalves[1].split('&');
+                if (urlHalves[1]) {
+                    var urlVars = urlHalves[1].split('&');
 
-					for (var i = 0; i <= (urlVars.length); i++) {
-						if (urlVars[i]) {
-							var urlVarPair = urlVars[i].split('=');
+                    for (var i = 0; i <= (urlVars.length); i++) {
+                        if (urlVars[i]) {
+                            var urlVarPair = urlVars[i].split('=');
 
-							if (urlVarPair[0] && urlVarPair[0] == urlVarName.toLowerCase()) {
-								urlVarValue = urlVarPair[1];
-							}
-						}
-					}
-				}
+                            if (urlVarPair[0] && urlVarPair[0] == urlVarName.toLowerCase()) {
+                                urlVarValue = urlVarPair[1];
+                            }
+                        }
+                    }
+                }
 
-				return urlVarValue;
-			}
+                return urlVarValue;
+            }
 
-			$(document).ready(function () {
-				route = getURLVar('route');
+            $(document).ready(function () {
+                route = getURLVar('route');
 
-				if (!route) {
-					$('#tab_home').addClass('selected');
-				} else {
-					part = route.split('/');
+                if (!route) {
+                    $('#tab_home').addClass('selected');
+                } else {
+                    part = route.split('/');
 
-					if (route == 'common/home') {
-						$('#tab_home').addClass('selected');
-					} else if (route == 'account/login') {
-						$('#tab_login').addClass('selected');
-					} else if (part[0] == 'account') {
-						$('#tab_account').addClass('selected');
-					} else if (route == 'checkout/cart') {
-						$('#tab_cart').addClass('selected');
-					} else if (part[0] == 'checkout') {
-						$('#tab_checkout').addClass('selected');
-					} else {
-						$('#tab_home').addClass('selected');
-					}
-				}
-			});
+                    if (route == 'common/home') {
+                        $('#tab_home').addClass('selected');
+                    } else if (route == 'account/login') {
+                        $('#tab_login').addClass('selected');
+                    } else if (part[0] == 'account') {
+                        $('#tab_account').addClass('selected');
+                    } else if (route == 'checkout/cart') {
+                        $('#tab_cart').addClass('selected');
+                    } else if (part[0] == 'checkout') {
+                        $('#tab_checkout').addClass('selected');
+                    } else {
+                        $('#tab_home').addClass('selected');
+                    }
+                }
+            });
 //--></script>
-		<script type="text/javascript"><!--
-			$('#search input').keydown(function (e) {
-				if (e.keyCode == 13) {
-					moduleSearch();
-				}
-			});
+        <script type="text/javascript"><!--
+            $('#search input').keydown(function (e) {
+                if (e.keyCode == 13) {
+                    moduleSearch();
+                }
+            });
 
-			function moduleSearch() {
-				pathArray = location.pathname.split('/');
+            function moduleSearch() {
+                pathArray = location.pathname.split('/');
 
-				url = 'http://tzelewski.co.uk/template/kinder/';
+                url = 'http://tzelewski.co.uk/template/kinder/';
 
-				url += 'index.php?route=product/search';
+                url += 'index.php?route=product/search';
 
-				var filter_keyword = $('#filter_keyword').attr('value')
+                var filter_keyword = $('#filter_keyword').attr('value')
 
-				if (filter_keyword) {
-					url += '&keyword=' + encodeURIComponent(filter_keyword);
-				}
+                if (filter_keyword) {
+                    url += '&keyword=' + encodeURIComponent(filter_keyword);
+                }
 
-				var filter_category_id = $('#filter_category_id').attr('value');
+                var filter_category_id = $('#filter_category_id').attr('value');
 
-				if (filter_category_id) {
-					url += '&category_id=' + filter_category_id;
-				}
+                if (filter_category_id) {
+                    url += '&category_id=' + filter_category_id;
+                }
 
-				location = url;
-			}
+                location = url;
+            }
 //--></script>
-		<script type="text/javascript"><!--
-			$('.switcher').bind('click', function () {
-				$(this).find('.option').slideToggle('fast');
-			});
-			$('.switcher').bind('mouseleave', function () {
-				$(this).find('.option').slideUp('fast');
-			}); 
+        <script type="text/javascript"><!--
+            $('.switcher').bind('click', function () {
+                $(this).find('.option').slideToggle('fast');
+            });
+            $('.switcher').bind('mouseleave', function () {
+                $(this).find('.option').slideUp('fast');
+            }); 
 //--></script>
-		<div id="slider" class="grid_12">
-			<style>
-				.pics
-				{
-					height: 320px;
-					width: 700px;
-					padding: 0;
-					overflow: hidden;
-					border-bottom: 1px solid #E7E7E7;
-				}
-				.pics img
-				{
-					padding: 0;
-					top: 0;
-					left: 0;
-				}
-			</style>
-			<script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.nivo.slider.pack.js")"></script>
-			<script type="text/javascript">
-				$(window).load(function () {
-					$('#slideshow').nivoSlider({
-						effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
-						slices: 15, // For slice animations
-						boxCols: 8, // For box animations
-						boxRows: 4, // For box animations
-						animSpeed: 2000, // Slide transition speed
-						pauseTime: 5000, // How long each slide will show
-						startSlide: 0, // Set starting Slide (0 index)
-						directionNav: true, // Next & Prev navigation
-						directionNavHide: true, // Only show on hover
-						controlNav: false, // 1,2,3... navigation
-						controlNavThumbs: false, // Use thumbnails for Control Nav
-						controlNavThumbsFromRel: false, // Use image rel for thumbs
-						controlNavThumbsSearch: '.jpg', // Replace this with...
-						controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
-						keyboardNav: true, // Use left & right arrows
-						pauseOnHover: true, // Stop animation while hovering
-						manualAdvance: false, // Force manual transitions
-						captionOpacity: 0.8, // Universal caption opacity
-						prevText: 'Prev', // Prev directionNav text
-						nextText: 'Next', // Next directionNav text
-						beforeChange: function () { }, // Triggers before a slide transition
-						afterChange: function () { }, // Triggers after a slide transition
-						slideshowEnd: function () { }, // Triggers after all slides have been shown
-						lastSlide: function () { }, // Triggers when last slide is shown
-						afterLoad: function () { } // Triggers when slider has loaded
-					});
-				});
-			</script>
-			<div id="slideshow" class="pics">
-				<a href="http://tzelewski.co.uk/template/kinder/#" target="_self">
-					<img alt="" src="@Url.Content("~/Content/image/slide2.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"
-						target="_self"><img alt="" src="@Url.Content("~/Content/image/slide3.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"
-							target="_self"><img alt="" src="@Url.Content("~/Content/image/slide5.jpg")" /></a></div>
-			<div id="homeBanners">
-				<a href="http://tzelewski.co.uk/template/kinder/#">
-					<img alt="#" src="@Url.Content("~/Content/image/button1.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"><img
+        <div id="slider" class="grid_12">
+            <style>
+                .pics
+                {
+                    height: 320px;
+                    width: 700px;
+                    padding: 0;
+                    overflow: hidden;
+                    border-bottom: 1px solid #E7E7E7;
+                }
+                .pics img
+                {
+                    padding: 0;
+                    top: 0;
+                    left: 0;
+                }
+            </style>
+            <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.nivo.slider.pack.js")"></script>
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('#slideshow').nivoSlider({
+                        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+                        slices: 15, // For slice animations
+                        boxCols: 8, // For box animations
+                        boxRows: 4, // For box animations
+                        animSpeed: 2000, // Slide transition speed
+                        pauseTime: 5000, // How long each slide will show
+                        startSlide: 0, // Set starting Slide (0 index)
+                        directionNav: true, // Next & Prev navigation
+                        directionNavHide: true, // Only show on hover
+                        controlNav: false, // 1,2,3... navigation
+                        controlNavThumbs: false, // Use thumbnails for Control Nav
+                        controlNavThumbsFromRel: false, // Use image rel for thumbs
+                        controlNavThumbsSearch: '.jpg', // Replace this with...
+                        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+                        keyboardNav: true, // Use left & right arrows
+                        pauseOnHover: true, // Stop animation while hovering
+                        manualAdvance: false, // Force manual transitions
+                        captionOpacity: 0.8, // Universal caption opacity
+                        prevText: 'Prev', // Prev directionNav text
+                        nextText: 'Next', // Next directionNav text
+                        beforeChange: function () { }, // Triggers before a slide transition
+                        afterChange: function () { }, // Triggers after a slide transition
+                        slideshowEnd: function () { }, // Triggers after all slides have been shown
+                        lastSlide: function () { }, // Triggers when last slide is shown
+                        afterLoad: function () { } // Triggers when slider has loaded
+                    });
+                });
+            </script>
+            <div id="slideshow" class="pics">
+                <a href="http://tzelewski.co.uk/template/kinder/#" target="_self">
+                    <img alt="" src="@Url.Content("~/Content/image/slide2.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"
+                        target="_self"><img alt="" src="@Url.Content("~/Content/image/slide3.jpg")" /></a><a
+                            href="http://tzelewski.co.uk/template/kinder/#" target="_self"><img alt="" src="@Url.Content("~/Content/image/slide5.jpg")" /></a></div>
+            <div id="homeBanners">
+                <a href="http://tzelewski.co.uk/template/kinder/#">
+                    <img alt="#" src="@Url.Content("~/Content/image/button1.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"><img
 						alt="#" src="@Url.Content("~/Content/image/button2.jpg")" /></a></div>
-		</div>
-		<div id="customHome">
-			<div class="grid_4">
-				<h2>
-					Visually beautiful</h2>
-				<p>
-					Kinder comes with four beautiful colour schemes. So whatever you sell, you can choose
-					a theme version that will suit your needs.</p>
-				<a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
-					Purchase now</a></div>
-			<div class="grid_4">
-				<h2>
-					Technically advanced</h2>
-				<p>
-					Kinder contains four custom modules so you get not only beautiful, but also technically
-					advanced, jQuery enhanced theme.
-				</p>
-				<a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
-					Get it now</a></div>
-			<div class="grid_4">
-				<h2>
-					Value for money</h2>
-				<p>
-					We believe that the combination of pretty design and some clever scripting make
-					Kinder a fantastic value for money.</p>
-				<a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
-					Buy now</a></div>
-		</div>
-	</div>
-	<div class="wide_spacer">
-	</div>
-	<div id="container" class="container_12">
-		<div id="column_left" class="grid_3">
-			<div class="box">
-				<div class="top">
-					Categories</div>
-				<div id="category" class="middle">
-					<ul>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=20">
-							Desktops</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=18">
-							Laptops &amp; Notebooks</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=25">
-							Components</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=17">
-							Software</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=24">
-							Phones &amp; PDAs</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=33">
-							Cameras</a></li>
-						<li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=34">
-							MP3 Players</a></li>
-					</ul>
-				</div>
-				<div class="bottom">
-					&nbsp;</div>
-			</div>
-			<div class="box">
-				<div class="top">
-					Brands</div>
-				<div style="text-align: center;" class="middle">
-					<select id="brands_selector" onchange="location = this.value">
-						<option value="">--- Please Select --- </option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=8">
-							Apple</option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=9">
-							Canon</option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=7">
-							Hewlett-Packard</option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=5">
-							HTC</option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=6">
-							Palm</option>
-						<option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=10">
-							Sony</option>
-					</select>
-				</div>
-				<div class="bottom">
-					&nbsp;</div>
-			</div>
-		</div>
-		<div id="content_home">
-			<div class="top">
-				<div class="center">
-					<div class="heading">
-						Latest Products</div>
-				</div>
-			</div>
-			<div class="middle">
-			@RenderBody();
-				<div class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-								<img title="iPod Classic" alt="iPod Classic" src="@Url.Content("~/Content/image/dfsdfsfr53-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£117.50</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-								iPod Classic</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-								product 20</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£117.50</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-								Add to Cart</a></div>
-					</div>
-				</div>
-				<div class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
-								<img title="HP LP3065" alt="HP LP3065" src="@Url.Content("~/Content/image/2290798632_1122ae7489_b-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£1,175.00</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
-								HP LP3065</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
-								Product 21</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£1,175.00</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
-								Add to Cart</a></div>
-					</div>
-				</div>
-				<div id="no_right_margin" class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=46">
-								<img title="Sony VAIO" alt="Sony VAIO" src="@Url.Content("~/Content/image/Photoxpress_3966288-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£1,175.00</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=46">
-								Sony VAIO</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=46">
-								Product 19</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£1,175.00</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart&amp;product_id=46">
-								Add to Cart</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="bottom">
-			</div>
-			<div class="top">
-				<div class="center">
-					<div class="heading">
-						Featured Products</div>
-				</div>
-			</div>
-			<div class="middle">
-				<div class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=28">
-								<img title="HTC Touch HD" alt="HTC Touch HD" src="@Url.Content("~/Content/image/3906290344_5ae8dab98d_o-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£569.22</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=28">
-								HTC Touch HD</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=28">
-								Product 1</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£569.22</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart&amp;product_id=28">
-								Add to Cart</a></div>
-					</div>
-				</div>
-				<div class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=42">
-								<img title='Apple Cinema 30&quot;' alt='Apple Cinema 30&quot;' src="@Url.Content("~/Content/image/Photoxpress_2697464-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£100.00</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=42">
-								Apple Cinema 30&quot;</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=42">
-								Product 15</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£100.00</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart&amp;product_id=42">
-								Add to Cart</a></div>
-					</div>
-				</div>
-				<div id="no_right_margin" class="grid_3">
-					<div class="product_container">
-						<div class="product_visible">
-							<a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=43">
-								<img title="MacBook" alt="MacBook" src="@Url.Content("~/Content/image/agfgf-210x210.jpg")" /></a><br />
-							<p class="n_price">
-								<span>£587.50</span></p>
-						</div>
-						<div class="product_hidden">
-							<a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=43">
-								MacBook</a><br />
-							<a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=43">
-								Product 16</a><br />
-							<div class="product_spacer">
-							</div>
-							<span class="n_price_h">£587.50</span><br />
-							<div style="height: 8px;">
-							</div>
-							<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart&amp;product_id=43">
-								Add to Cart</a></div>
-					</div>
-				</div>
-			</div>
-			<div class="bottom">
-			</div>
-		</div>
-	</div>
-	<!--  end container -->
-	<div class="clear">
-	</div>
-	<div id="footer-top-outside">
-		<div id="customHome" class="container_12">
-			<div id="about_us_footer" class="grid_3">
-				<h2>
-					About Kinder</h2>
-				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-					unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</p>
-			</div>
-			<div id="contact_footer" class="grid_3">
-				<h2>
-					Contact Us</h2>
-				<ul>
-					<!-- TELEPHONE 1 -->
-					<li id="footer_telephone">+44 0161 741 852 </li>
-					<!-- TELEPHONE 2 -->
-					<li id="footer_telephone2">+44 0845 125 125 </li>
-					<!-- FAX  -->
-					<li id="footer_fax">+44 0161 789 963 </li>
-					<!-- EMAIL 1 -->
-					<li id="footer_email">info@kinder </li>
-					<!-- EMAIL 2 -->
-					<li id="footer_email2">email@kinder </li>
-					<!-- SKYPE -->
-					<li id="footer_skype">kinder </li>
-				</ul>
-			</div>
-			<!--  FACEBOOK -->
-			<div id="facebook_footer" class="grid_3		
+        </div>
+        <div id="customHome">
+            <div class="grid_4">
+                <h2>
+                    Visually beautiful</h2>
+                <p>
+                    Kinder comes with four beautiful colour schemes. So whatever you sell, you can choose
+                    a theme version that will suit your needs.</p>
+                <a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
+                    Purchase now</a></div>
+            <div class="grid_4">
+                <h2>
+                    Technically advanced</h2>
+                <p>
+                    Kinder contains four custom modules so you get not only beautiful, but also technically
+                    advanced, jQuery enhanced theme.
+                </p>
+                <a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
+                    Get it now</a></div>
+            <div class="grid_4">
+                <h2>
+                    Value for money</h2>
+                <p>
+                    We believe that the combination of pretty design and some clever scripting make
+                    Kinder a fantastic value for money.</p>
+                <a id="learn_more" href="http://themeforest.net/item/kinder-4-in-1-premium-opencart-template/260931?ref=tomsky">
+                    Buy now</a></div>
+        </div>
+    </div>
+    <div class="wide_spacer">
+    </div>
+    <div id="container" class="container_12">
+        <div id="column_left" class="grid_3">
+            <div class="box">
+                <div class="top">
+                    Categories</div>
+                <div id="category" class="middle">
+                    <ul>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=20">
+                            Desktops</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=18">
+                            Laptops &amp; Notebooks</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=25">
+                            Components</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=17">
+                            Software</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=24">
+                            Phones &amp; PDAs</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=33">
+                            Cameras</a></li>
+                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=34">
+                            MP3 Players</a></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    &nbsp;</div>
+            </div>
+            <div class="box">
+                <div class="top">
+                    Brands</div>
+                <div style="text-align: center;" class="middle">
+                    <select id="brands_selector" onchange="location = this.value">
+                        <option value="">--- Please Select --- </option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=8">
+                            Apple</option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=9">
+                            Canon</option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=7">
+                            Hewlett-Packard</option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=5">
+                            HTC</option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=6">
+                            Palm</option>
+                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=10">
+                            Sony</option>
+                    </select>
+                </div>
+                <div class="bottom">
+                    &nbsp;</div>
+            </div>
+        </div>
+        <div id="content_home">
+        @RenderBody()  
+        </div>
+    </div>
+    <!--  end container -->
+    <div class="clear">
+    </div>
+    <div id="footer-top-outside">
+        <div id="customHome" class="container_12">
+            <div id="about_us_footer" class="grid_3">
+                <h2>
+                    About Kinder</h2>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div id="contact_footer" class="grid_3">
+                <h2>
+                    Contact Us</h2>
+                <ul>
+                    <!-- TELEPHONE 1 -->
+                    <li id="footer_telephone">+44 0161 741 852 </li>
+                    <!-- TELEPHONE 2 -->
+                    <li id="footer_telephone2">+44 0845 125 125 </li>
+                    <!-- FAX  -->
+                    <li id="footer_fax">+44 0161 789 963 </li>
+                    <!-- EMAIL 1 -->
+                    <li id="footer_email">info@kinder </li>
+                    <!-- EMAIL 2 -->
+                    <li id="footer_email2">email@kinder </li>
+                    <!-- SKYPE -->
+                    <li id="footer_skype">kinder </li>
+                </ul>
+            </div>
+            <!--  FACEBOOK -->
+            <div id="facebook_footer" class="grid_3		
 		?&gt;">
-				<h2>
-					Facebook</h2>
-				<script type="text/javascript" src=""></script>
-			</div>
-			<!--  CUSTOM COLUMN -->
-			<div id="custom_column_footer" class="grid_3">
-				<h2>
-					FAQ</h2>
-				<ul id="nav">
-					<li><a href="http://tzelewski.co.uk/template/kinder/#">Delivery</a></li>
-					<li><a href="http://tzelewski.co.uk/template/kinder/#">Payments</a></li>
-					<li><a href="http://tzelewski.co.uk/template/kinder/#">Stock Availability </a></li>
-					<li><a href="http://tzelewski.co.uk/template/kinder/#">Contact Us</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="clear">
-	</div>
-	<div id="footer-middle-outside">
-		<div id="footer-middle-inside" class="container_12">
-			<div id="information_footer" class="grid_4">
-				<h2>
-					Information</h2>
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=4">
-									About Us</a>
-							</td>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=3">
-									Privacy Policy</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=5">
-									Terms &amp; Conditions</a>
-							</td>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/contact">
-									Contact Us</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/sitemap">
-									Site Map</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="footer_links" class="grid_4">
-				<h2>
-					Store</h2>
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<a id="footer_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-									Home</a>
-							</td>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/login">Log In</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a>
-							</td>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="footer_payments" class="grid_4">
-				<h2>
-					Payment methods</h2>
-				<a onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');">
-					<img alt="" src="@Url.Content("~/Content/image/payment.png")" /></a></div>
-		</div>
-	</div>
-	<div class="clear">
-	</div>
-	<div id="footer-bottom-outside">
-		<div id="footer-bottom-inside" class="container_12">
-			Kinder - Premium Opencart template © 2011
-		</div>
-	</div>
-	<script type="text/javascript">
-		$(document).ready(function (e) {
-			try {
-				$("#brands_selector").msDropDown();
-			} catch (e) {
-				alert(e.message);
-			}
+                <h2>
+                    Facebook</h2>
+                <script type="text/javascript" src=""></script>
+            </div>
+            <!--  CUSTOM COLUMN -->
+            <div id="custom_column_footer" class="grid_3">
+                <h2>
+                    FAQ</h2>
+                <ul id="nav">
+                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Delivery</a></li>
+                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Payments</a></li>
+                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Stock Availability </a></li>
+                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="footer-middle-outside">
+        <div id="footer-middle-inside" class="container_12">
+            <div id="information_footer" class="grid_4">
+                <h2>
+                    Information</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=4">
+                                    About Us</a>
+                            </td>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=3">
+                                    Privacy Policy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=5">
+                                    Terms &amp; Conditions</a>
+                            </td>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/contact">
+                                    Contact Us</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/sitemap">
+                                    Site Map</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="footer_links" class="grid_4">
+                <h2>
+                    Store</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a id="footer_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                                    Home</a>
+                            </td>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/login">Log In</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a>
+                            </td>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="footer_payments" class="grid_4">
+                <h2>
+                    Payment methods</h2>
+                <a onclick="window.open('https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW');">
+                    <img alt="" src="@Url.Content("~/Content/image/payment.png")" /></a></div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="footer-bottom-outside">
+        <div id="footer-bottom-inside" class="container_12">
+            Kinder - Premium Opencart template © 2011
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            try {
+                $("#brands_selector").msDropDown();
+            } catch (e) {
+                alert(e.message);
+            }
 
-		});
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function (e) {
-			try {
-				$("#sort").msDropDown({ mainCSS: 'dd2' });
-			} catch (e) {
-				alert(e.message);
-			}
-		});
-	</script>
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            try {
+                $("#sort").msDropDown({ mainCSS: 'dd2' });
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
 </body>
 </html>

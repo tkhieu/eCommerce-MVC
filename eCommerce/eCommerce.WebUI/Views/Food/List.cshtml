@@ -1,12 +1,8 @@
 ﻿@model IEnumerable<eCommerce.Model.FOOD>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "List Food";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-@foreach (var p in Model)
-{
-    <div>@p.Name</div>
-}
-
-<h2>List</h2>
+<h2>List Food</h2>
