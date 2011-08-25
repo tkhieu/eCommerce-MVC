@@ -633,6 +633,10 @@
       <Project>{082C99E9-FA31-41FE-A1D2-D5C4D0F557C6}</Project>
       <Name>eCommerce.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eCommerce.Utility\eCommerce.Utility.csproj">
+      <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>
+      <Name>eCommerce.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
