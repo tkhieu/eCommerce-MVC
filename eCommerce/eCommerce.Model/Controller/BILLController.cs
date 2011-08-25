@@ -94,5 +94,25 @@ namespace eCommerce.Model.Controller
             _db = new FoodStoreEntities();
             return _db.BILLs.Single(p => p.ID == id);
         }
+        public static int GetPayment(int year,int month)
+        {
+            _db = new FoodStoreEntities();
+            var result =
+                _db.BILLs.Where(
+                    p => p.Date != null && (p.Date.Value.Month == month && p.Date.Value.Year == year)).Sum(p => p.TotalPayment);
+            if (result != null) return (int)result;
+            else
+            {
+                return 0;
+            }
+        }
+        public static void GetMaxMinYear(ref int minYear,ref int maxYear)
+        {
+            _db = new FoodStoreEntities();
+            var min = _db.BILLs.Min(p => p.Date);
+            var max = _db.BILLs.Max(p => p.Date);
+            if (min != null) minYear = min.Value.Year;
+            if (max != null) maxYear = max.Value.Year;
+        }
     }
 }
