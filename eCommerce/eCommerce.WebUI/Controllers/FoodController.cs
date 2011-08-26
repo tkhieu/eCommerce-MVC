@@ -4,13 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using eCommerce.Model.Concrete;
+using eCommerce.Utility;
+using eCommerce.WebUI.Models;
+using eCommerce.WebUI.Models.Supporter;
 
 namespace eCommerce.WebUI.Controllers
 {
     public class FoodController : Controller
     {
-        private String _imageCDN = Utility.Configuration.IMAGE_CDN_HOST;
+        private String _imageCDN = Configuration.IMAGE_CDN_HOST;
         private EFFoodRepository _repository;
+        private int _pageSize = Configuration.PAGE_SIZE;
 
         
         public FoodController(EFFoodRepository repository)
@@ -25,12 +29,26 @@ namespace eCommerce.WebUI.Controllers
             return View();
         }
 
-        public ViewResult List()
+        public ViewResult List(int page = 1)
         {
+            FoodListViewModel foodListViewModel = new FoodListViewModel
+                                                      {
+                                                          Foods = _repository.Foods
+                                                                              .OrderBy(p => p.ID)
+                                                                              .Skip((page - 1) * _pageSize)
+                                                                              .Take(_pageSize),
+                                                          PagingInfo = new PagingInfo
+                                                                           {
+                                                                               CurrentPage = page,
+                                                                               ItemPerPage = _pageSize,
+                                                                               TotalItem = _repository.Foods.Count()
+                                                                           }
+                                                      };
             ViewData["ImageCDN"] = _imageCDN;
 
-            return View(_repository.Foods);
+            return View(foodListViewModel);
         }
 
     }
 }
+;

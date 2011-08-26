@@ -6,7 +6,8 @@ namespace eCommerce.Utility
     {
         public const String IMAGE_CDN_HOST = "http://localhost/ImageCDN/";
         public const String ENCRYPT_PASSWORD = "Trần Kim Hiếu";
-
         public const String SYSTEM_NAME = "eCommerce Admin System";
+        public const int PAGE_SIZE = 6;
+
     }
 }

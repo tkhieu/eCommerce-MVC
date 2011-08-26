@@ -1,6 +1,8 @@
 ﻿@using System.Diagnostics
 @using System.Globalization
-@model IEnumerable<eCommerce.Model.FOOD>
+@using eCommerce.WebUI.HtmlHelper
+@using eCommerce.WebUI.Models
+@model FoodListViewModel
 @{
     ViewBag.Title = "List Food";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -12,7 +14,7 @@
     </div>
 </div>
 <div class="middle">
-    @foreach (var food in Model)
+    @foreach (var food in Model.Foods)
     {
         string imageLink = @ViewData["ImageCDN"] + @food.Image;
         string price = String.Empty;
@@ -42,9 +44,12 @@
                         <div style="height: 8px;">
                         </div>
                         <a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-                            Add to Cart</a></div>
+                            Add to Cart @food.ID</a></div>
                 </div>
             </div>
         </div>
     }
+</div>
+<div>
+    @PagingHelper.PageLinks(Model.PagingInfo,x => Url.Action("List", new {page = x}))
 </div>
