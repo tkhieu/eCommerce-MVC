@@ -11,5 +11,6 @@ namespace eCommerce.WebUI.Models
     {
         public IEnumerable<FOOD> Foods { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public String CurrentFoodType { get; set; }
     }
 }

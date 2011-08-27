@@ -14,9 +14,9 @@ namespace eCommerce.WebUI.Controllers
     {
         private String _imageCDN = Configuration.IMAGE_CDN_HOST;
         private EFFoodRepository _repository;
-        private int _pageSize = Configuration.PAGE_SIZE;
+        private const int PAGE_SIZE = Configuration.PAGE_SIZE;
 
-        
+
         public FoodController(EFFoodRepository repository)
         {
             this._repository = repository;
@@ -29,20 +29,22 @@ namespace eCommerce.WebUI.Controllers
             return View();
         }
 
-        public ViewResult List(int page = 1)
+        public ViewResult List(string type,int page = 1)
         {
             FoodListViewModel foodListViewModel = new FoodListViewModel
                                                       {
                                                           Foods = _repository.Foods
+                                                                              .Where(p=> type == null || p.FOODTYPE.Alias == type)
                                                                               .OrderBy(p => p.ID)
-                                                                              .Skip((page - 1) * _pageSize)
-                                                                              .Take(_pageSize),
+                                                                              .Skip((page - 1) * PAGE_SIZE)
+                                                                              .Take(PAGE_SIZE),
                                                           PagingInfo = new PagingInfo
                                                                            {
                                                                                CurrentPage = page,
-                                                                               ItemPerPage = _pageSize,
+                                                                               ItemPerPage = PAGE_SIZE,
                                                                                TotalItem = _repository.Foods.Count()
-                                                                           }
+                                                                           },
+                                                                           CurrentFoodType = type
                                                       };
             ViewData["ImageCDN"] = _imageCDN;
 

@@ -1,9 +1,6 @@
-﻿using System.Reflection;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Ninject;
-using Ninject.Web.Mvc;
 using eCommerce.WebUI.Infrastructure;
 
 namespace eCommerce.WebUI
@@ -22,20 +19,32 @@ namespace eCommerce.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                null, // we don't need to specify a name
-                "Page{page}",
-                new {Controller = "Food", action = "List"}
+            routes.MapRoute(null,
+                            "", // Only matches the empty URL (i.e. /)
+                            new
+                                {
+                                    controller = "Food",
+                                    action = "List",
+                                    type = (string) null,
+                                    page = 1
+                                }
+                );
+            routes.MapRoute(null,
+                            "Page{page}", // Matches /Page2, /Page123, but not /PageXYZ
+                            new {controller = "Food", action = "List", type = (string) null},
+                            new {page = @"\d+"} // Constraints: page must be numerical
+                );
+            routes.MapRoute(null,
+                            "{type}", // Matches /Football or /AnythingWithNoSlash
+                            new {controller = "Food", action = "List", page = 1}
+                );
+            routes.MapRoute(null,
+                            "{type}/Page{page}", // Matches /Football/Page567
+                            new {controller = "Food", action = "List"}, // Defaults
+                            new {page = @"\d+"} // Constraints: page must be numerical
                 );
 
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                // new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-                new {controller = "Food", action = "List", id = UrlParameter.Optional}
-                );
-
-            
+            routes.MapRoute(null, "{controller}/{action}");
         }
 
         protected void Application_Start()
@@ -48,8 +57,5 @@ namespace eCommerce.WebUI
             //!Add NinjectControllerFactory
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }
-
-        
-        
     }
 }
