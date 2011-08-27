@@ -20,5 +20,5 @@
     }
 </div>
 <div class="page-link">
-    Page: @PagingHelper.PageLinks(Model.PagingInfo,x => Url.Action("List", new {page = x}))
+    Page: @PagingHelper.PageLinks(Model.PagingInfo,x => Url.Action("List", new {page = x,type = Model.CurrentFoodType}))
 </div>
