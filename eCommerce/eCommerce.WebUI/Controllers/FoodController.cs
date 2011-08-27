@@ -42,7 +42,7 @@ namespace eCommerce.WebUI.Controllers
                                                                            {
                                                                                CurrentPage = page,
                                                                                ItemPerPage = PAGE_SIZE,
-                                                                               TotalItem = _repository.Foods.Count()
+                                                                               TotalItem = type == null? _repository.Foods.Count() : _repository.Foods.Where(p=>p.FOODTYPE.Alias == type).Count()
                                                                            },
                                                                            CurrentFoodType = type
                                                       };
