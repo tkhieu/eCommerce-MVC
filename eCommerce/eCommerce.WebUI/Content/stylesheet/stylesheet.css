@@ -838,3 +838,12 @@ a.button_add_small:visited {
 #ts-arrows {
 	background: url("../image/ts_arrows.png") no-repeat right top; left: -5px; top: 15px; width: 30px; height: 45px; text-indent: -9999px; float: right; position: relative;
 }
+
+
+.page-link a {
+	margin: 0px; color: cornflowerblue; text-transform: capitalize; font-family: "Museo"; font-size: 12pt; font-weight: 500;
+}
+
+.page-link {
+	margin: 0px; color:greenyellow; text-transform: capitalize; font-family: "Museo"; font-size: 12pt; font-weight: 500;
+}

@@ -50,6 +50,6 @@
         </div>
     }
 </div>
-<div>
-    @PagingHelper.PageLinks(Model.PagingInfo,x => Url.Action("List", new {page = x}))
+<div class="page-link">
+    Page: @PagingHelper.PageLinks(Model.PagingInfo,x => Url.Action("List", new {page = x}))
 </div>
