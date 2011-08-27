@@ -1,0 +1,38 @@
+﻿@using System.Globalization
+@using eCommerce.Model
+@model FOOD
+@{
+    FOOD food = Model;
+    string imageLink = @ViewData["ImageCDN"] + @food.Image;
+    string price = String.Empty;
+    if (food.Price != null)
+    {
+        price = ((float) food.Price).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " vnđ";
+    }
+
+
+<div class="grid_3">
+    <div class="grid_3">
+        <div class="product_container">
+            <div class="product_visible">
+                <a href="">
+                    <img title="@food.Name" alt="@food.Name" src="@imageLink" /></a><br />
+                <p class="n_price">
+                    <span>@price</span></p>
+            </div>
+            <div class="product_hidden">
+                <a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                    @food.Name</a><br />
+                <a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                    @food.FOODTYPE.Name</a><br />
+                <div class="product_spacer">
+                </div>
+                <span class="n_price_h">@price</span><br />
+                <div style="height: 8px;">
+                </div>
+                <a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                    Add to Cart @food.ID</a></div>
+        </div>
+    </div>
+</div>
+}
