@@ -116,6 +116,7 @@
           <Property Name="Detail" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="200" />
           <Property Name="FoodType" Type="int" />
+          <Property Name="Alias" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="FOODTYPE">
           <Key>
@@ -123,6 +124,7 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Alias" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="MANAGER">
           <Key>
@@ -391,6 +393,7 @@
           <Property Name="FoodTypeId" Type="Int32" />
           <NavigationProperty Name="FOODTYPE" Relationship="FoodStoreModel.FK_FOOD_FOODTYPE1" FromRole="FOOD" ToRole="FOODTYPE" />
           <NavigationProperty Name="ORDERDETAILs" Relationship="FoodStoreModel.FK_ORDERDETAIL_FOOD" FromRole="FOOD" ToRole="ORDERDETAIL" />
+          <Property Type="String" Name="Alias" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="FOODTYPE">
           <Key>
@@ -399,6 +402,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="FOODs" Relationship="FoodStoreModel.FK_FOOD_FOODTYPE1" FromRole="FOODTYPE" ToRole="FOOD" />
+          <Property Type="String" Name="Alias" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="QUESTION">
           <Key>
@@ -638,7 +642,8 @@
             <ScalarProperty Name="Answer" ColumnName="Answer" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="FOODs"><EntityTypeMapping TypeName="FoodStoreModel.FOOD"><MappingFragment StoreEntitySet="FOOD">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Price" ColumnName="Price" />
             <ScalarProperty Name="Detail" ColumnName="Detail" />
@@ -646,7 +651,8 @@
             <ScalarProperty Name="FoodTypeId" ColumnName="FoodType" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="FOODTYPEs"><EntityTypeMapping TypeName="FoodStoreModel.FOODTYPE"><MappingFragment StoreEntitySet="FOODTYPE">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Name" ColumnName="Name" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="QUESTIONs"><EntityTypeMapping TypeName="FoodStoreModel.QUESTION"><MappingFragment StoreEntitySet="QUESTION">
@@ -745,15 +751,15 @@
       <Diagram Name="FoodStore" ZoomLevel="88">
         <EntityTypeShape EntityType="FoodStoreModel.ACCOUNT" Width="1.5" PointX="3.75" PointY="12.5" Height="3.3263964843749996" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.FOOD" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="FoodStoreModel.FOODTYPE" Width="1.5" PointX="1.5" PointY="9.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="FoodStoreModel.FOODTYPE" Width="1.5" PointX="3.375" PointY="2.625" Height="1.7879850260416657" IsExpanded="true" />
         <EntityTypeShape EntityType="FoodStoreModel.QUESTION" Width="1.5" PointX="1.5" PointY="13.375" Height="1.5956835937499996" IsExpanded="true" />
         <AssociationConnector Association="FoodStoreModel.FK_ACCOUNT_QUESTION" ManuallyRouted="false">
           <ConnectorPoint PointX="3" PointY="14.172841796875" />
           <ConnectorPoint PointX="3.75" PointY="14.172841796875" />
         </AssociationConnector>
         <AssociationConnector Association="FoodStoreModel.FK_FOOD_FOODTYPE1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.875" PointY="9.5" />
-          <ConnectorPoint PointX="1.875" PointY="3.4994921875" />
+          <ConnectorPoint PointX="3.375" PointY="3.06224609375" />
+          <ConnectorPoint PointX="2.25" PointY="3.06224609375" />
         </AssociationConnector>
         <EntityTypeShape EntityType="FoodStoreModel.CITY" Width="1.5" PointX="8" PointY="10.625" Height="2.1725878906249996" />
         <EntityTypeShape EntityType="FoodStoreModel.DISTRICT" Width="1.5" PointX="9.75" PointY="7.625" Height="2.3648893229166674" />
@@ -774,10 +780,8 @@
         <EntityTypeShape EntityType="FoodStoreModel.BILL" Width="1.5" PointX="9.5" PointY="0.5" Height="2.3648893229166674" />
         <EntityTypeShape EntityType="FoodStoreModel.ORDERDETAIL" Width="1.5" PointX="17.625" PointY="6.25" Height="2.5571907552083388" />
         <AssociationConnector Association="FoodStoreModel.FK_ORDERDETAIL_FOOD" >
-          <ConnectorPoint PointX="1.2812475" PointY="3.4994921874999996" />
-          <ConnectorPoint PointX="1.2812475" PointY="6.90625" />
-          <ConnectorPoint PointX="1.7916666666666667" PointY="6.9062499999999991" />
-          <ConnectorPoint PointX="1.9583333333333333" PointY="6.90625" />
+          <ConnectorPoint PointX="1.5" PointY="3.4994921875" />
+          <ConnectorPoint PointX="1.5" PointY="6.90625" />
           <ConnectorPoint PointX="12.666666666666666" PointY="6.9062499999999991" />
           <ConnectorPoint PointX="12.833333333333334" PointY="6.90625" />
           <ConnectorPoint PointX="17.625" PointY="6.90625" />

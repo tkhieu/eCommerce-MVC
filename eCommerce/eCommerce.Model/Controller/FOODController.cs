@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using eCommerce.Utility;
+
 
 namespace eCommerce.Model.Controller
 {
@@ -40,6 +42,7 @@ namespace eCommerce.Model.Controller
                 food.Detail = foodDetail;
                 food.Image = foodImage;
                 food.FOODTYPE = foodType;
+                food.Alias = StringOperation.GetAlias(id, foodName);
 
                 _db.AddToFOODs(food);
                 _db.SaveChanges();
@@ -109,6 +112,7 @@ namespace eCommerce.Model.Controller
                 food.Detail = foodDetail;
                 if (foodImage != null)
                     food.Image = foodImage;
+                food.Alias = StringOperation.GetAlias(id, foodName);
 
                 _db.SaveChanges();
             }
