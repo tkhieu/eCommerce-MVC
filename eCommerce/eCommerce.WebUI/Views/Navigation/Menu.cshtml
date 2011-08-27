@@ -1,0 +1,18 @@
+﻿@using eCommerce.Model
+@model IEnumerable<FOODTYPE>
+<div class="box">
+    <div class="top">
+        Categories</div>
+    <div id="category" class="middle">
+        <ul>
+            @foreach (var type in Model)
+            {
+                <li>
+                    @Html.RouteLink(type.Name, new { controller = "Food", action = "List", type = type.Alias, page = 1 })
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="bottom">
+        &nbsp;</div>
+</div>

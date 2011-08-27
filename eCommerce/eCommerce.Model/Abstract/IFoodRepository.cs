@@ -9,5 +9,7 @@ namespace eCommerce.Model.Abstract
     public interface IFoodRepository
     {
         IQueryable<FOOD> Foods { get; }
+
+        IQueryable<FOODTYPE> Types { get; } 
     }
 }

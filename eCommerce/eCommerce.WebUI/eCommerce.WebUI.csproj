@@ -111,6 +111,7 @@
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -629,6 +630,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Food\List.cshtml" />
     <Content Include="Views\Shared\FoodSummary.cshtml" />
+    <Content Include="Views\Navigation\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

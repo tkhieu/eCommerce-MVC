@@ -292,30 +292,8 @@
     </div>
     <div id="container" class="container_12">
         <div id="column_left" class="grid_3">
-            <div class="box">
-                <div class="top">
-                    Categories</div>
-                <div id="category" class="middle">
-                    <ul>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=20">
-                            Desktops</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=18">
-                            Laptops &amp; Notebooks</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=25">
-                            Components</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=17">
-                            Software</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=24">
-                            Phones &amp; PDAs</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=33">
-                            Cameras</a></li>
-                        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/category&amp;path=34">
-                            MP3 Players</a></li>
-                    </ul>
-                </div>
-                <div class="bottom">
-                    &nbsp;</div>
-            </div>
+        @{Html.RenderAction("Menu","Navigation");}
+            
             <div class="box">
                 <div class="top">
                     Brands</div>
