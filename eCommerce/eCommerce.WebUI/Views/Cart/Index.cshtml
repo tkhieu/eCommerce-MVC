@@ -1,85 +1,112 @@
 ﻿@using eCommerce.WebUI.Models
 @model CartIndexViewModel
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
-<h2>Index</h2>
-
-
-  <div id="content">
+<div id="content">
     <div class="top">
-      <div class="left"></div>
-      <div class="right"></div>
-      <div class="center">
-        <h1> Shopping Cart</h1>
-      </div>
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Shopping Cart</h1>
+        </div>
     </div>
     <div class="middle">
         <form id="cart" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">
         <table class="cart">
-          <tbody>
-            <tr class="table_heading">
-              @*<th align="center">Remove</th>*@
-              <th align="center">Image</th>
-              <th align="left">Name</th>
-              <th align="left">Model</th>
-              <th align="right">Quantity</th>
-              <th align="right">Unit Price</th>
-              <th align="right">Total</th>
-            </tr>
-            
-
-            @foreach (var item in Model.Cart.Items)
-            {
-
-<tr>
-              @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
-                <td align="center"><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47"><img alt="HP LP3065" src="image/2290798632_1122ae7489_b-75x75.jpg" /></a></td>
-                <td valign="top" align="left"><a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a></td>
-                <td valign="top" align="left">@item.Food.FOODTYPE.Name</td>
-                <td valign="top" align="right"><input name="quantity[47:602]" value="@item.Quantity" 
-                                                      size="3" type="text" /></td>
-                <td valign="top" align="right">@item.Food.Price</td>
-                <td valign="top" align="right">@(@item.Food.Price*@item.Quantity)</td>
+            <tbody>
+                <tr class="table_heading">
+                    @*<th align="center">Remove</th>*@
+                    <th align="center">
+                        Image
+                    </th>
+                    <th align="left">
+                        Name
+                    </th>
+                    <th align="left">
+                        Model
+                    </th>
+                    <th align="right">
+                        Quantity
+                    </th>
+                    <th align="right">
+                        Unit Price
+                    </th>
+                    <th align="right">
+                        Total
+                    </th>
                 </tr>
-            }
-            
-          </tbody>
+                @foreach (var item in Model.Cart.Items)
+                {
+
+                    <tr>
+                        @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
+                        <td align="center">
+                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
+                                <img alt="HP LP3065" src="image/2290798632_1122ae7489_b-75x75.jpg" /></a>
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a>
+                        </td>
+                        <td valign="top" align="left">@item.Food.FOODTYPE.Name
+                        </td>
+                        <td valign="top" align="right">
+                            <input name="quantity[47:602]" value="@item.Quantity" 
+                                                      size="3" type="text" />
+                        </td>
+                        <td valign="top" align="right">@item.Food.Price
+                        </td>
+                        <td valign="top" align="right">@(@item.Food.Price * @item.Quantity)
+                        </td>
+                    </tr>
+                }
+            </tbody>
         </table>
         <div style="width: 100%; display: inline-block;">
-          <table style="float: right; display: inline-block;">
-            <tbody>
-              
-              <tr>
-                <td align="right"><b>Total:</b></td>
-                <td align="right">@Model.Cart.ComputeTotalValue()</td>
-              </tr>
-            </tbody>
-          </table>
-          <br />
+            <table style="float: right; display: inline-block;">
+                <tbody>
+                    <tr>
+                        <td align="right">
+                            <b>Total:</b>
+                        </td>
+                        <td align="right">@Model.Cart.ComputeTotalValue()
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
         </div>
         <div class="buttons">
-          <table>
-            <tbody>
-              <tr>
-                <td align="left"><a class="button" 
-      onclick="$('#cart').submit();"><span>Update</span></a></td>
-                <td align="center"><a class="button" onclick="location ='@Model.ReturnUrl'"><span>Continue 
-                  Shopping</span></a></td>
-                <td align="right"><a class="button" onclick="location = 'http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping'"><span>Checkout</span></a></td>
-              </tr>
-            </tbody>
-          </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            <a class="button" onclick="$('#cart').submit();"><span>Update</span></a>
+                        </td>
+                        <td align="center">
+                            <a class="button" onclick="location ='@Model.ReturnUrl'"><span>Continue Shopping</span></a>
+                        </td>
+                        <td align="right">
+                            <a class="button" onclick="location = 'http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping'">
+                                <span>Checkout</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-      </form>
+        </form>
     </div>
     <div class="bottom">
-      <div class="left"></div>
-      <div class="right"></div>
-      <div class="center"></div>
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+        </div>
     </div>
-  </div>
+</div>
 </div>

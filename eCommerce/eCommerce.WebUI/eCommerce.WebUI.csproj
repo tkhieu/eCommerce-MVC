@@ -479,6 +479,7 @@
     <Content Include="Content\javascript\jquery.fancybox-1.3.4.pack.js" />
     <Content Include="Content\javascript\jquery.nivo.slider.pack.js" />
     <Content Include="Content\javascript\jquery.prettyPhoto.js" />
+    <None Include="Content\javascript\Museo.-oldjs" />
     <Content Include="Content\javascript\Museo.js" />
     <Content Include="Content\javascript\tab.js" />
     <Content Include="Content\javascript\tabs.js" />

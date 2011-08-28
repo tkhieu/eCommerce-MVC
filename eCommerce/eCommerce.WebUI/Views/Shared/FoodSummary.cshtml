@@ -7,43 +7,39 @@
     string price = String.Empty;
     if (food.Price != null)
     {
-        price = ((float) food.Price).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + " vnđ";
+        price = ((float)food.Price).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "đ";
     }
 
 
-<div class="grid_3">
     <div class="grid_3">
-        <div class="product_container">
-            <div class="product_visible">
-                <a href="">
-                    <img title="@food.Name" alt="@food.Name" src="@imageLink" /></a><br />
-                <p class="n_price">
-                    <span>@price</span></p>
-            </div>
-            <div class="product_hidden">
-                <a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-                    @food.Name</a><br />
-                <a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-                    @food.FOODTYPE.Name</a><br />
-                <div class="product_spacer">
+        <div class="grid_3">
+            <div class="product_container">
+                <div class="product_visible">
+                    <a href="">
+                        <img title="@food.Name" alt="@food.Name" src="@imageLink" /></a><br />
+                    <p class="n_price">
+                        <span>@price</span></p>
                 </div>
-                <span class="n_price_h">@price</span><br />
-                <div style="height: 8px;">
-                </div>
-
-
-                <a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-                    Add to Cart </a>
-                    
+                <div class="product_hidden">
+                    <a class="product_name" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                        @food.Name</a><br />
+                    <a class="product_model" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                        @food.FOODTYPE.Name</a><br />
+                    <div class="product_spacer">
+                    </div>
+                    <span class="n_price_h">@price</span><br />
+                    <div style="height: 8px;">
+                    </div>
+                    @*<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
+                        Add to Cart </a>*@
                     @using (Html.BeginForm("AddToCart", "Cart"))
                     {
                         @Html.HiddenFor(x => x.ID);
-                        @Html.Hidden("returnUrl",Request.Url.PathAndQuery)
-                        <input type="submit" value="+ Add to cart" />
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                        <input type="submit" class="button_add" value="Add to cart" />
                     }
-                    
-                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 }

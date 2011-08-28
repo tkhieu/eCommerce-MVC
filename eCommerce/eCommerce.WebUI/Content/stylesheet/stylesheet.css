@@ -554,7 +554,7 @@ a.button_add_small:visited {
 	color: rgb(160, 65, 13); font-size: 12px; text-decoration: line-through;
 }
 .button_add {
-	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px;height: 25px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
 }
 .button_add:visited {
 	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
