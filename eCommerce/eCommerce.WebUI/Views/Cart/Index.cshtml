@@ -42,12 +42,13 @@
                 </tr>
                 @foreach (var item in Model.Cart.Items)
                 {
-
+                    string imageLink = @ViewData["ImageCDN"] + @item.Food.Image+".ashx?height=75";
+                    
                     <tr>
                         @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
                         <td align="center">
-                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=47">
-                                <img alt="HP LP3065" src="image/2290798632_1122ae7489_b-75x75.jpg" /></a>
+                            
+                                <img alt="@item.Food.Name" src="@imageLink" />
                         </td>
                         <td valign="top" align="left">
                             <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a>

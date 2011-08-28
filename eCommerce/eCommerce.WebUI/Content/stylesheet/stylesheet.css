@@ -233,7 +233,7 @@ tr.odd {
 	display: none;
 }
 #content {
-	margin-bottom: 10px; margin-left: 240px;
+	margin-bottom: 10px;
 }
 #content .top .left {
 	background: url("../image/content_top_left.png") no-repeat; width: 5px; height: 32px; float: left;

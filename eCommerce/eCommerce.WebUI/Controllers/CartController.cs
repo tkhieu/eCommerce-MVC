@@ -1,14 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using eCommerce.Model;
 using eCommerce.Model.Abstract;
 using eCommerce.Model.Entities;
+using eCommerce.Utility;
 using eCommerce.WebUI.Models;
 
 namespace eCommerce.WebUI.Controllers
 {
     public class CartController : Controller
     {
+        private String _imageCDN = Configuration.IMAGE_CDN_HOST;
+
         private IFoodRepository _repository;
         public CartController(IFoodRepository repository)
         {
@@ -17,6 +21,7 @@ namespace eCommerce.WebUI.Controllers
 
         public ViewResult Index(string returnUrl)
         {
+            ViewData["ImageCDN"] = _imageCDN;
             return View(new CartIndexViewModel
                             {
                                 Cart = GetCart(),
