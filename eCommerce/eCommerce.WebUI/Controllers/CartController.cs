@@ -19,45 +19,43 @@ namespace eCommerce.WebUI.Controllers
             this._repository = repository;
         }
 
-        public ViewResult Index(string returnUrl)
+        public ViewResult Index(Cart cart,string returnUrl)
         {
             ViewData["ImageCDN"] = _imageCDN;
             return View(new CartIndexViewModel
                             {
-                                Cart = GetCart(),
+                                Cart = cart,
                                 ReturnUrl = returnUrl
                             });
         }
 
-        public RedirectToRouteResult AddToCart(int ID, string returnUrl)
+        public RedirectToRouteResult AddToCart(Cart cart,int ID, string returnUrl)
         {
             FOOD food = _repository.Foods.FirstOrDefault(p => p.ID == ID);
             if (food !=null)
             {
-                GetCart().AddItem(food, 1);
+                cart.AddItem(food, 1);
             }
             return RedirectToAction("Index", new {returnUrl});
         }
 
-        public RedirectToRouteResult RemoveFromCart(int foodId,string returnUrl)
+        public RedirectToRouteResult UpdateQuantity(Cart cart, int ID,int quantity, string returnUrl)
+        {
+
+            FOOD food = _repository.Foods.FirstOrDefault(p => p.ID == ID);
+            cart.UpdateQuantity(food,quantity);
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
+        public RedirectToRouteResult RemoveFromCart(Cart cart,int foodId,string returnUrl)
         {
             FOOD food = _repository.Foods.FirstOrDefault(p => p.ID == foodId);
             if (food != null)
             {
-                GetCart().RemoveItem(food);
+                cart.RemoveItem(food);
             }
             return RedirectToAction("Index", new {returnUrl});
         }
 
-        private Cart GetCart()
-        {
-            Cart cart = (Cart)Session["Cart"];
-            if (cart == null)
-            {
-                cart = new Cart();
-                Session["Cart"] = cart;
-            }
-            return cart;
-        }
     }
 }

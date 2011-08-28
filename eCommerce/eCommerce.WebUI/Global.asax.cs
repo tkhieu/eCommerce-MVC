@@ -1,6 +1,8 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using eCommerce.Model.Entities;
+using eCommerce.WebUI.Binders;
 using eCommerce.WebUI.Infrastructure;
 
 namespace eCommerce.WebUI
@@ -56,6 +58,7 @@ namespace eCommerce.WebUI
 
             //!Add NinjectControllerFactory
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
+            ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
         }
     }
 }

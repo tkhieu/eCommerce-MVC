@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectMVC3.cs" />
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
+    <Compile Include="Binders\CartModelBinder.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -473,7 +474,7 @@
     <Content Include="Content\javascript\DD_belatedPNG_0.0.8a-min.js" />
     <Content Include="Content\javascript\jquery-1.3.2.min.js" />
     <Content Include="Content\javascript\jquery-1.6.1.min.js" />
-    <Content Include="Content\javascript\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="Content\javascript\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="Content\javascript\jquery.cookie.js" />
     <Content Include="Content\javascript\jquery.dd.js" />
     <Content Include="Content\javascript\jquery.fancybox-1.3.4.pack.js" />
@@ -491,6 +492,20 @@
     <Content Include="Content\stylesheet\ie6.css" />
     <Content Include="Content\stylesheet\ie7.css" />
     <Content Include="Content\stylesheet\jquery-ui-1.8.9.custom.css" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-icons_666666_256x240.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Content\stylesheet\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\stylesheet\jquery-ui\jquery-ui-1.8.16.custom.css" />
     <Content Include="Content\stylesheet\jquery.fancybox-1.3.4.css" />
     <Content Include="Content\stylesheet\nivo-slider.css" />
     <Content Include="Content\stylesheet\prettyPhoto.css" />

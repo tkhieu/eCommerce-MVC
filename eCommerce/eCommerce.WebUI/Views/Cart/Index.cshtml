@@ -16,7 +16,6 @@
         </div>
     </div>
     <div class="middle">
-        <form id="cart" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">
         <table class="cart">
             <tbody>
                 <tr class="table_heading">
@@ -28,7 +27,7 @@
                         Name
                     </th>
                     <th align="left">
-                        Model
+                        Type
                     </th>
                     <th align="right">
                         Quantity
@@ -39,16 +38,18 @@
                     <th align="right">
                         Total
                     </th>
+                    <th align="center">
+                        Task
+                    </th>
                 </tr>
                 @foreach (var item in Model.Cart.Items)
                 {
-                    string imageLink = @ViewData["ImageCDN"] + @item.Food.Image+".ashx?height=75";
+                    string imageLink = @ViewData["ImageCDN"] + @item.Food.Image + ".ashx?height=75";
                     
                     <tr>
                         @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
                         <td align="center">
-                            
-                                <img alt="@item.Food.Name" src="@imageLink" />
+                            <img alt="@item.Food.Name" src="@imageLink" />
                         </td>
                         <td valign="top" align="left">
                             <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a>
@@ -56,12 +57,29 @@
                         <td valign="top" align="left">@item.Food.FOODTYPE.Name
                         </td>
                         <td valign="top" align="right">
-                            <input name="quantity[47:602]" value="@item.Quantity" 
-                                                      size="3" type="text" />
+                        @using (Html.BeginForm("UpdateQuantity", "Cart"))
+                            {
+                            @*<input name="quantity" value="@item.Quantity" 
+                                                      size="3" type="text" />*@
+                                @Html.Hidden("ID", item.Food.ID)
+                                @Html.TextBox("quantity",item.Quantity, new {size="1",})
+                                @Html.HiddenFor(x => x.ReturnUrl)
+                                <input class="update_button" type="submit" value="Update" />
+                            }
+
+                            
                         </td>
                         <td valign="top" align="right">@item.Food.Price
                         </td>
                         <td valign="top" align="right">@(@item.Food.Price * @item.Quantity)
+                        </td>
+                        <td valign="top" align="right">
+                            @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                            {
+                                @Html.Hidden("foodId", item.Food.ID)
+                                @Html.HiddenFor(x => x.ReturnUrl)
+                                <input class="remove_button" type="submit" value="Remove" />
+                            }
                         </td>
                     </tr>
                 }
@@ -99,7 +117,6 @@
                 </tbody>
             </table>
         </div>
-        </form>
     </div>
     <div class="bottom">
         <div class="left">
@@ -110,4 +127,17 @@
         </div>
     </div>
 </div>
-</div>
+
+<script type="text/javascript">
+
+    $(function() {
+        $(".remove_button").button();
+        $(".update_button").button({
+                icons: {
+                    primary: "ui-icon-circle-check"
+                },
+                text: false
+            });
+    });
+
+</script>

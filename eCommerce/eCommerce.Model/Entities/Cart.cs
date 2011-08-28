@@ -22,6 +22,20 @@ namespace eCommerce.Model.Entities
             }
         }
 
+        public void UpdateQuantity(FOOD food,int quantity)
+        {
+            CartItem item = null;
+            foreach (CartItem cartItem in Items)
+            {
+                if (cartItem.Food.ID == food.ID)
+                {
+                    item = cartItem;
+                    break;
+                }
+            }
+            item.Quantity = quantity;
+        }
+
         public void RemoveItem(FOOD food)
         {
             _cartItems.RemoveAll(p => p.Food.ID == food.ID);
