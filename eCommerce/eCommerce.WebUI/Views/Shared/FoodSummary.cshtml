@@ -30,8 +30,19 @@
                 <span class="n_price_h">@price</span><br />
                 <div style="height: 8px;">
                 </div>
+
+
                 <a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
-                    Add to Cart @food.ID</a></div>
+                    Add to Cart </a>
+                    
+                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    {
+                        @Html.HiddenFor(x => x.ID);
+                        @Html.Hidden("returnUrl",Request.Url.PathAndQuery)
+                        <input type="submit" value="+ Add to cart" />
+                    }
+                    
+                    </div>
         </div>
     </div>
 </div>
