@@ -1,9 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace eCommerce.WebUI.Models.Account
 {
     public class Register
     {
+
         public string Username { get; set; }
         public string Password { get; set; }
         public string RetypePassword { get; set; }
@@ -19,5 +22,7 @@ namespace eCommerce.WebUI.Models.Account
         
         public string Question { get; set; }
         public string Answer { get; set; }
+
+        public IEnumerable<SelectListItem> ListQuestions { get; set; }
     }
 }

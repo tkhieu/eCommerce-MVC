@@ -1,8 +1,203 @@
 ﻿@model eCommerce.WebUI.Models.Account.Register
-
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+<div id="content">
+    <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Account Register</h1>
+        </div>
+    </div>
+    <div class="middle">
+        <p>
+            If you already have an account with us, please login at the <a href="#">login page</a>.</p>
+        @using (Html.BeginForm("Register", "Account",FormMethod.Post,new {id="register"}))
+        {
+            <b style="margin-bottom: 2px; display: block;">Your Login Details</b>
+            <div class="content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="200px">
+                                Username:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Username)
+                                @Html.ValidationMessageFor(x => x.Username)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Password)
+                                @Html.ValidationMessageFor(x => x.Password)
+                            </td>
+                        </tr>
 
-<h2>Register</h2>
+                        <tr>
+                            <td>
+                                Retype Password:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.RetypePassword)
+                                @Html.ValidationMessageFor(x => x.RetypePassword)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Email:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Email)
+                                @Html.ValidationMessageFor(x => x.Email)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <b style="margin-bottom: 2px; display: block;">Your Personal Details</b>
+            <div class="content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="200px">
+                                Name:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Name)
+                                @Html.ValidationMessageFor(x => x.Name)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Social ID:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.SocialId)
+                                @Html.ValidationMessageFor(x => x.SocialId)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Tel:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Tel)
+                                @Html.ValidationMessageFor(x => x.Tel)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Address:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Address)
+                                @Html.ValidationMessageFor(x => x.Address)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Address:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Address)
+                                @Html.ValidationMessageFor(x => x.Address)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                District:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.District)
+                                @Html.ValidationMessageFor(x => x.District)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                City:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.City)
+                                @Html.ValidationMessageFor(x => x.City)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            
+            <b style="margin-bottom: 2px; display: block;">Your Security Details</b>
+            <div class="content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="200px">
+                                Question:
+                            </td>
+                            <td>
+                                @Html.DropDownListFor(x => x.Question,Model.ListQuestions)
+                                @Html.ValidationMessageFor(x => x.Username)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td>
+                                @Html.EditorFor(x => x.Password)
+                                @Html.ValidationMessageFor(x => x.Password)
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="buttons">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="padding-right: 5px;" align="right">
+                                I have read and agree to the <a class="thickbox" href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information/loadInfo&amp;create=1"
+                                    alt="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=3">
+                                    <b>Privacy Policy</b></a>
+                            </td>
+                            <td style="padding-right: 10px;">
+                                <input name="agree" value="1" type="checkbox">
+                            </td>
+                            <td align="right">
+                                <a class="button" onclick="$('#register').submit();"><span>
+                                    Create
+                                </span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+        <div class="bottom">
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+            <div class="center">
+            </div>
+        </div>
+    </div>
+</div>
