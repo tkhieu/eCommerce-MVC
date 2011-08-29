@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace eCommerce.Model.Entities.Account
+namespace eCommerce.WebUI.Models.Account
 {
     public class Register
     {

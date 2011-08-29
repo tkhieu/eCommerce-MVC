@@ -1,4 +1,6 @@
-﻿namespace eCommerce.Model.Entities.Cart
+﻿using eCommerce.Model;
+
+namespace eCommerce.WebUI.Models.Shopping
 {
     public class CartItem
     {
