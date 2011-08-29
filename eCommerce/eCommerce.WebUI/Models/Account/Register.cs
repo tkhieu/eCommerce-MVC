@@ -4,19 +4,20 @@ namespace eCommerce.WebUI.Models.Account
 {
     public class Register
     {
-        [Required(ErrorMessage = "Please enter a name")]
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string RetypePassword { get; set; }
+        public string Email { get; set; }
+        
         public string Name { get; set; }
-        [Required(ErrorMessage = "Please enter the first address line")]
-        public string Line1 { get; set; }
-        public string Line2 { get; set; }
-        public string Line3 { get; set; }
-        [Required(ErrorMessage = "Please enter a city name")]
+        public string SocialId { get; set; }
+        public string Tel { get; set; }
+
+        public string Address { get; set; }
+        public string District { get; set; }
         public string City { get; set; }
-        [Required(ErrorMessage = "Please enter a state name")]
-        public string State { get; set; }
-        public string Zip { get; set; }
-        [Required(ErrorMessage = "Please enter a country name")]
-        public string Country { get; set; }
-        public bool GiftWrap { get; set; }
+        
+        public string Question { get; set; }
+        public string Answer { get; set; }
     }
 }
