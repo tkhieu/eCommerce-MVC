@@ -14,6 +14,12 @@ namespace eCommerce.Model.Controller
             return _db.CITies.Single(p => p.ID == cityId).DISTRICTs.ToList();
         }
 
+        public static List<DISTRICT> GetList(string district)
+        {
+            _db = new FoodStoreEntities();
+            return _db.DISTRICTs.Where(p =>p.Name.ToLower().StartsWith(district.ToLower())).ToList();
+        }
+
         //Lấy câu hỏi by Id
         public static DISTRICT GetById(int id)
         {

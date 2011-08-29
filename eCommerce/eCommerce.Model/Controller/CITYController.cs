@@ -17,6 +17,12 @@ namespace eCommerce.Model.Controller
             return _db.CITies.ToList();
         }
 
+        public static List<CITY> GetList(string city)
+        {
+            _db = new FoodStoreEntities();
+            return _db.CITies.ToList().Where(p => p.Name.ToLower().StartsWith(city.ToLower())).ToList();
+        }
+
         //Lấy câu hỏi by Id
         public static CITY GetById(int id)
         {

@@ -115,8 +115,15 @@
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\ValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\City.ashx.cs">
+      <DependentUpon>City.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\District.ashx.cs">
+      <DependentUpon>District.ashx</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="HtmlHelper\PagingHelper.cs" />
@@ -646,6 +653,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\image\flags\.DS_Store" />
+    <Content Include="Handler\City.ashx" />
+    <Content Include="Handler\District.ashx" />
     <None Include="PayPalHelper\Docs\startHere.docx" />
     <None Include="PayPalHelper\Docs\startHere.pdf" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />

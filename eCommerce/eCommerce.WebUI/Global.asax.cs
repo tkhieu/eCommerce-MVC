@@ -20,6 +20,7 @@ namespace eCommerce.WebUI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            
 
             routes.MapRoute(null,
                             "", // Only matches the empty URL (i.e. /)

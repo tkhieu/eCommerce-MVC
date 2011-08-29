@@ -71,6 +71,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controller\QUESTIONController.cs" />
     <Compile Include="SimpleJSON\AccountJSON.cs" />
+    <Compile Include="SimpleJSON\CityJSON.cs" />
+    <Compile Include="SimpleJSON\DistrictJSON.cs" />
     <Compile Include="SimpleJSON\FoodJSON.cs" />
   </ItemGroup>
   <ItemGroup>
