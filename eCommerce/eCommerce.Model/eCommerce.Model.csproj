@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions">
+      <HintPath>..\packages\DataAnnotationsExtensions.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions.ClientValidation">
+      <HintPath>..\packages\DataAnnotationsExtensions.MVC3.0.6.0.0\lib\NETFramework40\DataAnnotationsExtensions.ClientValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10715.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
@@ -48,9 +57,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.1.0.0\lib\NETFramework40\WebActivator.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IFoodRepository.cs" />
+    <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="Concrete\EFFoodRepository.cs" />
     <Compile Include="Controller\ACCOUNTController.cs" />
     <Compile Include="Controller\BILLController.cs" />
@@ -59,6 +72,7 @@
     <Compile Include="Controller\FOODController.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\MANAGERController.cs" />
+    <Compile Include="Entities\Account\Register.cs" />
     <Compile Include="Entities\Cart\Cart.cs" />
     <Compile Include="Entities\Cart\CartItem.cs" />
     <Compile Include="ProjectEnum.cs" />
