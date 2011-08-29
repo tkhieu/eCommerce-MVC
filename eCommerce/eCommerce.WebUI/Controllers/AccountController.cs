@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Web.Mvc;
 using eCommerce.Model;
+using eCommerce.Model.Abstract;
+using eCommerce.Model.Controller;
 using eCommerce.WebUI.Models.Account;
 
 namespace eCommerce.WebUI.Controllers
@@ -10,6 +12,7 @@ namespace eCommerce.WebUI.Controllers
     {
         //
         // GET: /Account/
+        private IFoodRepository _repository;
 
         public ActionResult Index()
         {
@@ -19,15 +22,11 @@ namespace eCommerce.WebUI.Controllers
         public ActionResult Register()
         {
             var db = new FoodStoreEntities();
-            List<QUESTION> list = db.QUESTIONs.ToList();
 
+            List<QUESTION> list = db.QUESTIONs.ToList();
             return View(new Register
                             {
-                                ListQuestions = list.Select(q => new SelectListItem
-                                                                     {
-                                                                         Text = q.Question,
-                                                                         Value = q.ID.ToString()
-                                                                     })
+                                ListQuestions = list
                             });
         }
 
@@ -36,9 +35,21 @@ namespace eCommerce.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
+                int city = CityController.GetIdByTerm(register.City);
+                int district = DistrictController.GetIdByTerm(register.District);
 
+                Model.Controller.AccountController.Insert(register.Username, register.Password, register.Name,
+                                                          register.Address, register.Tel, register.SocialId,
+                                                          register.Email, int.Parse(register.Question), register.Answer, city, district);
+                Redirect("/Account/Login");
             }
-            return View();
+            var db = new FoodStoreEntities();
+
+            List<QUESTION> list = db.QUESTIONs.ToList();
+            return View((new Register
+                            {
+                                ListQuestions = list
+                            }));
         }
     }
 }

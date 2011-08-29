@@ -35,5 +35,11 @@ namespace eCommerce.Model.Controller
         {
             return db.CITies.Single(p => p.ID == id);
         }
+
+        public static int GetIdByTerm(string city)
+        {
+            _db = new FoodStoreEntities();
+            return _db.CITies.Where(p => p.Name == city).Select(p => p.ID).ToList()[0];
+        }
     }
 }

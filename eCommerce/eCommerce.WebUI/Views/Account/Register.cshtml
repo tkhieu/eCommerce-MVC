@@ -87,7 +87,7 @@
                                 Password:
                             </td>
                             <td>
-                                @Html.EditorFor(x => x.Password)
+                                @Html.PasswordFor(x => x.Password)
                                 @Html.ValidationMessageFor(x => x.Password)
                             </td>
                         </tr>
@@ -96,7 +96,7 @@
                                 Retype Password:
                             </td>
                             <td>
-                                @Html.EditorFor(x => x.RetypePassword)
+                                @Html.PasswordFor(x => x.RetypePassword)
                                 @Html.ValidationMessageFor(x => x.RetypePassword)
                             </td>
                         </tr>
@@ -153,15 +153,7 @@
                                 @Html.ValidationMessageFor(x => x.Address)
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                Address:
-                            </td>
-                            <td>
-                                @Html.EditorFor(x => x.Address)
-                                @Html.ValidationMessageFor(x => x.Address)
-                            </td>
-                        </tr>
+                        
                         <tr>
                             <td>
                                 District:
@@ -194,17 +186,17 @@
                                 Question:
                             </td>
                             <td>
-                                @Html.DropDownListFor(x => x.Question, Model.ListQuestions)
-                                @Html.ValidationMessageFor(x => x.Username)
+                                @Html.DropDownListFor(x => x.Question, new SelectList( Model.ListQuestions,"ID","Question"))
+                                @Html.ValidationMessageFor(x => x.Question)
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Password:
+                                Answer:
                             </td>
                             <td>
-                                @Html.EditorFor(x => x.Password)
-                                @Html.ValidationMessageFor(x => x.Password)
+                                @Html.EditorFor(x => x.Answer)
+                                @Html.ValidationMessageFor(x => x.Answer)
                             </td>
                         </tr>
                     </tbody>

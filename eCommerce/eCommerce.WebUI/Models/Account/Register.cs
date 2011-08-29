@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using DataAnnotationsExtensions;
+using eCommerce.Model;
 
 namespace eCommerce.WebUI.Models.Account
 {
@@ -40,6 +41,6 @@ namespace eCommerce.WebUI.Models.Account
         [Required]
         public string Answer { get; set; }
 
-        public IEnumerable<SelectListItem> ListQuestions { get; set; }
+        public List<QUESTION> ListQuestions { get; set; }
     }
 }
