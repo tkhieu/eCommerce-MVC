@@ -117,6 +117,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="HtmlHelper\PagingHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
@@ -649,6 +650,7 @@
     <Content Include="Views\Shared\FoodSummary.cshtml" />
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

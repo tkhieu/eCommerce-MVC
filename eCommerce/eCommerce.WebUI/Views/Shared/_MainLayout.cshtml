@@ -90,20 +90,7 @@
                         </div>
                         </form>
                     </div>
-                    <div id="cart_in_header">
-                        <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">
-                            <img alt="Go to your shopping cart" src="@Url.Content("~/Content/image/cart.png")" /></a>
-                        <p class="header_info">
-                            Items:
-                        </p>
-                        <p class="header_numbers">
-                            0</p>
-                        <p class="header_info">
-                            Total:
-                        </p>
-                        <p class="header_numbers">
-                            £0.00</p>
-                    </div>
+                    @{Html.RenderAction("Summary", "Cart");}
                 </div>
             </div>
             <!--  end header top -->
@@ -294,7 +281,7 @@
     </div>
     <div id="container" class="container_12">
         <div id="column_left" class="grid_3">
-        @{Html.RenderAction("Menu","Navigation");}
+        @{Html.RenderAction("Menu", "Navigation");}
             
             <div class="box">
                 <div class="top">
