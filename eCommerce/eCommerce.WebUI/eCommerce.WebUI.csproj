@@ -110,7 +110,6 @@
     <Compile Include="App_Start\NinjectMVC3.cs" />
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="Binders\CartModelBinder.cs" />
-    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
@@ -649,8 +648,6 @@
     <Content Include="Views\Food\List.cshtml" />
     <Content Include="Views\Shared\FoodSummary.cshtml" />
     <Content Include="Views\Navigation\Menu.cshtml" />
-    <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\Cart\Summary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">
