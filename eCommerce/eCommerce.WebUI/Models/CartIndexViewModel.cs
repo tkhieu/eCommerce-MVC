@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using eCommerce.Model.Entities;
+using eCommerce.Model.Entities.Cart;
 
 namespace eCommerce.WebUI.Models
 {

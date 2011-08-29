@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using eCommerce.Model.Entities;
+using eCommerce.Model.Entities.Cart;
 
 namespace eCommerce.WebUI.Binders
 {

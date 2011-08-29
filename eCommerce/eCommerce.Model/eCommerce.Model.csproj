@@ -58,8 +58,8 @@
     <Compile Include="Controller\FOODController.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\MANAGERController.cs" />
-    <Compile Include="Entities\Cart.cs" />
-    <Compile Include="Entities\CartItem.cs" />
+    <Compile Include="Entities\Cart\Cart.cs" />
+    <Compile Include="Entities\Cart\CartItem.cs" />
     <Compile Include="ProjectEnum.cs" />
     <Compile Include="FoodStore.Designer.cs">
       <DependentUpon>FoodStore.edmx</DependentUpon>
@@ -82,7 +82,9 @@
     </EntityDeploy>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Entities\Account\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Utility\eCommerce.Utility.csproj">
       <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>

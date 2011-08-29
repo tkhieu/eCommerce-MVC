@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using eCommerce.Model;
 using eCommerce.Model.Abstract;
 using eCommerce.Model.Entities;
+using eCommerce.Model.Entities.Cart;
 using eCommerce.Utility;
 using eCommerce.WebUI.Models;
 
