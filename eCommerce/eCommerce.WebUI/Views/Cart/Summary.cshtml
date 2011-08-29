@@ -1,0 +1,24 @@
+﻿@using System.Globalization
+@using eCommerce.Model.Entities.Cart
+@using eCommerce.WebUI.HtmlHelper
+@model Cart
+@{
+    Layout = null;
+}
+<div id="cart_in_header">
+    @{
+
+        string total = ((float)Model.ComputeTotalValue()).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "đ";        
+        <p class="header_info">
+          <b>Your cart</b> 
+        </p>
+        <p class="header_numbers">
+            @Model.Items.Sum(x => x.Quantity) items</p>
+        <p class="header_numbers">
+          Total: @total</p>
+        
+        <p class="header_info">
+            @Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { id = "learn_more" })
+        </p>
+    }
+</div>
