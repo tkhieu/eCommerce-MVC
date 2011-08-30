@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using eCommerce.Model.Entities;
-using eCommerce.Model.Entities.Cart;
+using eCommerce.WebUI.Models.Shopping;
 
 namespace eCommerce.WebUI.Binders
 {

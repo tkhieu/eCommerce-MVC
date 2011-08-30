@@ -17,6 +17,12 @@ namespace eCommerce.Model.Controller
             return _db.CITies.ToList();
         }
 
+        public static List<CITY> GetList(string city)
+        {
+            _db = new FoodStoreEntities();
+            return _db.CITies.ToList().Where(p => p.Name.ToLower().StartsWith(city.ToLower())).ToList();
+        }
+
         //Lấy câu hỏi by Id
         public static CITY GetById(int id)
         {
@@ -28,6 +34,12 @@ namespace eCommerce.Model.Controller
         public static CITY GetById(int id,FoodStoreEntities db)
         {
             return db.CITies.Single(p => p.ID == id);
+        }
+
+        public static int GetIdByTerm(string city)
+        {
+            _db = new FoodStoreEntities();
+            return _db.CITies.Where(p => p.Name == city).Select(p => p.ID).ToList()[0];
         }
     }
 }

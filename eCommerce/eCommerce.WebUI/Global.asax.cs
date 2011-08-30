@@ -1,10 +1,9 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using eCommerce.Model.Entities;
-using eCommerce.Model.Entities.Cart;
 using eCommerce.WebUI.Binders;
 using eCommerce.WebUI.Infrastructure;
+using eCommerce.WebUI.Models.Shopping;
 
 namespace eCommerce.WebUI
 {
@@ -21,6 +20,7 @@ namespace eCommerce.WebUI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            
 
             routes.MapRoute(null,
                             "", // Only matches the empty URL (i.e. /)

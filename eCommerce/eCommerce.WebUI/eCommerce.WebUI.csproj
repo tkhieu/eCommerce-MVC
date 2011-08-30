@@ -115,14 +115,25 @@
     <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\ValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\City.ashx.cs">
+      <DependentUpon>City.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\District.ashx.cs">
+      <DependentUpon>District.ashx</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="HtmlHelper\PagingHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Models\Account\Login.cs" />
+    <Compile Include="Models\Account\Register.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\FoodListViewModel.cs" />
+    <Compile Include="Models\Shopping\Cart.cs" />
+    <Compile Include="Models\Shopping\CartItem.cs" />
     <Compile Include="Models\Supporter\PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -480,6 +491,7 @@
     <Content Include="Content\javascript\jquery.cookie.js" />
     <Content Include="Content\javascript\jquery.dd.js" />
     <Content Include="Content\javascript\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Content\javascript\jquery.nivo.slider.js" />
     <Content Include="Content\javascript\jquery.nivo.slider.pack.js" />
     <Content Include="Content\javascript\jquery.prettyPhoto.js" />
     <Content Include="Content\javascript\Museo.js" />
@@ -643,6 +655,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\image\flags\.DS_Store" />
+    <Content Include="Handler\City.ashx" />
+    <Content Include="Handler\District.ashx" />
     <None Include="PayPalHelper\Docs\startHere.docx" />
     <None Include="PayPalHelper\Docs\startHere.pdf" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
@@ -652,6 +666,8 @@
     <Content Include="Views\Navigation\Menu.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Summary.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using eCommerce.Utility;
 
 namespace eCommerce.Model.Controller
 {
@@ -18,7 +19,7 @@ namespace eCommerce.Model.Controller
             var account = new ACCOUNT();
             account.ID = GetMaxId();
             account.Username = username;
-            account.Password = password;
+            account.Password = SaltEncrypt.HashCodeSHA1(password);
             account.Name = fullName;
             account.Address = address;
             account.Tel = tel;
@@ -129,6 +130,24 @@ namespace eCommerce.Model.Controller
         {
             _db = new FoodStoreEntities();
             return _db.ACCOUNTs.ToList().Where(p => p.Username.ToLower().StartsWith(searchText.ToLower())).ToList();
+        }
+
+        public static bool IsLoginOk(String username, String password)
+        {
+            bool flag = true;
+            password = SaltEncrypt.HashCodeSHA1(password);
+            _db = new FoodStoreEntities();
+
+            try
+            {
+                ACCOUNT account = _db.ACCOUNTs.Single(p => p.Username == username && p.Password == password);
+            }
+            catch (Exception)
+            {
+                flag = false;
+            }
+            
+            return flag;
         }
     }
 }

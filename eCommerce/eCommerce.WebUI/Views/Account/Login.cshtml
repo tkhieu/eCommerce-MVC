@@ -1,0 +1,67 @@
+﻿@using eCommerce.WebUI.Models.Account
+@model Login
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div id="content">
+    <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Login</h1>
+        </div>
+    </div>
+    <div class="middle">
+        <div style="width: 100%; margin-bottom: 10px; display: inline-block;">
+            <div style="width: 45%; float: left; display: inline-block;">
+                <b style="margin-bottom: 2px; display: block;">I am a new customer.</b>
+                <div class="content">
+                    <p>
+                        Checkout Options:</p>
+                    <p>
+                        By creating an account you will be able to shop faster, be up to date on an order's
+                        status, and keep track of the orders you have previously made.</p>
+                    <div style="text-align: right; vertical-align:bottom;">
+                        <a class="button" href="/Account/Register"><span>Continue</span></a></div>
+                </div>
+            </div>
+            <div style="width: 45%; float: right; display: inline-block;">
+                <b style="margin-bottom: 2px; display: block;">Returning Customer</b>
+                @using (@Html.BeginForm("Login", "Account",FormMethod.Post,new {id="login"}))
+                {
+                    <div class="content">
+                        I am a returning customer.<br>
+                        <br>
+                        <b>E-Mail Address:</b><br>
+                        @Html.EditorFor(x=>x.Username)
+                        <br>
+                        <br>
+                        <b>Password:</b><br>
+                        @Html.PasswordFor(x=>x.Password)
+                        <br>
+                        <a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/forgotten">Forgotten
+                            Password</a><br>
+                        <div style="text-align: left;">
+                            <a class="button" onclick="$('#login').submit();"><span>
+                                Login
+                            </span></a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="left">
+    </div>
+    <div class="right">
+    </div>
+    <div class="center">
+    </div>
+</div>
+</div> 

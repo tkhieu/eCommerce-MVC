@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using eCommerce.Model;
 
-namespace eCommerce.Model.Entities.Cart
+namespace eCommerce.WebUI.Models.Shopping
 {
     public class Cart
     {
