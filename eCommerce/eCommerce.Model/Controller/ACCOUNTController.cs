@@ -121,6 +121,13 @@ namespace eCommerce.Model.Controller
             return _db.ACCOUNTs.Single(p => p.ID == id);
         }
 
+        public static ACCOUNT GetByUsername(string username)
+        {
+            _db = new FoodStoreEntities();
+            return _db.ACCOUNTs.Single(p => p.Username == username);
+        }
+
+
         public static ACCOUNT GetById(int id,FoodStoreEntities db)
         {
             return db.ACCOUNTs.Single(p => p.ID == id);

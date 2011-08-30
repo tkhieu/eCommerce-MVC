@@ -134,6 +134,7 @@
     <Compile Include="Models\FoodListViewModel.cs" />
     <Compile Include="Models\Shopping\Cart.cs" />
     <Compile Include="Models\Shopping\CartItem.cs" />
+    <Compile Include="Models\Shopping\ShippingDetail.cs" />
     <Compile Include="Models\Supporter\PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -668,6 +669,7 @@
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

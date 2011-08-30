@@ -62,5 +62,15 @@ namespace eCommerce.WebUI.Controllers
             return View(cart);
         }
 
+        public ActionResult Checkout()
+        {
+            if (Session["login"] == null || (bool)Session["login"] != true)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            ACCOUNT account = Model.Controller.AccountController.GetById((int) Session["id"]);
+            ViewData["account"] = account;
+            return View(new ShippingDetail());
+        }
     }
 }

@@ -61,6 +61,10 @@ namespace eCommerce.WebUI.Controllers
             {
                 if (Model.Controller.AccountController.IsLoginOk(login.Username,login.Password))
                 {
+                    ACCOUNT account = Model.Controller.AccountController.GetByUsername(login.Username);
+                    Session["login"] = true;
+                    Session["id"] = account.ID;
+
                     return RedirectToAction("Index", "Account");
                 }
             }
