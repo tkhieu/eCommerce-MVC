@@ -128,12 +128,19 @@
     <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="HtmlHelper\PagingHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Models\Account\Edit.cs" />
+    <Compile Include="Models\Account\HistoryDetail.cs" />
     <Compile Include="Models\Account\Login.cs" />
+    <Compile Include="Models\Account\OrderHistory.cs" />
+    <Compile Include="Models\Account\Password.cs" />
     <Compile Include="Models\Account\Register.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
+    <Compile Include="Models\CheckoutConfirmModel.cs" />
     <Compile Include="Models\FoodListViewModel.cs" />
+    <Compile Include="Models\Shopping\Address.cs" />
     <Compile Include="Models\Shopping\Cart.cs" />
     <Compile Include="Models\Shopping\CartItem.cs" />
+    <Compile Include="Models\Shopping\ShippingDetail.cs" />
     <Compile Include="Models\Supporter\PagingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -668,6 +675,13 @@
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Cart\Confirm.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Password.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\OrderHistory.cshtml" />
+    <Content Include="Views\Account\OrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

@@ -1,0 +1,208 @@
+﻿@using eCommerce.WebUI.Models.Shopping
+@model ShippingDetail
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    <script type="text/javascript" src="@Url.Content("~/Scripts/MicrosoftAjax.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/MicrosoftMvcAjax.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/MicrosoftMvcValidation.debug.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+}
+<div id="content">
+    <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Checkout</h1>
+        </div>
+    </div>
+    <div class="middle">
+        @using (@Html.BeginForm("Checkout", "Cart", FormMethod.Post, new { id = "checkout" }))
+        {
+            <div id="radio_address">
+                <input type="radio" id="radio1" name="radio_address" checked="checked" /><label for="radio1">New Address</label>
+                <input type="radio" id="radio2" name="radio_address" /><label for="radio2">Existing
+                    Address</label>
+            </div>
+            @Html.HiddenFor(x => x.NewAddress, new { value = 3 })
+            <p>
+                @Html.DropDownListFor(x => x.SelectAddress, new SelectList(Model.ListAddress, "Id", "FullAdd", 1))
+            </p>
+            <div id="enter_address">
+                <b style="margin-bottom: 2px; display: block;">Shipping Address Details</b>
+                <div class="content">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="200px">
+                                    Name:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.Name)
+                                    @Html.ValidationMessageFor(x => x.Name)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Social ID:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.SocialId)
+                                    @Html.ValidationMessageFor(x => x.SocialId)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.Email)
+                                    @Html.ValidationMessageFor(x => x.Email)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tel:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.Tel)
+                                    @Html.ValidationMessageFor(x => x.Tel)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Address:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.Address)
+                                    @Html.ValidationMessageFor(x => x.Address)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    District:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.District)
+                                    @Html.ValidationMessageFor(x => x.District)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    City:
+                                </td>
+                                <td>
+                                    @Html.EditorFor(x => x.City)
+                                    @Html.ValidationMessageFor(x => x.City)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @Html.HiddenFor(x => x.PaymentMethod)
+            <div id="radio_payment">
+                <input type="radio" id="payment1" name="radio_payment" /><label for="payment1">Paypal</label>
+                <input type="radio" id="payment2" name="radio_payment" /><label for="payment2">Ngân
+                    Lượng</label>
+                <input type="radio" id="payment3" name="radio_payment" checked="checked" /><label
+                    for="payment3">Traditional Method</label>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td align="right">
+                                <a class="button" onclick="$('#checkout').submit();"><span>Checkout</span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+    <div class="bottom">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+
+        $("#radio1").click(function () {
+            $('#NewAddress').val(true);
+            $('#enter_address').show();
+
+            $('#SelectAddress :input').attr('disabled', true);
+
+        });
+        $("#radio2").click(function () {
+            $('#NewAddress').val(false);
+            $('#enter_address').hide();
+            $('#SelectAddress :input').removeAttr('disabled');
+
+        });
+
+        $("#payment1").click(function () {
+            $('#PaymentMethod').val(1);
+        });
+
+        $("#payment2").click(function () {
+            $('#PaymentMethod').val(2);
+        });
+
+        $("#payment3").click(function () {
+            $('#PaymentMethod').val(3);
+        });
+
+        $("#radio_address").buttonset();
+        $("#radio_payment").buttonset();
+
+        $("#City").autocomplete({
+            source: '@Url.Content("~/Handler/City.ashx")',
+            minLenght: 0,
+            select: function (event, ui) {
+                $("#City").val(ui.item.value);
+            }
+
+        });
+
+        $("#District").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Handler/District.ashx",
+                    dataType: "json",
+                    data: {
+                        term: request.term,
+                        city: function () {
+                            var sb = $("#City").val();
+                            return sb;
+                        }
+                    },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return {
+                                label: item.label,
+                                value: item.value
+                            };
+                        }));
+                    }
+
+                });
+            },
+            minLenght: 0,
+            select: function (event, ui) {
+                $("#District").val(ui.item.value);
+            }
+
+        });
+    });
+</script>

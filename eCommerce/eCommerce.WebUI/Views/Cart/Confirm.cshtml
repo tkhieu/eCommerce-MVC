@@ -1,7 +1,6 @@
-﻿@using eCommerce.WebUI.Models
-@model CartIndexViewModel
+﻿@model eCommerce.WebUI.Models.CheckoutConfirmModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Confirm";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 <div id="content">
@@ -12,7 +11,7 @@
         </div>
         <div class="center">
             <h1>
-                Shopping Cart</h1>
+                Shopping Confirm</h1>
         </div>
     </div>
     <div class="middle">
@@ -38,9 +37,7 @@
                     <th align="right">
                         Total
                     </th>
-                    <th align="center">
-                        Task
-                    </th>
+                    
                 </tr>
                 @foreach (var item in Model.Cart.Items)
                 {
@@ -52,44 +49,26 @@
                             <img alt="@item.Food.Name" src="@imageLink" />
                         </td>
                         <td valign="top" align="left">
-                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a>
+                            <a href="#">@item.Food.Name</a>
                         </td>
                         <td valign="top" align="left">@item.Food.FOODTYPE.Name
                         </td>
-                        <td valign="top" align="right">
-                        @using (Html.BeginForm("UpdateQuantity", "Cart"))
-                            {
-                            @*<input name="quantity" value="@item.Quantity" 
-                                                      size="3" type="text" />*@
-                                @Html.Hidden("ID", item.Food.ID)
-                                @Html.TextBox("quantity",item.Quantity, new {size="1",})
-                                @Html.HiddenFor(x => x.ReturnUrl)
-                                <input class="update_button" type="submit" value="Update" />
-                            }
-
-                            
+                        <td valign="top" align="left">@item.Quantity
                         </td>
                         <td valign="top" align="right">@item.Food.Price
                         </td>
                         <td valign="top" align="right">@(@item.Food.Price * @item.Quantity)
                         </td>
-                        <td valign="top" align="right">
-                            @using (Html.BeginForm("RemoveFromCart", "Cart"))
-                            {
-                                @Html.Hidden("foodId", item.Food.ID)
-                                @Html.HiddenFor(x => x.ReturnUrl)
-                                <input class="remove_button" type="submit" value="Remove" />
-                            }
-                        </td>
                     </tr>
                 }
             </tbody>
         </table>
+         
         <div style="width: 100%; display: inline-block;">
             <table style="float: right; display: inline-block;">
                 <tbody>
                     <tr>
-                        <td align="right">
+                        <td align="right" width="100px">
                             <b>Total:</b>
                         </td>
                         <td align="right">@Model.Cart.ComputeTotalValue()
@@ -99,19 +78,81 @@
             </table>
             <br />
         </div>
+        <div class="content">
+
+        <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Shipping Address</h1>
+        </div>
+    </div>
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        Full name
+                    </td>
+                    <td>
+                        @Model.Shipping.Name
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tel
+                    </td>
+                    <td>
+                        @Model.Shipping.Tel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        @Model.Shipping.Email
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address
+                    </td>
+                    <td>
+                        @Model.Shipping.Address
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        District
+                    </td>
+                    <td>
+                        @Model.Shipping.District
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City
+                    </td>
+                    <td>
+                        @Model.Shipping.City
+                    </td>
+                </tr>
+            </table>
+        </div>
         <div class="buttons">
             <table>
                 <tbody>
                     <tr>
                         <td align="left">
-                            <a class="button" onclick="$('#cart').submit();"><span>Update</span></a>
+                            <a class="button" href="@Url.Action("Checkout","Cart")"><span>Update</span></a>
                         </td>
                         <td align="center">
-                            <a class="button" onclick="location ='@Model.ReturnUrl'"><span>Continue Shopping</span></a>
+                            <a class="button" onclick="location ='/'"><span>Continue Shopping</span></a>
                         </td>
                         <td align="right">
-                            <a class="button" href="@Url.Action("Checkout","Cart")">
-                                <span>Checkout</span></a>
+                            <a class="button" href="@Url.Action("CompleteOrder","Cart")"><span>Checkout</span></a>
                         </td>
                     </tr>
                 </tbody>
@@ -127,17 +168,3 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-
-    $(function() {
-        $(".remove_button").button();
-        $(".update_button").button({
-                icons: {
-                    primary: "ui-icon-circle-check"
-                },
-                text: false
-            });
-    });
-
-</script>

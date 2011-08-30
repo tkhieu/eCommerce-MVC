@@ -1,9 +1,11 @@
-﻿@using eCommerce.WebUI.Models
-@model CartIndexViewModel
+﻿@using eCommerce.WebUI.Models.Account
+@model HistoryDetail
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "OrderDetail";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+
 <div id="content">
     <div class="top">
         <div class="left">
@@ -12,7 +14,7 @@
         </div>
         <div class="center">
             <h1>
-                Shopping Cart</h1>
+                Order Detail</h1>
         </div>
     </div>
     <div class="middle">
@@ -38,48 +40,29 @@
                     <th align="right">
                         Total
                     </th>
-                    <th align="center">
-                        Task
-                    </th>
+                    
                 </tr>
-                @foreach (var item in Model.Cart.Items)
+                @foreach (var item in Model.OrderDetails)
                 {
-                    string imageLink = @ViewData["ImageCDN"] + @item.Food.Image + ".ashx?height=75";
+                    string imageLink = @ViewData["ImageCDN"] + @item.FOOD.Image + ".ashx?height=75";
                     
                     <tr>
                         @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
                         <td align="center">
-                            <img alt="@item.Food.Name" src="@imageLink" />
+                            <img alt="@item.FOOD.Name" src="@imageLink" />
                         </td>
                         <td valign="top" align="left">
-                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.Food.Name</a>
+                            <a href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_i=47">@item.FOOD.Name</a>
                         </td>
-                        <td valign="top" align="left">@item.Food.FOODTYPE.Name
+                        <td valign="top" align="left">@item.FOOD.FOODTYPE.Name
                         </td>
                         <td valign="top" align="right">
-                        @using (Html.BeginForm("UpdateQuantity", "Cart"))
-                            {
-                            @*<input name="quantity" value="@item.Quantity" 
-                                                      size="3" type="text" />*@
-                                @Html.Hidden("ID", item.Food.ID)
-                                @Html.TextBox("quantity",item.Quantity, new {size="1",})
-                                @Html.HiddenFor(x => x.ReturnUrl)
-                                <input class="update_button" type="submit" value="Update" />
-                            }
-
+                        @item.Count
                             
                         </td>
-                        <td valign="top" align="right">@item.Food.Price
+                        <td valign="top" align="right">@item.FOOD.Price
                         </td>
-                        <td valign="top" align="right">@(@item.Food.Price * @item.Quantity)
-                        </td>
-                        <td valign="top" align="right">
-                            @using (Html.BeginForm("RemoveFromCart", "Cart"))
-                            {
-                                @Html.Hidden("foodId", item.Food.ID)
-                                @Html.HiddenFor(x => x.ReturnUrl)
-                                <input class="remove_button" type="submit" value="Remove" />
-                            }
+                        <td valign="top" align="right">@(@item.FOOD.Price * @item.Count)
                         </td>
                     </tr>
                 }
@@ -92,7 +75,7 @@
                         <td align="right">
                             <b>Total:</b>
                         </td>
-                        <td align="right">@Model.Cart.ComputeTotalValue()
+                        <td align="right">@Model.OrderDetails.Sum(p=>p.Price * p.Count)
                         </td>
                     </tr>
                 </tbody>
@@ -104,14 +87,14 @@
                 <tbody>
                     <tr>
                         <td align="left">
-                            <a class="button" onclick="$('#cart').submit();"><span>Update</span></a>
+                            <a class="button" href="@Url.Action("Index")"><span>Back</span></a>
                         </td>
                         <td align="center">
-                            <a class="button" onclick="location ='@Model.ReturnUrl'"><span>Continue Shopping</span></a>
+                            
                         </td>
                         <td align="right">
-                            <a class="button" href="@Url.Action("Checkout","Cart")">
-                                <span>Checkout</span></a>
+                            <a class="button" href="@Url.Action("List","Food")">
+                                <span>Home</span></a>
                         </td>
                     </tr>
                 </tbody>
@@ -128,16 +111,4 @@
     </div>
 </div>
 
-<script type="text/javascript">
 
-    $(function() {
-        $(".remove_button").button();
-        $(".update_button").button({
-                icons: {
-                    primary: "ui-icon-circle-check"
-                },
-                text: false
-            });
-    });
-
-</script>

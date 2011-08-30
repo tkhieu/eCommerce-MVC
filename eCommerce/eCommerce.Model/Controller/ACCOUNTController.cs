@@ -75,6 +75,8 @@ namespace eCommerce.Model.Controller
             return flag;
         }
 
+
+
         public static int GetMaxId()
         {
             int id;
@@ -121,6 +123,13 @@ namespace eCommerce.Model.Controller
             return _db.ACCOUNTs.Single(p => p.ID == id);
         }
 
+        public static ACCOUNT GetByUsername(string username)
+        {
+            _db = new FoodStoreEntities();
+            return _db.ACCOUNTs.Single(p => p.Username == username);
+        }
+
+
         public static ACCOUNT GetById(int id,FoodStoreEntities db)
         {
             return db.ACCOUNTs.Single(p => p.ID == id);
@@ -147,6 +156,32 @@ namespace eCommerce.Model.Controller
                 flag = false;
             }
             
+            return flag;
+        }
+
+        public static bool ChangePassword(int accountId, string oldPassword, string newPassword)
+        {
+            _db = new FoodStoreEntities();
+            bool flag = true;
+            try
+            {
+                ACCOUNT account = GetById(accountId);
+                if (account.Password == SaltEncrypt.HashCodeSHA1(oldPassword))
+                {
+                    account.Password = SaltEncrypt.HashCodeSHA1(newPassword);
+                    _db.SaveChanges();
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception)
+            {
+                flag = false;
+                throw;
+            }
             return flag;
         }
     }
