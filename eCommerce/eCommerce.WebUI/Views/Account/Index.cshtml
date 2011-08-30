@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<div id="content">
+    <div class="top">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        <h1>My Account</h1>
+      </div>
+    </div>
+    <div class="middle">
+      <p><b>My Account</b></p>
+      <ul>
+        <li><a href="@Url.Action("Edit","Account")">Edit 
+          your account information</a></li>
+        <li><a href="@Url.Action("Password","Account")">Change 
+          your password</a></li>
+      </ul>
+      <p><b>My Orders</b></p>
+      <ul>
+        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/history">View 
+          your order history</a></li>
+      </ul>
+      <p><b>Newsletter</b></p>
+      <ul>
+        <li><a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/newsletter">Subscribe 
+          / unsubscribe to newsletter</a></li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center"></div>
+    </div>
+  </div>

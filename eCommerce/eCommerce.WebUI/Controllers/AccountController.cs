@@ -16,7 +16,41 @@ namespace eCommerce.WebUI.Controllers
 
         public ActionResult Index()
         {
+            if (Session["login"] == null || (bool)Session["login"] ==false)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             return View();
+        }
+
+
+        public ActionResult Password()
+        {
+            if (Session["login"] == null || (bool)Session["login"] == false)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View(new Password());
+        }
+
+        [HttpPost]
+        public ActionResult Password(Password password)
+        {
+            if (ModelState.IsValid)
+            {
+                int accountId = int.Parse(Session["id"].ToString());
+                if (eCommerce.Model.Controller.AccountController.ChangePassword(accountId,password.OldPassword,password.NewPassword))
+                {
+                    return RedirectToAction("Index","Account");
+                }
+            }
+
+            return View(new Password()
+                            {
+                                Success = false
+                            });
         }
 
         public ActionResult Register()
@@ -48,6 +82,49 @@ namespace eCommerce.WebUI.Controllers
             List<QUESTION> list = db.QUESTIONs.ToList();
             return View(register.ListQuestions = list);
         }
+
+        public ActionResult Edit()
+        {
+            var db = new FoodStoreEntities();
+             int accountId = int.Parse(Session["id"].ToString());
+            ACCOUNT account = Model.Controller.AccountController.GetById(accountId);
+
+            Edit edit = new Edit()
+                            {
+                                Address = account.Address,
+                                //City = account.CITY.Name,
+                                //District = account.DISTRICT.Name,
+                                Name = account.Name,
+                                SocialId = account.SocialID,
+                                Tel = account.Tel,
+                                Email = account.Email
+                            };
+            return View(edit);
+        }
+
+
+        [HttpPost]
+        public ActionResult Edit(Edit edit)
+        {
+            int accountId = int.Parse(Session["id"].ToString());
+            if (ModelState.IsValid)
+            {
+                int city = CityController.GetIdByTerm(edit.City);
+                int district = DistrictController.GetIdByTerm(edit.District);
+                
+                if (Model.Controller.AccountController.Update(accountId, edit.Name, edit.Address, edit.Tel, edit.SocialId, city, district))
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+
+            var db = new FoodStoreEntities();
+            
+
+            
+            return View();
+        }
+
 
         public ActionResult Login()
         {

@@ -10,7 +10,7 @@
     <script>
         $(function () {
             $("#City").autocomplete({
-                source: '/Handler/City.ashx',
+                source: '@Url.Content("~/Handler/City.ashx")',
                 minLenght: 0,
                 select: function (event, ui) {
                     $("#City").val(ui.item.value);
@@ -21,7 +21,7 @@
             $("#District").autocomplete({
                 source: function (request, response) {
                     $.ajax({
-                        url: "/Handler/District.ashx",
+                        url: '@Url.Content("~/Handler/District.ashx")',
                         dataType: "json",
                         data: {
                             term: request.term,

@@ -5,9 +5,12 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta name="Description" content="Kinder is a premium Opencart template. It comes with 4 custom modules, 4 beautiful colour schemes and many options and improvements. Check it out yourself! " />
     <link rel="icon" href="@Url.Content("~/Content/image/cart.png")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.6.2.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.8.15.js")"></script>
+
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/960grid.css")" />
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/stylesheet.css")" />
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/jquery-ui/jquery-ui-1.8.16.custom.css")" />
+    
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/nivo-slider.css")" media="screen" />
     <!--[if lt IE 7]>
 	<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/ie6.css")" />
@@ -17,8 +20,6 @@
 	</script>
 	<![endif]-->
     <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery-1.6.1.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Content/javascript/jquery.prettyPhoto.js")"></script>
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/stylesheet/prettyPhoto.css")" />
     <script type="text/javascript" src="@Url.Content("~/Content/javascript/tab.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/javascript/cufon-yui.js")"></script>
@@ -53,7 +54,7 @@
         <div id="header" class="grid_12">
             <div id="header-top">
                 <div id="logo">
-                    <a href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                    <a href="@Url.Action("List","Food")">
                         <img title="Kinder - Premium Opencart template" alt="Kinder - Premium Opencart template"
 							src="@Url.Content("~/Content/image/kinder-logo.png")" /></a></div>
                 <!--  end logo -->
@@ -97,10 +98,10 @@
             <!--  end header top -->
             <div id="header-bottom">
                 <div id="top-menu">
-                    <a id="tab_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
-                        Home</a><a id="tab_login" href="login.htm">Log In</a><a id="tab_account" href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a><a
-                            id="tab_cart" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a><a
-                                id="tab_checkout" href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a></div>
+                    <a id="tab_home" href="@Url.Action("List","Food")">
+                        Home</a><a id="tab_login" href="@Url.Action("Login","Account")">Log In</a><a id="tab_account" href="@Url.Action("Index","Account")">Account</a><a
+                            id="tab_cart" href="@Url.Action("Checkout","Cart")">Basket</a><a
+                                id="tab_checkout" href="@Url.Action("Confirm","Cart")">Checkout</a></div>
                 <div id="search">
                     <div class="div9">
                         <input id="filter_keyword" onclick="this.value = '';" value="Keywords" type="text" />

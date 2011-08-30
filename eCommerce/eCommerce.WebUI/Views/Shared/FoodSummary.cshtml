@@ -3,7 +3,7 @@
 @model FOOD
 @{
     FOOD food = Model;
-    string imageLink = @ViewData["ImageCDN"] + @food.Image;
+    string imageLink = @ViewData["ImageCDN"] + @food.Image + ".ashx?height=220&width=220&stretch=fill";
     string price = String.Empty;
     if (food.Price != null)
     {
