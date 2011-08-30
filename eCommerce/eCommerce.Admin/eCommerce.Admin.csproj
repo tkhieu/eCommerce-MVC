@@ -217,6 +217,9 @@
     <Compile Include="Service\Food2Order.ashx.cs">
       <DependentUpon>Food2Order.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Service\Statistic\FoodType-Year.ashx.cs">
+      <DependentUpon>FoodType-Year.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -604,6 +607,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service\Food2Order.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service\Statistic\FoodType-Year.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

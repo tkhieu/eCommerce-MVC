@@ -98,7 +98,7 @@ namespace eCommerce.Admin
             if (DataValidating())
             {
                 String username = NewUserUserName.Text;
-                String password = SaltEncrypt.HashCodeSHA1(NewUserPassword.Text);
+                String password = NewUserPassword.Text;
                 String fullName = NewUserFullName.Text;
                 String address = NewUserAddress.Text;
                 String tel = NewUserPhone.Text;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using eCommerce.Utility;
 
 namespace eCommerce.Model.Controller
 {
@@ -53,6 +54,7 @@ namespace eCommerce.Model.Controller
 
                 foodType.ID = id;
                 foodType.Name = foodTypeName;
+                foodType.Alias = StringOperation.GetAlias(id, foodTypeName);
 
                 _db.AddToFOODTYPEs(foodType);
                 _db.SaveChanges();
@@ -73,6 +75,7 @@ namespace eCommerce.Model.Controller
                 var foodType = _db.FOODTYPEs.Single(p => p.ID == id);
 
                 foodType.Name = foodTypeName;
+                foodType.Alias = StringOperation.GetAlias(id, foodTypeName);
                 _db.SaveChanges();
             }
             catch (Exception)

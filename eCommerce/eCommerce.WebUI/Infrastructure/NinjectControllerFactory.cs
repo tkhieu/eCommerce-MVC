@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using Moq;
@@ -18,6 +19,7 @@ namespace eCommerce.WebUI.Infrastructure
         public NinjectControllerFactory()
         {
             _ninjectKernel = new StandardKernel();
+            //_ninjectKernel.Load(Assembly.GetExecutingAssembly());
             AddBinding();
         }
 
@@ -30,7 +32,5 @@ namespace eCommerce.WebUI.Infrastructure
         {
            _ninjectKernel.Bind<IFoodRepository>().To<EFFoodRepository>();
         }
-
-
     }
 }

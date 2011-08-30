@@ -61,8 +61,15 @@ namespace eCommerce.Admin
                 
 
                 bool checkFtpNotError = true;
-
-                int foodId = FoodController.GetMaxId();
+                int foodId = 0;
+                if (Session["edit"] != null && (int)Session["edit"] == 1)
+                {
+                    foodId = (int) Session["id"];
+                }
+                else
+                {
+                    foodId = FoodController.GetMaxId();
+                }
                 String imageFileName = "";
                 
                 if (NewFoodImage.PostedFile != null)

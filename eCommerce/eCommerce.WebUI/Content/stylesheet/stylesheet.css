@@ -233,7 +233,7 @@ tr.odd {
 	display: none;
 }
 #content {
-	margin-bottom: 10px; margin-left: 240px;
+	margin-bottom: 10px;
 }
 #content .top .left {
 	background: url("../image/content_top_left.png") no-repeat; width: 5px; height: 32px; float: left;
@@ -554,7 +554,7 @@ a.button_add_small:visited {
 	color: rgb(160, 65, 13); font-size: 12px; text-decoration: line-through;
 }
 .button_add {
-	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px;height: 25px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
 }
 .button_add:visited {
 	background: url("../image/learn_more_bg_hover.png") repeat-x 0px 0px; padding: 5px 10px; border-radius: 3px; color: white; font-weight: 700; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px;
@@ -837,4 +837,13 @@ a.button_add_small:visited {
 }
 #ts-arrows {
 	background: url("../image/ts_arrows.png") no-repeat right top; left: -5px; top: 15px; width: 30px; height: 45px; text-indent: -9999px; float: right; position: relative;
+}
+
+
+.page-link a {
+	margin: 0px; color: cornflowerblue; text-transform: capitalize; font-family: "Museo"; font-size: 12pt; font-weight: 500;
+}
+
+.page-link {
+	margin: 0px; color:greenyellow; text-transform: capitalize; font-family: "Museo"; font-size: 12pt; font-weight: 500;
 }
