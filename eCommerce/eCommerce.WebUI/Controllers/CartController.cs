@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using eCommerce.Model;
 using eCommerce.Model.Abstract;
+using eCommerce.Model.Controller;
 using eCommerce.Utility;
 using eCommerce.WebUI.Models;
 using eCommerce.WebUI.Models.Shopping;
@@ -193,6 +194,29 @@ namespace eCommerce.WebUI.Controllers
             ViewData["ImageCDN"] = _imageCDN;
             CheckoutConfirmModel confirm = (CheckoutConfirmModel) Session["confirm"];
             return View(confirm);
+        }
+
+        public ViewResult CompleteOrder()
+        {
+            ACCOUNT account = Model.Controller.AccountController.GetById((int)Session["id"]);
+            CheckoutConfirmModel confirm = (CheckoutConfirmModel)Session["confirm"];
+            int city = CityController.GetIdByTerm(confirm.Shipping.City);
+            int district = DistrictController.GetIdByTerm(confirm.Shipping.District);
+            List<int> listFood = new List<int>();
+            foreach (CartItem cartItem in confirm.Cart.Items)
+            {
+                listFood.Add(cartItem.Food.ID);
+            }
+            List<int> listCount = new List<int>();
+            foreach (CartItem cartItem in confirm.Cart.Items)
+            {
+                listCount.Add(cartItem.Quantity);
+            }
+            if (OrderController.Insert(account.ID,confirm.Shipping.Name,confirm.Shipping.Address,confirm.Shipping.Tel,DateTime.Now,confirm.Shipping.Email,1,(int)confirm.Cart.ComputeTotalValue(),city,district,listFood,listCount))
+            {
+                
+            }
+            return View();
         }
     }
 }
