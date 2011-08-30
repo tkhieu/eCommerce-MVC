@@ -1,9 +1,11 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using eCommerce.WebUI.Binders;
 using eCommerce.WebUI.Infrastructure;
 using eCommerce.WebUI.Models.Shopping;
+using PayPal;
 
 namespace eCommerce.WebUI
 {
@@ -67,6 +69,15 @@ namespace eCommerce.WebUI
             //!Add NinjectControllerFactory
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
+
+
+            //Paypal
+            
+            PayPal.Profile.Initialize("seller_1314725372_biz_api1.yahoo.com", "1314725411", "AQxOidqF9vq.LSWIO.EM9Xjfzjl.AX7Qxxa-4f41c.tZkE-qNmBCX1fe", "sandbox");
+            PayPal.Profile.Language = "en_US";
+            PayPal.Profile.CurrencyCode = "USD";
+            
+
         }
     }
 }

@@ -682,6 +682,8 @@
     <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Account\OrderHistory.cshtml" />
     <Content Include="Views\Account\OrderDetail.cshtml" />
+    <Content Include="Views\Cart\CancelOrder.cshtml" />
+    <Content Include="Views\Cart\CompleteOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

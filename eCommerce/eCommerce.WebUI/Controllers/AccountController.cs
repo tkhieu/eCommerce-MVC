@@ -132,7 +132,7 @@ namespace eCommerce.WebUI.Controllers
 
         public ActionResult Login()
         {
-            return View(new Login());
+            return View();
         }
 
         [HttpPost]
@@ -146,7 +146,7 @@ namespace eCommerce.WebUI.Controllers
                     Session["login"] = true;
                     Session["id"] = account.ID;
 
-                    return RedirectToAction("Index", "Account");
+                    return RedirectToAction("Index");
                 }
             }
             return View();

@@ -9,8 +9,9 @@
     {
         price = ((float)food.Price).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "đ";
     }
-
-
+   
+        
+                    
     <div class="grid_3">
         <div class="grid_3">
             <div class="product_container">
@@ -30,13 +31,19 @@
                     <span class="n_price_h">@price</span><br />
                     <div style="height: 8px;">
                     </div>
-                    
-                    @using (Html.BeginForm("AddToCart", "Cart",FormMethod.Post))
+                    @using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post))
                     {
                         @Html.HiddenFor(x => x.ID);
                         @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
                         <input type="submit" class="button_add" value="Add to cart" />
                     }
+                    @{ 
+                        int forex = 20000;
+                        var payPalButton = PayPal.ButtonManager.AddToCartButton.Create(
+                               business: "seller_1314725372_biz@yahoo.com",
+                               itemName: @food.FOODTYPE.Name, amount: ((decimal)@food.Price /@forex).ToString("N2"));
+                       HtmlString payPalButtonHtml = new HtmlString(payPalButton.WebSiteCode); }
+                    @payPalButtonHtml
                 </div>
             </div>
         </div>

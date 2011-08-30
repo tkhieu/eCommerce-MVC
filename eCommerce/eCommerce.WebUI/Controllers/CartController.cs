@@ -75,6 +75,10 @@ namespace eCommerce.WebUI.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
+            if ((Cart)Session["Cart"] == null || ((Cart)Session["Cart"]).Items.Count() == 0)
+            {
+                 return RedirectToAction("List", "Food");
+            }
             ACCOUNT account = Model.Controller.AccountController.GetById((int) Session["id"]);
             ViewData["account"] = account;
 
@@ -194,8 +198,13 @@ namespace eCommerce.WebUI.Controllers
 
 
 
-        public ViewResult Confirm()
+        public ActionResult Confirm()
         {
+            if ((Cart)Session["Cart"] == null || ((Cart)Session["Cart"]).Items.Count() == 0)
+            {
+                 return RedirectToAction("Index", "Account");
+            }
+
             ViewData["ImageCDN"] = _imageCDN;
             CheckoutConfirmModel confirm = (CheckoutConfirmModel) Session["confirm"];
             return View(confirm);
@@ -221,6 +230,13 @@ namespace eCommerce.WebUI.Controllers
             {
                 
             }
+            return View();
+        }
+
+
+        public ViewResult CancelOrder()
+        {
+            Session["Cart"] = null;
             return View();
         }
     }

@@ -146,14 +146,17 @@
                 <tbody>
                     <tr>
                         <td align="left">
-                            <a class="button" href="@Url.Action("Checkout","Cart")"><span>Update</span></a>
+                            <a class="button" href="@Url.Action("CancelOrder","Cart")"><span>Cancel Order</span></a>
                         </td>
                         <td align="center">
                             <a class="button" onclick="location ='/'"><span>Continue Shopping</span></a>
                         </td>
                         <td align="right">
                             <a class="button" href="@Url.Action("CompleteOrder","Cart")"><span>Checkout</span></a>
-                        </td>
+                            @{
+                                string href = "https://www.nganluong.vn/button_payment.php?receiver=kimhieuqtvn@gmail.com&product_name="+ @DateTime.Now.ToLongTimeString() +"&price="+ @Model.Cart.ComputeTotalValue().ToString() +"&return_url="+@Url.Action("CompleteOrder")+"comments="+@Model.Shipping.Name+"";
+                            }
+                                                    </td>
                     </tr>
                 </tbody>
             </table>
