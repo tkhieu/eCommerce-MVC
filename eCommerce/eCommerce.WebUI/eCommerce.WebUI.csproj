@@ -128,6 +128,7 @@
     <Compile Include="HtmlHelper\HtmlExtensions.cs" />
     <Compile Include="HtmlHelper\PagingHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Models\Account\Login.cs" />
     <Compile Include="Models\Account\Register.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\FoodListViewModel.cs" />
@@ -490,6 +491,7 @@
     <Content Include="Content\javascript\jquery.cookie.js" />
     <Content Include="Content\javascript\jquery.dd.js" />
     <Content Include="Content\javascript\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Content\javascript\jquery.nivo.slider.js" />
     <Content Include="Content\javascript\jquery.nivo.slider.pack.js" />
     <Content Include="Content\javascript\jquery.prettyPhoto.js" />
     <Content Include="Content\javascript\Museo.js" />
@@ -665,6 +667,7 @@
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">

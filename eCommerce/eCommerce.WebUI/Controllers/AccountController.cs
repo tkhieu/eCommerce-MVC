@@ -41,15 +41,30 @@ namespace eCommerce.WebUI.Controllers
                 Model.Controller.AccountController.Insert(register.Username, register.Password, register.Name,
                                                           register.Address, register.Tel, register.SocialId,
                                                           register.Email, int.Parse(register.Question), register.Answer, city, district);
-                Redirect("/Account/Login");
+                return RedirectToAction("Login", "Account");
             }
             var db = new FoodStoreEntities();
 
             List<QUESTION> list = db.QUESTIONs.ToList();
-            return View((new Register
-                            {
-                                ListQuestions = list
-                            }));
+            return View(register.ListQuestions = list);
+        }
+
+        public ActionResult Login()
+        {
+            return View(new Login());
+        }
+
+        [HttpPost]
+        public ActionResult Login(Login login)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Model.Controller.AccountController.IsLoginOk(login.Username,login.Password))
+                {
+                    return RedirectToAction("Index", "Account");
+                }
+            }
+            return View();
         }
     }
 }
