@@ -10,23 +10,30 @@ namespace eCommerce.WebUI.Models.Shopping
 {
     public class ShippingDetail
     {
-        [Required]
+        
         public string Name { get; set; }
-        [Email]
+        
         public string Email { get; set; }
-        [Required]
+        
         public string SocialId { get; set; }
-        [Required]
+        
 
         public string Tel { get; set; }
 
-        [Required]
+        
         public string Address { get; set; }
-        [Required]
-        [Remote("District", "Validation")]
+        
         public string District { get; set; }
-        [Required]
-        [Remote("City", "Validation")]
+        
         public string City { get; set; }
+
+        public int SelectAddress { get; set; }
+
+        public IEnumerable<Address> ListAddress { get; set; }
+
+        public bool NewAddress { get; set; }
+        public int PaymentMethod { get; set; }
+
     }
+
 }

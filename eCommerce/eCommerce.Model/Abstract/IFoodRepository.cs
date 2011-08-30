@@ -10,6 +10,8 @@ namespace eCommerce.Model.Abstract
     {
         IQueryable<FOOD> Foods { get; }
 
-        IQueryable<FOODTYPE> Types { get; } 
+        IQueryable<FOODTYPE> Types { get; }
+
+        IQueryable<ORDER> Orders { get; }
     }
 }

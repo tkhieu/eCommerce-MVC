@@ -1,0 +1,170 @@
+﻿@model eCommerce.WebUI.Models.CheckoutConfirmModel
+@{
+    ViewBag.Title = "Confirm";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div id="content">
+    <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Shopping Confirm</h1>
+        </div>
+    </div>
+    <div class="middle">
+        <table class="cart">
+            <tbody>
+                <tr class="table_heading">
+                    @*<th align="center">Remove</th>*@
+                    <th align="center">
+                        Image
+                    </th>
+                    <th align="left">
+                        Name
+                    </th>
+                    <th align="left">
+                        Type
+                    </th>
+                    <th align="right">
+                        Quantity
+                    </th>
+                    <th align="right">
+                        Unit Price
+                    </th>
+                    <th align="right">
+                        Total
+                    </th>
+                    
+                </tr>
+                @foreach (var item in Model.Cart.Items)
+                {
+                    string imageLink = @ViewData["ImageCDN"] + @item.Food.Image + ".ashx?height=75";
+                    
+                    <tr>
+                        @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
+                        <td align="center">
+                            <img alt="@item.Food.Name" src="@imageLink" />
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="#">@item.Food.Name</a>
+                        </td>
+                        <td valign="top" align="left">@item.Food.FOODTYPE.Name
+                        </td>
+                        <td valign="top" align="left">@item.Quantity
+                        </td>
+                        <td valign="top" align="right">@item.Food.Price
+                        </td>
+                        <td valign="top" align="right">@(@item.Food.Price * @item.Quantity)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+         
+        <div style="width: 100%; display: inline-block;">
+            <table style="float: right; display: inline-block;">
+                <tbody>
+                    <tr>
+                        <td align="right" width="100px">
+                            <b>Total:</b>
+                        </td>
+                        <td align="right">@Model.Cart.ComputeTotalValue()
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+        </div>
+        <div class="content">
+
+        <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Shipping Address</h1>
+        </div>
+    </div>
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        Full name
+                    </td>
+                    <td>
+                        @Model.Shipping.Name
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tel
+                    </td>
+                    <td>
+                        @Model.Shipping.Tel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        @Model.Shipping.Email
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address
+                    </td>
+                    <td>
+                        @Model.Shipping.Address
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        District
+                    </td>
+                    <td>
+                        @Model.Shipping.District
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City
+                    </td>
+                    <td>
+                        @Model.Shipping.City
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="buttons">
+            <table>
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            <a class="button" href="/Cart/Checkout/"><span>Update</span></a>
+                        </td>
+                        <td align="center">
+                            <a class="button" onclick="location ='/'"><span>Continue Shopping</span></a>
+                        </td>
+                        <td align="right">
+                            <a class="button" href="/Cart/CompleteOrder"><span>Checkout</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+        </div>
+    </div>
+</div>
