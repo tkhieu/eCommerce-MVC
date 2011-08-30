@@ -147,5 +147,27 @@ namespace eCommerce.WebUI.Controllers
             }
             return View();
         }
+
+        public ActionResult OrderHistory()
+        {
+            var db = new FoodStoreEntities();
+            int accountId = int.Parse(Session["id"].ToString());
+            OrderHistory orderHistory = new OrderHistory()
+                                            {
+                                                Orders = db.ORDERs.Where(p => p.ACCOUNT.ID == accountId).ToList()
+                                            };
+            return View(orderHistory);
+        }
+
+        public ActionResult OrderDetail(int id)
+        {
+            var db = new FoodStoreEntities();
+            int accountId = int.Parse(Session["id"].ToString());
+            HistoryDetail historyDetail = new HistoryDetail()
+                                              {
+                                                  OrderDetails = db.ORDERDETAILs.Where(p=>p.ORDER.ID == id).ToList()
+                                              };
+            return View(historyDetail);
+        }
     }
 }

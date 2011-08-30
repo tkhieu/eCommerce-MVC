@@ -285,29 +285,7 @@
         <div id="column_left" class="grid_3">
         @{Html.RenderAction("Menu", "Navigation");}
             
-            <div class="box">
-                <div class="top">
-                    Brands</div>
-                <div style="text-align: center;" class="middle">
-                    <select id="brands_selector" onchange="location = this.value">
-                        <option value="">--- Please Select --- </option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=8">
-                            Apple</option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=9">
-                            Canon</option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=7">
-                            Hewlett-Packard</option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=5">
-                            HTC</option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=6">
-                            Palm</option>
-                        <option value="http://tzelewski.co.uk/template/kinder/index.php?route=product/manufacturer&amp;manufacturer_id=10">
-                            Sony</option>
-                    </select>
-                </div>
-                <div class="bottom">
-                    &nbsp;</div>
-            </div>
+            
         </div>
         <div id="content_home">
         @RenderBody()  

@@ -32,7 +32,7 @@
                     </div>
                     @*<a class="button_add" href="http://tzelewski.co.uk/template/kinder/index.php?route=product/product&amp;product_id=48">
                         Add to Cart </a>*@
-                    @using (Html.BeginForm("AddToCart", "Cart"))
+                    @using (Html.BeginForm("AddToCart", "Cart",FormMethod.Post))
                     {
                         @Html.HiddenFor(x => x.ID);
                         @Html.Hidden("returnUrl", Request.Url.PathAndQuery)

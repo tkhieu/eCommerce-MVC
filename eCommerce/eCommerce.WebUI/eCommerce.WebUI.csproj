@@ -129,7 +129,9 @@
     <Compile Include="HtmlHelper\PagingHelper.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
     <Compile Include="Models\Account\Edit.cs" />
+    <Compile Include="Models\Account\HistoryDetail.cs" />
     <Compile Include="Models\Account\Login.cs" />
+    <Compile Include="Models\Account\OrderHistory.cs" />
     <Compile Include="Models\Account\Password.cs" />
     <Compile Include="Models\Account\Register.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
@@ -678,6 +680,8 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Password.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\OrderHistory.cshtml" />
+    <Content Include="Views\Account\OrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Model\eCommerce.Model.csproj">
