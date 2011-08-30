@@ -60,7 +60,7 @@
                 <!--  end logo -->
                 <div id="header-top-right">
                     <div id="selectors">
-                        <form id="currency_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        
                         <div class="switcher">
                             <div class="selected">
                                 <a>Pound Sterling</a></div>
@@ -72,11 +72,11 @@
                         </div>
                         <div style="display: inline;">
                             <input name="currency_code" type="hidden" />
-                            <input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
+                            <input name="redirect" value="#"
                                 type="hidden" />
                         </div>
-                        </form>
-                        <form id="language_form" enctype="multipart/form-data" method="post" action="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                        
+                        
                         <div class="switcher">
                             <div class="selected">
                                 <a>
@@ -87,10 +87,10 @@
                         </div>
                         <div>
                             <input name="language_code" type="hidden" />
-                            <input name="redirect" value="http://tzelewski.co.uk/template/kinder/index.php?route=common/home&amp;theme=kinder-warm"
+                            <input name="redirect" value="#"
                                 type="hidden" />
                         </div>
-                        </form>
+                        
                     </div>
                     @{Html.RenderAction("Summary", "Cart");}
                 </div>
@@ -165,7 +165,7 @@
             function moduleSearch() {
                 pathArray = location.pathname.split('/');
 
-                url = 'http://tzelewski.co.uk/template/kinder/';
+                url = '';
 
                 url += 'index.php?route=product/search';
 
@@ -242,13 +242,13 @@
                 });
             </script>
             <div id="slideshow" class="pics">
-                <a href="http://tzelewski.co.uk/template/kinder/#" target="_self">
-                    <img alt="" src="@Url.Content("~/Content/image/slide2.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"
+                <a href="#" target="_self">
+                    <img alt="" src="@Url.Content("~/Content/image/slide2.jpg")" /></a><a href="#"
                         target="_self"><img alt="" src="@Url.Content("~/Content/image/slide3.jpg")" /></a><a
-                            href="http://tzelewski.co.uk/template/kinder/#" target="_self"><img alt="" src="@Url.Content("~/Content/image/slide5.jpg")" /></a></div>
+                            href="#" target="_self"><img alt="" src="@Url.Content("~/Content/image/slide5.jpg")" /></a></div>
             <div id="homeBanners">
-                <a href="http://tzelewski.co.uk/template/kinder/#">
-                    <img alt="#" src="@Url.Content("~/Content/image/button1.jpg")" /></a><a href="http://tzelewski.co.uk/template/kinder/#"><img
+                <a href="#">
+                    <img alt="#" src="@Url.Content("~/Content/image/button1.jpg")" /></a><a href="#"><img
 						alt="#" src="@Url.Content("~/Content/image/button2.jpg")" /></a></div>
         </div>
         <div id="customHome">
@@ -335,10 +335,10 @@
                 <h2>
                     FAQ</h2>
                 <ul id="nav">
-                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Delivery</a></li>
-                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Payments</a></li>
-                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Stock Availability </a></li>
-                    <li><a href="http://tzelewski.co.uk/template/kinder/#">Contact Us</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Stock Availability </a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -354,27 +354,27 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=4">
+                                <a href="#">
                                     About Us</a>
                             </td>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=3">
+                                <a href="#">
                                     Privacy Policy</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=5">
+                                <a href="#">
                                     Terms &amp; Conditions</a>
                             </td>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/contact">
+                                <a href="#">
                                     Contact Us</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=information/sitemap">
+                                <a href="#">
                                     Site Map</a>
                             </td>
                         </tr>
@@ -388,24 +388,24 @@
                     <tbody>
                         <tr>
                             <td>
-                                <a id="footer_home" href="http://tzelewski.co.uk/template/kinder/index.php?route=common/home">
+                                <a id="footer_home" href="#">
                                     Home</a>
                             </td>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/login">Log In</a>
+                                <a href="#">Log In</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=account/account">Account</a>
+                                <a href="#">Account</a>
                             </td>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/cart">Basket</a>
+                                <a href="#">Basket</a>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="http://tzelewski.co.uk/template/kinder/index.php?route=checkout/shipping">Checkout</a>
+                                <a href="#">Checkout</a>
                             </td>
                         </tr>
                     </tbody>

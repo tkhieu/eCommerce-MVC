@@ -10,15 +10,28 @@
 
         string total = ((float)Model.ComputeTotalValue()).ToString("N0", CultureInfo.CreateSpecificCulture("fr-FR")) + "đ";        
         <p class="header_info">
-          <b>Your cart</b> 
+            <b>Your cart</b>
         </p>
         <p class="header_numbers">
             @Model.Items.Sum(x => x.Quantity) items</p>
         <p class="header_numbers">
-          Total: @total</p>
+            Total: @total</p>
         
         <p class="header_info">
             @Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { id = "learn_more" })
         </p>
+        
+        
+         if (Session["login"] == null || (bool)Session["login"] != true)
+        {
+        <p class="header_info">
+            @Html.ActionLink("Login", "Login", "Account", null, new { id = "learn_more" })
+        </p>   
+        } else if (Session["login"] != null && (bool)Session["login"] == true)
+        {
+        <p class="header_info">
+            @Html.ActionLink("Logout", "Logout", "Account", null, new { id = "learn_more" })
+        </p>   
+        }
     }
 </div>

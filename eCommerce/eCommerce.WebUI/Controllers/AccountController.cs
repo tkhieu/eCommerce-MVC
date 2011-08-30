@@ -85,6 +85,10 @@ namespace eCommerce.WebUI.Controllers
 
         public ActionResult Edit()
         {
+            if (Session["login"] == null || (bool)Session["login"] == false)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var db = new FoodStoreEntities();
              int accountId = int.Parse(Session["id"].ToString());
             ACCOUNT account = Model.Controller.AccountController.GetById(accountId);
@@ -150,6 +154,10 @@ namespace eCommerce.WebUI.Controllers
 
         public ActionResult OrderHistory()
         {
+            if (Session["login"] == null || (bool)Session["login"] == false)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var db = new FoodStoreEntities();
             int accountId = int.Parse(Session["id"].ToString());
             OrderHistory orderHistory = new OrderHistory()
@@ -161,6 +169,10 @@ namespace eCommerce.WebUI.Controllers
 
         public ActionResult OrderDetail(int id)
         {
+            if (Session["login"] == null || (bool)Session["login"] == false)
+            {
+                return RedirectToAction("Login", "Account");
+            }
             var db = new FoodStoreEntities();
             int accountId = int.Parse(Session["id"].ToString());
             HistoryDetail historyDetail = new HistoryDetail()
@@ -168,6 +180,14 @@ namespace eCommerce.WebUI.Controllers
                                                   OrderDetails = db.ORDERDETAILs.Where(p=>p.ORDER.ID == id).ToList()
                                               };
             return View(historyDetail);
+        }
+
+
+        public ActionResult Logout()
+        {
+            Session["login"] = null;
+            Session["id"] = null;
+            return RedirectToAction("List", "Food");
         }
     }
 }

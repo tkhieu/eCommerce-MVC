@@ -37,6 +37,13 @@ namespace eCommerce.WebUI
                             new {controller = "Food", action = "List", type = (string) null},
                             new {page = @"\d+"} // Constraints: page must be numerical
                 );
+
+            routes.MapRoute(null,
+                            "Account/OrderDetail/{id}", // Matches /Page2, /Page123, but not /PageXYZ
+                            new { controller = "Account", action = "OrderDetail"},
+                            new { id = @"\d+" } // Constraints: page must be numerical
+                );
+
             routes.MapRoute(null,
                             "{type}", // Matches /Football or /AnythingWithNoSlash
                             new {controller = "Food", action = "List", page = 1}

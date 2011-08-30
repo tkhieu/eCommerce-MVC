@@ -24,6 +24,11 @@ namespace eCommerce.WebUI.Controllers
 
         public ViewResult Index(Cart cart, string returnUrl)
         {
+            if (cart.Items.Count() == 0)
+            {
+                Redirect(returnUrl);
+                
+            }
             ViewData["ImageCDN"] = _imageCDN;
             return View(new CartIndexViewModel
                             {
