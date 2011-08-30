@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace eCommerce.UnitTests
 {
@@ -10,9 +6,9 @@ namespace eCommerce.UnitTests
     /// Summary description for UnitTest1
     /// </summary>
     [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
-        public UnitTest1()
+        public UnitTest()
         {
             //
             // TODO: Add constructor logic here

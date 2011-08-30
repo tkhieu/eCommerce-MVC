@@ -87,6 +87,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controller\QUESTIONController.cs" />
     <Compile Include="SimpleJSON\AccountJSON.cs" />
+    <Compile Include="SimpleJSON\CityJSON.cs" />
+    <Compile Include="SimpleJSON\DistrictJSON.cs" />
     <Compile Include="SimpleJSON\FoodJSON.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +99,10 @@
     </EntityDeploy>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Entities\Account\" />
+    <Folder Include="Entities\Cart\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eCommerce.Utility\eCommerce.Utility.csproj">
       <Project>{8E76C2B5-95D1-4490-9FC1-571C90FB58D8}</Project>

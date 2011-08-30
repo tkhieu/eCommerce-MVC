@@ -14,5 +14,10 @@ namespace eCommerce.Model.Concrete
         {
             get { return _db.FOODs; }
         }
+
+        public IQueryable<FOODTYPE> Types
+        {
+            get { return _db.FOODTYPEs; }
+        }
     }
 }
