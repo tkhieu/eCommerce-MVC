@@ -22,9 +22,9 @@
                         <span>@price</span></p>
                 </div>
                 <div class="product_hidden">
-                    <a class="product_name" href="">
+                    <a class="product_name" href="@Url.Action("Detail","Food",new{id=@food.ID})">
                         @food.Name</a><br />
-                    <a class="product_model" href="">
+                    <a class="product_model" href="@Url.Action("List","Food",new{type=@food.FOODTYPE.Alias})">
                         @food.FOODTYPE.Name</a><br />
                     <div class="product_spacer">
                     </div>
@@ -37,13 +37,7 @@
                         @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
                         <input type="submit" class="button_add" value="Add to cart" />
                     }
-                    @{ 
-                        int forex = 20000;
-                        var payPalButton = PayPal.ButtonManager.AddToCartButton.Create(
-                               business: "seller_1314725372_biz@yahoo.com",
-                               itemName: @food.FOODTYPE.Name, amount: ((decimal)@food.Price /@forex).ToString("N2"));
-                       HtmlString payPalButtonHtml = new HtmlString(payPalButton.WebSiteCode); }
-                    @payPalButtonHtml
+                   
                 </div>
             </div>
         </div>

@@ -47,6 +47,16 @@ namespace eCommerce.WebUI.Controllers
             return RedirectToAction("Index", new {returnUrl});
         }
 
+        public RedirectToRouteResult AddToCartQuantity(Cart cart, int ID, string returnUrl,int quantity)
+        {
+            FOOD food = _repository.Foods.FirstOrDefault(p => p.ID == ID);
+            if (food != null)
+            {
+                cart.AddItem(food, quantity);
+            }
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
         public RedirectToRouteResult UpdateQuantity(Cart cart, int ID, int quantity, string returnUrl)
         {
             FOOD food = _repository.Foods.FirstOrDefault(p => p.ID == ID);
