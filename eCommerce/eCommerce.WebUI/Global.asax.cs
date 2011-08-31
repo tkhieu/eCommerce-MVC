@@ -1,9 +1,11 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using eCommerce.WebUI.Binders;
 using eCommerce.WebUI.Infrastructure;
 using eCommerce.WebUI.Models.Shopping;
+using PayPal;
 
 namespace eCommerce.WebUI
 {
@@ -37,6 +39,19 @@ namespace eCommerce.WebUI
                             new {controller = "Food", action = "List", type = (string) null},
                             new {page = @"\d+"} // Constraints: page must be numerical
                 );
+
+            routes.MapRoute(null,
+                            "Account/OrderDetail/{id}", // Matches /Page2, /Page123, but not /PageXYZ
+                            new { controller = "Account", action = "OrderDetail"},
+                            new { id = @"\d+" } // Constraints: page must be numerical
+                );
+
+            routes.MapRoute(null,
+                            "Food/Detail/{id}", // Matches /Page2, /Page123, but not /PageXYZ
+                            new { controller = "Food", action = "Detail" },
+                            new { id = @"\d+" } // Constraints: page must be numerical
+                );
+
             routes.MapRoute(null,
                             "{type}", // Matches /Football or /AnythingWithNoSlash
                             new {controller = "Food", action = "List", page = 1}
@@ -60,6 +75,15 @@ namespace eCommerce.WebUI
             //!Add NinjectControllerFactory
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
+
+
+            //Paypal
+            
+            PayPal.Profile.Initialize("seller_1314725372_biz_api1.yahoo.com", "1314725411", "AQxOidqF9vq.LSWIO.EM9Xjfzjl.AX7Qxxa-4f41c.tZkE-qNmBCX1fe", "sandbox");
+            PayPal.Profile.Language = "en_US";
+            PayPal.Profile.CurrencyCode = "USD";
+            
+
         }
     }
 }

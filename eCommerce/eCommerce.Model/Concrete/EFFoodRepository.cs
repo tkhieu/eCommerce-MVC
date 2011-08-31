@@ -19,5 +19,10 @@ namespace eCommerce.Model.Concrete
         {
             get { return _db.FOODTYPEs; }
         }
+
+        public IQueryable<ORDER> Orders
+        {
+            get { return _db.ORDERs; }
+        }
     }
 }

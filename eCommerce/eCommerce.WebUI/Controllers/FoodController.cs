@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using eCommerce.Model;
 using eCommerce.Model.Concrete;
 using eCommerce.Utility;
 using eCommerce.WebUI.Models;
@@ -49,6 +50,13 @@ namespace eCommerce.WebUI.Controllers
             ViewData["ImageCDN"] = _imageCDN;
 
             return View(foodListViewModel);
+        }
+
+        public ViewResult Detail(int id)
+        {
+            ViewData["ImageCDN"] = _imageCDN;
+            FOOD food = Model.Controller.FoodController.GetById(id);
+            return View(food);
         }
 
     }

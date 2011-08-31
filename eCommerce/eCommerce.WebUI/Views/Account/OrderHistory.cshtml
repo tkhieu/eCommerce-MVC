@@ -1,0 +1,121 @@
+﻿@using eCommerce.Utility
+@using eCommerce.WebUI.Models.Account
+@model OrderHistory
+
+@{
+    ViewBag.Title = "OrderHistory";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div id="content">
+    <div class="top">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h1>
+                Order History</h1>
+        </div>
+    </div>
+    <div class="middle">
+        <table class="cart">
+            <tbody>
+                <tr class="table_heading">
+                    @*<th align="center">Remove</th>*@
+                    <th align="center">
+                        No
+                    </th>
+                    <th align="left">
+                        Time
+                    </th>
+                    <th align="left">
+                        Name
+                    </th>
+                    <th align="right">
+                        Quantity
+                    </th>
+                    <th align="right">
+                        Total
+                    </th>
+                    <th align="center">
+                        Status
+                    </th>
+                </tr>
+                @{
+                    int i = 0;
+                }
+                @foreach (var item in Model.Orders)
+                {
+                    i = i+1;
+                    
+                    
+                    <tr>
+                        @*<td align="center"><input name="remove[47:602]" type="checkbox" /></td>*@
+                        <td align="center">
+                            @i
+                        </td>
+                        <td valign="top" align="left">
+                            @item.Date.ToString()
+                        </td>
+                        <td valign="top" align="left">@Html.ActionLink(@item.Name,"OrderDetail",new{id=@item.ID})
+                        </td>
+                        <td valign="top" align="right">
+                       @item.ORDERDETAILs.Sum(p=>p.Count).ToString()
+                            
+                        </td>
+                        <td valign="top" align="right">@item.TotalPayment
+                        </td>
+                        <td>
+                        @{
+                            string state = "";
+                            if (item.State == (int)eCommerce.Model.ProjectEnum.OrderState.Finish)
+                            {
+                                state = "Finish";
+                            }
+                            else if (item.State == (int)eCommerce.Model.ProjectEnum.OrderState.New)
+                            {
+                                state = "New";
+                            }
+                            else if (item.State == (int)eCommerce.Model.ProjectEnum.OrderState.Processing)
+                            {
+                                state = "Processing";
+                            }
+                        } 
+                        @state
+                        </td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+        
+        <div class="buttons">
+            <table>
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            <a class="button" href="@Url.Action("Index")"><span>Back</span></a>
+                        </td>
+                        <td align="center">
+                            
+                        </td>
+                        <td align="right">
+                            <a class="button" href="@Url.Action("List","Food")">
+                                <span>Home</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+        </div>
+    </div>
+</div>
+

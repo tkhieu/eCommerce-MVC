@@ -64,4 +64,4 @@ jQuery(this).stop().animate({ left: "0" }, "medium");
 });
 
 
-Cufon.replace('h1, h2, #customHome h2, h3, h4, h5, .category_name, #content h1, .heading, #top-menu a, #learn_more, .n_price span, .s_price span , .product_hidden .product_name, .product_hidden .product_model, .product_hidden .n_price_h, .button_add, .button_add:visited, .button_add, .button_add:visited , .box .top, .n_price_prod, .button span , .page-link, input .button_add'); // Requires a selector engine for IE 6-7, see above
+Cufon.replace('h1, h2, #customHome h2, h4, h5, .category_name, #content h1, .heading, #top-menu a, #learn_more, .n_price span, .s_price span , .product_hidden .product_name, .product_hidden .product_model, .product_hidden .n_price_h, .button_add, .button_add:visited, .button_add, .button_add:visited , .box .top, .n_price_prod, .button span , .page-link, input .button_add'); // Requires a selector engine for IE 6-7, see above

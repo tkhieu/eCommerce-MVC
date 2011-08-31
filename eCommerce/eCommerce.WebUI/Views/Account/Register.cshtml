@@ -10,7 +10,7 @@
     <script>
         $(function () {
             $("#City").autocomplete({
-                source: '/Handler/City.ashx',
+                source: '@Url.Content("~/Handler/City.ashx")',
                 minLenght: 0,
                 select: function (event, ui) {
                     $("#City").val(ui.item.value);
@@ -21,7 +21,7 @@
             $("#District").autocomplete({
                 source: function (request, response) {
                     $.ajax({
-                        url: "/Handler/District.ashx",
+                        url: '@Url.Content("~/Handler/District.ashx")',
                         dataType: "json",
                         data: {
                             term: request.term,
@@ -208,8 +208,8 @@
                     <tbody>
                         <tr>
                             <td style="padding-right: 5px;" align="right">
-                                I have read and agree to the <a class="thickbox" href="http://tzelewski.co.uk/template/kinder/index.php?route=information/information/loadInfo&amp;create=1"
-                                    alt="http://tzelewski.co.uk/template/kinder/index.php?route=information/information&amp;information_id=3">
+                                I have read and agree to the <a class="thickbox" href="#"
+                                    alt="#">
                                     <b>Privacy Policy</b></a>
                             </td>
                             <td style="padding-right: 10px;">
