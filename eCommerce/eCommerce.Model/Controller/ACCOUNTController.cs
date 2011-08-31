@@ -16,34 +16,48 @@ namespace eCommerce.Model.Controller
 
             _db = new FoodStoreEntities();
 
-            var account = new ACCOUNT();
-            account.ID = GetMaxId();
-            account.Username = username;
-            account.Password = SaltEncrypt.HashCodeSHA1(password);
-            account.Name = fullName;
-            account.Address = address;
-            account.Tel = tel;
-            account.SocialID = socialId;
-            account.Email = email;
-            account.QUESTION = QuestionController.GetById(question,_db);
-            account.Answer = answer;
-            account.CITY = CityController.GetById(idCity,_db);
-            account.DISTRICT = DistrictController.GetById(idDistrict,_db);
 
-            //Chèn đối tượng ACCOUNT vào CSDL
-            bool flag = true;
             try
             {
-                
-                _db.AddToACCOUNTs(account);
-                _db.SaveChanges();
+                ACCOUNT check = _db.ACCOUNTs.Single(p => p.Username == username);
             }
             catch (Exception)
             {
-                flag = false;
-                throw;
+
+                var account = new ACCOUNT();
+                account.ID = GetMaxId();
+                account.Username = username;
+                account.Password = SaltEncrypt.HashCodeSHA1(password);
+                account.Name = fullName;
+                account.Address = address;
+                account.Tel = tel;
+                account.SocialID = socialId;
+                account.Email = email;
+                account.QUESTION = QuestionController.GetById(question, _db);
+                account.Answer = answer;
+                account.CITY = CityController.GetById(idCity, _db);
+                account.DISTRICT = DistrictController.GetById(idDistrict, _db);
+
+                //Chèn đối tượng ACCOUNT vào CSDL
+                bool flag = true;
+                try
+                {
+
+                    _db.AddToACCOUNTs(account);
+                    _db.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    flag = false;
+                    throw;
+                }
+                return flag;
             }
-            return flag;
+            return false;
+            
+           
+
+
         }
 
         public static bool Update(int id, String fullName, String address, String tel, String socialId, int idCity, int idDistrict)

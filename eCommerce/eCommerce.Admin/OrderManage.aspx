@@ -184,11 +184,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Note
+                            Email
                         </td>
                         <td>
-                            <asp:TextBox ID="NewOrderNote" runat="server" TextMode="MultiLine" Width="300px"
-                                Height="50px"></asp:TextBox>
+                            <asp:TextBox ID="NewOrderNote" runat="server" Width="300px" Height="15px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
